@@ -13218,6 +13218,7 @@ Code: 42601
 **************************************************************
 
 **************************************************************
+<<<<<<< HEAD
 DATUM:16.7.2019. 13:18:55, FORMA: RemoteDB
 LINIJA KODA:65
 GREŠKA:
@@ -13235,6 +13236,9 @@ The specified table does not exist. [ registracija ]
 
 **************************************************************
 DATUM:16.7.2019. 13:41:50, FORMA: RemoteDB
+=======
+DATUM:16.7.2019. 13:33:43, FORMA: RemoteDB
+>>>>>>> 09b3a4c98bc263fbde9a5fe9fbfab7e8ae11e4d2
 LINIJA KODA:65
 GREŠKA:
 select * from registracija;

@@ -678,6 +678,7 @@ namespace PCPOS.Class
 
     internal class PosPrint
     {
+        // dino je bnorel
         public static int id { get; set; }
         public static string logicalName { get; set; }
         public static string deviceCategory { get; set; }

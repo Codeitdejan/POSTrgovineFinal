@@ -496,6 +496,7 @@ namespace PCPOS
 
         private void picMaloprodaj_Click(object sender, EventArgs e)
         {
+            
             if (!Class.Registracija.dopustenoKreiranjeNovihDokumenta)
             {
                 return;
@@ -527,6 +528,7 @@ namespace PCPOS
                 ks.MainForm = MainForm;
                 ks.Show();
             }
+            
         }
 
         private void picKalk_Click(object sender, EventArgs e)
