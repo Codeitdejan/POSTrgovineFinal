@@ -6,6 +6,9 @@
 build/
 DerivedData/
 
+# Logs and databases #
+*.sdf
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
