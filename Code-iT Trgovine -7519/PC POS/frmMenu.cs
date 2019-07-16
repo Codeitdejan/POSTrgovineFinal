@@ -195,11 +195,11 @@ namespace PCPOS
                                 }
                             }
 
-                            frmRegistracija2017 CR = new frmRegistracija2017();
+                           /* frmRegistracija2017 CR = new frmRegistracija2017();
                             CR.broj = newBroj;
                             CR.productKey = ns;
                             CR.MainForm = this;
-                            CR.ShowDialog();
+                            CR.ShowDialog();*/
                         }
                         else
                         {
