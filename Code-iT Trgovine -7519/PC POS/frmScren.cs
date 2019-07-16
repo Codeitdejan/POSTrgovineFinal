@@ -496,6 +496,7 @@ namespace PCPOS
 
         private void picMaloprodaj_Click(object sender, EventArgs e)
         {
+            
             if (!Class.Registracija.dopustenoKreiranjeNovihDokumenta)
             {
                 return;
@@ -527,6 +528,7 @@ namespace PCPOS
                 ks.MainForm = MainForm;
                 ks.Show();
             }
+            
         }
 
         private void picKalk_Click(object sender, EventArgs e)
@@ -605,7 +607,7 @@ namespace PCPOS
             }
             frmRobaUsluge f = new frmRobaUsluge();
             f.MdiParent = MainForm;
-            //f.Dock = DockStyle.Fill;
+            f.Dock = DockStyle.Fill;
             f.MainFormMenu = MainForm;
             f.Show();
         }
@@ -619,10 +621,7 @@ namespace PCPOS
             }
             Sifarnik.frmAddPartners f = new Sifarnik.frmAddPartners();
             f.MdiParent = MainForm;
-            f.Focus();
-            f.TopMost = true;
-            f.LayoutMdi(MdiLayout.Cascade);
-            //f.Dock = DockStyle.Fill;
+            f.Dock = DockStyle.Fill;
             f.MainFormMenu = MainForm;
             f.Show();
         }
@@ -793,7 +792,10 @@ namespace PCPOS
                 return;
             }
             frmRadniNalogSerivs s = new frmRadniNalogSerivs();
-            s.ShowDialog();
+            s.MdiParent = MainForm;
+            s.MainForm = MainForm;
+            s.Dock = DockStyle.Fill;
+            s.Show();
         }
     }
 }

@@ -229,6 +229,17 @@ C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS Update\obj\x86\Debu
 C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS Update\obj\x86\Debug\PC POS Update.csproj.CoreCompileInputs.cache
 C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS Update\obj\x86\Debug\PC POS Update.exe
 C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS Update\obj\x86\Debug\PC POS Update.pdb
+<<<<<<< HEAD
+C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS Update\bin\Debug\PC POS Update.exe
+C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS Update\bin\Debug\PC POS Update.pdb
+C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS Update\obj\x86\Debug\PC POS Update.csprojAssemblyReference.cache
+C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS Update\obj\x86\Debug\PC_POS_Update.frmUpdate.resources
+C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS Update\obj\x86\Debug\PC_POS_Update.Properties.Resources.resources
+C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS Update\obj\x86\Debug\PC POS Update.csproj.GenerateResource.cache
+C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS Update\obj\x86\Debug\PC POS Update.csproj.CoreCompileInputs.cache
+C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS Update\obj\x86\Debug\PC POS Update.exe
+C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS Update\obj\x86\Debug\PC POS Update.pdb
+=======
 D:\Projects\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS Update\bin\Debug\PC POS Update.exe
 D:\Projects\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS Update\bin\Debug\PC POS Update.pdb
 D:\Projects\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS Update\obj\x86\Debug\PC POS Update.csprojResolveAssemblyReference.cache
@@ -238,3 +249,4 @@ D:\Projects\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS Update\obj\x86\Debug\
 D:\Projects\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS Update\obj\x86\Debug\PC POS Update.csproj.CoreCompileInputs.cache
 D:\Projects\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS Update\obj\x86\Debug\PC POS Update.exe
 D:\Projects\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS Update\obj\x86\Debug\PC POS Update.pdb
+>>>>>>> 09b3a4c98bc263fbde9a5fe9fbfab7e8ae11e4d2

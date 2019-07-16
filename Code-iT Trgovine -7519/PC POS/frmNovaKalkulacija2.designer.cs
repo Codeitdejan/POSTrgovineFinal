@@ -1804,8 +1804,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoScrollMinSize = new System.Drawing.Size(1124, 587);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1124, 589);
+            this.ControlBox = false;
             this.Controls.Add(this.frmSkeniraniDoc);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDeleteAll);
@@ -1815,6 +1817,7 @@
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmNovaKalkulacija2";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
