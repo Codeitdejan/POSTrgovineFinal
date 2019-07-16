@@ -13216,3 +13216,11 @@ Code: 42601
    at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 512
    at PCPOS.classSQL.insert(String sql) in C:\Users\Marko Vrban\Downloads\Ostalo-master\Projekt\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 142
 **************************************************************
+
+**************************************************************
+DATUM:16.7.2019. 13:33:43, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+select * from registracija;
+The specified table does not exist. [ registracija ]
+**************************************************************
