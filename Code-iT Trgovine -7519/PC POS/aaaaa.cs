@@ -9,6 +9,8 @@ namespace PCPOS
 {
     public partial class aaaaa : Form
     {
+
+        //aaaaaaaa
         public aaaaa()
         {
             InitializeComponent();
