@@ -66,6 +66,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnTraziPartnera)).BeginInit();
@@ -105,7 +106,7 @@
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Arial", 8.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(635, 587);
+            this.dgv.Size = new System.Drawing.Size(694, 618);
             this.dgv.TabIndex = 23;
             // 
             // sifra
@@ -200,7 +201,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(647, 615);
+            this.groupBox1.Size = new System.Drawing.Size(706, 646);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Uvoz aktikla i grupiranje grupa";
@@ -261,7 +262,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.cbSkladiste);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox2.Location = new System.Drawing.Point(679, 272);
+            this.groupBox2.Location = new System.Drawing.Point(738, 295);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(317, 80);
             this.groupBox2.TabIndex = 25;
@@ -290,8 +291,7 @@
             // btnKreirajXMLiSpremi
             // 
             this.btnKreirajXMLiSpremi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKreirajXMLiSpremi.BackColor = System.Drawing.Color.Transparent;
-            this.btnKreirajXMLiSpremi.BackgroundImage = global::PCPOS.Properties.Resources.Untitled_1;
+            this.btnKreirajXMLiSpremi.BackColor = System.Drawing.Color.Gainsboro;
             this.btnKreirajXMLiSpremi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnKreirajXMLiSpremi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKreirajXMLiSpremi.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
@@ -301,8 +301,8 @@
             this.btnKreirajXMLiSpremi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnKreirajXMLiSpremi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKreirajXMLiSpremi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.btnKreirajXMLiSpremi.ForeColor = System.Drawing.Color.White;
-            this.btnKreirajXMLiSpremi.Location = new System.Drawing.Point(795, 580);
+            this.btnKreirajXMLiSpremi.ForeColor = System.Drawing.Color.Black;
+            this.btnKreirajXMLiSpremi.Location = new System.Drawing.Point(854, 611);
             this.btnKreirajXMLiSpremi.Name = "btnKreirajXMLiSpremi";
             this.btnKreirajXMLiSpremi.Size = new System.Drawing.Size(197, 48);
             this.btnKreirajXMLiSpremi.TabIndex = 73;
@@ -314,8 +314,7 @@
             // btnUcitajExcel
             // 
             this.btnUcitajExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUcitajExcel.BackColor = System.Drawing.Color.Transparent;
-            this.btnUcitajExcel.BackgroundImage = global::PCPOS.Properties.Resources.Untitled_1;
+            this.btnUcitajExcel.BackColor = System.Drawing.Color.Gainsboro;
             this.btnUcitajExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUcitajExcel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUcitajExcel.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
@@ -325,7 +324,7 @@
             this.btnUcitajExcel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnUcitajExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUcitajExcel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btnUcitajExcel.ForeColor = System.Drawing.Color.White;
+            this.btnUcitajExcel.ForeColor = System.Drawing.Color.Black;
             this.btnUcitajExcel.Location = new System.Drawing.Point(169, 56);
             this.btnUcitajExcel.Name = "btnUcitajExcel";
             this.btnUcitajExcel.Size = new System.Drawing.Size(135, 40);
@@ -345,7 +344,7 @@
             this.groupBox3.Controls.Add(this.txtNazivPartnera);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox3.Location = new System.Drawing.Point(679, 171);
+            this.groupBox3.Location = new System.Drawing.Point(738, 194);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(317, 92);
             this.groupBox3.TabIndex = 26;
@@ -356,7 +355,7 @@
             // 
             this.tab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tab.Controls.Add(this.txtUvozIzExcela);
-            this.tab.Location = new System.Drawing.Point(675, 23);
+            this.tab.Location = new System.Drawing.Point(734, 46);
             this.tab.Name = "tab";
             this.tab.SelectedIndex = 0;
             this.tab.Size = new System.Drawing.Size(317, 129);
@@ -397,7 +396,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(688, 359);
+            this.progressBar1.Location = new System.Drawing.Point(749, 381);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(294, 23);
             this.progressBar1.TabIndex = 75;
@@ -405,20 +404,36 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(679, 389);
+            this.webBrowser1.Location = new System.Drawing.Point(734, 421);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
-            this.webBrowser1.Size = new System.Drawing.Size(317, 185);
+            this.webBrowser1.Size = new System.Drawing.Size(317, 186);
             this.webBrowser1.TabIndex = 76;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(921, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 77;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Nird
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(170)))), ((int)(((byte)(197)))));
-            this.ClientSize = new System.Drawing.Size(1004, 640);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(1063, 671);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.tab);
@@ -426,7 +441,9 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Nird";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nird";
@@ -483,5 +500,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pdv;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.Button button1;
     }
 }

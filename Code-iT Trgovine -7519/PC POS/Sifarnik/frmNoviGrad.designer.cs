@@ -34,6 +34,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtPosta = new System.Windows.Forms.TextBox();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.grad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.posta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_zupanija = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drzava = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.naselje = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_grad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prirez = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNoviUnos = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,13 +49,7 @@
             this.txtnazivGrada = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNaselje = new System.Windows.Forms.TextBox();
-            this.grad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.posta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_zupanija = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.drzava = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.naselje = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_grad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prirez = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,6 +120,47 @@
             this.dgv.Size = new System.Drawing.Size(622, 450);
             this.dgv.TabIndex = 114;
             this.dgv.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellEndEdit);
+            // 
+            // grad
+            // 
+            this.grad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.grad.HeaderText = "Grad";
+            this.grad.Name = "grad";
+            // 
+            // posta
+            // 
+            this.posta.HeaderText = "Pošta";
+            this.posta.Name = "posta";
+            // 
+            // id_zupanija
+            // 
+            this.id_zupanija.HeaderText = "Županija";
+            this.id_zupanija.Name = "id_zupanija";
+            this.id_zupanija.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // drzava
+            // 
+            this.drzava.HeaderText = "Država";
+            this.drzava.Name = "drzava";
+            this.drzava.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.drzava.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // naselje
+            // 
+            this.naselje.HeaderText = "Naselje";
+            this.naselje.Name = "naselje";
+            // 
+            // id_grad
+            // 
+            this.id_grad.HeaderText = "id_grad";
+            this.id_grad.Name = "id_grad";
+            this.id_grad.ReadOnly = true;
+            this.id_grad.Visible = false;
+            // 
+            // prirez
+            // 
+            this.prirez.HeaderText = "Prirez %";
+            this.prirez.Name = "prirez";
             // 
             // btnNoviUnos
             // 
@@ -215,52 +257,29 @@
             this.txtNaselje.Size = new System.Drawing.Size(155, 20);
             this.txtNaselje.TabIndex = 120;
             // 
-            // grad
+            // button1
             // 
-            this.grad.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.grad.HeaderText = "Grad";
-            this.grad.Name = "grad";
-            // 
-            // posta
-            // 
-            this.posta.HeaderText = "Pošta";
-            this.posta.Name = "posta";
-            // 
-            // id_zupanija
-            // 
-            this.id_zupanija.HeaderText = "Županija";
-            this.id_zupanija.Name = "id_zupanija";
-            this.id_zupanija.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // drzava
-            // 
-            this.drzava.HeaderText = "Država";
-            this.drzava.Name = "drzava";
-            this.drzava.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.drzava.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // naselje
-            // 
-            this.naselje.HeaderText = "Naselje";
-            this.naselje.Name = "naselje";
-            // 
-            // id_grad
-            // 
-            this.id_grad.HeaderText = "id_grad";
-            this.id_grad.Name = "id_grad";
-            this.id_grad.ReadOnly = true;
-            this.id_grad.Visible = false;
-            // 
-            // prirez
-            // 
-            this.prirez.HeaderText = "Prirez %";
-            this.prirez.Name = "prirez";
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(669, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 121;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmNoviGrad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(643, 594);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(811, 594);
+            this.ControlBox = false;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtNaselje);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbDrazava);
@@ -274,6 +293,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtZupanija);
             this.Controls.Add(this.txtnazivGrada);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmNoviGrad";
             this.Text = "Unos novog grada";
             this.Load += new System.EventHandler(this.frmNoviGrad_Load);
@@ -305,5 +327,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn naselje;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_grad;
         private System.Windows.Forms.DataGridViewTextBoxColumn prirez;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dTlisteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSRliste = new PCPOS.Dataset.DSRliste();
             this.dTRpodaciTvrtkeBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -42,6 +42,7 @@
             this.chbRobno = new System.Windows.Forms.CheckBox();
             this.chbUsluge = new System.Windows.Forms.CheckBox();
             this.btnUcitaj = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dTlisteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSRliste)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dTRpodaciTvrtkeBindingSource)).BeginInit();
@@ -85,15 +86,15 @@
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource4.Name = "DataSet1";
-            reportDataSource4.Value = this.dTlisteBindingSource;
-            reportDataSource5.Name = "DataSet2";
-            reportDataSource5.Value = this.dTRpodaciTvrtkeBindingSource;
-            reportDataSource6.Name = "DataSet3";
-            reportDataSource6.Value = this.dTlisteTekstBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.dTlisteBindingSource;
+            reportDataSource2.Name = "DataSet2";
+            reportDataSource2.Value = this.dTRpodaciTvrtkeBindingSource;
+            reportDataSource3.Name = "DataSet3";
+            reportDataSource3.Value = this.dTlisteTekstBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PCPOS.Report.PopisArtikala.ListaArtikala.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 57);
             this.reportViewer1.Name = "reportViewer1";
@@ -130,16 +131,35 @@
             this.btnUcitaj.UseVisualStyleBackColor = true;
             this.btnUcitaj.Click += new System.EventHandler(this.btnUcitaj_Click);
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(664, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmPopisArtikala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(806, 792);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnUcitaj);
             this.Controls.Add(this.chbUsluge);
             this.Controls.Add(this.chbRobno);
             this.Controls.Add(this.reportViewer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPopisArtikala";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista";
@@ -167,5 +187,6 @@
         private System.Windows.Forms.CheckBox chbRobno;
         private System.Windows.Forms.CheckBox chbUsluge;
         private System.Windows.Forms.Button btnUcitaj;
+        private System.Windows.Forms.Button button1;
     }
 }

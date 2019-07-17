@@ -1523,9 +1523,11 @@ namespace PCPOS
         {
             frmSviRadniNaloziServis objForm3 = new frmSviRadniNaloziServis();
             objForm3.sifra_rn = "";
+            objForm3.MdiParent = MainForm;
             objForm3.MainForm = this;
+            objForm3.Dock = DockStyle.Fill;
             broj_rn_edit = null;
-            objForm3.ShowDialog();
+            objForm3.Show();
             if (broj_rn_edit != null)
             {
                 fillRN();

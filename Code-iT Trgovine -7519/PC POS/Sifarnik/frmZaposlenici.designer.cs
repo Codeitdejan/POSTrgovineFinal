@@ -67,6 +67,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.dtpRodenje = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,7 +98,7 @@
             this.dgv.Location = new System.Drawing.Point(12, 162);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersVisible = false;
-            this.dgv.Size = new System.Drawing.Size(993, 389);
+            this.dgv.Size = new System.Drawing.Size(1197, 389);
             this.dgv.TabIndex = 24;
             this.dgv.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellEndEdit);
             // 
@@ -437,11 +438,28 @@
             this.label12.TabIndex = 21;
             this.label12.Text = "Dat.rođ:";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(1079, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmZaposlenici
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1017, 563);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(1221, 563);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dtpRodenje);
             this.Controls.Add(this.txt);
             this.Controls.Add(this.label5);
@@ -467,6 +485,9 @@
             this.Controls.Add(this.txtAdresa);
             this.Controls.Add(this.txtPrezime);
             this.Controls.Add(this.txtIme);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmZaposlenici";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Zaposlenici";
@@ -519,5 +540,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dat_rod;
         private System.Windows.Forms.DataGridViewCheckBoxColumn aktivnost;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
-	}
+        private System.Windows.Forms.Button button1;
+    }
 }

@@ -29,7 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNaziv = new System.Windows.Forms.TextBox();
             this.btnNovo = new System.Windows.Forms.Button();
@@ -51,6 +51,7 @@
             this.txtSkraceniNaziv = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPuniNaziv = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSk)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,8 +107,8 @@
             // 
             this.dgvSk.AllowUserToAddRows = false;
             this.dgvSk.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightBlue;
-            this.dgvSk.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightBlue;
+            this.dgvSk.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSk.BackgroundColor = System.Drawing.Color.White;
             this.dgvSk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSk.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -237,11 +238,29 @@
             this.txtPuniNaziv.Size = new System.Drawing.Size(211, 23);
             this.txtPuniNaziv.TabIndex = 14;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(645, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmValute
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 423);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(787, 423);
+            this.ControlBox = false;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtPuniNaziv);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtSkraceniNaziv);
@@ -256,7 +275,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNaziv);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmValute";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Valute";
@@ -291,5 +312,6 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn tecaj;
 		private System.Windows.Forms.DataGridViewTextBoxColumn paritet;
 		private System.Windows.Forms.DataGridViewTextBoxColumn id_valuta;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -1885,9 +1885,11 @@ CBskladiste.SelectedValue));
         private void btnOtvoriKalkulacije_Click(object sender, EventArgs e)
         {
             frmPopisKalkulacija popisKalkulacija = new frmPopisKalkulacija();
+            popisKalkulacija.MdiParent = MainForm;
             popisKalkulacija.MainForm = this;
             broj_kalkulacije_edit = null;
-            popisKalkulacija.ShowDialog();
+            popisKalkulacija.Dock = DockStyle.Fill;
+            popisKalkulacija.Show();
 
             if (broj_kalkulacije_edit != null)
             {

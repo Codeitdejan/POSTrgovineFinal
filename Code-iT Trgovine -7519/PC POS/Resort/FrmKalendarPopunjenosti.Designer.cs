@@ -36,11 +36,11 @@
             this.btnPreviousMonth = new System.Windows.Forms.Button();
             this.btnNextMonth = new System.Windows.Forms.Button();
             this.cbMonth = new System.Windows.Forms.ComboBox();
-            this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.numYear = new System.Windows.Forms.NumericUpDown();
             this.btnReservation = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numYear)).BeginInit();
             this.SuspendLayout();
@@ -130,22 +130,6 @@
             this.cbMonth.TabIndex = 3;
             this.cbMonth.SelectionChangeCommitted += new System.EventHandler(this.CbMonth_SelectionChangeCommitted);
             // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.White;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnClose.ForeColor = System.Drawing.Color.Black;
-            this.btnClose.Location = new System.Drawing.Point(718, 12);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(115, 34);
-            this.btnClose.TabIndex = 4;
-            this.btnClose.Text = "Izlaz";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -181,20 +165,38 @@
             this.btnReservation.UseVisualStyleBackColor = false;
             this.btnReservation.Click += new System.EventHandler(this.BtnReservation_Click);
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(703, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmKalendarPopunjenosti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(845, 414);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnReservation);
             this.Controls.Add(this.numYear);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.cbMonth);
             this.Controls.Add(this.btnNextMonth);
             this.Controls.Add(this.btnPreviousMonth);
             this.Controls.Add(this.dataGridView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmKalendarPopunjenosti";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kalendar popunjenosti";
@@ -213,10 +215,10 @@
         private System.Windows.Forms.Button btnPreviousMonth;
         private System.Windows.Forms.Button btnNextMonth;
         private System.Windows.Forms.ComboBox cbMonth;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numYear;
         private System.Windows.Forms.Button btnReservation;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button button1;
     }
 }

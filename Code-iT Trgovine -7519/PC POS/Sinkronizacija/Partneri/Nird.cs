@@ -20,17 +20,11 @@ namespace PCPOS.Sinkronizacija.Partneri
         private void frmIzvozIzPrograma_Load(object sender, EventArgs e)
         {
             fill();
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Color x = System.Drawing.Color.FromArgb(((byte)(105)), ((byte)(170)), ((byte)(197)));
-            Color y = System.Drawing.Color.FromArgb(((byte)(40)), ((byte)(109)), ((byte)(135)));
-
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), x, y, 250);
-            c.FillRectangle(bG, 0, 0, Width, Height);
         }
 
         private string[] GetSlike(string sifra)
@@ -536,6 +530,11 @@ namespace PCPOS.Sinkronizacija.Partneri
                 string url = "http://proizvodi.nird.hr/-" + DT.Rows[row]["Sifra"].ToString();
                 webBrowser1.Navigate(new Uri(url));
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

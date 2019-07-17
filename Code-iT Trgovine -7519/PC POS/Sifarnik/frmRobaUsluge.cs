@@ -275,7 +275,10 @@ namespace PCPOS
         private void btnTrazi_Click(object sender, EventArgs e)
         {
             frmRobaTrazi roba = new frmRobaTrazi();
-            roba.ShowDialog();
+            roba.MdiParent = MainFormMenu;
+            roba.MainMenu = this;
+            roba.Dock = DockStyle.Fill;
+            roba.Show();
 
             if (txtNaziv.Enabled == false)
             {

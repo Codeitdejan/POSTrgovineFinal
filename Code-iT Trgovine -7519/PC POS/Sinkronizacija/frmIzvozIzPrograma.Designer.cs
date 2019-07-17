@@ -54,6 +54,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.bgWorker1 = new System.ComponentModel.BackgroundWorker();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnTraziPartnera)).BeginInit();
@@ -75,13 +76,13 @@
             this.sifra,
             this.partner,
             this.id});
-            this.dgv.Location = new System.Drawing.Point(6, 117);
+            this.dgv.Location = new System.Drawing.Point(-1, 117);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowTemplate.Height = 18;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(419, 270);
+            this.dgv.Size = new System.Drawing.Size(549, 370);
             this.dgv.TabIndex = 23;
             // 
             // sifra
@@ -120,15 +121,14 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(431, 393);
+            this.groupBox1.Size = new System.Drawing.Size(561, 493);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Izvoz aktikla prema dobavljačima";
             // 
             // btnDodaj
             // 
-            this.btnDodaj.BackColor = System.Drawing.Color.Transparent;
-            this.btnDodaj.BackgroundImage = global::PCPOS.Properties.Resources.Untitled_1;
+            this.btnDodaj.BackColor = System.Drawing.Color.Gainsboro;
             this.btnDodaj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDodaj.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDodaj.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
@@ -138,7 +138,7 @@
             this.btnDodaj.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDodaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.btnDodaj.ForeColor = System.Drawing.Color.White;
+            this.btnDodaj.ForeColor = System.Drawing.Color.Black;
             this.btnDodaj.Location = new System.Drawing.Point(365, 56);
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(59, 34);
@@ -203,7 +203,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.cbSkladiste);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox2.Location = new System.Drawing.Point(454, 13);
+            this.groupBox2.Location = new System.Drawing.Point(605, 13);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(317, 98);
             this.groupBox2.TabIndex = 25;
@@ -232,8 +232,7 @@
             // btnKreiraj
             // 
             this.btnKreiraj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKreiraj.BackColor = System.Drawing.Color.Transparent;
-            this.btnKreiraj.BackgroundImage = global::PCPOS.Properties.Resources.Untitled_1;
+            this.btnKreiraj.BackColor = System.Drawing.Color.Gainsboro;
             this.btnKreiraj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnKreiraj.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKreiraj.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
@@ -243,8 +242,8 @@
             this.btnKreiraj.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnKreiraj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKreiraj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.btnKreiraj.ForeColor = System.Drawing.Color.White;
-            this.btnKreiraj.Location = new System.Drawing.Point(644, 358);
+            this.btnKreiraj.ForeColor = System.Drawing.Color.Black;
+            this.btnKreiraj.Location = new System.Drawing.Point(769, 451);
             this.btnKreiraj.Name = "btnKreiraj";
             this.btnKreiraj.Size = new System.Drawing.Size(127, 48);
             this.btnKreiraj.TabIndex = 72;
@@ -256,8 +255,7 @@
             // btnKreirajXMLiSpremi
             // 
             this.btnKreirajXMLiSpremi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKreirajXMLiSpremi.BackColor = System.Drawing.Color.Transparent;
-            this.btnKreirajXMLiSpremi.BackgroundImage = global::PCPOS.Properties.Resources.Untitled_1;
+            this.btnKreirajXMLiSpremi.BackColor = System.Drawing.Color.Gainsboro;
             this.btnKreirajXMLiSpremi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnKreirajXMLiSpremi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKreirajXMLiSpremi.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
@@ -267,8 +265,8 @@
             this.btnKreirajXMLiSpremi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnKreirajXMLiSpremi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKreirajXMLiSpremi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.btnKreirajXMLiSpremi.ForeColor = System.Drawing.Color.White;
-            this.btnKreirajXMLiSpremi.Location = new System.Drawing.Point(469, 358);
+            this.btnKreirajXMLiSpremi.ForeColor = System.Drawing.Color.Black;
+            this.btnKreirajXMLiSpremi.Location = new System.Drawing.Point(594, 451);
             this.btnKreirajXMLiSpremi.Name = "btnKreirajXMLiSpremi";
             this.btnKreirajXMLiSpremi.Size = new System.Drawing.Size(169, 48);
             this.btnKreirajXMLiSpremi.TabIndex = 73;
@@ -280,8 +278,7 @@
             // btnSpremiSQL
             // 
             this.btnSpremiSQL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSpremiSQL.BackColor = System.Drawing.Color.Transparent;
-            this.btnSpremiSQL.BackgroundImage = global::PCPOS.Properties.Resources.Untitled_1;
+            this.btnSpremiSQL.BackColor = System.Drawing.Color.Gainsboro;
             this.btnSpremiSQL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSpremiSQL.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSpremiSQL.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
@@ -291,8 +288,8 @@
             this.btnSpremiSQL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnSpremiSQL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSpremiSQL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.btnSpremiSQL.ForeColor = System.Drawing.Color.White;
-            this.btnSpremiSQL.Location = new System.Drawing.Point(644, 308);
+            this.btnSpremiSQL.ForeColor = System.Drawing.Color.Black;
+            this.btnSpremiSQL.Location = new System.Drawing.Point(769, 401);
             this.btnSpremiSQL.Name = "btnSpremiSQL";
             this.btnSpremiSQL.Size = new System.Drawing.Size(127, 48);
             this.btnSpremiSQL.TabIndex = 75;
@@ -309,7 +306,7 @@
             this.groupBox3.Controls.Add(this.txtMjeseci);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox3.Location = new System.Drawing.Point(454, 117);
+            this.groupBox3.Location = new System.Drawing.Point(605, 117);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(317, 102);
             this.groupBox3.TabIndex = 26;
@@ -350,19 +347,35 @@
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(454, 228);
+            this.checkBox1.Location = new System.Drawing.Point(605, 228);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(162, 17);
             this.checkBox1.TabIndex = 74;
             this.checkBox1.Text = "Slike se zovu isto kao i šifre?";
             this.checkBox1.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(1003, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmIzvozIzPrograma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(170)))), ((int)(((byte)(197)))));
-            this.ClientSize = new System.Drawing.Size(783, 418);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(1142, 518);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSpremiSQL);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btnKreirajXMLiSpremi);
@@ -370,6 +383,9 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmIzvozIzPrograma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Izvoz iz programa u xml";
@@ -413,5 +429,6 @@
         private System.ComponentModel.BackgroundWorker bgWorker1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button btnSpremiSQL;
+        private System.Windows.Forms.Button button1;
     }
 }

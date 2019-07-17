@@ -1526,12 +1526,14 @@ namespace PCPOS
         private void btnSveFakture_Click(object sender, EventArgs e)
         {
             frmSveOtpremnice objForm2 = new frmSveOtpremnice();
+            objForm2.MdiParent = MainForm;
             objForm2.sifra_otpremnice = "";
             objForm2.MainForm = this;
             broj_otpremnice_edit = null;
             godina_edit = null;
             skladiste_edit = null;
-            objForm2.ShowDialog();
+            objForm2.Dock = DockStyle.Fill;
+            objForm2.Show();
             if (broj_otpremnice_edit != null)
             {
                 ControlDisableEnable(0, 1, 1, 0, 0);

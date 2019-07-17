@@ -55,7 +55,6 @@
             this.txtDjelatnost = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.btnSpremi = new System.Windows.Forms.Button();
-            this.btnOdustani = new System.Windows.Forms.Button();
             this.txtSifra = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -121,6 +120,7 @@
             this.lblSkladistePartnera = new System.Windows.Forms.Label();
             this.cmbSkladistePartnera = new System.Windows.Forms.ComboBox();
             this.chbZacrniPodatke = new System.Windows.Forms.CheckBox();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -455,24 +455,13 @@
             // btnSpremi
             // 
             this.btnSpremi.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnSpremi.Location = new System.Drawing.Point(630, 12);
+            this.btnSpremi.Location = new System.Drawing.Point(510, 12);
             this.btnSpremi.Name = "btnSpremi";
             this.btnSpremi.Size = new System.Drawing.Size(127, 33);
             this.btnSpremi.TabIndex = 6;
             this.btnSpremi.Text = "Spremi";
             this.btnSpremi.UseVisualStyleBackColor = true;
             this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
-            // 
-            // btnOdustani
-            // 
-            this.btnOdustani.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnOdustani.Location = new System.Drawing.Point(502, 12);
-            this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(122, 33);
-            this.btnOdustani.TabIndex = 5;
-            this.btnOdustani.Text = "Odustani";
-            this.btnOdustani.UseVisualStyleBackColor = true;
-            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // txtSifra
             // 
@@ -627,7 +616,7 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::PCPOS.Properties.Resources._1059;
-            this.pictureBox1.Location = new System.Drawing.Point(785, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(655, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 33);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1334,21 +1323,36 @@
             this.chbZacrniPodatke.AutoSize = true;
             this.chbZacrniPodatke.BackColor = System.Drawing.Color.Transparent;
             this.chbZacrniPodatke.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.chbZacrniPodatke.Location = new System.Drawing.Point(441, 514);
+            this.chbZacrniPodatke.Location = new System.Drawing.Point(520, 514);
             this.chbZacrniPodatke.Name = "chbZacrniPodatke";
             this.chbZacrniPodatke.Size = new System.Drawing.Size(168, 21);
             this.chbZacrniPodatke.TabIndex = 26;
             this.chbZacrniPodatke.Text = "Zacrni podatke (GDPR)";
             this.chbZacrniPodatke.UseVisualStyleBackColor = false;
             // 
+            // button7
+            // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button7.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(882, 12);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(126, 43);
+            this.button7.TabIndex = 112;
+            this.button7.Text = "Izlaz      ";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // frmAddPartners
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(872, 654);
+            this.ClientSize = new System.Drawing.Size(1031, 654);
             this.ControlBox = false;
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.chbZacrniPodatke);
             this.Controls.Add(this.cmbSkladistePartnera);
             this.Controls.Add(this.lblSkladistePartnera);
@@ -1359,7 +1363,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.rtbNapomena);
@@ -1414,7 +1417,6 @@
         private System.Windows.Forms.ComboBox txtDjelatnost;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnSpremi;
-        private System.Windows.Forms.Button btnOdustani;
         private System.Windows.Forms.TextBox txtSifra;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label22;
@@ -1480,5 +1482,6 @@
         private System.Windows.Forms.Label lblSkladistePartnera;
         private System.Windows.Forms.ComboBox cmbSkladistePartnera;
         private System.Windows.Forms.CheckBox chbZacrniPodatke;
+        private System.Windows.Forms.Button button7;
     }
 }

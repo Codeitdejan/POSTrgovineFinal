@@ -536,6 +536,7 @@
             this.BackColor = System.Drawing.Color.SlateGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1015, 606);
+            this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDeleteAllFaktura);
             this.Controls.Add(this.btnSveFakture);
@@ -545,7 +546,12 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbHeader);
             this.Controls.Add(this.dgw);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmRadniNalogSerivs2016";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Radni nalog servis";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPonude_FormClosing);

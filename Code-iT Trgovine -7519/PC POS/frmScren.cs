@@ -545,8 +545,9 @@ namespace PCPOS
 
             frmNovaKalkulacija2 nova_kalkulacija = new frmNovaKalkulacija2();
             nova_kalkulacija.MdiParent = MainForm;
-            nova_kalkulacija.Dock = DockStyle.Fill;
             nova_kalkulacija.MainForm = MainForm;
+            nova_kalkulacija.Dock = DockStyle.Fill;
+            
             nova_kalkulacija.Show();
         }
 
@@ -565,17 +566,19 @@ namespace PCPOS
             {
                 frmFaktura f = new frmFaktura();
                 f.MdiParent = MainForm;
-                f.Dock = DockStyle.Fill;
                 f.MainForm = MainForm;
                 f.frmmenu = MainForm;
+                f.Dock = DockStyle.Fill;
+                
                 f.Show();
             }
             else
             {
                 Robno.frmFakturaBezRobe FR = new Robno.frmFakturaBezRobe();
                 FR.MdiParent = MainForm;
-                FR.Dock = DockStyle.Fill;
                 FR.MainForm = MainForm;
+                FR.Dock = DockStyle.Fill;
+                
                 FR.Show();
             }
         }
@@ -592,9 +595,10 @@ namespace PCPOS
                 return;
             }
             frmPonude f = new frmPonude();
+            f.MainForm = MainForm;
             f.MdiParent = MainForm;
             f.Dock = DockStyle.Fill;
-            f.MainForm = MainForm;
+            
             f.Show();
         }
 
@@ -607,8 +611,9 @@ namespace PCPOS
             }
             frmRobaUsluge f = new frmRobaUsluge();
             f.MdiParent = MainForm;
-            f.Dock = DockStyle.Fill;
             f.MainFormMenu = MainForm;
+            f.Dock = DockStyle.Fill;
+            
             f.Show();
         }
 
@@ -621,8 +626,9 @@ namespace PCPOS
             }
             Sifarnik.frmAddPartners f = new Sifarnik.frmAddPartners();
             f.MdiParent = MainForm;
-            f.Dock = DockStyle.Fill;
             f.MainFormMenu = MainForm;
+            f.Dock = DockStyle.Fill;
+            
             f.Show();
         }
 
@@ -639,8 +645,9 @@ namespace PCPOS
             }
             frmOtpremnica f = new frmOtpremnica();
             f.MdiParent = MainForm;
-            f.Dock = DockStyle.Fill;
             f.MainForm = MainForm;
+            f.Dock = DockStyle.Fill;
+            
             f.Show();
         }
 

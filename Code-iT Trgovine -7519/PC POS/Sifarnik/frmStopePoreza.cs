@@ -18,14 +18,11 @@ namespace PCPOS.Sifarnik
         private void frmSkladista_Load(object sender, EventArgs e)
         {
             SetDgv();
-            this.Paint += new PaintEventHandler(Form1_Paint);
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), Color.AliceBlue, Color.LightSlateGray, 250);
-            c.FillRectangle(bG, 0, 0, Width, Height);
+        
         }
 
         private void SetDgv()
@@ -121,6 +118,11 @@ dgvSk.Rows[e.RowIndex].Cells["id_porez"].FormattedValue.ToString());
         private void frmStopePoreza_FormClosing(object sender, FormClosingEventArgs e)
         {
             btnNovo.Select();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

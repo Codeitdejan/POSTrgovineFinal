@@ -32,20 +32,20 @@
             this.cbgrupe = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtpodgrupa = new System.Windows.Forms.TextBox();
-            this.btnobrisi = new System.Windows.Forms.Button();
             this.id_podgrupa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Grupa = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtpodgrupa = new System.Windows.Forms.TextBox();
+            this.btnobrisi = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDodaj
             // 
-            this.btnDodaj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnDodaj.Location = new System.Drawing.Point(347, 8);
+            this.btnDodaj.Location = new System.Drawing.Point(305, 11);
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(128, 32);
             this.btnDodaj.TabIndex = 4;
@@ -90,13 +90,31 @@
             this.Grupa});
             this.dgv.Enabled = false;
             this.dgv.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.dgv.Location = new System.Drawing.Point(12, 97);
+            this.dgv.Location = new System.Drawing.Point(12, 159);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersVisible = false;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(507, 244);
+            this.dgv.Size = new System.Drawing.Size(1201, 458);
             this.dgv.TabIndex = 5;
             this.dgv.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellEndEdit);
+            // 
+            // id_podgrupa
+            // 
+            this.id_podgrupa.HeaderText = "ID";
+            this.id_podgrupa.Name = "id_podgrupa";
+            this.id_podgrupa.ReadOnly = true;
+            // 
+            // naziv
+            // 
+            this.naziv.HeaderText = "Ime podgrupe";
+            this.naziv.Name = "naziv";
+            // 
+            // Grupa
+            // 
+            this.Grupa.HeaderText = "Grupa";
+            this.Grupa.Name = "Grupa";
+            this.Grupa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grupa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // label2
             // 
@@ -118,9 +136,8 @@
             // 
             // btnobrisi
             // 
-            this.btnobrisi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnobrisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnobrisi.Location = new System.Drawing.Point(347, 56);
+            this.btnobrisi.Location = new System.Drawing.Point(305, 57);
             this.btnobrisi.Name = "btnobrisi";
             this.btnobrisi.Size = new System.Drawing.Size(128, 32);
             this.btnobrisi.TabIndex = 10;
@@ -128,29 +145,29 @@
             this.btnobrisi.UseVisualStyleBackColor = true;
             this.btnobrisi.Click += new System.EventHandler(this.btnobrisi_Click);
             // 
-            // id_podgrupa
+            // button1
             // 
-            this.id_podgrupa.HeaderText = "ID";
-            this.id_podgrupa.Name = "id_podgrupa";
-            this.id_podgrupa.ReadOnly = true;
-            // 
-            // naziv
-            // 
-            this.naziv.HeaderText = "Ime podgrupe";
-            this.naziv.Name = "naziv";
-            // 
-            // Grupa
-            // 
-            this.Grupa.HeaderText = "Grupa";
-            this.Grupa.Name = "Grupa";
-            this.Grupa.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grupa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(1262, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmPodGrupe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 353);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(1404, 629);
+            this.ControlBox = false;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnobrisi);
             this.Controls.Add(this.txtpodgrupa);
             this.Controls.Add(this.label2);
@@ -158,6 +175,9 @@
             this.Controls.Add(this.cbgrupe);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.btnDodaj);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPodGrupe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pod grupe";
@@ -181,5 +201,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id_podgrupa;
         private System.Windows.Forms.DataGridViewTextBoxColumn naziv;
         private System.Windows.Forms.DataGridViewComboBoxColumn Grupa;
+        private System.Windows.Forms.Button button1;
     }
 }

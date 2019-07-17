@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.dgvSk = new System.Windows.Forms.DataGridView();
+            this.skladiste = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drzava = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aktivnost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.glavno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_grad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_drzava = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_skladiste = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSkladiste = new System.Windows.Forms.TextBox();
             this.cbGrad = new System.Windows.Forms.ComboBox();
@@ -41,14 +49,7 @@
             this.chbAktivnost = new System.Windows.Forms.CheckBox();
             this.btnOdustani = new System.Windows.Forms.Button();
             this.chbGlavno = new System.Windows.Forms.CheckBox();
-            this.skladiste = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.drzava = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aktivnost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.glavno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_grad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_drzava = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_skladiste = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSk)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,9 +77,68 @@
             this.dgvSk.Name = "dgvSk";
             this.dgvSk.ReadOnly = true;
             this.dgvSk.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSk.Size = new System.Drawing.Size(610, 266);
+            this.dgvSk.Size = new System.Drawing.Size(1119, 433);
             this.dgvSk.TabIndex = 0;
             this.dgvSk.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSk_CellClick);
+            // 
+            // skladiste
+            // 
+            this.skladiste.DataPropertyName = "skladiste";
+            this.skladiste.HeaderText = "Skladište";
+            this.skladiste.Name = "skladiste";
+            this.skladiste.ReadOnly = true;
+            // 
+            // grad
+            // 
+            this.grad.DataPropertyName = "grad";
+            this.grad.HeaderText = "Grad";
+            this.grad.Name = "grad";
+            this.grad.ReadOnly = true;
+            // 
+            // drzava
+            // 
+            this.drzava.DataPropertyName = "drzava";
+            this.drzava.HeaderText = "Država";
+            this.drzava.Name = "drzava";
+            this.drzava.ReadOnly = true;
+            // 
+            // aktivnost
+            // 
+            this.aktivnost.DataPropertyName = "aktivnost";
+            this.aktivnost.HeaderText = "Aktivnost";
+            this.aktivnost.Name = "aktivnost";
+            this.aktivnost.ReadOnly = true;
+            // 
+            // glavno
+            // 
+            this.glavno.DataPropertyName = "glavno";
+            this.glavno.HeaderText = "Glavno";
+            this.glavno.Name = "glavno";
+            this.glavno.ReadOnly = true;
+            // 
+            // id_grad
+            // 
+            this.id_grad.DataPropertyName = "id_grad";
+            this.id_grad.HeaderText = "id_grad";
+            this.id_grad.Name = "id_grad";
+            this.id_grad.ReadOnly = true;
+            this.id_grad.Visible = false;
+            // 
+            // id_drzava
+            // 
+            this.id_drzava.DataPropertyName = "id_drzava";
+            this.id_drzava.HeaderText = "id_drzava";
+            this.id_drzava.Name = "id_drzava";
+            this.id_drzava.ReadOnly = true;
+            this.id_drzava.Visible = false;
+            // 
+            // id_skladiste
+            // 
+            this.id_skladiste.DataPropertyName = "id_skladiste";
+            this.id_skladiste.HeaderText = "id_skladiste";
+            this.id_skladiste.Name = "id_skladiste";
+            this.id_skladiste.ReadOnly = true;
+            this.id_skladiste.Visible = false;
             // 
             // label1
             // 
@@ -204,70 +264,28 @@
             this.chbGlavno.Text = "Glavno:";
             this.chbGlavno.UseVisualStyleBackColor = false;
             // 
-            // skladiste
+            // button1
             // 
-            this.skladiste.DataPropertyName = "skladiste";
-            this.skladiste.HeaderText = "Skladište";
-            this.skladiste.Name = "skladiste";
-            this.skladiste.ReadOnly = true;
-            // 
-            // grad
-            // 
-            this.grad.DataPropertyName = "grad";
-            this.grad.HeaderText = "Grad";
-            this.grad.Name = "grad";
-            this.grad.ReadOnly = true;
-            // 
-            // drzava
-            // 
-            this.drzava.DataPropertyName = "drzava";
-            this.drzava.HeaderText = "Država";
-            this.drzava.Name = "drzava";
-            this.drzava.ReadOnly = true;
-            // 
-            // aktivnost
-            // 
-            this.aktivnost.DataPropertyName = "aktivnost";
-            this.aktivnost.HeaderText = "Aktivnost";
-            this.aktivnost.Name = "aktivnost";
-            this.aktivnost.ReadOnly = true;
-            // 
-            // glavno
-            // 
-            this.glavno.DataPropertyName = "glavno";
-            this.glavno.HeaderText = "Glavno";
-            this.glavno.Name = "glavno";
-            this.glavno.ReadOnly = true;
-            // 
-            // id_grad
-            // 
-            this.id_grad.DataPropertyName = "id_grad";
-            this.id_grad.HeaderText = "id_grad";
-            this.id_grad.Name = "id_grad";
-            this.id_grad.ReadOnly = true;
-            this.id_grad.Visible = false;
-            // 
-            // id_drzava
-            // 
-            this.id_drzava.DataPropertyName = "id_drzava";
-            this.id_drzava.HeaderText = "id_drzava";
-            this.id_drzava.Name = "id_drzava";
-            this.id_drzava.ReadOnly = true;
-            this.id_drzava.Visible = false;
-            // 
-            // id_skladiste
-            // 
-            this.id_skladiste.DataPropertyName = "id_skladiste";
-            this.id_skladiste.HeaderText = "id_skladiste";
-            this.id_skladiste.Name = "id_skladiste";
-            this.id_skladiste.ReadOnly = true;
-            this.id_skladiste.Visible = false;
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(1001, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmSkladista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 422);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(1143, 589);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.chbGlavno);
             this.Controls.Add(this.chbAktivnost);
             this.Controls.Add(this.btnNovo);
@@ -281,6 +299,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvSk);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmSkladista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Skladišta";
@@ -315,5 +336,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id_grad;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_drzava;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_skladiste;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -35,6 +35,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.broj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orginalni_dokumenat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dobavljac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.skladiste = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ukupno_vpc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ukupno_mpc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fakturni_iznos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.placeno = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.id_skladiste = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ID = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.id_partner = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.chbDO = new System.Windows.Forms.CheckBox();
@@ -69,18 +81,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnUrediSifru = new System.Windows.Forms.Button();
             this.btnSveFakture = new System.Windows.Forms.Button();
-            this.broj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orginalni_dokumenat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dobavljac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.skladiste = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ukupno_vpc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ukupno_mpc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fakturni_iznos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placeno = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.id_skladiste = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ID = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.id_partner = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -130,6 +130,87 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // broj
+            // 
+            this.broj.HeaderText = "Broj";
+            this.broj.Name = "broj";
+            this.broj.ReadOnly = true;
+            // 
+            // orginalni_dokumenat
+            // 
+            this.orginalni_dokumenat.HeaderText = "Org.Doc";
+            this.orginalni_dokumenat.Name = "orginalni_dokumenat";
+            this.orginalni_dokumenat.ReadOnly = true;
+            // 
+            // dobavljac
+            // 
+            this.dobavljac.HeaderText = "Dobavljač";
+            this.dobavljac.Name = "dobavljac";
+            this.dobavljac.ReadOnly = true;
+            // 
+            // skladiste
+            // 
+            this.skladiste.HeaderText = "Skladište";
+            this.skladiste.Name = "skladiste";
+            this.skladiste.ReadOnly = true;
+            // 
+            // datum
+            // 
+            this.datum.HeaderText = "Datum";
+            this.datum.Name = "datum";
+            this.datum.ReadOnly = true;
+            // 
+            // ukupno_vpc
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ukupno_vpc.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ukupno_vpc.HeaderText = "Ukupno VPC";
+            this.ukupno_vpc.Name = "ukupno_vpc";
+            this.ukupno_vpc.ReadOnly = true;
+            // 
+            // ukupno_mpc
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ukupno_mpc.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ukupno_mpc.HeaderText = "Ukupno MPC";
+            this.ukupno_mpc.Name = "ukupno_mpc";
+            this.ukupno_mpc.ReadOnly = true;
+            // 
+            // fakturni_iznos
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.fakturni_iznos.DefaultCellStyle = dataGridViewCellStyle4;
+            this.fakturni_iznos.HeaderText = "Fakturni iznos";
+            this.fakturni_iznos.Name = "fakturni_iznos";
+            this.fakturni_iznos.ReadOnly = true;
+            // 
+            // placeno
+            // 
+            this.placeno.HeaderText = "Plačeno";
+            this.placeno.Name = "placeno";
+            this.placeno.ReadOnly = true;
+            // 
+            // id_skladiste
+            // 
+            this.id_skladiste.HeaderText = "id_skladiste";
+            this.id_skladiste.Name = "id_skladiste";
+            this.id_skladiste.ReadOnly = true;
+            this.id_skladiste.Visible = false;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // id_partner
+            // 
+            this.id_partner.HeaderText = "id_partner";
+            this.id_partner.Name = "id_partner";
+            this.id_partner.ReadOnly = true;
+            this.id_partner.Visible = false;
             // 
             // groupBox1
             // 
@@ -489,97 +570,21 @@
             this.btnSveFakture.UseVisualStyleBackColor = true;
             this.btnSveFakture.Click += new System.EventHandler(this.btnSveFakture_Click);
             // 
-            // broj
-            // 
-            this.broj.HeaderText = "Broj";
-            this.broj.Name = "broj";
-            this.broj.ReadOnly = true;
-            // 
-            // orginalni_dokumenat
-            // 
-            this.orginalni_dokumenat.HeaderText = "Org.Doc";
-            this.orginalni_dokumenat.Name = "orginalni_dokumenat";
-            this.orginalni_dokumenat.ReadOnly = true;
-            // 
-            // dobavljac
-            // 
-            this.dobavljac.HeaderText = "Dobavljač";
-            this.dobavljac.Name = "dobavljac";
-            this.dobavljac.ReadOnly = true;
-            // 
-            // skladiste
-            // 
-            this.skladiste.HeaderText = "Skladište";
-            this.skladiste.Name = "skladiste";
-            this.skladiste.ReadOnly = true;
-            // 
-            // datum
-            // 
-            this.datum.HeaderText = "Datum";
-            this.datum.Name = "datum";
-            this.datum.ReadOnly = true;
-            // 
-            // ukupno_vpc
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ukupno_vpc.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ukupno_vpc.HeaderText = "Ukupno VPC";
-            this.ukupno_vpc.Name = "ukupno_vpc";
-            this.ukupno_vpc.ReadOnly = true;
-            // 
-            // ukupno_mpc
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ukupno_mpc.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ukupno_mpc.HeaderText = "Ukupno MPC";
-            this.ukupno_mpc.Name = "ukupno_mpc";
-            this.ukupno_mpc.ReadOnly = true;
-            // 
-            // fakturni_iznos
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.fakturni_iznos.DefaultCellStyle = dataGridViewCellStyle4;
-            this.fakturni_iznos.HeaderText = "Fakturni iznos";
-            this.fakturni_iznos.Name = "fakturni_iznos";
-            this.fakturni_iznos.ReadOnly = true;
-            // 
-            // placeno
-            // 
-            this.placeno.HeaderText = "Plačeno";
-            this.placeno.Name = "placeno";
-            this.placeno.ReadOnly = true;
-            // 
-            // id_skladiste
-            // 
-            this.id_skladiste.HeaderText = "id_skladiste";
-            this.id_skladiste.Name = "id_skladiste";
-            this.id_skladiste.ReadOnly = true;
-            this.id_skladiste.Visible = false;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // id_partner
-            // 
-            this.id_partner.HeaderText = "id_partner";
-            this.id_partner.Name = "id_partner";
-            this.id_partner.ReadOnly = true;
-            this.id_partner.Visible = false;
-            // 
             // frmPopisKalkulacija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1004, 599);
+            this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnUrediSifru);
             this.Controls.Add(this.btnSveFakture);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPopisKalkulacija";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kalkulacije";
