@@ -2876,5 +2876,17 @@ namespace PCPOS
             FrmAgencije form = new FrmAgencije();
             form.Show();
         }
+
+        private void deklaracijeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Util.classZaposleniciDopustenja.provjeraZaposlenika(3))
+            {
+                MessageBox.Show("Nemate potrebno ovlaštenje za pristup stavci");
+                return;
+            }
+
+            Report.Naljepnice.Deklaracije izn = new Report.Naljepnice.Deklaracije();
+            izn.ShowDialog();
+        }
     }
 }

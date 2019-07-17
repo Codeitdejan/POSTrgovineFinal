@@ -9975,3 +9975,4 @@ C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x
 C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PC POS.csproj.CopyComplete
 C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PC POS.exe
 C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PC POS.pdb
+C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PCPOS.Report.Naljepnice.Deklaracije.resources
