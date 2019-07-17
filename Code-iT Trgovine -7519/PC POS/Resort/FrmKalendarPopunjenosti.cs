@@ -316,5 +316,76 @@ namespace PCPOS.Resort
             Close();
         }
 
+        private void dataGridView_MouseUp(object sender, MouseEventArgs e)
+        {
+            //Broj označenih čelija
+            int selectedCellCount = dataGridView.GetCellCount(DataGridViewElementStates.Selected);
+
+            if (UserSelectedMultipleRows(ref dataGridView, selectedCellCount))
+                return;
+
+            if (UserSelectedRowHeader(ref dataGridView, selectedCellCount))
+                return;
+
+            int [] days = Days(ref dataGridView, selectedCellCount);
+            int firstDay = days[0];
+            int lastDay = days[1];
+            
+            //OTVORITI FORMU UNOS REZERVACIJE S PARAMETRIMA O KOJOJ SOBI SE RADI, PRVI DAN, POSLJEDNJI DAN, MJESEC, GODINA
+
+        }
+
+        //Provjera ako je korisnik označio više od 1 reda
+        //To se ne smije dopustiti, zbog toga što je moguće napraviti jednu rezervaciju za jednu sobu u jednom trenutku
+        private bool UserSelectedMultipleRows(ref DataGridView dataGridView, int selectedCellCount)
+        {
+            
+            int firstCellRowNumber = dataGridView.SelectedCells[0].RowIndex;
+            bool oneRowSelected = true;
+            for (int i = 1; oneRowSelected && i < selectedCellCount; i++)
+            {
+                if (dataGridView.SelectedCells[i].RowIndex != firstCellRowNumber)
+                    oneRowSelected = false;
+            }
+            if (!oneRowSelected)
+            {
+                MessageBox.Show("Možete odabrati samo 1 sobu (red).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return !oneRowSelected;
+        }
+
+        //Provjera ako je korisnik označio ROW header
+        private bool UserSelectedRowHeader(ref DataGridView dataGridView, int selectedCellCount)
+        {
+            for (int i = 0; i < selectedCellCount; i++)
+            {
+                if (dataGridView.SelectedCells[i].ColumnIndex == 0)
+                {
+                    MessageBox.Show("Krivi odabir. Ne možete odabrati zaglavlje redka / stupca.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        //Odabiremo prvi i posljednji označeni dan
+        //Ovisno je li korisnik označavao s lijeva na desno ili s desna na lijevo, potrebno je posložiti first day i last day
+        private int[] Days(ref DataGridView dataGridView, int selectedCellCount)
+        {
+            int[] days = new int[2];
+            int firstDay = dataGridView.SelectedCells[0].ColumnIndex;
+            int lastDay = dataGridView.SelectedCells[selectedCellCount - 1].ColumnIndex;
+            if (firstDay > lastDay)
+            {
+                int switchVariable = firstDay;
+                firstDay = lastDay;
+                lastDay = switchVariable;
+            }
+            days[0] = firstDay;
+            days[1] = lastDay;
+
+            return days;
+        }
     }
 }
