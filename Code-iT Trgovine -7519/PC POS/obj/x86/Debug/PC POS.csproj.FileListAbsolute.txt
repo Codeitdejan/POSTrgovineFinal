@@ -9978,7 +9978,6 @@ C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x
 <<<<<<< HEAD
 C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PCPOS.Report.Naljepnice.Deklaracije.resources
 =======
-<<<<<<< HEAD
 C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -10412,7 +10411,6 @@ C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\ob
 C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PC POS.csproj.CopyComplete
 C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PC POS.exe
 C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PC POS.pdb
-=======
 D:\Projects\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 D:\Projects\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 D:\Projects\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\bin\Debug\SqlServerTypes\x86\msvcr120.dll

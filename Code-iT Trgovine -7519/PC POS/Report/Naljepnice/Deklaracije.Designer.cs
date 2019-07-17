@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Deklaracije));
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.DTRobaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSDeklaracije = new PCPOS.Report.Naljepnice.DSDeklaracije();
             this.txtOstalo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtProizvodac = new System.Windows.Forms.TextBox();
@@ -53,27 +55,37 @@
             this.btnPartner = new System.Windows.Forms.PictureBox();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dSDeklaracije = new PCPOS.Report.Naljepnice.DSDeklaracije();
-            this.DTRobaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.DTRobaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSDeklaracije)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPartner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSDeklaracije)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DTRobaBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // DTRobaBindingSource
+            // 
+            this.DTRobaBindingSource.DataMember = "DTRoba";
+            this.DTRobaBindingSource.DataSource = this.dSDeklaracije;
+            // 
+            // dSDeklaracije
+            // 
+            this.dSDeklaracije.DataSetName = "DSDeklaracije";
+            this.dSDeklaracije.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtOstalo
             // 
-            this.txtOstalo.Location = new System.Drawing.Point(598, 44);
-            this.txtOstalo.MaxLength = 200;
+            this.txtOstalo.Location = new System.Drawing.Point(81, 326);
+            this.txtOstalo.MaxLength = 60;
             this.txtOstalo.Multiline = true;
             this.txtOstalo.Name = "txtOstalo";
-            this.txtOstalo.Size = new System.Drawing.Size(245, 66);
+            this.txtOstalo.Size = new System.Drawing.Size(218, 88);
             this.txtOstalo.TabIndex = 604;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(595, 24);
+            this.label2.Location = new System.Drawing.Point(20, 329);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 17);
             this.label2.TabIndex = 603;
@@ -81,7 +93,7 @@
             // 
             // txtProizvodac
             // 
-            this.txtProizvodac.Location = new System.Drawing.Point(103, 88);
+            this.txtProizvodac.Location = new System.Drawing.Point(106, 186);
             this.txtProizvodac.Margin = new System.Windows.Forms.Padding(4);
             this.txtProizvodac.MaxLength = 30;
             this.txtProizvodac.Name = "txtProizvodac";
@@ -91,7 +103,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(17, 90);
+            this.label14.Location = new System.Drawing.Point(20, 189);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(82, 17);
@@ -100,17 +112,17 @@
             // 
             // txtZapocniOdBroja
             // 
-            this.txtZapocniOdBroja.Location = new System.Drawing.Point(978, 47);
+            this.txtZapocniOdBroja.Location = new System.Drawing.Point(148, 462);
             this.txtZapocniOdBroja.Margin = new System.Windows.Forms.Padding(4);
             this.txtZapocniOdBroja.Name = "txtZapocniOdBroja";
-            this.txtZapocniOdBroja.Size = new System.Drawing.Size(76, 22);
+            this.txtZapocniOdBroja.Size = new System.Drawing.Size(151, 22);
             this.txtZapocniOdBroja.TabIndex = 591;
             this.txtZapocniOdBroja.Text = "1";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(850, 50);
+            this.label13.Location = new System.Drawing.Point(20, 462);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(119, 17);
@@ -119,10 +131,10 @@
             // 
             // btnKreiraj
             // 
-            this.btnKreiraj.Location = new System.Drawing.Point(853, 73);
+            this.btnKreiraj.Location = new System.Drawing.Point(23, 497);
             this.btnKreiraj.Margin = new System.Windows.Forms.Padding(4);
             this.btnKreiraj.Name = "btnKreiraj";
-            this.btnKreiraj.Size = new System.Drawing.Size(201, 37);
+            this.btnKreiraj.Size = new System.Drawing.Size(276, 37);
             this.btnKreiraj.TabIndex = 592;
             this.btnKreiraj.Text = "Kreiraj";
             this.btnKreiraj.UseVisualStyleBackColor = true;
@@ -130,17 +142,17 @@
             // 
             // txtBrojNaljepnica
             // 
-            this.txtBrojNaljepnica.Location = new System.Drawing.Point(978, 17);
+            this.txtBrojNaljepnica.Location = new System.Drawing.Point(148, 427);
             this.txtBrojNaljepnica.Margin = new System.Windows.Forms.Padding(4);
             this.txtBrojNaljepnica.Name = "txtBrojNaljepnica";
-            this.txtBrojNaljepnica.Size = new System.Drawing.Size(76, 22);
+            this.txtBrojNaljepnica.Size = new System.Drawing.Size(151, 22);
             this.txtBrojNaljepnica.TabIndex = 590;
             this.txtBrojNaljepnica.Text = "10";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(850, 20);
+            this.label12.Location = new System.Drawing.Point(20, 432);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(105, 17);
@@ -149,17 +161,17 @@
             // 
             // txtZemlja
             // 
-            this.txtZemlja.Location = new System.Drawing.Point(431, 88);
+            this.txtZemlja.Location = new System.Drawing.Point(137, 291);
             this.txtZemlja.Margin = new System.Windows.Forms.Padding(4);
-            this.txtZemlja.MaxLength = 30;
+            this.txtZemlja.MaxLength = 26;
             this.txtZemlja.Name = "txtZemlja";
-            this.txtZemlja.Size = new System.Drawing.Size(157, 22);
+            this.txtZemlja.Size = new System.Drawing.Size(162, 22);
             this.txtZemlja.TabIndex = 589;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(314, 90);
+            this.label10.Location = new System.Drawing.Point(20, 294);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(116, 17);
@@ -168,17 +180,17 @@
             // 
             // txtUvoznik
             // 
-            this.txtUvoznik.Location = new System.Drawing.Point(380, 54);
+            this.txtUvoznik.Location = new System.Drawing.Point(86, 256);
             this.txtUvoznik.Margin = new System.Windows.Forms.Padding(4);
             this.txtUvoznik.MaxLength = 30;
             this.txtUvoznik.Name = "txtUvoznik";
-            this.txtUvoznik.Size = new System.Drawing.Size(208, 22);
+            this.txtUvoznik.Size = new System.Drawing.Size(213, 22);
             this.txtUvoznik.TabIndex = 588;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(314, 57);
+            this.label8.Location = new System.Drawing.Point(20, 259);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 17);
@@ -187,17 +199,17 @@
             // 
             // txtIzvoznik
             // 
-            this.txtIzvoznik.Location = new System.Drawing.Point(380, 21);
+            this.txtIzvoznik.Location = new System.Drawing.Point(86, 221);
             this.txtIzvoznik.Margin = new System.Windows.Forms.Padding(4);
             this.txtIzvoznik.MaxLength = 30;
             this.txtIzvoznik.Name = "txtIzvoznik";
-            this.txtIzvoznik.Size = new System.Drawing.Size(208, 22);
+            this.txtIzvoznik.Size = new System.Drawing.Size(213, 22);
             this.txtIzvoznik.TabIndex = 587;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(314, 24);
+            this.label6.Location = new System.Drawing.Point(20, 224);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 17);
@@ -206,7 +218,7 @@
             // 
             // txtSifra
             // 
-            this.txtSifra.Location = new System.Drawing.Point(78, 19);
+            this.txtSifra.Location = new System.Drawing.Point(81, 116);
             this.txtSifra.Margin = new System.Windows.Forms.Padding(4);
             this.txtSifra.MaxLength = 25;
             this.txtSifra.Name = "txtSifra";
@@ -217,7 +229,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 22);
+            this.label4.Location = new System.Drawing.Point(20, 119);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 17);
@@ -226,7 +238,7 @@
             // 
             // txtNaslov
             // 
-            this.txtNaslov.Location = new System.Drawing.Point(78, 54);
+            this.txtNaslov.Location = new System.Drawing.Point(81, 151);
             this.txtNaslov.Margin = new System.Windows.Forms.Padding(4);
             this.txtNaslov.MaxLength = 30;
             this.txtNaslov.Name = "txtNaslov";
@@ -237,7 +249,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 56);
+            this.label1.Location = new System.Drawing.Point(20, 154);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 17);
@@ -249,7 +261,7 @@
             this.btnPartner.BackColor = System.Drawing.Color.Transparent;
             this.btnPartner.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPartner.Image = ((System.Drawing.Image)(resources.GetObject("btnPartner.Image")));
-            this.btnPartner.Location = new System.Drawing.Point(255, 14);
+            this.btnPartner.Location = new System.Drawing.Point(258, 110);
             this.btnPartner.Margin = new System.Windows.Forms.Padding(4);
             this.btnPartner.Name = "btnPartner";
             this.btnPartner.Size = new System.Drawing.Size(41, 34);
@@ -264,9 +276,9 @@
             reportDataSource1.Value = this.DTRobaBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PCPOS.Report.Naljepnice.Deklaracije.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(40, 132);
+            this.reportViewer1.Location = new System.Drawing.Point(316, 116);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(1001, 784);
+            this.reportViewer1.Size = new System.Drawing.Size(1049, 776);
             this.reportViewer1.TabIndex = 605;
             // 
             // bindingSource1
@@ -274,22 +286,33 @@
             this.bindingSource1.DataMember = "DTRoba";
             this.bindingSource1.DataSource = this.dSDeklaracije;
             // 
-            // dSDeklaracije
+            // label3
             // 
-            this.dSDeklaracije.DataSetName = "DSDeklaracije";
-            this.dSDeklaracije.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(703, 96);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(211, 17);
+            this.label3.TabIndex = 606;
+            this.label3.Text = "Print na etikete 70x37mm (T-46)";
             // 
-            // DTRobaBindingSource
+            // label5
             // 
-            this.DTRobaBindingSource.DataMember = "DTRoba";
-            this.DTRobaBindingSource.DataSource = this.dSDeklaracije;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.Location = new System.Drawing.Point(581, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(220, 44);
+            this.label5.TabIndex = 607;
+            this.label5.Text = "Deklaracije";
             // 
             // Deklaracije
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(1077, 942);
+            this.ClientSize = new System.Drawing.Size(1407, 798);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.txtOstalo);
             this.Controls.Add(this.label2);
@@ -311,16 +334,17 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNaslov);
             this.Controls.Add(this.label1);
-            this.MaximumSize = new System.Drawing.Size(1095, 989);
-            this.MinimumSize = new System.Drawing.Size(1095, 989);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Deklaracije";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Deklaracije";
             this.Load += new System.EventHandler(this.Deklaracije_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DTRobaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSDeklaracije)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPartner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSDeklaracije)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DTRobaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,5 +376,7 @@
         private System.Windows.Forms.BindingSource bindingSource1;
         private DSDeklaracije dSDeklaracije;
         private System.Windows.Forms.BindingSource DTRobaBindingSource;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
     }
 }
