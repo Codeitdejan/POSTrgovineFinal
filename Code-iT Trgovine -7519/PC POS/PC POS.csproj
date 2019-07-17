@@ -861,6 +861,17 @@
     <Compile Include="Report\Liste\frmListeMeduskladisnicaPC.Designer.cs">
       <DependentUpon>frmListeMeduskladisnicaPC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\Naljepnice\Deklaracije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\Naljepnice\Deklaracije.Designer.cs">
+      <DependentUpon>Deklaracije.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Naljepnice\DSDeklaracije.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSDeklaracije.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Report\PopisGostiju\dsPopisGostiju.cs">
       <DependentUpon>dsPopisGostiju.xsd</DependentUpon>
     </Compile>
@@ -2735,6 +2746,10 @@
     <EmbeddedResource Include="Report\Liste\ListeMeduskladisnicaPC.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\Naljepnice\Deklaracije.rdlc" />
+    <EmbeddedResource Include="Report\Naljepnice\Deklaracije.resx">
+      <DependentUpon>Deklaracije.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\PopisGostiju\FrmPopisGostijuReport.resx">
       <DependentUpon>FrmPopisGostijuReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -2763,7 +2778,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report\KnjiznoOdobrenje\repKnjiznoOdobrenje.rdlc" />
     <EmbeddedResource Include="Report\Naljepnice\NaljepniceServisEan.rdlc" />
-    <EmbeddedResource Include="Report\Naljepnice\NaljepniceEan.rdlc" />
+    <EmbeddedResource Include="Report\Naljepnice\NaljepniceEan.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\Naljepnice\NaljepniceEan.resx">
       <DependentUpon>NaljepniceEan.cs</DependentUpon>
     </EmbeddedResource>
@@ -3810,6 +3827,17 @@
     <EmbeddedResource Include="Report\Faktura_njem\Report2.rdlc">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <None Include="Report\Naljepnice\DSDeklaracije.xsc">
+      <DependentUpon>DSDeklaracije.xsd</DependentUpon>
+    </None>
+    <None Include="Report\Naljepnice\DSDeklaracije.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSDeklaracije.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\Naljepnice\DSDeklaracije.xss">
+      <DependentUpon>DSDeklaracije.xsd</DependentUpon>
+    </None>
     <None Include="Report\PopisGostiju\dsPopisGostiju.xsc">
       <DependentUpon>dsPopisGostiju.xsd</DependentUpon>
     </None>
