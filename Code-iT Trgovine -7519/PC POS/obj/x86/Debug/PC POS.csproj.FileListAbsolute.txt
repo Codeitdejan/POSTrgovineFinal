@@ -9976,6 +9976,9 @@ C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x
 C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PC POS.exe
 C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PC POS.pdb
 <<<<<<< HEAD
+C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PCPOS.Report.Naljepnice.Deklaracije.resources
+=======
+<<<<<<< HEAD
 C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -10858,3 +10861,4 @@ D:\Projects\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\yo-NG\P
 D:\Projects\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PC POS.exe
 D:\Projects\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PC POS.pdb
 >>>>>>> 09b3a4c98bc263fbde9a5fe9fbfab7e8ae11e4d2
+>>>>>>> ea8fe83288268841a829647b641f16b31cfa38d5
