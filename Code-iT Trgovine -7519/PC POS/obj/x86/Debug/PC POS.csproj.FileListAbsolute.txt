@@ -10860,4 +10860,8 @@ D:\Projects\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PC POS.
 D:\Projects\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PC POS.pdb
 >>>>>>> 09b3a4c98bc263fbde9a5fe9fbfab7e8ae11e4d2
 >>>>>>> ea8fe83288268841a829647b641f16b31cfa38d5
+<<<<<<< HEAD
 C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PCPOS.Report.Naljepnice.Deklaracije.resources
+=======
+C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PCPOS.Report.Naljepnice.Deklaracije.resources
+>>>>>>> 979e4b42b878568f969accc61ce595366ddfefeb

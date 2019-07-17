@@ -2987,7 +2987,9 @@ namespace PCPOS
             }
 
             Report.Naljepnice.Deklaracije izn = new Report.Naljepnice.Deklaracije();
-            izn.ShowDialog();
+            izn.MdiParent = this;
+            izn.Dock = DockStyle.Fill;
+            izn.Show();
         }
 
         private void gradoviToolStripMenuItem_Click(object sender, EventArgs e)

@@ -87,6 +87,7 @@
             this.dataGridView.Size = new System.Drawing.Size(821, 288);
             this.dataGridView.TabIndex = 0;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_CellClick);
+            this.dataGridView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dataGridView_MouseUp);
             // 
             // btnPreviousMonth
             // 

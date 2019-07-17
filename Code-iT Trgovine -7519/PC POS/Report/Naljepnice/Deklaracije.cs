@@ -41,15 +41,21 @@ namespace PCPOS.Report.Naljepnice
         {
             try
             {
-                /* 
-                if (File.Exists("Naljepnice"))
+                
+                if (File.Exists("Deklaracije"))
                 {
-                    string[] podaci = File.ReadAllLines("Naljepnice");
+                    string[] podaci = File.ReadAllLines("Deklaracije");
                     txtSifra.Text = podaci[0];
                     txtNaslov.Text = podaci[1];
-                    txtBrojNaljepnica.Text = podaci[5];
-                    txtZapocniOdBroja.Text = podaci[6];
-                }*/
+                    txtProizvodac.Text = podaci[2];
+                    txtIzvoznik.Text = podaci[3];
+                    txtUvoznik.Text = podaci[4];
+                    txtZemlja.Text = podaci[5];
+                    txtOstalo.Text = podaci[6];
+                    txtBrojNaljepnica.Text = podaci[7];
+                    txtZapocniOdBroja.Text = podaci[8];
+                }
+
             }
             catch (Exception ex)
             {
@@ -95,34 +101,46 @@ namespace PCPOS.Report.Naljepnice
 
 
                     DataRow r = DTlista.NewRow();
-                    r["sifra"] = _1 ? txtSifra.Text : "";
-                    r["naziv_robe"] = _1 ? txtNaslov.Text : "";
-                    r["proizvodac"] = _1 ? txtProizvodac.Text : "";
-                    r["izvoznik"] = _1 ? txtIzvoznik.Text : "";
-                    r["uvoznik"] = _1 ? txtUvoznik.Text : "";
-                    r["zemlja_podrijetla"] = _1 ? txtZemlja.Text : "";
-                    r["ostalo"] = _1 ? txtOstalo.Text : "";
+                    r["sifra"] = _1 ? "ŠIFRA: " + txtSifra.Text : "";
+                    r["naziv_robe"] = _1 ? "NAZIV ROBE: " + txtNaslov.Text : "";
+                    r["proizvodac"] = _1 ? "PROIZVOĐAČ: " + txtProizvodac.Text : "";
+                    r["izvoznik"] = _1 ? "IZVOZNIK: " + txtIzvoznik.Text : "";
+                    r["uvoznik"] = _1 ? "UVOZNIK: " + txtUvoznik.Text : "";
+                    r["zemlja_podrijetla"] = _1 ? "ZEMLJA PODRIJETLA: " + txtZemlja.Text : "";
+                    r["ostalo"] = _1 ? "OSTALO: " + txtOstalo.Text : "";
                     
-                    r["sifra1"] = _2 ? txtSifra.Text : "";
-                    r["naziv_robe1"] = _2 ? txtNaslov.Text : "";
-                    r["proizvodac1"] = _2 ? txtProizvodac.Text : "";
-                    r["izvoznik1"] = _2 ? txtIzvoznik.Text : "";
-                    r["uvoznik1"] = _2 ? txtUvoznik.Text : "";
-                    r["zamlja_podrijetla1"] = _2 ? txtZemlja.Text : "";
-                    r["ostalo1"] = _2 ? txtOstalo.Text : "";
+                    r["sifra1"] = _2 ? "ŠIFRA: " + txtSifra.Text : "";
+                    r["naziv_robe1"] = _2 ? "NAZIV ROBE: " + txtNaslov.Text : "";
+                    r["proizvodac1"] = _2 ? "PROIZVOĐAČ: " + txtProizvodac.Text : "";
+                    r["izvoznik1"] = _2 ? "IZVOZNIK: " + txtIzvoznik.Text : "";
+                    r["uvoznik1"] = _2 ? "UVOZNIK: " + txtUvoznik.Text : "";
+                    r["zamlja_podrijetla1"] = _2 ? "ZEMLJA PODRIJETLA: " + txtZemlja.Text : "";
+                    r["ostalo1"] = _2 ? "OSTALO: " + txtOstalo.Text : "";
 
-                    r["sifra2"] = _3 ? txtSifra.Text : "";
-                    r["naziv_robe2"] = _3 ? txtNaslov.Text : "";
-                    r["proizvodac2"] = _3 ? txtProizvodac.Text : "";
-                    r["izvoznik2"] = _3 ? txtIzvoznik.Text : "";
-                    r["uvoznik2"] = _3 ? txtUvoznik.Text : "";
-                    r["zamlja_podrijetla2"] = _3 ? txtZemlja.Text : "";
-                    r["ostalo2"] = _3 ? txtOstalo.Text : "";
+                    r["sifra2"] = _3 ? "ŠIFRA: " + txtSifra.Text : "";
+                    r["naziv_robe2"] = _3 ? "NAZIV ROBE: " + txtNaslov.Text : "";
+                    r["proizvodac2"] = _3 ? "PROIZVOĐAČ: " + txtProizvodac.Text : "";
+                    r["izvoznik2"] = _3 ? "IZVOZNIK: " + txtIzvoznik.Text : "";
+                    r["uvoznik2"] = _3 ? "UVOZNIK: " + txtUvoznik.Text : "";
+                    r["zamlja_podrijetla2"] = _3 ? "ZEMLJA PODRIJETLA: " + txtZemlja.Text : "";
+                    r["ostalo2"] = _3 ? "OSTALO: " + txtOstalo.Text : "";
 
                     DTlista.Rows.Add(r);
                 }
 
                 this.reportViewer1.RefreshReport();
+
+                File.WriteAllText("Deklaracije",
+                    txtSifra.Text + "\r\n" +
+                    txtNaslov.Text + "\r\n" +
+                    txtProizvodac.Text + "\r\n" +
+                    txtIzvoznik.Text + "\r\n" +
+                    txtUvoznik.Text + "\r\n" +
+                    txtZemlja.Text + "\r\n" +
+                    txtOstalo.Text + "\r\n" +
+                    txtBrojNaljepnica.Text + "\r\n" +
+                    txtZapocniOdBroja.Text +
+                    "");
 
             }
             catch (Exception ex)

@@ -1618,7 +1618,10 @@ and rp.id_skladiste = '{1}';", sifra, Properties.Settings.Default.idSkladiste);
             try
             {
                 if (sifra == "-")
+                {
+                   // MessageBox.Show("!serial" + Util.Korisno.GodinaKojaSeKoristiUbazi + Global.Database.GetMaxBroj("racuni", "broj_racuna"));
                     return "!serial" + Util.Korisno.GodinaKojaSeKoristiUbazi + Global.Database.GetMaxBroj("racuni", "broj_racuna");
+                }
 
                 if (sifra.Length > 3)
                 {

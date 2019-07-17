@@ -177,7 +177,7 @@ namespace PCPOS.Global
         public static string GetMaxBroj(string tableName, string columnName)
         {
             string result = "";
-            string query = $@"SELECT MAX({columnName}) FROM {tableName}";
+            string query = $@"SELECT MAX(CAST ({columnName} AS INTEGER)) FROM {tableName}";
             DataTable dataTable = classSQL.select(query, tableName)?.Tables[0];
             if (dataTable.Rows.Count > 0)
             {
