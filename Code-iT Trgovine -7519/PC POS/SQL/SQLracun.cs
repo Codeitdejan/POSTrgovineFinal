@@ -92,7 +92,7 @@ namespace PCPOS.SQL
 
                     for (int i = 0; i < DT.Rows.Count; i++)
                     {
-                        string naziv = DT.Rows[i]["ime"].ToString();
+                        string naziv = DT.Rows[i]["naziv"].ToString();
 
                         string sql = "INSERT INTO racun_stavke (broj_racuna,sifra_robe,id_skladiste,mpc,porez,kolicina,rabat," +
                             "vpc,nbc,porez_potrosnja,naziv,povratna_naknada,povratna_naknada_izn,rabat_izn,mpc_rabat,ukupno_rabat," +
