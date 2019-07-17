@@ -10,6 +10,7 @@ namespace PCPOS.Resort
 {
     public partial class FrmRezervacija : Form
     {
+        bool constructorWithParameters = false;
         public int BrojRezervacije { get; set; }
         public bool EditMode = false;
         public bool ReservationCreated = false;
@@ -17,6 +18,21 @@ namespace PCPOS.Resort
         public FrmRezervacija()
         {
             InitializeComponent();
+            constructorWithParameters = false;
+        }
+
+        string imeSobe;
+        string dtpFirstDay;
+        string dtpLastDay;
+
+        //Second constructor is used while selecting rows and Opening "FrmRezervacija", not while pressing on "Unos rezervacije"
+        public FrmRezervacija(string c_imeSobe, string c_dtpFirstDay, string c_dtpLastDay)
+        {
+            InitializeComponent();
+            imeSobe = c_imeSobe;
+            dtpFirstDay = c_dtpFirstDay;
+            dtpLastDay = c_dtpLastDay;
+            constructorWithParameters = true;
         }
 
         private void FrmUnosRezervacije_Load(object sender, EventArgs e)
@@ -45,6 +61,12 @@ namespace PCPOS.Resort
         /// </summary>
         private void SetFields()
         {
+            MessageBox.Show(imeSobe + " " + dtpFirstDay + " " + dtpLastDay);
+            if (constructorWithParameters)
+            {
+                cbSoba.SelectedIndex=cbSoba.Items.IndexOf(imeSobe);
+            }
+
             SetBroj();
             numGodina.Value = DateTime.Now.Year;
         }
