@@ -332,10 +332,10 @@ namespace PCPOS.Resort
             int lastDay = days[1];
 
             //OTVORITI FORMU UNOS REZERVACIJE S PARAMETRIMA O KOJOJ SOBI SE RADI, PRVI DAN, POSLJEDNJI DAN, MJESEC, GODINA, TRENUTNO VRIJEME hh:mm:ss
-            string imeSobe = dataGridView.Rows[dataGridView.SelectedCells[0].RowIndex].Cells[0].Value.ToString();
+            int rowNumberToInsertIntoComboBox = dataGridView.SelectedCells[0].RowIndex;
             string fullFirstDay = firstDay.ToString() + "." + (cbMonth.SelectedIndex + 1).ToString() + "." + numYear.Value.ToString() + " " + DateTime.Now.ToString("hh:mm:ss");
             string fullLastDay = lastDay.ToString() + "." + (cbMonth.SelectedIndex + 1).ToString() + "." + numYear.Value.ToString() + " " + DateTime.Now.ToString("hh:mm:ss");
-            FrmRezervacija frmRezervacija = new FrmRezervacija(imeSobe, fullFirstDay, fullLastDay);
+            FrmRezervacija frmRezervacija = new FrmRezervacija(rowNumberToInsertIntoComboBox, fullFirstDay, fullLastDay);
             frmRezervacija.ShowDialog();
         }
 

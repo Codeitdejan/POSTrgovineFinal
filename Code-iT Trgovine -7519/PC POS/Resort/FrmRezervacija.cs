@@ -14,22 +14,24 @@ namespace PCPOS.Resort
         public int BrojRezervacije { get; set; }
         public bool EditMode = false;
         public bool ReservationCreated = false;
+        public bool firstLoad = false;
 
         public FrmRezervacija()
         {
             InitializeComponent();
-            constructorWithParameters = false;
+            constructorWithParameters =false;
+            firstLoad = true;
         }
 
-        string imeSobe;
+        int brojSobe;
         string dtpFirstDay;
         string dtpLastDay;
 
         //Second constructor is used while selecting rows and Opening "FrmRezervacija", not while pressing on "Unos rezervacije"
-        public FrmRezervacija(string c_imeSobe, string c_dtpFirstDay, string c_dtpLastDay)
+        public FrmRezervacija(int c_brojSobe, string c_dtpFirstDay, string c_dtpLastDay)
         {
             InitializeComponent();
-            imeSobe = c_imeSobe;
+            brojSobe = c_brojSobe;
             dtpFirstDay = c_dtpFirstDay;
             dtpLastDay = c_dtpLastDay;
             constructorWithParameters = true;
@@ -61,14 +63,16 @@ namespace PCPOS.Resort
         /// </summary>
         private void SetFields()
         {
-            MessageBox.Show(imeSobe + " " + dtpFirstDay + " " + dtpLastDay);
-            if (constructorWithParameters)
-            {
-                cbSoba.SelectedIndex=cbSoba.Items.IndexOf(imeSobe);
-            }
-
             SetBroj();
             numGodina.Value = DateTime.Now.Year;
+            if (constructorWithParameters)
+            {
+                cbSoba.SelectedIndex = brojSobe;
+                dtpDatumDolaska.Value = Convert.ToDateTime(dtpFirstDay);
+                dtpDatumOdlaska.Value = Convert.ToDateTime(dtpLastDay);
+                SetPrices();
+                firstLoad = true;
+            }
         }
 
         /// <summary>
@@ -179,6 +183,7 @@ namespace PCPOS.Resort
         /// </summary>
         private void SetPrices()
         {
+            //MessageBox.Show(cbSoba.SelectedValue.ToString());
             DataTable DTsoba = Global.Database.GetSobe(cbSoba.SelectedValue.ToString());
             if (DTsoba?.Rows.Count > 0)
             {
@@ -358,7 +363,7 @@ namespace PCPOS.Resort
                 MessageBox.Show($"Execute exception issue: {ex.Message}");
             }
         }
-        
+
         /// <summary>
         /// 
         /// </summary>
@@ -443,17 +448,20 @@ namespace PCPOS.Resort
 
         private void CbSoba_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SetPrices();
+            if (firstLoad)
+                SetPrices();
         }
 
         private void DtpDatumDolaska_ValueChanged(object sender, EventArgs e)
         {
-            SetPrices();
+            if (firstLoad)
+                SetPrices();
         }
 
         private void DtpDatumOdlaska_ValueChanged(object sender, EventArgs e)
         {
-            SetPrices();
+            if (firstLoad)
+                SetPrices();
         }
 
         #endregion
