@@ -1345,8 +1345,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(872, 654);
+            this.ControlBox = false;
             this.Controls.Add(this.chbZacrniPodatke);
             this.Controls.Add(this.cmbSkladistePartnera);
             this.Controls.Add(this.lblSkladistePartnera);
@@ -1362,6 +1364,7 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.rtbNapomena);
             this.Controls.Add(this.label8);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddPartners";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Partneri";

@@ -14,7 +14,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Windows.Forms;
 using System.Xml.Linq;
-
+//Dela?????
 namespace PCPOS
 {
     public partial class frmMenu : Form
