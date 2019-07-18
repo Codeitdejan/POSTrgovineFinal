@@ -320,18 +320,10 @@ namespace PCPOS.Resort
         {
             Close();
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> 8fd3c1986cb8ff040a1694c5a3c8706a573fadc6
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> 8fd3c1986cb8ff040a1694c5a3c8706a573fadc6
         private void dataGridView_MouseUp(object sender, MouseEventArgs e)
         {
             if (otvoritiNovuFormicu)
