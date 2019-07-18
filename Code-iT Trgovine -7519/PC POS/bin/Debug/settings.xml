@@ -4,7 +4,11 @@
     <path_database path="C:\Users\DrazenPC\Desktop\PC POS\PC POS\bin\Debug\pc_pos_database.sdf" />
   </database_compact>
   <database_remote>
+<<<<<<< HEAD
     <postgree server="localhost" port="5432" username="postgres" database="nevida2019" active="1" />
+=======
+    <postgree server="192.168.18.20" port="5432" username="postgres" database="pos2019" active="1" />
+>>>>>>> 2f40f3ef04a2084c5c48bd78226c020ddc73e0b7
     <caffe server="localhost" port="5432" username="postgres" database="rossa2019" active="1" />
   </database_remote>
 </settings>
