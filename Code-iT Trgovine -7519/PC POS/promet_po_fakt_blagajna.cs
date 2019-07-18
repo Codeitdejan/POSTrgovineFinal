@@ -74,5 +74,10 @@ namespace PCPOS
             cbSkladiste.DisplayMember = "skladiste";
             cbSkladiste.ValueMember = "id_skladiste";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

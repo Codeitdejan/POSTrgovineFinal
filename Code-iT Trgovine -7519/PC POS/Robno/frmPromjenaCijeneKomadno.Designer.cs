@@ -418,6 +418,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(996, 545);
             this.Controls.Add(this.btnOpenRoba);
             this.Controls.Add(this.dgw);
@@ -440,6 +441,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.txtSifra_robe);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPromjenaCijeneKomadno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Promjena cijene komadno";

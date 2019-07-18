@@ -57,6 +57,7 @@
             this.fid_kasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_ducan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_kasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlTop.SuspendLayout();
             this.pnlFill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFakture)).BeginInit();
@@ -64,6 +65,7 @@
             // 
             // pnlTop
             // 
+            this.pnlTop.Controls.Add(this.button1);
             this.pnlTop.Controls.Add(this.btnKnjiznoOdobrenjeAll);
             this.pnlTop.Controls.Add(this.txtPorez);
             this.pnlTop.Controls.Add(this.label2);
@@ -73,7 +75,7 @@
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1015, 55);
+            this.pnlTop.Size = new System.Drawing.Size(1087, 55);
             this.pnlTop.TabIndex = 0;
             // 
             // btnKnjiznoOdobrenjeAll
@@ -83,7 +85,7 @@
             this.btnKnjiznoOdobrenjeAll.FlatAppearance.BorderSize = 0;
             this.btnKnjiznoOdobrenjeAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKnjiznoOdobrenjeAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnKnjiznoOdobrenjeAll.Location = new System.Drawing.Point(913, 5);
+            this.btnKnjiznoOdobrenjeAll.Location = new System.Drawing.Point(803, 5);
             this.btnKnjiznoOdobrenjeAll.Name = "btnKnjiznoOdobrenjeAll";
             this.btnKnjiznoOdobrenjeAll.Size = new System.Drawing.Size(90, 45);
             this.btnKnjiznoOdobrenjeAll.TabIndex = 4;
@@ -152,7 +154,7 @@
             this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlBottom.Location = new System.Drawing.Point(0, 506);
             this.pnlBottom.Name = "pnlBottom";
-            this.pnlBottom.Size = new System.Drawing.Size(1015, 100);
+            this.pnlBottom.Size = new System.Drawing.Size(1087, 100);
             this.pnlBottom.TabIndex = 1;
             // 
             // pnlFill
@@ -161,7 +163,7 @@
             this.pnlFill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFill.Location = new System.Drawing.Point(0, 55);
             this.pnlFill.Name = "pnlFill";
-            this.pnlFill.Size = new System.Drawing.Size(1015, 451);
+            this.pnlFill.Size = new System.Drawing.Size(1087, 451);
             this.pnlFill.TabIndex = 2;
             // 
             // dgvFakture
@@ -308,15 +310,33 @@
             this.id_kasa.Name = "id_kasa";
             this.id_kasa.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(945, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmKnjiznoOdobrenje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(1015, 606);
+            this.ClientSize = new System.Drawing.Size(1087, 606);
             this.Controls.Add(this.pnlFill);
             this.Controls.Add(this.pnlBottom);
             this.Controls.Add(this.pnlTop);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmKnjiznoOdobrenje";
             this.Text = "Knjižno Odobrenje";
             this.Load += new System.EventHandler(this.frmKnjiznoOdobrenje_Load);
@@ -352,5 +372,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id_ducan;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_kasa;
         private System.Windows.Forms.Button btnKnjiznoOdobrenjeAll;
+        private System.Windows.Forms.Button button1;
     }
 }

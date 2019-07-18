@@ -20,7 +20,7 @@ namespace PCPOS.Robno
 
         private void frmSveOdjave_komisione_Load(object sender, EventArgs e)
         {
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            //this.Paint += new PaintEventHandler(Form1_Paint);
 
             if (MainFormMenu == null)
             {

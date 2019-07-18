@@ -48,15 +48,11 @@ namespace PCPOS
             }
 
             txtIzradio.Text = classSQL.select("SELECT ime+' '+prezime as Ime  FROM zaposlenici WHERE id_zaposlenik='" + Properties.Settings.Default.id_zaposlenik + "'", "zaposlenici").Tables[0].Rows[0][0].ToString();
-            this.Paint += new PaintEventHandler(Form1_Paint);
             load = true;
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), Color.AliceBlue, Color.LightSlateGray, 1000);
-            c.FillRectangle(bG, 0, 0, Width, Height);
         }
 
         private void numeric()
@@ -1060,7 +1056,9 @@ left join roba r on rp.sifra = r.sifra where rp.sifra = '" + dg(i, "sifra") + "'
             frmSveMeduskladisnice sm = new frmSveMeduskladisnice();
             //sm.sifra_fakture = "";
             sm.MainForm = this;
-            sm.ShowDialog();
+            sm.MdiParent = this.MdiParent;
+            sm.Dock = DockStyle.Fill;
+            sm.Show();
             if (broj_ms_edit != null)
             {
                 deleteFields();

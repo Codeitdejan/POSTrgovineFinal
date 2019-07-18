@@ -35,7 +35,7 @@ namespace PCPOS.Robno
             txtBrojInventure.Text = brojInventure();
             ControlDisableEnable(1, 0, 0, 1, 0);
             if (broj_inventure_edit != null) { fillInventura(); }
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            //this.Paint += new PaintEventHandler(Form1_Paint);
             EnableDisable(false);
         }
 
@@ -654,7 +654,9 @@ VALUES ( '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '1' );",
             frmSveInventure objForm2 = new frmSveInventure();
             objForm2.broj__inventure = "";
             objForm2.MainForm = this;
-            objForm2.ShowDialog();
+            objForm2.MdiParent = this.MdiParent;
+            objForm2.Dock = DockStyle.Fill;
+            objForm2.Show();
 
             if (broj_inventure_edit != null)
             {

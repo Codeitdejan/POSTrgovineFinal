@@ -667,6 +667,9 @@
             this.Controls.Add(this.btnNoviUnos);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnSpremi);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPrimka";
             this.Text = "Primka";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrimka_FormClosing);

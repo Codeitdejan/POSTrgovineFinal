@@ -40,6 +40,7 @@
             this.dtpOD = new System.Windows.Forms.DateTimePicker();
             this.dtpDO = new System.Windows.Forms.DateTimePicker();
             this.btnIspis = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -110,7 +111,7 @@
             this.label1.Font = new System.Drawing.Font("Arial", 9F);
             this.label1.Location = new System.Drawing.Point(78, 124);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 15);
+            this.label1.Size = new System.Drawing.Size(58, 15);
             this.label1.TabIndex = 53;
             this.label1.Text = "Skladište";
             // 
@@ -132,7 +133,7 @@
             this.lblDO.Font = new System.Drawing.Font("Arial", 9F);
             this.lblDO.Location = new System.Drawing.Point(77, 72);
             this.lblDO.Name = "lblDO";
-            this.lblDO.Size = new System.Drawing.Size(84, 15);
+            this.lblDO.Size = new System.Drawing.Size(85, 15);
             this.lblDO.TabIndex = 55;
             this.lblDO.Text = "Završni datum";
             // 
@@ -180,12 +181,28 @@
             this.btnIspis.UseVisualStyleBackColor = false;
             this.btnIspis.Click += new System.EventHandler(this.btnIspis_Click);
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(387, 11);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 56;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // promet_po_fakt_blagajna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(353, 363);
+            this.ClientSize = new System.Drawing.Size(529, 363);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbSkladiste);
             this.Controls.Add(this.btnIspis);
@@ -197,6 +214,9 @@
             this.Controls.Add(this.lblDO);
             this.Controls.Add(this.dtpOD);
             this.Controls.Add(this.dtpDO);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "promet_po_fakt_blagajna";
             this.Text = "Promet kase po fakturama (novćano)";
             this.ResumeLayout(false);
@@ -217,5 +237,6 @@
         private System.Windows.Forms.Label lblDO;
         private System.Windows.Forms.DateTimePicker dtpOD;
         private System.Windows.Forms.DateTimePicker dtpDO;
+        private System.Windows.Forms.Button button1;
     }
 }

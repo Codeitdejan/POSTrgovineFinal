@@ -33,6 +33,7 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(knjigaPII));
             this.dTRpodaciTvrtkeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSRpodaciTvrtke = new PCPOS.Dataset.DSRpodaciTvrtke();
             this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -106,6 +107,7 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1129, 535);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "knjigaPII";
             this.Text = "Knjiga primitaka i izdataka";
             this.Load += new System.EventHandler(this.knjigaPII_Load);

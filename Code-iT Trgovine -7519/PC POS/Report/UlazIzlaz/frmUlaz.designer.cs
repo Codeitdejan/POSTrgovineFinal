@@ -32,6 +32,7 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUlaz));
             this.dTlisteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSRliste = new PCPOS.Dataset.DSRliste();
             this.dTRpodaciTvrtkeBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -95,16 +96,16 @@
             this.reportViewer1.Size = new System.Drawing.Size(791, 792);
             this.reportViewer1.TabIndex = 0;
             // 
-            // frmListe6
+            // frmUlaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(791, 792);
             this.Controls.Add(this.reportViewer1);
-            this.Name = "frmListe6";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmUlaz";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Rekapitulacija";
             this.Load += new System.EventHandler(this.frmListe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dTlisteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSRliste)).EndInit();

@@ -418,7 +418,9 @@ VALUES ( {0}, {1}, '{2}', '{3}', {4}, {5}, '{6}', {7}, {8}, '{9}', {10}, {11}, {
             frmSviAvansiRacun objForm2 = new frmSviAvansiRacun();
             //objForm2.sifra_fakture = "";
             objForm2.MainForm = this;
-            objForm2.ShowDialog();
+            objForm2.MdiParent = this.MdiParent;
+            objForm2.Dock = DockStyle.Fill;
+            objForm2.Show();
             if (broj_avansa_edit != 0 && godina != 0)
             {
                 deleteFields();
@@ -1395,6 +1397,11 @@ VALUES ( {0}, {1}, '{2}', '{3}', {4}, {5}, '{6}', {7}, {8}, '{9}', {10}, {11}, {
         {
             frmAvansStornoRacun a = new frmAvansStornoRacun();
             a.ShowDialog();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

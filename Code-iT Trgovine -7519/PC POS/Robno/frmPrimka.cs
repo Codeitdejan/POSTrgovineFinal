@@ -36,12 +36,6 @@ namespace PCPOS.Robno
 
         private void frmPrimka_Load(object sender, EventArgs e)
         {
-            /****************************SINKRONIZACIJA SA WEB-OM*****************/
-            bgSinkronizacija = new BackgroundWorker();
-            bgSinkronizacija.DoWork += new DoWorkEventHandler(bgSinkronizacija_DoWork);
-            bgSinkronizacija.WorkerSupportsCancellation = true;
-            /****************************SINKRONIZACIJA SA WEB-OM*****************/
-
             MyDataGrid.MainForm = this;
             classSQL.update("UPDATE primka_stavke SET kolicina=REPLACE(kolicina,'.',',')");
             createTablesRobno c = new createTablesRobno();
@@ -51,7 +45,6 @@ namespace PCPOS.Robno
             setTextBrojPrimke();
             ControlDisableEnable(true, false, false, false, false, true);
             EnableDisable(false);
-            this.Paint += new PaintEventHandler(Form1_Paint);
             if (broj_primke != 0 && broj_skladista != 0)
             {
                 FillPrimka(broj_primke, broj_skladista);
@@ -59,21 +52,15 @@ namespace PCPOS.Robno
             setTextIzradio(Properties.Settings.Default.id_zaposlenik);
         }
 
-        /****************************SINKRONIZACIJA SA WEB-OM*****************/
-        private BackgroundWorker bgSinkronizacija = null;
-        private synWeb.synPokretac PokretacSinkronizacije = new synWeb.synPokretac();
-        /****************************SINKRONIZACIJA SA WEB-OM*****************/
 
         private void frmPrimka_FormClosing(object sender, FormClosingEventArgs e)
         {
-            /****************************SINKRONIZACIJA SA WEB-OM*****************/
-            bgSinkronizacija.RunWorkerAsync();
-            /****************************SINKRONIZACIJA SA WEB-OM*****************/
+
         }
 
         private void bgSinkronizacija_DoWork(object sender, DoWorkEventArgs e)
         {
-            PokretacSinkronizacije.PokreniSinkronizaciju(true, true, true, true, true, true, true, true, true, true, true, true, true, true, true);
+            
         }
 
         #region Customize DataGridView
@@ -346,7 +333,9 @@ namespace PCPOS.Robno
             Robno.frmSvePrimke objForm2 = new Robno.frmSvePrimke();
             //objForm2.sifra_fakture = "";
             objForm2.MainForm = this;
-            objForm2.ShowDialog();
+            objForm2.MdiParent = this.MdiParent;
+            objForm2.Dock = DockStyle.Fill;
+            objForm2.Show();
             if (broj_primke != 0 && broj_skladista != 0)
             {
                 deleteFields();

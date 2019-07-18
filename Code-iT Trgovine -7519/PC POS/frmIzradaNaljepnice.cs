@@ -23,7 +23,7 @@ namespace PCPOS
 
             chbMultiItems.Enabled = false;
 
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            //this.Paint += new PaintEventHandler(Form1_Paint);
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -561,6 +561,11 @@ txtartikl.Text);
             {
                 checkBox1.Checked = false;
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

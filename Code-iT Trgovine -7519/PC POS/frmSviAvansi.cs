@@ -43,9 +43,7 @@ namespace PCPOS
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), Color.AliceBlue, Color.LightSlateGray, 1000);
-            c.FillRectangle(bG, 0, 0, Width, Height);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -394,7 +392,6 @@ namespace PCPOS
 
         private void frmSviAvansi_SizeChanged(object sender, EventArgs e)
         {
-            this.Paint += new PaintEventHandler(Form1_Paint);
         }
     }
 }

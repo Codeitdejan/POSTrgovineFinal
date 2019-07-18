@@ -33,6 +33,7 @@
             this.chbSkladiste = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnIspis = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbSkladiste
@@ -93,16 +94,35 @@
             this.btnIspis.UseVisualStyleBackColor = false;
             this.btnIspis.Click += new System.EventHandler(this.btnIspis_Click);
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(322, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 46;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmSkladisteFinancijsko
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(284, 136);
+            this.ClientSize = new System.Drawing.Size(464, 219);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnIspis);
             this.Controls.Add(this.cbSkladiste);
             this.Controls.Add(this.chbSkladiste);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmSkladisteFinancijsko";
             this.Text = "Skladiste financijsko";
             this.Load += new System.EventHandler(this.frmSkladisteFinancijsko_Load);
@@ -117,5 +137,6 @@
         private System.Windows.Forms.CheckBox chbSkladiste;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnIspis;
+        private System.Windows.Forms.Button button1;
     }
 }

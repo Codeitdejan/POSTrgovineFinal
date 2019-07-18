@@ -330,8 +330,9 @@
             this.Controls.Add(this.btnIzlaz);
             this.Controls.Add(this.btnUredi);
             this.Controls.Add(this.btnIspis);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmSviRobniDobropisi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Svi robni dobropisi";

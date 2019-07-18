@@ -45,7 +45,7 @@ namespace PCPOS.Robno
             setTextBrojIzdatnice();
             ControlDisableEnable(true, false, false, false, false, true);
             EnableDisable(false);
-            this.Paint += new PaintEventHandler(Form1_Paint);
+           
             if (broj_izdatnice != 0 && broj_skladista != 0)
             {
                 FillIzdatnica(broj_izdatnice, broj_skladista);
@@ -313,7 +313,9 @@ namespace PCPOS.Robno
         {
             Robno.frmSveIzdatnice objForm2 = new Robno.frmSveIzdatnice();
             objForm2.MainForm = this;
-            objForm2.ShowDialog();
+            objForm2.MdiParent = this.MdiParent;
+            objForm2.Dock = DockStyle.Fill;
+            objForm2.Show();
             if (broj_izdatnice != 0 && broj_skladista != 0)
             {
                 deleteFields();
@@ -981,9 +983,6 @@ namespace PCPOS.Robno
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), Color.AliceBlue, Color.LightSlateGray, 250);
-            c.FillRectangle(bG, 0, 0, Width, Height);
         }
 
         private string brojIzdatnice()

@@ -16,7 +16,7 @@ namespace PCPOS.Kasa
         private void frmSveSmjene_Load(object sender, EventArgs e)
         {
             LoadSmjene();
-            this.Paint += new PaintEventHandler(Form1_Paint);
+       
         }
 
         private void LoadSmjene()
@@ -41,12 +41,7 @@ namespace PCPOS.Kasa
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Color x = System.Drawing.Color.FromArgb(((byte)(105)), ((byte)(170)), ((byte)(197)));
-            Color y = System.Drawing.Color.FromArgb(((byte)(40)), ((byte)(109)), ((byte)(135)));
 
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), x, y, 250);
-            c.FillRectangle(bG, 0, 0, Width, Height);
         }
 
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -56,6 +51,11 @@ namespace PCPOS.Kasa
             ps.datumOD = dgv.Rows[e.RowIndex].Cells["pocetak"].FormattedValue.ToString();
             ps.datumDO = dgv.Rows[e.RowIndex].Cells["zavrsetak"].FormattedValue.ToString();
             ps.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

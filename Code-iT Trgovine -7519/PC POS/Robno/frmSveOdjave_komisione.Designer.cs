@@ -396,6 +396,9 @@
             this.Controls.Add(this.btnSveFakture);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmSveOdjave_komisione";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sve odjave komisione robe";

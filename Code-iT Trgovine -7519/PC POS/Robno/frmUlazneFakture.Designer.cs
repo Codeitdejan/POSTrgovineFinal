@@ -824,6 +824,9 @@
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmUlazneFakture";
             this.Load += new System.EventHandler(this.frmUlazneFakture_Load);
             this.groupBox1.ResumeLayout(false);

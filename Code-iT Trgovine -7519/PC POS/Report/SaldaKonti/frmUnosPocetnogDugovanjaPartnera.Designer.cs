@@ -45,13 +45,15 @@
             this.lblPotrazuje = new System.Windows.Forms.Label();
             this.lblUplaceno = new System.Windows.Forms.Label();
             this.lblOtvoreno = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlTop.SuspendLayout();
             this.pnlFill.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTop
             // 
-            this.pnlTop.BackColor = System.Drawing.Color.LightSlateGray;
+            this.pnlTop.BackColor = System.Drawing.Color.SlateGray;
+            this.pnlTop.Controls.Add(this.button1);
             this.pnlTop.Controls.Add(this.btnSrchPartners);
             this.pnlTop.Controls.Add(this.btnTrazi);
             this.pnlTop.Controls.Add(this.txtNaziv);
@@ -60,7 +62,7 @@
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(917, 80);
+            this.pnlTop.Size = new System.Drawing.Size(1054, 80);
             this.pnlTop.TabIndex = 0;
             // 
             // btnSrchPartners
@@ -134,7 +136,7 @@
             this.pnlFill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFill.Location = new System.Drawing.Point(0, 80);
             this.pnlFill.Name = "pnlFill";
-            this.pnlFill.Size = new System.Drawing.Size(917, 485);
+            this.pnlFill.Size = new System.Drawing.Size(1054, 485);
             this.pnlFill.TabIndex = 1;
             // 
             // btnOdustani
@@ -235,14 +237,32 @@
             this.lblOtvoreno.TabIndex = 1;
             this.lblOtvoreno.Text = "Otvoreno:";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(912, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmUnosPocetnogDugovanjaPartnera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(917, 565);
+            this.ClientSize = new System.Drawing.Size(1054, 565);
             this.Controls.Add(this.pnlFill);
             this.Controls.Add(this.pnlTop);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmUnosPocetnogDugovanjaPartnera";
             this.Text = "frmUnosPocetnogDugovanjaPartnera";
             this.pnlTop.ResumeLayout(false);
@@ -272,5 +292,6 @@
         private System.Windows.Forms.TextBox txtOtvoreno;
         private System.Windows.Forms.Button btnSpremi;
         private System.Windows.Forms.Button btnOdustani;
+        private System.Windows.Forms.Button button1;
     }
 }

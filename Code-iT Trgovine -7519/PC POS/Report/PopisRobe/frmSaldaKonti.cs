@@ -168,5 +168,10 @@ order by case when sifra_robe ~ '\D' then 1000000000::int ELSE to_number(sifra_r
 
             this.reportViewer1.RefreshReport();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

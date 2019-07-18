@@ -211,5 +211,10 @@ group by au.broj, au.datum, au.id_poslovnica, au.id_naplatni_uredaj;";
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

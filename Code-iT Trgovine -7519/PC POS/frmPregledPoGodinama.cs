@@ -208,5 +208,10 @@ namespace PCPOS
                 richTextBox1.Text = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells["opis"].FormattedValue.ToString();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

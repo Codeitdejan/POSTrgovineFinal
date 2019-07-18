@@ -24,13 +24,14 @@
         /// </summary>
         private void InitializeComponent () {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKarticaKupca));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKarticaKupca));
             this.tmTimer1 = new System.Windows.Forms.Timer(this.components);
             this.txtKarticaKupca = new System.Windows.Forms.TextBox();
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.btnResetKartice = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.lblNaziv = new System.Windows.Forms.Label();
             this.pnlFill = new System.Windows.Forms.Panel();
             this.dgvData = new System.Windows.Forms.DataGridView();
-            this.btnResetKartice = new System.Windows.Forms.Button();
             this.pnlTop.SuspendLayout();
             this.pnlFill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
@@ -88,6 +88,25 @@
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(995, 125);
             this.pnlTop.TabIndex = 1;
+            // 
+            // btnResetKartice
+            // 
+            this.btnResetKartice.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnResetKartice.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnResetKartice.BackgroundImage")));
+            this.btnResetKartice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnResetKartice.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResetKartice.FlatAppearance.BorderSize = 0;
+            this.btnResetKartice.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnResetKartice.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnResetKartice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResetKartice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnResetKartice.Location = new System.Drawing.Point(632, 3);
+            this.btnResetKartice.Name = "btnResetKartice";
+            this.btnResetKartice.Size = new System.Drawing.Size(161, 46);
+            this.btnResetKartice.TabIndex = 135;
+            this.btnResetKartice.Text = "Reset kartice";
+            this.btnResetKartice.UseVisualStyleBackColor = true;
+            this.btnResetKartice.Click += new System.EventHandler(this.btnResetKartice_Click);
             // 
             // label3
             // 
@@ -304,25 +323,6 @@
             this.dgvData.Size = new System.Drawing.Size(971, 550);
             this.dgvData.TabIndex = 0;
             // 
-            // btnResetKartice
-            // 
-            this.btnResetKartice.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnResetKartice.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnResetKartice.BackgroundImage")));
-            this.btnResetKartice.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnResetKartice.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnResetKartice.FlatAppearance.BorderSize = 0;
-            this.btnResetKartice.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnResetKartice.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnResetKartice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResetKartice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnResetKartice.Location = new System.Drawing.Point(632, 3);
-            this.btnResetKartice.Name = "btnResetKartice";
-            this.btnResetKartice.Size = new System.Drawing.Size(161, 46);
-            this.btnResetKartice.TabIndex = 135;
-            this.btnResetKartice.Text = "Reset kartice";
-            this.btnResetKartice.UseVisualStyleBackColor = true;
-            this.btnResetKartice.Click += new System.EventHandler(this.btnResetKartice_Click);
-            // 
             // frmKarticaKupca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,7 +332,9 @@
             this.ClientSize = new System.Drawing.Size(995, 694);
             this.Controls.Add(this.pnlFill);
             this.Controls.Add(this.pnlTop);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmKarticaKupca";
             this.Text = "frmKarticaKupca";
             this.Load += new System.EventHandler(this.frmKarticaKupca_Load);

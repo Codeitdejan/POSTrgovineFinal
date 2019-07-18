@@ -49,7 +49,7 @@ namespace PCPOS.Robno
             dgv.DataSource = DSinventura.Tables[0];
             dgv.Columns["id_skladiste"].Visible = false;
             dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            //this.Paint += new PaintEventHandler(Form1_Paint);
         }
 
         private void fillCB()

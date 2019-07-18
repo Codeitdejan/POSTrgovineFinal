@@ -141,5 +141,10 @@ where case when {0} = 0 then 1 = 1 else date_part('month', y.datum1) = {0} end;"
                 throw;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

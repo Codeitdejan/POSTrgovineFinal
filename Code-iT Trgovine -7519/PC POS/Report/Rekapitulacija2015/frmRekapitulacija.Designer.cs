@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource11 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource12 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dTRpodaciTvrtkeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSRpodaciTvrtke = new PCPOS.Dataset.DSRpodaciTvrtke();
             this.dTListaUniverzalnaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -51,6 +51,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cmbDokumenti = new System.Windows.Forms.ComboBox();
             this.brProizvodackaCijena = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dTRpodaciTvrtkeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSRpodaciTvrtke)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dTListaUniverzalnaBindingSource)).BeginInit();
@@ -131,16 +132,16 @@
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource11.Name = "DSpodaciTVR";
-            reportDataSource11.Value = this.dTRpodaciTvrtkeBindingSource;
-            reportDataSource12.Name = "DsPodaci";
-            reportDataSource12.Value = this.dTListaUniverzalnaBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource11);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource12);
+            reportDataSource1.Name = "DSpodaciTVR";
+            reportDataSource1.Value = this.dTRpodaciTvrtkeBindingSource;
+            reportDataSource2.Name = "DsPodaci";
+            reportDataSource2.Value = this.dTListaUniverzalnaBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PCPOS.Report.Rekapitulacija2015.Rekapitulacija.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 111);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(793, 712);
+            this.reportViewer1.Size = new System.Drawing.Size(827, 712);
             this.reportViewer1.TabIndex = 576;
             // 
             // chbZbirno
@@ -246,12 +247,28 @@
             this.brProizvodackaCijena.Visible = false;
             this.brProizvodackaCijena.CheckedChanged += new System.EventHandler(this.brProizvodackaCijena_CheckedChanged);
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(844, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 587;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmRekapitulacija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(817, 835);
+            this.ClientSize = new System.Drawing.Size(986, 835);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.brProizvodackaCijena);
             this.Controls.Add(this.cmbDokumenti);
             this.Controls.Add(this.label4);
@@ -268,6 +285,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tdOdDatuma);
             this.Controls.Add(this.btnTrazi);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmRekapitulacija";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rekapitulacija analitika";
@@ -303,5 +323,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbDokumenti;
         private System.Windows.Forms.RadioButton brProizvodackaCijena;
+        private System.Windows.Forms.Button button1;
     }
 }

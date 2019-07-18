@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKarticaRobe));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.cbSkladiste = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -72,6 +72,7 @@
             this.dgw = new System.Windows.Forms.DataGridView();
             this.tabKartica = new System.Windows.Forms.TabControl();
             this.brRedaka = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnOpenRoba)).BeginInit();
             this.tabPage2.SuspendLayout();
@@ -130,7 +131,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(14, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(966, 86);
+            this.groupBox1.Size = new System.Drawing.Size(916, 86);
             this.groupBox1.TabIndex = 51;
             this.groupBox1.TabStop = false;
             // 
@@ -140,7 +141,7 @@
             this.btnIspis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnIspis.Image = global::PCPOS.Properties.Resources.print_printer;
             this.btnIspis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIspis.Location = new System.Drawing.Point(858, 29);
+            this.btnIspis.Location = new System.Drawing.Point(808, 29);
             this.btnIspis.Name = "btnIspis";
             this.btnIspis.Size = new System.Drawing.Size(102, 38);
             this.btnIspis.TabIndex = 64;
@@ -306,7 +307,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(962, 312);
+            this.tabPage2.Size = new System.Drawing.Size(1066, 312);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Trenutno stanje na skladištima";
             // 
@@ -326,7 +327,7 @@
             this.dgw3.MultiSelect = false;
             this.dgw3.Name = "dgw3";
             this.dgw3.RowHeadersWidth = 30;
-            this.dgw3.Size = new System.Drawing.Size(943, 294);
+            this.dgw3.Size = new System.Drawing.Size(1047, 294);
             this.dgw3.TabIndex = 43;
             // 
             // tabPage1
@@ -355,7 +356,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(962, 312);
+            this.tabPage1.Size = new System.Drawing.Size(1066, 312);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Kartica";
             // 
@@ -581,8 +582,8 @@
             // 
             this.dgw.AllowUserToAddRows = false;
             this.dgw.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgw.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgw.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgw.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -596,7 +597,7 @@
             this.dgw.Name = "dgw";
             this.dgw.ReadOnly = true;
             this.dgw.RowHeadersWidth = 30;
-            this.dgw.Size = new System.Drawing.Size(943, 191);
+            this.dgw.Size = new System.Drawing.Size(1047, 191);
             this.dgw.TabIndex = 42;
             this.dgw.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgw_CellMouseDoubleClick);
             // 
@@ -612,7 +613,7 @@
             this.tabKartica.Location = new System.Drawing.Point(14, 114);
             this.tabKartica.Name = "tabKartica";
             this.tabKartica.SelectedIndex = 0;
-            this.tabKartica.Size = new System.Drawing.Size(970, 350);
+            this.tabKartica.Size = new System.Drawing.Size(1074, 350);
             this.tabKartica.TabIndex = 2;
             this.tabKartica.SelectedIndexChanged += new System.EventHandler(this.tabKartica_SelectedIndexChanged);
             // 
@@ -628,14 +629,34 @@
             this.brRedaka.TabIndex = 64;
             this.brRedaka.Text = "label10";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(954, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 65;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmKarticaRobe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 483);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(1100, 483);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.brRedaka);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabKartica);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmKarticaRobe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kartica robe";
@@ -699,5 +720,6 @@
 		private System.Windows.Forms.Label brRedaka;
         private System.Windows.Forms.CheckBox chbPocetno;
         private System.Windows.Forms.Button btnIspis;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -473,6 +473,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(932, 496);
             this.Controls.Add(this.btnUcitajSveStavke);
             this.Controls.Add(this.pictureBox1);
@@ -497,6 +498,9 @@
             this.Controls.Add(this.label17);
             this.Controls.Add(this.txtSifra_robe);
             this.Controls.Add(this.dgw);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmUnosInventura";
             this.Text = "Inventura";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmUnosInventura_FormClosing);

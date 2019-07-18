@@ -32,6 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRobaNaKomisiji));
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.dSRpodaciTvrtkeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSRpodaciTvrtke = new PCPOS.Dataset.DSRpodaciTvrtke();
+            this.dSRlisteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSRliste = new PCPOS.Dataset.DSRliste();
             this.chbZbirno = new System.Windows.Forms.CheckBox();
             this.btnPonistiPartnera = new System.Windows.Forms.Button();
             this.txtPartnerNaziv = new System.Windows.Forms.TextBox();
@@ -44,16 +48,33 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtpDatumDo = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.dSRpodaciTvrtke = new PCPOS.Dataset.DSRpodaciTvrtke();
-            this.dSRpodaciTvrtkeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dSRliste = new PCPOS.Dataset.DSRliste();
-            this.dSRlisteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.btnPartner)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSRpodaciTvrtke)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dSRpodaciTvrtkeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSRliste)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSRpodaciTvrtke)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSRlisteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSRliste)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPartner)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dSRpodaciTvrtkeBindingSource
+            // 
+            this.dSRpodaciTvrtkeBindingSource.DataMember = "DTRpodaciTvrtke";
+            this.dSRpodaciTvrtkeBindingSource.DataSource = this.dSRpodaciTvrtke;
+            // 
+            // dSRpodaciTvrtke
+            // 
+            this.dSRpodaciTvrtke.DataSetName = "DSRpodaciTvrtke";
+            this.dSRpodaciTvrtke.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dSRlisteBindingSource
+            // 
+            this.dSRlisteBindingSource.DataMember = "DTliste";
+            this.dSRlisteBindingSource.DataSource = this.dSRliste;
+            // 
+            // dSRliste
+            // 
+            this.dSRliste.DataSetName = "DSRliste";
+            this.dSRliste.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // chbZbirno
             // 
@@ -132,7 +153,7 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PCPOS.Report.Komisija.RobaNaKomisiji.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(5, 72);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(766, 735);
+            this.reportViewer1.Size = new System.Drawing.Size(874, 735);
             this.reportViewer1.TabIndex = 576;
             // 
             // btnTrazi
@@ -140,7 +161,7 @@
             this.btnTrazi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnTrazi.Image = global::PCPOS.Properties.Resources._10591;
             this.btnTrazi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrazi.Location = new System.Drawing.Point(675, 12);
+            this.btnTrazi.Location = new System.Drawing.Point(647, 12);
             this.btnTrazi.Name = "btnTrazi";
             this.btnTrazi.Size = new System.Drawing.Size(96, 54);
             this.btnTrazi.TabIndex = 571;
@@ -188,32 +209,28 @@
             this.label3.TabIndex = 575;
             this.label3.Text = "Do datuma:";
             // 
-            // dSRpodaciTvrtke
+            // button1
             // 
-            this.dSRpodaciTvrtke.DataSetName = "DSRpodaciTvrtke";
-            this.dSRpodaciTvrtke.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dSRpodaciTvrtkeBindingSource
-            // 
-            this.dSRpodaciTvrtkeBindingSource.DataMember = "DTRpodaciTvrtke";
-            this.dSRpodaciTvrtkeBindingSource.DataSource = this.dSRpodaciTvrtke;
-            // 
-            // dSRliste
-            // 
-            this.dSRliste.DataSetName = "DSRliste";
-            this.dSRliste.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dSRlisteBindingSource
-            // 
-            this.dSRlisteBindingSource.DataMember = "DTliste";
-            this.dSRlisteBindingSource.DataSource = this.dSRliste;
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(749, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 583;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmRobaNaKomisiji
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(776, 812);
+            this.ClientSize = new System.Drawing.Size(884, 812);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.chbZbirno);
             this.Controls.Add(this.btnPonistiPartnera);
             this.Controls.Add(this.btnPartner);
@@ -226,15 +243,18 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtpDatumOd);
             this.Controls.Add(this.btnTrazi);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmRobaNaKomisiji";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Popis prodane robe";
             this.Load += new System.EventHandler(this.frmListe_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.btnPartner)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSRpodaciTvrtke)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSRpodaciTvrtkeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSRliste)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSRpodaciTvrtke)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSRlisteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSRliste)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPartner)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,5 +278,6 @@
         private Dataset.DSRpodaciTvrtke dSRpodaciTvrtke;
         private System.Windows.Forms.BindingSource dSRlisteBindingSource;
         private Dataset.DSRliste dSRliste;
+        private System.Windows.Forms.Button button1;
     }
 }

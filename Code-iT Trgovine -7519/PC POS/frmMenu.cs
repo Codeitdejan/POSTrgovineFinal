@@ -714,9 +714,11 @@ namespace PCPOS
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
+            /*
             Graphics c = e.Graphics;
             Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), Color.AliceBlue, Color.LightSlateGray, 250);
             c.FillRectangle(bG, 0, 0, Width, Height);
+            */
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -887,6 +889,7 @@ namespace PCPOS
             Robno.frmSveFaktureBezRobe sf = new Robno.frmSveFaktureBezRobe();
             sf.MdiParent = this;
             sf.MainFormMenu = this;
+            sf.Dock = DockStyle.Fill;
             sf.Show();
         }
 
@@ -936,6 +939,7 @@ namespace PCPOS
             frmSviAvansi avansSvi = new frmSviAvansi();
             avansSvi.MdiParent = this;
             avansSvi.MainFormMenu = this;
+            avansSvi.Dock = DockStyle.Fill;
             avansSvi.Show();
         }
 
@@ -968,6 +972,7 @@ namespace PCPOS
             Robno.frmSvePrimke primkaSve = new Robno.frmSvePrimke();
             primkaSve.MdiParent = this;
             primkaSve.MainFormMenu = this;
+            primkaSve.Dock = DockStyle.Fill;
             primkaSve.Show();
         }
 
@@ -1000,6 +1005,7 @@ namespace PCPOS
             Robno.frmSveIzdatnice izdatnicaSve = new Robno.frmSveIzdatnice();
             izdatnicaSve.MdiParent = this;
             izdatnicaSve.MainFormMenu = this;
+            izdatnicaSve.Dock = DockStyle.Fill;
             izdatnicaSve.Show();
         }
 
@@ -1031,7 +1037,9 @@ namespace PCPOS
                 return;
             }
             frmAktivacijaDokumenata ad = new frmAktivacijaDokumenata();
-            ad.ShowDialog();
+            ad.MdiParent = this;
+            ad.Dock = DockStyle.Fill;
+            ad.Show();
         }
 
         private void unosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1090,6 +1098,7 @@ namespace PCPOS
             frmPopisKalkulacija fr = new frmPopisKalkulacija();
             fr.MdiParent = this;
             fr.MainFormMenu = this;
+            fr.Dock = DockStyle.Fill;
             fr.Show();
         }
 
@@ -1121,6 +1130,7 @@ namespace PCPOS
             frmSveFakture sf = new frmSveFakture();
             sf.MdiParent = this;
             sf.MainFormMenu = this;
+            sf.Dock = DockStyle.Fill;
             sf.Show();
         }
 
@@ -1186,6 +1196,7 @@ namespace PCPOS
             }
             frmSviRadniNalozi srn = new frmSviRadniNalozi();
             srn.MdiParent = this;
+            srn.Dock = DockStyle.Fill;
             srn.MainFormMenu = this;
             srn.Show();
         }
@@ -1219,6 +1230,7 @@ namespace PCPOS
             }
             frmSviNormativi sf = new frmSviNormativi();
             sf.MdiParent = this;
+            sf.Dock = DockStyle.Fill;
             sf.MainFormMenu = this;
             sf.Show();
         }
@@ -1279,6 +1291,7 @@ namespace PCPOS
             }
             frmSveOtpremnice so = new frmSveOtpremnice();
             so.MdiParent = this;
+            so.Dock = DockStyle.Fill;
             so.MainFormMenu = this;
             so.Show();
         }
@@ -1291,7 +1304,9 @@ namespace PCPOS
                 return;
             }
             frmAktivnostiZaposlenika AZ = new frmAktivnostiZaposlenika();
-            AZ.ShowDialog();
+            AZ.MdiParent = this;
+            AZ.Dock = DockStyle.Fill;
+            AZ.Show();
         }
 
         private void promocijaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1307,7 +1322,9 @@ namespace PCPOS
                 return;
             }
             frmPromocijePostavke pp = new frmPromocijePostavke();
-            pp.ShowDialog();
+            pp.MdiParent = this;
+            pp.Dock = DockStyle.Fill;
+            pp.Show();
         }
 
         private void unosInventureToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1336,7 +1353,9 @@ namespace PCPOS
                 return;
             }
             podloga frmpo = new podloga();
-            frmpo.ShowDialog();
+            frmpo.MdiParent = this;
+            frmpo.Dock = DockStyle.Fill;
+            frmpo.Show();
         }
 
         private void posPrinterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1347,7 +1366,9 @@ namespace PCPOS
                 return;
             }
             frmPosPrinter posprint = new frmPosPrinter();
-            posprint.ShowDialog();
+            posprint.MdiParent = this;
+            posprint.Dock = DockStyle.Fill;
+            posprint.Show();
         }
 
         private void postavkeProgramaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1358,7 +1379,9 @@ namespace PCPOS
                 return;
             }
             frmPostavke settings_form = new frmPostavke();
-            settings_form.ShowDialog();
+            settings_form.MdiParent = this;
+            settings_form.Dock = DockStyle.Fill;
+            settings_form.Show();
         }
 
         private void skladištaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1773,7 +1796,7 @@ namespace PCPOS
             Kasa.frmPrometPoRobiBezSkladista prp = new Kasa.frmPrometPoRobiBezSkladista();
             prp.MdiParent = this;
             prp.Dock = DockStyle.Fill;
-            prp.ShowDialog();
+            prp.Show();
         }
 
         private void prometKaseToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -1799,7 +1822,7 @@ namespace PCPOS
             Fiskalizacija.frmPoslovniProstor sf = new Fiskalizacija.frmPoslovniProstor();
             sf.MdiParent = this;
             sf.Dock = DockStyle.Fill;
-            sf.ShowDialog();
+            sf.Show();
         }
 
         private void prodajaParagonToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1817,7 +1840,7 @@ namespace PCPOS
             frmParagonac p = new frmParagonac();
             p.MdiParent = this;
             p.Dock = DockStyle.Fill;
-            p.ShowDialog();
+            p.Show();
         }
 
         private void sveUlazneFaktureToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1829,6 +1852,7 @@ namespace PCPOS
             }
             frmSveUlazneFakture p = new frmSveUlazneFakture();
             p.MdiParent = this;
+            p.Dock = DockStyle.Fill;
             p.MainFormMenu = this;
             p.Show();
         }
@@ -1858,7 +1882,9 @@ namespace PCPOS
                 return;
             }
             Robno.frmOtpisRobe p = new Robno.frmOtpisRobe();
-            p.ShowDialog();
+            p.MdiParent = this;
+            p.Dock = DockStyle.Fill;
+            p.Show();
         }
 
         private void sviOtpisiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1871,6 +1897,7 @@ namespace PCPOS
             Robno.frmSviOtpisi sviotp = new Robno.frmSviOtpisi();
             sviotp.MdiParent = this;
             sviotp.MainFormMenu = this;
+            sviotp.Dock = DockStyle.Fill;
             sviotp.Show();
         }
 
@@ -1886,7 +1913,9 @@ namespace PCPOS
                 return;
             }
             frmRadniNalogSerivs s = new frmRadniNalogSerivs();
-            s.ShowDialog();
+            s.MdiParent = this;
+            s.Dock = DockStyle.Fill;
+            s.Show();
         }
 
         private void sviServisiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1898,6 +1927,7 @@ namespace PCPOS
             }
             frmSviRadniNaloziServis s = new frmSviRadniNaloziServis();
             s.MdiParent = this;
+            s.Dock = DockStyle.Fill;
             s.MainFormMenu = this;
             s.Show();
         }
@@ -1910,7 +1940,9 @@ namespace PCPOS
                 return;
             }
             Kasa.frmSveSmjene sm = new Kasa.frmSveSmjene();
-            sm.ShowDialog();
+            sm.MdiParent = this;
+            sm.Dock = DockStyle.Fill;
+            sm.Show();
         }
 
         private void valuteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1934,7 +1966,9 @@ namespace PCPOS
                 return;
             }
             frmKnjigaPII knj = new frmKnjigaPII();
-            knj.ShowDialog();
+            knj.MdiParent = this;
+            knj.Dock = DockStyle.Fill;
+            knj.Show();
         }
 
         private void prometKasePoFakturamaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1945,7 +1979,9 @@ namespace PCPOS
                 return;
             }
             promet_po_fakt_blagajna pr = new promet_po_fakt_blagajna();
-            pr.ShowDialog();
+            pr.MdiParent = this;
+            pr.Dock = DockStyle.Fill;
+            pr.Show();
         }
 
         private void izvještajPoŠtičenikuToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1979,7 +2015,9 @@ namespace PCPOS
                 return;
             }
             frmIzlazUlazskl UIZ = new frmIzlazUlazskl();
-            UIZ.ShowDialog();
+            UIZ.MdiParent = this;
+            UIZ.Dock = DockStyle.Fill;
+            UIZ.Show();
         }
 
         private void novaFakturaZaVanToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1994,7 +2032,9 @@ namespace PCPOS
                 return;
             }
             FakturaVan.frmFakturaVan fak = new FakturaVan.frmFakturaVan();
-            fak.ShowDialog();
+            fak.MdiParent = this;
+            fak.Dock = DockStyle.Fill;
+            fak.Show();
         }
 
         private void sveFaktureZaVanToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2005,7 +2045,9 @@ namespace PCPOS
                 return;
             }
             FakturaVan.frmSveFaktureVan faksve = new FakturaVan.frmSveFaktureVan();
-            faksve.ShowDialog();
+            faksve.MdiParent = this;
+            faksve.Dock = DockStyle.Fill;
+            faksve.Show();
         }
 
         private void prometKasePoDanimaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2016,7 +2058,9 @@ namespace PCPOS
                 return;
             }
             frmIspisProdajnihArtiklaPoDanima ispisdani = new frmIspisProdajnihArtiklaPoDanima();
-            ispisdani.ShowDialog();
+            ispisdani.MdiParent = this;
+            ispisdani.Dock = DockStyle.Fill;
+            ispisdani.Show();
         }
 
         private void poravnavanjeSkladištaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2027,7 +2071,9 @@ namespace PCPOS
                 return;
             }
             frmPoravnanjeSkladista por = new frmPoravnanjeSkladista();
-            por.ShowDialog();
+            por.MdiParent = this;
+            por.Dock = DockStyle.Fill;
+            por.Show();
         }
 
         private void podgrupaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2051,7 +2097,9 @@ namespace PCPOS
                 return;
             }
             Odrzavanja.frmOdrzavanja odr = new Odrzavanja.frmOdrzavanja();
-            odr.ShowDialog();
+            odr.MdiParent = this;
+            odr.Dock = DockStyle.Fill;
+            odr.Show();
         }
 
         private void promjenaCijenaKomadnoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2062,7 +2110,9 @@ namespace PCPOS
                 return;
             }
             Robno.frmPromjenaCijeneKomadno prom = new Robno.frmPromjenaCijeneKomadno();
-            prom.ShowDialog();
+            prom.MdiParent = this;
+            prom.Dock = DockStyle.Fill;
+            prom.Show();
         }
 
         private void održavanjeProvjeraToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2073,7 +2123,9 @@ namespace PCPOS
                 return;
             }
             Odrzavanja.Odrzavanje_promjena odr = new Odrzavanja.Odrzavanje_promjena();
-            odr.ShowDialog();
+            odr.MdiParent = this;
+            odr.Dock = DockStyle.Fill;
+            odr.Show();
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
@@ -2273,7 +2325,9 @@ namespace PCPOS
             }
 
             Report.Liste.frmSkladisteFinancijsko s = new Report.Liste.frmSkladisteFinancijsko();
-            s.ShowDialog();
+            s.MdiParent = this;
+            s.Dock = DockStyle.Fill;
+            s.Show();
         }
 
         private void knjigaUlazaIIzlazaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2285,7 +2339,9 @@ namespace PCPOS
             }
 
             frmTrgovackaKnjigaLoad frm = new frmTrgovackaKnjigaLoad();
-            frm.ShowDialog();
+            frm.MdiParent = this;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
         }
 
         private void provjeraNegativnihStanjaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2297,7 +2353,9 @@ namespace PCPOS
             }
 
             frmStanjeUMinusu frm = new frmStanjeUMinusu();
-            frm.ShowDialog();
+            frm.MdiParent = this;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
         }
 
         private void špranceToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2309,7 +2367,9 @@ namespace PCPOS
             }
 
             Util.frmSpranci frm = new Util.frmSpranci();
-            frm.ShowDialog();
+            frm.MdiParent = this;
+            frm.Dock = DockStyle.Fill;
+            frm.Show();
         }
 
         private void popisArtikalaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2419,13 +2479,17 @@ namespace PCPOS
             }
 
             Kasa.frmUlazIzlazFinancijski r = new Kasa.frmUlazIzlazFinancijski();
-            r.ShowDialog();
+            r.MdiParent = this;
+            r.Dock = DockStyle.Fill;
+            r.Show();
         }
 
         private void robuPreuzeoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmRobuPreuzeo rp = new frmRobuPreuzeo();
-            rp.ShowDialog();
+            rp.MdiParent = this;
+            rp.Dock = DockStyle.Fill;
+            rp.Show();
         }
 
         private void stariFormatToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2437,13 +2501,17 @@ namespace PCPOS
         private void popisKupljeneRobePremaPartneruToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Report.PopisRobe.frmPopisRobe pr = new Report.PopisRobe.frmPopisRobe();
-            pr.ShowDialog();
+            pr.MdiParent = this;
+            pr.Dock = DockStyle.Fill;
+            pr.Show();
         }
 
         private void popisDogađajaZaPartnereToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPartnerKronologija kr = new frmPartnerKronologija();
-            kr.ShowDialog();
+            kr.MdiParent = this;
+            kr.Dock = DockStyle.Fill;
+            kr.Show();
         }
 
         private void popisDogađajaZaPartnereToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -2457,13 +2525,17 @@ namespace PCPOS
         private void prodajaPoArtiklimaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Report.ProdajaPoArtiklima.frmProdajaPoArtiklu pa = new Report.ProdajaPoArtiklima.frmProdajaPoArtiklu();
-            pa.ShowDialog();
+            pa.MdiParent = this;
+            pa.Dock = DockStyle.Fill;
+            pa.Show();
         }
 
         private void blagajničkiIzvještajToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Report.BlagajnickiIzvjestaj.frmBlagajnickiIzvjestaj bli = new Report.BlagajnickiIzvjestaj.frmBlagajnickiIzvjestaj();
-            bli.ShowDialog();
+            bli.MdiParent = this;
+            bli.Dock = DockStyle.Fill;
+            bli.Show();
         }
 
         private void kronologijaPremaPartneruIRobiZaSveGodineToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2487,6 +2559,7 @@ namespace PCPOS
             //{
             Report.Rekapitulacija2015.frmRekapitulacija rep = new Report.Rekapitulacija2015.frmRekapitulacija();
             rep.MdiParent = this;
+            rep.Dock = DockStyle.Fill;
             rep.Show();
             //}
         }
@@ -2495,6 +2568,7 @@ namespace PCPOS
         {
             Report.PorezNaDohodak.frmPorezNaDohodak pnd = new Report.PorezNaDohodak.frmPorezNaDohodak();
             pnd.MdiParent = this;
+            pnd.Dock = DockStyle.Fill;
             pnd.Show();
         }
 
@@ -2595,7 +2669,9 @@ namespace PCPOS
                 return;
             }
             frmIzradaNaljepnice izn = new frmIzradaNaljepnice();
-            izn.ShowDialog();
+            izn.MdiParent = this;
+            izn.Dock = DockStyle.Fill;
+            izn.Show();
         }
 
         private void naljepniceBarcodeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2607,7 +2683,9 @@ namespace PCPOS
             }
 
             Report.Naljepnice.NaljepniceEan izn = new Report.Naljepnice.NaljepniceEan();
-            izn.ShowDialog();
+            izn.MdiParent = this;
+            izn.Dock = DockStyle.Fill;
+            izn.Show();
         }
 
         private void knjižnoOdobrenjeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2615,7 +2693,9 @@ namespace PCPOS
             try
             {
                 Robno.frmKnjiznoOdobrenje f = new Robno.frmKnjiznoOdobrenje();
-                f.ShowDialog();
+                f.MdiParent = this;
+                f.Dock = DockStyle.Fill;
+                f.Show();
             }
             catch (Exception ex)
             {
@@ -2633,7 +2713,9 @@ namespace PCPOS
                 }
 
                 frmAutomatskaUsklada f = new frmAutomatskaUsklada();
-                f.ShowDialog();
+                f.MdiParent = this;
+                f.Dock = DockStyle.Fill;
+                f.Show();
             }
             catch (Exception ex)
             {
@@ -2646,7 +2728,9 @@ namespace PCPOS
             try
             {
                 frmAutomatskaUskladaSve f = new frmAutomatskaUskladaSve();
-                f.ShowDialog();
+                f.MdiParent = this;
+                f.Dock = DockStyle.Fill;
+                f.Show();
             }
             catch (Exception ex)
             {
@@ -2713,6 +2797,8 @@ namespace PCPOS
                 }
 
                 frmBarkodeServis f = new frmBarkodeServis();
+                f.MdiParent = this;
+                f.Dock = DockStyle.Fill;
                 f.ShowDialog();
             }
             catch (Exception)
@@ -2845,15 +2931,17 @@ namespace PCPOS
         private void karticaRobeNaTuđenSkladištuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Proizvodnja.frmKarticaRobeNaTudemSkladistu f = new Proizvodnja.frmKarticaRobeNaTudemSkladistu();
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Dock = DockStyle.Fill;
+            f.Show();
         }
 
         private void knjigaPrometaKPRToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Report.KnjigaPrometaKPR.frmKPR2017 f = new Report.KnjigaPrometaKPR.frmKPR2017();
-            f.WindowState = FormWindowState.Maximized;
-
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Dock = DockStyle.Fill;
+            f.Show();
         }
 
         private void DugovanjaPartneraToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2865,7 +2953,9 @@ namespace PCPOS
             }
 
             Report.SaldaKonti.frmSaldaKonti sk = new Report.SaldaKonti.frmSaldaKonti();
-            sk.ShowDialog();
+            sk.MdiParent = this;
+            sk.Dock = DockStyle.Fill;
+            sk.Show();
         }
 
         private void unosPocetnogDugovanjaPartneraToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2883,7 +2973,9 @@ namespace PCPOS
                 }
 
                 Report.SaldaKonti.frmUnosPocetnogDugovanjaPartnera f = new Report.SaldaKonti.frmUnosPocetnogDugovanjaPartnera();
-                f.ShowDialog();
+                f.MdiParent = this;
+                f.Dock = DockStyle.Fill;
+                f.Show();
             }
             catch (Exception)
             {
@@ -2894,19 +2986,25 @@ namespace PCPOS
         private void robaNaKomisijiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Report.Komisija.frmRobaNaKomisiji pa = new Report.Komisija.frmRobaNaKomisiji();
-            pa.ShowDialog();
+            pa.MdiParent = this;
+            pa.Dock = DockStyle.Fill;
+            pa.Show();
         }
 
         private void rekapitulacijaRadnihNalogaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Report.Proizvodnja.RekapitulacijaRadnihNaloga.frmRekapitulacijaRadnihNaloga f = new Report.Proizvodnja.RekapitulacijaRadnihNaloga.frmRekapitulacijaRadnihNaloga();
-            f.ShowDialog();
+            f.MdiParent = this;
+            f.Dock = DockStyle.Fill;
+            f.Show();
         }
 
         private void rUCRazlikaUCijeniToolStripMenuItem_Click(object sender, EventArgs e)
         {
             IzlazniDokumenti.FormRUC form = new IzlazniDokumenti.FormRUC();
-            form.ShowDialog();
+            form.MdiParent = this;
+            form.Dock = DockStyle.Fill;
+            form.Show();
         }
 
         private void robniDobropisToolStripMenuItem_Click(object sender, EventArgs e)

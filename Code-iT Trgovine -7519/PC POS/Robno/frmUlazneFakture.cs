@@ -789,7 +789,9 @@ namespace PCPOS.Robno
             //}
             frmSveUlazneFakture Fu = new frmSveUlazneFakture();
             Fu.MainForm = this;
-            Fu.ShowDialog();
+            Fu.MdiParent = this.MdiParent;
+            Fu.Dock = DockStyle.Fill;
+            Fu.Show();
             if (broj_fakture_edit != null)
             {
                 deleteFields();

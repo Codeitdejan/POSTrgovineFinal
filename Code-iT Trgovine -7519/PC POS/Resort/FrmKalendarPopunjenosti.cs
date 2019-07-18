@@ -309,7 +309,9 @@ namespace PCPOS.Resort
         private void BtnReservation_Click(object sender, EventArgs e)
         {
             FrmRezervacija form = new FrmRezervacija();
-            form.ShowDialog();
+            form.MdiParent = this.MdiParent;
+            form.Dock = DockStyle.Fill;
+            form.Show();
             if (form.ReservationCreated)
                 LoadMonthData(SelectedMonth, Convert.ToInt32(numYear.Value));
         }
@@ -318,12 +320,18 @@ namespace PCPOS.Resort
         {
             Close();
         }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 8fd3c1986cb8ff040a1694c5a3c8706a573fadc6
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 8fd3c1986cb8ff040a1694c5a3c8706a573fadc6
         private void dataGridView_MouseUp(object sender, MouseEventArgs e)
         {
             if (otvoritiNovuFormicu)

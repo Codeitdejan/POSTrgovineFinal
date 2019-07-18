@@ -205,5 +205,10 @@ namespace PCPOS.Util
         }
 
         #endregion *****************************POPRATNE FUNKCIJE**************************************
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

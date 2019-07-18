@@ -69,5 +69,10 @@ order by rn.broj_naloga;", dtpDatumOd.Value, dtpDatumDo.Value);
                 throw;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
