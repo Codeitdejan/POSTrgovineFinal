@@ -406,63 +406,63 @@ namespace PCPOS
             // xplorerToolStripMenuItem
             // 
             this.xplorerToolStripMenuItem.Name = "xplorerToolStripMenuItem";
-            this.xplorerToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.xplorerToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
             this.xplorerToolStripMenuItem.Text = "Xplorer";
             this.xplorerToolStripMenuItem.Click += new System.EventHandler(this.xplorerToolStripMenuItem_Click);
             // 
             // dobarPartnerToolStripMenuItem
             // 
             this.dobarPartnerToolStripMenuItem.Name = "dobarPartnerToolStripMenuItem";
-            this.dobarPartnerToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.dobarPartnerToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
             this.dobarPartnerToolStripMenuItem.Text = "Dobar partner";
             this.dobarPartnerToolStripMenuItem.Click += new System.EventHandler(this.dobarPartnerToolStripMenuItem_Click);
             // 
             // bioBioToolStripMenuItem
             // 
             this.bioBioToolStripMenuItem.Name = "bioBioToolStripMenuItem";
-            this.bioBioToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.bioBioToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
             this.bioBioToolStripMenuItem.Text = "BioBio";
             this.bioBioToolStripMenuItem.Click += new System.EventHandler(this.bioBioToolStripMenuItem_Click);
             // 
             // školskaKnjigaToolStripMenuItem
             // 
             this.školskaKnjigaToolStripMenuItem.Name = "školskaKnjigaToolStripMenuItem";
-            this.školskaKnjigaToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.školskaKnjigaToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
             this.školskaKnjigaToolStripMenuItem.Text = "Školska knjiga";
             this.školskaKnjigaToolStripMenuItem.Click += new System.EventHandler(this.školskaKnjigaToolStripMenuItem_Click);
             // 
             // tradexcoToolStripMenuItem
             // 
             this.tradexcoToolStripMenuItem.Name = "tradexcoToolStripMenuItem";
-            this.tradexcoToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.tradexcoToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
             this.tradexcoToolStripMenuItem.Text = "Tradexco";
             this.tradexcoToolStripMenuItem.Click += new System.EventHandler(this.tradexcoToolStripMenuItem_Click);
             // 
             // nirdToolStripMenuItem
             // 
             this.nirdToolStripMenuItem.Name = "nirdToolStripMenuItem";
-            this.nirdToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.nirdToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
             this.nirdToolStripMenuItem.Text = "Nird";
             this.nirdToolStripMenuItem.Click += new System.EventHandler(this.nirdToolStripMenuItem_Click);
             // 
             // fokusTekstilToolStripMenuItem
             // 
             this.fokusTekstilToolStripMenuItem.Name = "fokusTekstilToolStripMenuItem";
-            this.fokusTekstilToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.fokusTekstilToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
             this.fokusTekstilToolStripMenuItem.Text = "Fokus Tekstil";
             this.fokusTekstilToolStripMenuItem.Click += new System.EventHandler(this.fokusTekstilToolStripMenuItem_Click);
             // 
             // afroditaToolStripMenuItem
             // 
             this.afroditaToolStripMenuItem.Name = "afroditaToolStripMenuItem";
-            this.afroditaToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.afroditaToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
             this.afroditaToolStripMenuItem.Text = "Afrodita";
             this.afroditaToolStripMenuItem.Click += new System.EventHandler(this.afroditaToolStripMenuItem_Click);
             // 
             // robotToolStripMenuItem
             // 
             this.robotToolStripMenuItem.Name = "robotToolStripMenuItem";
-            this.robotToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.robotToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
             this.robotToolStripMenuItem.Text = "Robot";
             this.robotToolStripMenuItem.Click += new System.EventHandler(this.robotToolStripMenuItem_Click);
             // 
@@ -634,21 +634,21 @@ namespace PCPOS
             // novaFakturaToolStripMenuItem1
             // 
             this.novaFakturaToolStripMenuItem1.Name = "novaFakturaToolStripMenuItem1";
-            this.novaFakturaToolStripMenuItem1.Size = new System.Drawing.Size(171, 24);
+            this.novaFakturaToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.novaFakturaToolStripMenuItem1.Text = "Nova faktura";
             this.novaFakturaToolStripMenuItem1.Click += new System.EventHandler(this.novaFakturaToolStripMenuItem_Click);
             // 
             // sveFaktureToolStripMenuItem1
             // 
             this.sveFaktureToolStripMenuItem1.Name = "sveFaktureToolStripMenuItem1";
-            this.sveFaktureToolStripMenuItem1.Size = new System.Drawing.Size(171, 24);
+            this.sveFaktureToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.sveFaktureToolStripMenuItem1.Text = "Sve fakture";
             this.sveFaktureToolStripMenuItem1.Click += new System.EventHandler(this.sveFaktureToolStripMenuItem_Click);
             // 
             // robuPreuzeoToolStripMenuItem
             // 
             this.robuPreuzeoToolStripMenuItem.Name = "robuPreuzeoToolStripMenuItem";
-            this.robuPreuzeoToolStripMenuItem.Size = new System.Drawing.Size(171, 24);
+            this.robuPreuzeoToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.robuPreuzeoToolStripMenuItem.Text = "Robu preuzeo";
             this.robuPreuzeoToolStripMenuItem.Click += new System.EventHandler(this.robuPreuzeoToolStripMenuItem_Click);
             // 
@@ -664,14 +664,14 @@ namespace PCPOS
             // novaFakturaToolStripMenuItem
             // 
             this.novaFakturaToolStripMenuItem.Name = "novaFakturaToolStripMenuItem";
-            this.novaFakturaToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.novaFakturaToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.novaFakturaToolStripMenuItem.Text = "Nova faktura";
             this.novaFakturaToolStripMenuItem.Click += new System.EventHandler(this.novaFakturaToolStripMenuItem_Click_1);
             // 
             // sveFaktureToolStripMenuItem
             // 
             this.sveFaktureToolStripMenuItem.Name = "sveFaktureToolStripMenuItem";
-            this.sveFaktureToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.sveFaktureToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.sveFaktureToolStripMenuItem.Text = "Sve fakture";
             this.sveFaktureToolStripMenuItem.Click += new System.EventHandler(this.sveFaktureToolStripMenuItem_Click_1);
             // 
@@ -710,14 +710,14 @@ namespace PCPOS
             // novaPonudaToolStripMenuItem1
             // 
             this.novaPonudaToolStripMenuItem1.Name = "novaPonudaToolStripMenuItem1";
-            this.novaPonudaToolStripMenuItem1.Size = new System.Drawing.Size(168, 24);
+            this.novaPonudaToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.novaPonudaToolStripMenuItem1.Text = "Nova ponuda";
             this.novaPonudaToolStripMenuItem1.Click += new System.EventHandler(this.novaPonudaToolStripMenuItem_Click);
             // 
             // svePonudeToolStripMenuItem
             // 
             this.svePonudeToolStripMenuItem.Name = "svePonudeToolStripMenuItem";
-            this.svePonudeToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
+            this.svePonudeToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.svePonudeToolStripMenuItem.Text = "Sve ponude";
             this.svePonudeToolStripMenuItem.Click += new System.EventHandler(this.svePonudeToolStripMenuItem1_Click);
             // 
@@ -834,14 +834,14 @@ namespace PCPOS
             // noviOtpisToolStripMenuItem
             // 
             this.noviOtpisToolStripMenuItem.Name = "noviOtpisToolStripMenuItem";
-            this.noviOtpisToolStripMenuItem.Size = new System.Drawing.Size(146, 24);
+            this.noviOtpisToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.noviOtpisToolStripMenuItem.Text = "Novi otpis";
             this.noviOtpisToolStripMenuItem.Click += new System.EventHandler(this.noviOtpisToolStripMenuItem_Click);
             // 
             // sviOtpisiToolStripMenuItem
             // 
             this.sviOtpisiToolStripMenuItem.Name = "sviOtpisiToolStripMenuItem";
-            this.sviOtpisiToolStripMenuItem.Size = new System.Drawing.Size(146, 24);
+            this.sviOtpisiToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.sviOtpisiToolStripMenuItem.Text = "Svi otpisi";
             this.sviOtpisiToolStripMenuItem.Click += new System.EventHandler(this.sviOtpisiToolStripMenuItem_Click);
             // 
@@ -1240,14 +1240,14 @@ namespace PCPOS
             // noviAvansToolStripMenuItem
             // 
             this.noviAvansToolStripMenuItem.Name = "noviAvansToolStripMenuItem";
-            this.noviAvansToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
+            this.noviAvansToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.noviAvansToolStripMenuItem.Text = "Novi avans";
             this.noviAvansToolStripMenuItem.Click += new System.EventHandler(this.noviAvansToolStripMenuItem_Click);
             // 
             // sviAvansiToolStripMenuItem
             // 
             this.sviAvansiToolStripMenuItem.Name = "sviAvansiToolStripMenuItem";
-            this.sviAvansiToolStripMenuItem.Size = new System.Drawing.Size(150, 24);
+            this.sviAvansiToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.sviAvansiToolStripMenuItem.Text = "Svi avansi";
             this.sviAvansiToolStripMenuItem.Click += new System.EventHandler(this.sviAvansiToolStripMenuItem_Click);
             // 
@@ -1583,21 +1583,21 @@ namespace PCPOS
             // noviServisToolStripMenuItem1
             // 
             this.noviServisToolStripMenuItem1.Name = "noviServisToolStripMenuItem1";
-            this.noviServisToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.noviServisToolStripMenuItem1.Size = new System.Drawing.Size(149, 24);
             this.noviServisToolStripMenuItem1.Text = "Novi servis";
             this.noviServisToolStripMenuItem1.Click += new System.EventHandler(this.noviServisToolStripMenuItem1_Click);
             // 
             // sviServisiToolStripMenuItem2
             // 
             this.sviServisiToolStripMenuItem2.Name = "sviServisiToolStripMenuItem2";
-            this.sviServisiToolStripMenuItem2.Size = new System.Drawing.Size(180, 24);
+            this.sviServisiToolStripMenuItem2.Size = new System.Drawing.Size(149, 24);
             this.sviServisiToolStripMenuItem2.Text = "Svi servisi";
             this.sviServisiToolStripMenuItem2.Click += new System.EventHandler(this.sviServisiToolStripMenuItem2_Click);
             // 
             // naljepniceToolStripMenuItem3
             // 
             this.naljepniceToolStripMenuItem3.Name = "naljepniceToolStripMenuItem3";
-            this.naljepniceToolStripMenuItem3.Size = new System.Drawing.Size(180, 24);
+            this.naljepniceToolStripMenuItem3.Size = new System.Drawing.Size(149, 24);
             this.naljepniceToolStripMenuItem3.Text = "Naljepnice";
             this.naljepniceToolStripMenuItem3.Click += new System.EventHandler(this.naljepniceToolStripMenuItem3_Click);
             // 

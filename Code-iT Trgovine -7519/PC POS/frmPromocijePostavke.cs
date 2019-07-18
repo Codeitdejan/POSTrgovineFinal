@@ -791,5 +791,10 @@ namespace PCPOS
                 nuBrojDanaNext.Value = Convert.ToInt16(DT.Rows[0]["traje_do"].ToString());
             }
         }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

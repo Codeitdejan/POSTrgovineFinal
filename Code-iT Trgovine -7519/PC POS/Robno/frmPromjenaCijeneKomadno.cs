@@ -43,7 +43,7 @@ namespace PCPOS.Robno
             nmGodinaInventure.Minimum = Convert.ToInt16(DateTime.Now.Year - 30);
             nmGodinaInventure.Maximum = Convert.ToInt16(DateTime.Now.Year + 30);
             nmGodinaInventure.Value = DateTime.Now.Year;
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            //this.Paint += new PaintEventHandler(Form1_Paint);
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -325,7 +325,9 @@ namespace PCPOS.Robno
             Robno.frmSvePromjeneCijenaKomadno prom = new Robno.frmSvePromjeneCijenaKomadno();
             prom.MainForm = this;
             broj_pocetno_edit = null;
-            prom.ShowDialog();
+            prom.MdiParent = this.MdiParent;
+            prom.Dock = DockStyle.Fill;
+            prom.Show();
 
             if (broj_pocetno_edit != null)
             {

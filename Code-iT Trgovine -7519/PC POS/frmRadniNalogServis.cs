@@ -49,7 +49,7 @@ namespace PCPOS
         {
             MyDataGrid.MainForm = this;
 
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            //this.Paint += new PaintEventHandler(Form1_Paint);
 
             DTpostavke = classSQL.select_settings("SELECT * FROM postavke", "postavke").Tables[0];
             DTpromocije1 = classSQL.select("SELECT * FROM promocija1", "promocija1").Tables[0];

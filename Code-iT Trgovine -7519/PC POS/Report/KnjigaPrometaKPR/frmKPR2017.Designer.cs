@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.DTListaUniverzalnaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaUniverzalna = new PCPOS.Dataset.ListaUniverzalna();
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.cmbMonths = new System.Windows.Forms.ComboBox();
             this.lblPeriod = new System.Windows.Forms.Label();
             this.btnLoad = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DTListaUniverzalnaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaUniverzalna)).BeginInit();
             this.SuspendLayout();
@@ -55,9 +56,9 @@
             this.reportViewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.DTListaUniverzalnaBindingSource;
-            this.reportViewer.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.DTListaUniverzalnaBindingSource;
+            this.reportViewer.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer.LocalReport.ReportEmbeddedResource = "PCPOS.Report.KnjigaPrometaKPR.KPR2017.rdlc";
             this.reportViewer.Location = new System.Drawing.Point(0, 66);
             this.reportViewer.Name = "reportViewer";
@@ -87,7 +88,7 @@
             // btnLoad
             // 
             this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnLoad.Location = new System.Drawing.Point(1003, 12);
+            this.btnLoad.Location = new System.Drawing.Point(332, 12);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(110, 48);
             this.btnLoad.TabIndex = 4;
@@ -95,15 +96,35 @@
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(983, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmKPR2017
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1125, 612);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.lblPeriod);
             this.Controls.Add(this.cmbMonths);
             this.Controls.Add(this.reportViewer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmKPR2017";
             this.Text = "frmKPR2017";
             this.Load += new System.EventHandler(this.frmKPR2017_Load);
@@ -121,5 +142,6 @@
         private Dataset.ListaUniverzalna listaUniverzalna;
         private System.Windows.Forms.BindingSource DTListaUniverzalnaBindingSource;
         public Microsoft.Reporting.WinForms.ReportViewer reportViewer;
+        private System.Windows.Forms.Button button1;
     }
 }

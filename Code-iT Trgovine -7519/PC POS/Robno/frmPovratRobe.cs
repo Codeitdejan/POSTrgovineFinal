@@ -100,7 +100,7 @@ namespace PCPOS.Robno
             SetSkladiste();
             txtBroj.Text = brojPovrata();
             ControlDisableEnable(1, 0, 0, 1, 0);
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            //this.Paint += new PaintEventHandler(Form1_Paint);
             if (broj_povrata_edit != null) { FillPovrat(); }
             txtIzradio.Text = classSQL.select("SELECT ime+' '+prezime as Ime  FROM zaposlenici WHERE id_zaposlenik='" + Properties.Settings.Default.id_zaposlenik + "'", "zaposlenici").Tables[0].Rows[0][0].ToString();
         }
@@ -1010,7 +1010,9 @@ namespace PCPOS.Robno
             Robno.frmSviPovrati sp = new Robno.frmSviPovrati();
             sp.sifra = "";
             sp.MainForm = this;
-            sp.ShowDialog();
+            sp.MdiParent = this.MdiParent;
+            sp.Dock = DockStyle.Fill;
+            sp.Show();
             if (broj_povrata_edit != null)
             {
                 DeleteFields();

@@ -92,7 +92,9 @@ namespace PCPOS.Kasa
             aa.PoslovnicaNaziv = cbDucan.Text;
             if (chbBlagajnik.Checked) { aa.cbZaposlenik = cbZaposlenik.SelectedValue.ToString(); aa.ZaposlenikNaziv = cbZaposlenik.Text; }
             if (chbDucan.Checked) { aa.cbDucan = cbDucan.SelectedValue.ToString(); }
-            aa.ShowDialog();
+            aa.MdiParent = this.MdiParent;
+            aa.Dock = DockStyle.Fill;
+            aa.Show();
         }
 
         private void btnIspisPOS_KeyDown(object sender, KeyEventArgs e)
@@ -107,6 +109,11 @@ namespace PCPOS.Kasa
         {
             Report.Kasa.frmPrometKase pr = new Report.Kasa.frmPrometKase();
             pr.ShowDialog();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

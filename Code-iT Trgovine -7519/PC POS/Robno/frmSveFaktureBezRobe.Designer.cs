@@ -489,6 +489,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1004, 837);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.dataGridView1);
@@ -496,6 +497,9 @@
             this.Controls.Add(this.btnUrediSifru);
             this.Controls.Add(this.btnSveFakture);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmSveFaktureBezRobe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sve fakture  IFA";

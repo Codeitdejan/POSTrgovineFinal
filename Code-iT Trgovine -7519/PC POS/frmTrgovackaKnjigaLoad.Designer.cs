@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.bttOdustani = new System.Windows.Forms.Button();
             this.cbRabati = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -101,11 +102,28 @@
             this.cbRabati.Text = "Ispis prometa sa rabatima ";
             this.cbRabati.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(290, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // frmTrgovackaKnjigaLoad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(256, 132);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(432, 132);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cbRabati);
             this.Controls.Add(this.bttOdustani);
             this.Controls.Add(this.label2);
@@ -113,7 +131,9 @@
             this.Controls.Add(this.bttPrikazi);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmTrgovackaKnjigaLoad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Knjiga Ulaza i Izlaza";
@@ -131,5 +151,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button bttOdustani;
         private System.Windows.Forms.CheckBox cbRabati;
+        private System.Windows.Forms.Button button1;
     }
 }

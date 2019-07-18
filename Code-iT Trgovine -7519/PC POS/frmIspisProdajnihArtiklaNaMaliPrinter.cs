@@ -20,17 +20,10 @@ namespace PCPOS
             SetCB();
             dtpOD.Value = Convert.ToDateTime(DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Day + " 00:00:00");
             dtpDO.Value = Convert.ToDateTime(DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Day + " 23:59:59");
-            this.Paint += new PaintEventHandler(Form1_Paint);
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Color x = System.Drawing.Color.FromArgb(((byte)(105)), ((byte)(170)), ((byte)(197)));
-            Color y = System.Drawing.Color.FromArgb(((byte)(40)), ((byte)(109)), ((byte)(135)));
-
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), x, y, 250);
-            c.FillRectangle(bG, 0, 0, Width, Height);
         }
 
         private DataTable DT_Zaposlenik;
@@ -185,6 +178,11 @@ namespace PCPOS
                 cbKasa.SelectedValue = DTpostavke.Rows[0]["default_blagajna"].ToString();
             }
             else chbKasa.Checked = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

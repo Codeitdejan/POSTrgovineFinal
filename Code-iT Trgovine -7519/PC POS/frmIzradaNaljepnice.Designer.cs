@@ -77,6 +77,7 @@
             this.txtPCDo = new System.Windows.Forms.TextBox();
             this.txtPCOd = new System.Windows.Forms.TextBox();
             this.chbMultiItems = new System.Windows.Forms.CheckBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,7 +105,7 @@
             this.dgv.Location = new System.Drawing.Point(12, 193);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersVisible = false;
-            this.dgv.Size = new System.Drawing.Size(775, 497);
+            this.dgv.Size = new System.Drawing.Size(876, 497);
             this.dgv.TabIndex = 5;
             // 
             // br
@@ -610,11 +611,28 @@
             this.chbMultiItems.Text = "Više stavki";
             this.chbMultiItems.UseVisualStyleBackColor = false;
             // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button2.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(758, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(130, 40);
+            this.button2.TabIndex = 137;
+            this.button2.Text = "Izlaz      ";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmIzradaNaljepnice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 702);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(900, 702);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.chbMultiItems);
             this.Controls.Add(this.cbPC);
             this.Controls.Add(this.label10);
@@ -652,6 +670,9 @@
             this.Controls.Add(this.txtDO);
             this.Controls.Add(this.txtPocetak);
             this.Controls.Add(this.txtOdKal);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmIzradaNaljepnice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Izrada naljepnice";
@@ -712,5 +733,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ean;
         private System.Windows.Forms.DataGridViewTextBoxColumn dokument;
         private System.Windows.Forms.CheckBox chbMultiItems;
+        private System.Windows.Forms.Button button2;
     }
 }

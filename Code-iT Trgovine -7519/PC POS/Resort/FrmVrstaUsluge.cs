@@ -55,7 +55,9 @@ namespace PCPOS.Resort
         {
             int brojZapisaDoSad = dataGridView.Rows.Count;
             FrmVrstaUslugeDodaj frmVrstaUslugeDodaj = new FrmVrstaUslugeDodaj(brojZapisaDoSad);
-            frmVrstaUslugeDodaj.ShowDialog();
+            frmVrstaUslugeDodaj.MdiParent = this.MdiParent;
+            frmVrstaUslugeDodaj.Dock = DockStyle.Fill;
+            frmVrstaUslugeDodaj.Show();
             FillGrid(); // Refresh dataGridView
         }
 
@@ -72,7 +74,9 @@ namespace PCPOS.Resort
             else
             {
                 FrmVrstaUslugeUredi frmVrstaUslugeUredi = new FrmVrstaUslugeUredi(idArtiklaIzBaze, brojArtiklaIzTablice);
-                frmVrstaUslugeUredi.ShowDialog();
+                frmVrstaUslugeUredi.MdiParent = this.MdiParent;
+                frmVrstaUslugeUredi.Dock = DockStyle.Fill;
+                frmVrstaUslugeUredi.Show();
                 FillGrid(); // Refresh dataGridView
             }
         }
@@ -104,6 +108,11 @@ namespace PCPOS.Resort
         private string GetSelectedServiceTypeId()
         {
             return dataGridView.Rows[dataGridView.CurrentCell.RowIndex].Cells["id"].Value.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

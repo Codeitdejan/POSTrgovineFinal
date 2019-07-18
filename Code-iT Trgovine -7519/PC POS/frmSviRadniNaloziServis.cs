@@ -30,7 +30,7 @@ namespace PCPOS
 
             fillCB();
             fillDataGrid();
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            //this.Paint += new PaintEventHandler(Form1_Paint);
         }
 
         private void SetDecimalInDgv(DataGridView dg, string column, string column1, string column2)

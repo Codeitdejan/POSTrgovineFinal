@@ -87,6 +87,7 @@
             this.txtDirektor = new System.Windows.Forms.TextBox();
             this.richTextServis = new System.Windows.Forms.RichTextBox();
             this.label29 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label14
@@ -677,11 +678,28 @@
             this.label29.TabIndex = 54;
             this.label29.Text = "Tekst na podnožju Radni nalog servis";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(943, 11);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 55;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // podloga
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(966, 706);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(1085, 706);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.richTextServis);
             this.Controls.Add(this.label28);
@@ -741,6 +759,7 @@
             this.Controls.Add(this.txtOib);
             this.Controls.Add(this.txtSkraceno);
             this.Controls.Add(this.txtImeTvrtke);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "podloga";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Podaci o tvrtki";
@@ -812,5 +831,6 @@
         private System.Windows.Forms.TextBox txtDirektor;
         private System.Windows.Forms.RichTextBox richTextServis;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Button button1;
     }
 }

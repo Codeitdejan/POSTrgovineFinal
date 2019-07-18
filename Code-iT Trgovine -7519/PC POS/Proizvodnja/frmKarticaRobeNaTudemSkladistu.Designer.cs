@@ -38,10 +38,10 @@
             this.dtpDatumDo = new System.Windows.Forms.DateTimePicker();
             this.lblDatumDo = new System.Windows.Forms.Label();
             this.btnPrikazi = new System.Windows.Forms.Button();
-            this.btnOdustani = new System.Windows.Forms.Button();
             this.lblPartnerNaziv = new System.Windows.Forms.Label();
             this.cmbSkladiste = new System.Windows.Forms.ComboBox();
             this.lblSkladiste = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblPoslovnice
@@ -141,24 +141,13 @@
             // btnPrikazi
             // 
             this.btnPrikazi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnPrikazi.Location = new System.Drawing.Point(796, 12);
+            this.btnPrikazi.Location = new System.Drawing.Point(837, 12);
             this.btnPrikazi.Name = "btnPrikazi";
             this.btnPrikazi.Size = new System.Drawing.Size(91, 61);
             this.btnPrikazi.TabIndex = 10;
             this.btnPrikazi.Text = "Prikaži";
             this.btnPrikazi.UseVisualStyleBackColor = true;
             this.btnPrikazi.Click += new System.EventHandler(this.btnPrikazi_Click);
-            // 
-            // btnOdustani
-            // 
-            this.btnOdustani.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnOdustani.Location = new System.Drawing.Point(893, 12);
-            this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(91, 61);
-            this.btnOdustani.TabIndex = 11;
-            this.btnOdustani.Text = "Odustani";
-            this.btnOdustani.UseVisualStyleBackColor = true;
-            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // lblPartnerNaziv
             // 
@@ -189,15 +178,31 @@
             this.lblSkladiste.TabIndex = 13;
             this.lblSkladiste.Text = "Skladište:";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(949, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmKarticaRobeNaTudemSkladistu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 483);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(1091, 483);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cmbSkladiste);
             this.Controls.Add(this.lblSkladiste);
             this.Controls.Add(this.lblPartnerNaziv);
-            this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnPrikazi);
             this.Controls.Add(this.dtpDatumDo);
             this.Controls.Add(this.lblDatumDo);
@@ -208,6 +213,9 @@
             this.Controls.Add(this.lblPartner);
             this.Controls.Add(this.cmbPoslovnice);
             this.Controls.Add(this.lblPoslovnice);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmKarticaRobeNaTudemSkladistu";
             this.Text = "Kartica robe na tuđem skladištu";
             this.Load += new System.EventHandler(this.frmKarticaRobeNaTudemSkladistu_Load);
@@ -228,9 +236,9 @@
         private System.Windows.Forms.DateTimePicker dtpDatumDo;
         private System.Windows.Forms.Label lblDatumDo;
         private System.Windows.Forms.Button btnPrikazi;
-        private System.Windows.Forms.Button btnOdustani;
         private System.Windows.Forms.Label lblPartnerNaziv;
         private System.Windows.Forms.ComboBox cmbSkladiste;
         private System.Windows.Forms.Label lblSkladiste;
+        private System.Windows.Forms.Button button1;
     }
 }

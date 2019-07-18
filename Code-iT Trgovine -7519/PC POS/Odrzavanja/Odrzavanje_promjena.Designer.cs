@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.txtTraziPremaSifri = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtIme = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.sifra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Partner = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kolicina_odr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtTraziPremaSifri = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtIme = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +63,37 @@
             this.dgv.Size = new System.Drawing.Size(936, 344);
             this.dgv.TabIndex = 24;
             this.dgv.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellEndEdit);
+            // 
+            // sifra
+            // 
+            this.sifra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sifra.HeaderText = "Šifra";
+            this.sifra.Name = "sifra";
+            this.sifra.ReadOnly = true;
+            this.sifra.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Partner
+            // 
+            this.Partner.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Partner.HeaderText = "Partner";
+            this.Partner.Name = "Partner";
+            this.Partner.ReadOnly = true;
+            this.Partner.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // kolicina_odr
+            // 
+            this.kolicina_odr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.kolicina_odr.HeaderText = "Količina održavanja";
+            this.kolicina_odr.Name = "kolicina_odr";
+            this.kolicina_odr.ReadOnly = true;
+            this.kolicina_odr.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // tel
+            // 
+            this.tel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tel.HeaderText = "Telefonski broj";
+            this.tel.Name = "tel";
+            this.tel.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // txtTraziPremaSifri
             // 
@@ -101,47 +133,36 @@
             this.label10.TabIndex = 38;
             this.label10.Text = "Traži prema imenu";
             // 
-            // sifra
+            // button1
             // 
-            this.sifra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sifra.HeaderText = "Šifra";
-            this.sifra.Name = "sifra";
-            this.sifra.ReadOnly = true;
-            this.sifra.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Partner
-            // 
-            this.Partner.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Partner.HeaderText = "Partner";
-            this.Partner.Name = "Partner";
-            this.Partner.ReadOnly = true;
-            this.Partner.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // kolicina_odr
-            // 
-            this.kolicina_odr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.kolicina_odr.HeaderText = "Količina održavanja";
-            this.kolicina_odr.Name = "kolicina_odr";
-            this.kolicina_odr.ReadOnly = true;
-            this.kolicina_odr.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // tel
-            // 
-            this.tel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tel.HeaderText = "Telefonski broj";
-            this.tel.Name = "tel";
-            this.tel.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(818, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Odrzavanje_promjena
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(958, 453);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtTraziPremaSifri);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtIme);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dgv);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Odrzavanje_promjena";
             this.Text = "Odrzavanje_promjena";
             this.Load += new System.EventHandler(this.Odrzavanje_promjena_Load);
@@ -163,5 +184,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Partner;
         private System.Windows.Forms.DataGridViewTextBoxColumn kolicina_odr;
         private System.Windows.Forms.DataGridViewTextBoxColumn tel;
+        private System.Windows.Forms.Button button1;
     }
 }

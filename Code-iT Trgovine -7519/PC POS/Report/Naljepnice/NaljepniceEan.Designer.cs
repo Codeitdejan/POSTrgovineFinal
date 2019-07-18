@@ -30,7 +30,7 @@
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NaljepniceEan));
             this.dTListaUniverzalnaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaUniverzalna = new PCPOS.Dataset.ListaUniverzalna();
@@ -57,6 +57,7 @@
             this.btnPartner = new System.Windows.Forms.PictureBox();
             this.txtZapocniOdBroja = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dTListaUniverzalnaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaUniverzalna)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPartner)).BeginInit();
@@ -250,13 +251,13 @@
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource4.Name = "DSLista";
-            reportDataSource4.Value = this.dTListaUniverzalnaBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource1.Name = "DSLista";
+            reportDataSource1.Value = this.dTListaUniverzalnaBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PCPOS.Report.Naljepnice.NaljepniceEan.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(15, 83);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(786, 679);
+            this.reportViewer1.Size = new System.Drawing.Size(769, 718);
             this.reportViewer1.TabIndex = 8;
             // 
             // btnPartner
@@ -289,12 +290,28 @@
             this.label13.TabIndex = 20;
             this.label13.Text = "Započni od broja:";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(794, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 559;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // NaljepniceEan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(810, 774);
+            this.ClientSize = new System.Drawing.Size(936, 812);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtZapocniOdBroja);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.btnPartner);
@@ -318,7 +335,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNaslov);
             this.Controls.Add(this.label1);
-            this.MaximumSize = new System.Drawing.Size(826, 812);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(826, 812);
             this.Name = "NaljepniceEan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -363,5 +382,6 @@
         private System.Windows.Forms.PictureBox btnPartner;
         private System.Windows.Forms.TextBox txtZapocniOdBroja;
         private System.Windows.Forms.Label label13;
-	}
+        private System.Windows.Forms.Button button1;
+    }
 }

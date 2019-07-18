@@ -49,7 +49,7 @@ namespace PCPOS
             btnSpremi.Enabled = false;
             ControlDisableEnable(true, false, false, true, false);
             if (broj_RN_edit != null) { FillRn(); edit = true; }
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            //this.Paint += new PaintEventHandler(Form1_Paint);
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -1248,7 +1248,9 @@ where n.sifra_artikla = '{0}';", DTRoba.Rows[0]["sifra"].ToString());
             frmSviRadniNalozi srn = new frmSviRadniNalozi();
             srn.sifra_rn = "";
             srn.MainForm = this;
-            srn.ShowDialog();
+            srn.MdiParent = this.MdiParent;
+            srn.Dock = DockStyle.Fill;
+            srn.Show();
             if (broj_RN_edit != null)
             {
                 deleteFields();

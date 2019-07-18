@@ -27,6 +27,15 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dokumenat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kupac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.broj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.artikl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kolicina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rabat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cijena = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.opis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPartnerIme = new System.Windows.Forms.TextBox();
@@ -37,15 +46,7 @@
             this.txtNazivArtikli = new System.Windows.Forms.TextBox();
             this.btnTrazi = new System.Windows.Forms.Button();
             this.btnProsleGosine = new System.Windows.Forms.Button();
-            this.dokumenat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kupac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.broj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.artikl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kolicina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rabat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cijena = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.opis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +77,60 @@
             this.dataGridView1.Size = new System.Drawing.Size(1059, 348);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // dokumenat
+            // 
+            this.dokumenat.HeaderText = "Dokumenat";
+            this.dokumenat.Name = "dokumenat";
+            this.dokumenat.ReadOnly = true;
+            // 
+            // kupac
+            // 
+            this.kupac.HeaderText = "Kupac";
+            this.kupac.Name = "kupac";
+            this.kupac.ReadOnly = true;
+            // 
+            // datum
+            // 
+            this.datum.HeaderText = "Datum";
+            this.datum.Name = "datum";
+            this.datum.ReadOnly = true;
+            // 
+            // broj
+            // 
+            this.broj.HeaderText = "Broj";
+            this.broj.Name = "broj";
+            this.broj.ReadOnly = true;
+            // 
+            // artikl
+            // 
+            this.artikl.HeaderText = "Artikl";
+            this.artikl.Name = "artikl";
+            this.artikl.ReadOnly = true;
+            // 
+            // kolicina
+            // 
+            this.kolicina.HeaderText = "Količina";
+            this.kolicina.Name = "kolicina";
+            this.kolicina.ReadOnly = true;
+            // 
+            // rabat
+            // 
+            this.rabat.HeaderText = "Rabat";
+            this.rabat.Name = "rabat";
+            this.rabat.ReadOnly = true;
+            // 
+            // cijena
+            // 
+            this.cijena.HeaderText = "Cijena";
+            this.cijena.Name = "cijena";
+            this.cijena.ReadOnly = true;
+            // 
+            // opis
+            // 
+            this.opis.HeaderText = "Opis";
+            this.opis.Name = "opis";
+            this.opis.ReadOnly = true;
             // 
             // richTextBox1
             // 
@@ -162,7 +217,7 @@
             // btnProsleGosine
             // 
             this.btnProsleGosine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnProsleGosine.Location = new System.Drawing.Point(914, 7);
+            this.btnProsleGosine.Location = new System.Drawing.Point(599, 8);
             this.btnProsleGosine.Name = "btnProsleGosine";
             this.btnProsleGosine.Size = new System.Drawing.Size(158, 67);
             this.btnProsleGosine.TabIndex = 10;
@@ -170,66 +225,28 @@
             this.btnProsleGosine.UseVisualStyleBackColor = true;
             this.btnProsleGosine.Click += new System.EventHandler(this.btnProsleGosine_Click);
             // 
-            // dokumenat
+            // button1
             // 
-            this.dokumenat.HeaderText = "Dokumenat";
-            this.dokumenat.Name = "dokumenat";
-            this.dokumenat.ReadOnly = true;
-            // 
-            // kupac
-            // 
-            this.kupac.HeaderText = "Kupac";
-            this.kupac.Name = "kupac";
-            this.kupac.ReadOnly = true;
-            // 
-            // datum
-            // 
-            this.datum.HeaderText = "Datum";
-            this.datum.Name = "datum";
-            this.datum.ReadOnly = true;
-            // 
-            // broj
-            // 
-            this.broj.HeaderText = "Broj";
-            this.broj.Name = "broj";
-            this.broj.ReadOnly = true;
-            // 
-            // artikl
-            // 
-            this.artikl.HeaderText = "Artikl";
-            this.artikl.Name = "artikl";
-            this.artikl.ReadOnly = true;
-            // 
-            // kolicina
-            // 
-            this.kolicina.HeaderText = "Količina";
-            this.kolicina.Name = "kolicina";
-            this.kolicina.ReadOnly = true;
-            // 
-            // rabat
-            // 
-            this.rabat.HeaderText = "Rabat";
-            this.rabat.Name = "rabat";
-            this.rabat.ReadOnly = true;
-            // 
-            // cijena
-            // 
-            this.cijena.HeaderText = "Cijena";
-            this.cijena.Name = "cijena";
-            this.cijena.ReadOnly = true;
-            // 
-            // opis
-            // 
-            this.opis.HeaderText = "Opis";
-            this.opis.Name = "opis";
-            this.opis.ReadOnly = true;
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(942, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmPregledPoGodinama
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(109)))), ((int)(((byte)(135)))));
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1084, 559);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnProsleGosine);
             this.Controls.Add(this.btnTrazi);
             this.Controls.Add(this.label4);
@@ -241,6 +258,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPregledPoGodinama";
             this.Text = "Pregled po godinama";
             this.Load += new System.EventHandler(this.frmPregledPoGodinama_Load);
@@ -272,5 +292,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rabat;
         private System.Windows.Forms.DataGridViewTextBoxColumn cijena;
         private System.Windows.Forms.DataGridViewTextBoxColumn opis;
+        private System.Windows.Forms.Button button1;
     }
 }

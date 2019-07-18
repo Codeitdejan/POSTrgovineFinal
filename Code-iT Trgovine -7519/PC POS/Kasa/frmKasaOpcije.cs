@@ -459,7 +459,7 @@ namespace PCPOS
                 "'" + DTracun.Rows[0]["broj_kartice_bodovi"].ToString() + "'," +
                 "'" + DTracun.Rows[0]["br_sa_prethodnog_racuna"].ToString() + "'," +
                 "'" + dobivenoGotovina + "'," +
-                "'NE'," +
+                "'DA',"+
                 "'" + ukupno + "'," +
                 "'" + DTracun.Rows[0]["napomena"].ToString() + "'," +
                 "'" + DTracun.Rows[0]["nacin_placanja"].ToString() + "'," +
@@ -535,7 +535,7 @@ namespace PCPOS
                 DSracunStavke.Rows[i].SetField("broj_racuna", novi_racun);
                 //
 
-                DataTable robaOduzmi = classSQL.select(
+           /*     DataTable robaOduzmi = classSQL.select(
                     "SELECT oduzmi FROM roba where sifra='" +
                     sifra + "'", "roba")
                     .Tables[0];
@@ -551,13 +551,13 @@ namespace PCPOS
                     /*SQL.SQLroba_prodaja.UpdateRows(
 						sifra_skladiste,
 						kol,
-						sifra);*/
+						sifra);
                     string update = "UPDATE roba_prodaja SET kolicina='" + kol.ToString() +
                         "' WHERE id_skladiste='" + sifra_skladiste +
                         "' AND sifra='" + sifra + "';";
                     classSQL.update(update);
-                }
-
+                }*/
+            
                 //???
                 if (sifra.Length > 4)
                 {
@@ -623,61 +623,18 @@ namespace PCPOS
             Stavke.Columns.Add("ime");
             for (int i = 0; i < Stavke.Rows.Count; i++)
             {
-                string sifra = Stavke.Rows[i]["sifra_robe"].ToString();
+                /*string sifra = Stavke.Rows[i]["sifra_robe"].ToString();
                 DataTable imeRobe = classSQL.select(
                     "SELECT naziv FROM roba where sifra='" +
                     sifra + "'", "roba")
-                    .Tables[0];
+                    .Tables[0];*/
+                string imeRobe = Stavke.Rows[i]["naziv"].ToString();
 
-                Stavke.Rows[i].SetField("ime", imeRobe.Rows[0]["naziv"].ToString());
+                // Stavke.Rows[i].SetField("ime", imeRobe.Rows[0]["naziv"].ToString());
+                Stavke.Rows[i].SetField("ime", imeRobe);
             }
 
             string placanje = "O";
-
-            //if (DTpostavkePrinter.Rows[0]["posPrinterBool"].ToString() == "1")
-            //{
-            //    try
-            //    {
-            //        if (Convert.ToDecimal(IznosGotovina) == 0 && Convert.ToDecimal(IznosKartica) > 0)
-            //        {
-            //            placanje = "K";
-            //        }
-            //        else if (Convert.ToDecimal(IznosGotovina) > 0 && Convert.ToDecimal(IznosKartica) == 0)
-            //        {
-            //            placanje = "G";
-            //        }
-            //        else if (Convert.ToDecimal(IznosGotovina) > 0 && Convert.ToDecimal(IznosKartica) > 0)
-            //        {
-            //            placanje = "O";
-            //        }
-
-            //        DateTime[] datumi = new DateTime[2];
-            //        datumi[0] = DateTime.Now;
-            //        datumi[1] = datumi[0];
-            //        PosPrint.classPosPrintMaloprodaja1.PrintReceipt(Stavke, blagajnik_ime,
-            //            noviRacun + "/" + datumi[0].Year.ToString(), sifraPartnera, barcode, noviRacun, placanje, datumi, false);
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        if (MessageBox.Show("Desila se pogreška kod ispisa na 'mali' pos printer.\r\nŽelite li ispisati ovaj dokument na A4 format?" + Environment.NewLine + Environment.NewLine
-            //            + ex.Message, "Printer") == DialogResult.Yes)
-            //        {
-            //            Report.Faktura.repFaktura rfak = new Report.Faktura.repFaktura();
-            //            rfak.dokumenat = "RAC";
-            //            rfak.ImeForme = "Račun";
-            //            rfak.broj_dokumenta = noviRacun;
-            //            rfak.ShowDialog();
-            //        }
-            //    }
-            //}
-            //else
-            //{
-            //    Report.Faktura.repFaktura rfak = new Report.Faktura.repFaktura();
-            //    rfak.dokumenat = "RAC";
-            //    rfak.ImeForme = "Račun";
-            //    rfak.broj_dokumenta = noviRacun;
-            //    rfak.ShowDialog();
-            //}
 
             if (Convert.ToDecimal(IznosGotovina) == 0 && Convert.ToDecimal(IznosBon) == 0 && Convert.ToDecimal(IznosKartica) != 0)
             {

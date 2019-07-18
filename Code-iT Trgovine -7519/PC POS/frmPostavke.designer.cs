@@ -250,6 +250,7 @@
             this.lblApiKey = new System.Windows.Forms.Label();
             this.txtApiKey = new System.Windows.Forms.TextBox();
             this.chbUseEmployees = new System.Windows.Forms.CheckBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabPage4.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox11.SuspendLayout();
@@ -968,7 +969,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(814, 385);
+            this.tabPage1.Size = new System.Drawing.Size(828, 385);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Osnovno";
             // 
@@ -1363,7 +1364,7 @@
             this.tabSkladiste.Location = new System.Drawing.Point(-2, 1);
             this.tabSkladiste.Name = "tabSkladiste";
             this.tabSkladiste.SelectedIndex = 0;
-            this.tabSkladiste.Size = new System.Drawing.Size(822, 423);
+            this.tabSkladiste.Size = new System.Drawing.Size(836, 423);
             this.tabSkladiste.TabIndex = 47;
             // 
             // tabPage3
@@ -2739,13 +2740,32 @@
             this.chbUseEmployees.Visible = false;
             this.chbUseEmployees.CheckedChanged += new System.EventHandler(this.chbUseEmployees_CheckedChanged);
             // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button5.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(855, 12);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(130, 40);
+            this.button5.TabIndex = 48;
+            this.button5.Text = "Izlaz      ";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // frmPostavke
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 422);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(997, 422);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.tabSkladiste);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPostavke";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Postavke";
@@ -3057,5 +3077,6 @@
         private System.Windows.Forms.Button btnSendInvoice;
         private System.Windows.Forms.Button btnUpdateStatus;
         private System.Windows.Forms.CheckBox cbKoristiResort;
+        private System.Windows.Forms.Button button5;
     }
 }

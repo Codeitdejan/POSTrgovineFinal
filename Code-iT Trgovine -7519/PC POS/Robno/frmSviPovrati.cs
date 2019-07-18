@@ -21,7 +21,7 @@ namespace PCPOS.Robno
 
         private void frmSviPovrati_Load(object sender, EventArgs e)
         {
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            //this.Paint += new PaintEventHandler(Form1_Paint);
 
             int heigt = SystemInformation.VirtualScreen.Height;
             this.Height = heigt - 60;

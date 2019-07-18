@@ -23,7 +23,7 @@ namespace PCPOS
             fillCB();
             fillDataGrid();
             PaintRows(dgv);
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            
         }
 
         private void PaintRows(DataGridView dg)
@@ -48,9 +48,6 @@ namespace PCPOS
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), Color.AliceBlue, Color.LightSlateGray, 250);
-            c.FillRectangle(bG, 0, 0, Width, Height);
         }
 
         private void fillDataGrid()

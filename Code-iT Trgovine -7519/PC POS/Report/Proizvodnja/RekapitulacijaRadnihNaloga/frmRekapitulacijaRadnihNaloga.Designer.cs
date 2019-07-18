@@ -31,21 +31,42 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.dSRpodaciTvrtkeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSRpodaciTvrtke = new PCPOS.Dataset.DSRpodaciTvrtke();
+            this.listaUniverzalnaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listaUniverzalna = new PCPOS.Dataset.ListaUniverzalna();
             this.reportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpDatumDo = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpDatumOd = new System.Windows.Forms.DateTimePicker();
             this.btnTrazi = new System.Windows.Forms.Button();
-            this.dSRpodaciTvrtke = new PCPOS.Dataset.DSRpodaciTvrtke();
-            this.dSRpodaciTvrtkeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.listaUniverzalna = new PCPOS.Dataset.ListaUniverzalna();
-            this.listaUniverzalnaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dSRpodaciTvrtke)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dSRpodaciTvrtkeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaUniverzalna)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSRpodaciTvrtke)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaUniverzalnaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaUniverzalna)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dSRpodaciTvrtkeBindingSource
+            // 
+            this.dSRpodaciTvrtkeBindingSource.DataMember = "DTRpodaciTvrtke";
+            this.dSRpodaciTvrtkeBindingSource.DataSource = this.dSRpodaciTvrtke;
+            // 
+            // dSRpodaciTvrtke
+            // 
+            this.dSRpodaciTvrtke.DataSetName = "DSRpodaciTvrtke";
+            this.dSRpodaciTvrtke.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // listaUniverzalnaBindingSource
+            // 
+            this.listaUniverzalnaBindingSource.DataMember = "DTListaUniverzalna";
+            this.listaUniverzalnaBindingSource.DataSource = this.listaUniverzalna;
+            // 
+            // listaUniverzalna
+            // 
+            this.listaUniverzalna.DataSetName = "ListaUniverzalna";
+            this.listaUniverzalna.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer
             // 
@@ -110,7 +131,7 @@
             this.btnTrazi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnTrazi.Image = global::PCPOS.Properties.Resources._10591;
             this.btnTrazi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrazi.Location = new System.Drawing.Point(676, 12);
+            this.btnTrazi.Location = new System.Drawing.Point(295, 12);
             this.btnTrazi.Name = "btnTrazi";
             this.btnTrazi.Size = new System.Drawing.Size(96, 52);
             this.btnTrazi.TabIndex = 580;
@@ -118,25 +139,20 @@
             this.btnTrazi.UseVisualStyleBackColor = true;
             this.btnTrazi.Click += new System.EventHandler(this.btnTrazi_Click);
             // 
-            // dSRpodaciTvrtke
+            // button1
             // 
-            this.dSRpodaciTvrtke.DataSetName = "DSRpodaciTvrtke";
-            this.dSRpodaciTvrtke.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dSRpodaciTvrtkeBindingSource
-            // 
-            this.dSRpodaciTvrtkeBindingSource.DataMember = "DTRpodaciTvrtke";
-            this.dSRpodaciTvrtkeBindingSource.DataSource = this.dSRpodaciTvrtke;
-            // 
-            // listaUniverzalna
-            // 
-            this.listaUniverzalna.DataSetName = "ListaUniverzalna";
-            this.listaUniverzalna.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // listaUniverzalnaBindingSource
-            // 
-            this.listaUniverzalnaBindingSource.DataMember = "DTListaUniverzalna";
-            this.listaUniverzalnaBindingSource.DataSource = this.listaUniverzalna;
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(641, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 581;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmRekapitulacijaRadnihNaloga
             // 
@@ -144,20 +160,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(776, 812);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnTrazi);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtpDatumDo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtpDatumOd);
             this.Controls.Add(this.reportViewer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmRekapitulacijaRadnihNaloga";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rekapitulacija radnih naloga";
             this.Load += new System.EventHandler(this.frmRekapitulacijaRadnihNaloga_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dSRpodaciTvrtke)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSRpodaciTvrtkeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaUniverzalna)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSRpodaciTvrtke)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaUniverzalnaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaUniverzalna)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,5 +195,6 @@
         private Dataset.DSRpodaciTvrtke dSRpodaciTvrtke;
         private System.Windows.Forms.BindingSource listaUniverzalnaBindingSource;
         private Dataset.ListaUniverzalna listaUniverzalna;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -50,6 +50,7 @@
             this.chbKasa = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbKasa = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnIspis
@@ -66,7 +67,7 @@
             this.btnIspis.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnIspis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIspis.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnIspis.Location = new System.Drawing.Point(13, 367);
+            this.btnIspis.Location = new System.Drawing.Point(12, 367);
             this.btnIspis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnIspis.Name = "btnIspis";
             this.btnIspis.Size = new System.Drawing.Size(135, 40);
@@ -284,7 +285,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.button1.Location = new System.Drawing.Point(165, 367);
+            this.button1.Location = new System.Drawing.Point(168, 367);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 40);
@@ -332,11 +333,28 @@
             this.cbKasa.Size = new System.Drawing.Size(279, 24);
             this.cbKasa.TabIndex = 92;
             // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button2.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(334, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(130, 40);
+            this.button2.TabIndex = 95;
+            this.button2.Text = "Izlaz      ";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmIspisProdajnihArtiklaPoDanima
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 423);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(476, 423);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.chbKasa);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cbKasa);
@@ -358,6 +376,7 @@
             this.Controls.Add(this.cbSkladiste);
             this.Controls.Add(this.cbGrupa);
             this.Controls.Add(this.cbDucan);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmIspisProdajnihArtiklaPoDanima";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prometi kase po danima";
@@ -390,5 +409,6 @@
         private System.Windows.Forms.CheckBox chbKasa;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbKasa;
+        private System.Windows.Forms.Button button2;
     }
 }

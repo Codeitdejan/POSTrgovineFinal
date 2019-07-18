@@ -48,8 +48,6 @@ namespace PCPOS
                 }
             }
             catch { }
-
-            this.Paint += new PaintEventHandler(Form1_Paint);
         }
 
         private void fillDataGrid()
@@ -105,9 +103,6 @@ namespace PCPOS
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), Color.AliceBlue, Color.LightSlateGray, 500);
-            c.FillRectangle(bG, 0, 0, Width, Height);
         }
 
         private DataSet DS_Zaposlenik = new DataSet();
