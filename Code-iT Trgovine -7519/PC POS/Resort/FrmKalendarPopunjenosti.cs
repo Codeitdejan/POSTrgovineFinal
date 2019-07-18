@@ -316,11 +316,11 @@ namespace PCPOS.Resort
             Close();
         }
 
-<<<<<<< HEAD
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-=======
+        }
+
         private void dataGridView_MouseUp(object sender, MouseEventArgs e)
         {
             //Broj označenih čelija
@@ -395,7 +395,6 @@ namespace PCPOS.Resort
             days[1] = lastDay;
 
             return days;
->>>>>>> 979e4b42b878568f969accc61ce595366ddfefeb
         }
     }
 }

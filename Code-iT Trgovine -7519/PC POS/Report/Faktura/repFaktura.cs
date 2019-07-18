@@ -266,7 +266,7 @@ namespace PCPOS.Report.Faktura
                 " " + imeTablica[1] + ".broj_racuna," +
                 " " + imeTablica[1] + ".rabat," +
                 " " + imeTablica[1] + ".sifra_robe AS sifra," +
-                " roba.naziv as naziv," +
+                " CASE WHEN racun_stavke.naziv IS NULL OR racun_stavke.naziv = '' THEN roba.naziv ELSE racun_stavke.naziv END as naziv," + 
                 " roba.jm as jm," +
                 " " + imeTablica[1] + ".id_skladiste AS skladiste" +
                 " FROM " + imeTablica[1] + "" +
