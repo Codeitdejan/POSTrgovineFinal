@@ -31,15 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBlagajne));
             this.cbDucan = new System.Windows.Forms.ComboBox();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.ime_blagajne = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_ducan = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.aktivnost = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNoviUnos = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.nuBrojNaplatnog = new System.Windows.Forms.NumericUpDown();
-            this.ime_blagajne = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_ducan = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.aktivnost = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuBrojNaplatnog)).BeginInit();
             this.SuspendLayout();
@@ -72,9 +73,34 @@
             this.dgv.Location = new System.Drawing.Point(14, 111);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersVisible = false;
-            this.dgv.Size = new System.Drawing.Size(559, 483);
+            this.dgv.Size = new System.Drawing.Size(743, 483);
             this.dgv.TabIndex = 102;
             this.dgv.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellEndEdit);
+            // 
+            // ime_blagajne
+            // 
+            this.ime_blagajne.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ime_blagajne.HeaderText = "Broj naplatnog uređaja";
+            this.ime_blagajne.Name = "ime_blagajne";
+            // 
+            // id_ducan
+            // 
+            this.id_ducan.HeaderText = "Poslovnica";
+            this.id_ducan.Name = "id_ducan";
+            this.id_ducan.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.id_ducan.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // aktivnost
+            // 
+            this.aktivnost.HeaderText = "Aktivnost";
+            this.aktivnost.Name = "aktivnost";
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id_grupa";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
             // 
             // btnNoviUnos
             // 
@@ -142,36 +168,29 @@
             this.nuBrojNaplatnog.Size = new System.Drawing.Size(169, 20);
             this.nuBrojNaplatnog.TabIndex = 104;
             // 
-            // ime_blagajne
+            // button1
             // 
-            this.ime_blagajne.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ime_blagajne.HeaderText = "Broj naplatnog uređaja";
-            this.ime_blagajne.Name = "ime_blagajne";
-            // 
-            // id_ducan
-            // 
-            this.id_ducan.HeaderText = "Poslovnica";
-            this.id_ducan.Name = "id_ducan";
-            this.id_ducan.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.id_ducan.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // aktivnost
-            // 
-            this.aktivnost.HeaderText = "Aktivnost";
-            this.aktivnost.Name = "aktivnost";
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id_grupa";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(637, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 105;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmBlagajne
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 613);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(779, 613);
+            this.ControlBox = false;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.nuBrojNaplatnog);
             this.Controls.Add(this.cbDucan);
             this.Controls.Add(this.dgv);
@@ -179,6 +198,9 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmBlagajne";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Popis naplatnih uređaja";
@@ -204,6 +226,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn id_ducan;
         private System.Windows.Forms.DataGridViewCheckBoxColumn aktivnost;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
-
+        private System.Windows.Forms.Button button1;
     }
 }

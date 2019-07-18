@@ -17,14 +17,6 @@ namespace PCPOS.Sifarnik
         //DataTable DTBojeForme;
         private void frmSobe_Load(object sender, EventArgs e)
         {
-            //DTBojeForme = classDBlite.LiteSelect("SELECT * FROM FormColors", "FormColors").Tables[0];
-
-            /****************************SINKRONIZACIJA SA WEB-OM*****************/
-            bgSinkronizacija = new BackgroundWorker();
-            bgSinkronizacija.DoWork += new DoWorkEventHandler(bgSinkronizacija_DoWork);
-            bgSinkronizacija.WorkerSupportsCancellation = true;
-            /****************************SINKRONIZACIJA SA WEB-OM*****************/
-
             DataTable DTtip_sobe = classSQL.select("SELECT * FROM grad ORDER BY grad;", "grad").Tables[0];
             cbGrad.DataSource = DTtip_sobe;
             cbGrad.DisplayMember = "grad";
@@ -73,24 +65,16 @@ namespace PCPOS.Sifarnik
             grad.ValueMember = "id_grad";
 
             Set();
-            this.Paint += new PaintEventHandler(Form1_Paint);
+           
         }
-
-        /****************************SINKRONIZACIJA SA WEB-OM*****************/
-        private BackgroundWorker bgSinkronizacija = null;
-        private synWeb.synPokretac PokretacSinkronizacije = new synWeb.synPokretac();
-        /****************************SINKRONIZACIJA SA WEB-OM*****************/
 
         private void bgSinkronizacija_DoWork(object sender, DoWorkEventArgs e)
         {
-            PokretacSinkronizacije.PokreniSinkronizaciju(true, true, true, true, true, true, true, true, true, true, true, true, true, true, true);
+            
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), Color.AliceBlue, Color.LightSlateGray, 250);
-            c.FillRectangle(bG, 0, 0, Width, Height);
         }
 
         private void Set()
@@ -426,8 +410,13 @@ dgv.Rows[e.RowIndex].Cells["id"].FormattedValue.ToString());
 
         private void frmSobe_FormClosing(object sender, FormClosingEventArgs e)
         {
-            bgSinkronizacija.RunWorkerAsync();
+   
             btnNoviUnos.Select();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

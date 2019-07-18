@@ -44,6 +44,7 @@
             this.cijena = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnObrisiSobu = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -207,20 +208,37 @@
             this.btnObrisiSobu.UseVisualStyleBackColor = false;
             this.btnObrisiSobu.Click += new System.EventHandler(this.BtnObrisiSobu_Click);
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(675, 11);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmPopisSoba
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(771, 586);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(817, 586);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnObrisiSobu);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTipSobe);
             this.Controls.Add(this.btnUrediSobu);
             this.Controls.Add(this.btnNovaSoba);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPopisSoba";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Popis soba";
@@ -245,5 +263,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn broj_lezaja;
         private System.Windows.Forms.DataGridViewTextBoxColumn cijena;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.Button button1;
     }
 }

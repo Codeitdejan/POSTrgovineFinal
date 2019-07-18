@@ -19,40 +19,21 @@ namespace PCPOS.Sifarnik
         private void frmGrupeProizvoda_Load(object sender, EventArgs e)
         {
             SetGrupe();
-            /****************************SINKRONIZACIJA SA WEB-OM*****************/
-            bgSinkronizacija = new BackgroundWorker();
-            bgSinkronizacija.DoWork += new DoWorkEventHandler(bgSinkronizacija_DoWork);
-            bgSinkronizacija.WorkerSupportsCancellation = true;
-            /****************************SINKRONIZACIJA SA WEB-OM*****************/
-
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            
         }
-
-        /****************************SINKRONIZACIJA SA WEB-OM*****************/
-        private BackgroundWorker bgSinkronizacija = null;
-        private synWeb.synPokretac PokretacSinkronizacije = new synWeb.synPokretac();
-        /****************************SINKRONIZACIJA SA WEB-OM*****************/
-
         private void GasenjeForme_FormClosing(object sender, FormClosingEventArgs e)
         {
-            /****************************SINKRONIZACIJA SA WEB-OM*****************/
-            bgSinkronizacija.RunWorkerAsync();
-            /****************************SINKRONIZACIJA SA WEB-OM*****************/
+            
         }
 
         private void bgSinkronizacija_DoWork(object sender, DoWorkEventArgs e)
         {
-            PokretacSinkronizacije.PokreniSinkronizaciju(true, true, true, true, true, true, true, true, true, true, true, true, true, true, true);
+            
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Color x = Color.FromArgb(((byte)(105)), ((byte)(170)), ((byte)(197)));
-            Color y = Color.FromArgb(((byte)(40)), ((byte)(109)), ((byte)(135)));
 
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), x, y, 250);
-            c.FillRectangle(bG, 0, 0, Width, Height);
         }
 
         private void SetGrupe()
@@ -114,6 +95,11 @@ dgv.Rows[e.RowIndex].Cells["id_grupa"].FormattedValue.ToString());
                     MessageBox.Show(ex.ToString());
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace PCPOS
         private DataSet DSdobavljac = new DataSet();
         private DataSet DSmanufacturers = new DataSet();
         private DataSet dsPostavke = new DataSet();
-
+        public frmRobaUsluge MainMenu { get; set; }
         public frmRobaTrazi()
         {
             InitializeComponent();
@@ -684,6 +684,21 @@ order by x.sort;");
                 Properties.Settings.Default.artikli_koji_su_na_skl = false;
             }
             Properties.Settings.Default.Save();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

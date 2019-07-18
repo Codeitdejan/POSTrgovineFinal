@@ -258,5 +258,10 @@ VALUES
             cbZemlja.SelectedValue = dgvSk.CurrentRow.Cells["id_drzava"].FormattedValue.ToString();
             chbGlavno.Checked = false;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

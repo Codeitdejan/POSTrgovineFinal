@@ -31,6 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.btnDodaj = new System.Windows.Forms.Button();
             this.btnTraziPartnera = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,7 +48,6 @@
             this.lblPotrazuje = new System.Windows.Forms.Label();
             this.lblBrojDogadaja = new System.Windows.Forms.Label();
             this.lblOdr = new System.Windows.Forms.Label();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnTraziPartnera)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
@@ -56,14 +57,15 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(109)))), ((int)(((byte)(135)))));
+            this.groupBox1.BackColor = System.Drawing.Color.SlateGray;
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnEdit);
             this.groupBox1.Controls.Add(this.btnDodaj);
             this.groupBox1.Controls.Add(this.btnTraziPartnera);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtFilter);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(10, 9);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(907, 96);
@@ -71,10 +73,45 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pretraži prema partneru, šifri partnera, opisu";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(775, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 43);
+            this.button1.TabIndex = 77;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
+            this.btnEdit.FlatAppearance.CheckedBackColor = System.Drawing.Color.LightSlateGray;
+            this.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnEdit.ForeColor = System.Drawing.Color.Black;
+            this.btnEdit.Location = new System.Drawing.Point(496, 30);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(169, 44);
+            this.btnEdit.TabIndex = 76;
+            this.btnEdit.Text = "Uredi događaj";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // btnDodaj
             // 
-            this.btnDodaj.BackColor = System.Drawing.Color.Transparent;
-            this.btnDodaj.BackgroundImage = global::PCPOS.Properties.Resources.Untitled_1;
+            this.btnDodaj.BackColor = System.Drawing.Color.Gainsboro;
             this.btnDodaj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDodaj.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDodaj.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
@@ -83,8 +120,8 @@
             this.btnDodaj.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnDodaj.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnDodaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.btnDodaj.ForeColor = System.Drawing.Color.White;
+            this.btnDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnDodaj.ForeColor = System.Drawing.Color.Black;
             this.btnDodaj.Location = new System.Drawing.Point(321, 30);
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(169, 44);
@@ -216,7 +253,7 @@
             this.lblDuguje.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblDuguje.AutoSize = true;
             this.lblDuguje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblDuguje.ForeColor = System.Drawing.Color.White;
+            this.lblDuguje.ForeColor = System.Drawing.Color.Black;
             this.lblDuguje.Location = new System.Drawing.Point(12, 533);
             this.lblDuguje.Name = "lblDuguje";
             this.lblDuguje.Size = new System.Drawing.Size(99, 20);
@@ -228,7 +265,7 @@
             this.lblPotrazuje.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblPotrazuje.AutoSize = true;
             this.lblPotrazuje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblPotrazuje.ForeColor = System.Drawing.Color.White;
+            this.lblPotrazuje.ForeColor = System.Drawing.Color.Black;
             this.lblPotrazuje.Location = new System.Drawing.Point(188, 533);
             this.lblPotrazuje.Name = "lblPotrazuje";
             this.lblPotrazuje.Size = new System.Drawing.Size(115, 20);
@@ -239,7 +276,7 @@
             // 
             this.lblBrojDogadaja.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblBrojDogadaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblBrojDogadaja.ForeColor = System.Drawing.Color.White;
+            this.lblBrojDogadaja.ForeColor = System.Drawing.Color.Black;
             this.lblBrojDogadaja.Location = new System.Drawing.Point(733, 528);
             this.lblBrojDogadaja.Name = "lblBrojDogadaja";
             this.lblBrojDogadaja.Size = new System.Drawing.Size(183, 20);
@@ -258,44 +295,25 @@
             this.lblOdr.Size = new System.Drawing.Size(0, 20);
             this.lblOdr.TabIndex = 76;
             // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.Transparent;
-            this.btnEdit.BackgroundImage = global::PCPOS.Properties.Resources.Untitled_1;
-            this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatAppearance.CheckedBackColor = System.Drawing.Color.LightSlateGray;
-            this.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(496, 30);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(169, 44);
-            this.btnEdit.TabIndex = 76;
-            this.btnEdit.Text = "Uredi događaj";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
             // frmPartnerKronologija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(109)))), ((int)(((byte)(135)))));
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(928, 557);
+            this.ControlBox = false;
             this.Controls.Add(this.lblOdr);
             this.Controls.Add(this.lblBrojDogadaja);
             this.Controls.Add(this.lblPotrazuje);
             this.Controls.Add(this.lblDuguje);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPartnerKronologija";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kronologija partnera";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPartnerKronologija_FormClosing);
             this.Load += new System.EventHandler(this.frmPartnerKronologija_Load);
             this.groupBox1.ResumeLayout(false);
@@ -326,5 +344,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.Label lblOdr;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button button1;
     }
 }

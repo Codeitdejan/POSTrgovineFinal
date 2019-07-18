@@ -6,6 +6,7 @@ namespace PCPOS
 {
     public partial class frmPartnerKronologija : Form
     {
+        public frmMenu MainForm { get; set; }
         public frmPartnerKronologija()
         {
             InitializeComponent();
@@ -46,7 +47,9 @@ namespace PCPOS
         private void btnDodaj_Click(object sender, EventArgs e)
         {
             frmPartnerKronologijaDodaj dod = new frmPartnerKronologijaDodaj();
-            dod.ShowDialog();
+            dod.MdiParent = this.MdiParent;
+            dod.Dock = DockStyle.Fill;
+            dod.Show();
             PopuniPodatke();
         }
 
@@ -161,6 +164,11 @@ namespace PCPOS
             {
                 throw;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

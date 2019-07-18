@@ -17,17 +17,11 @@ namespace PCPOS.Sinkronizacija.Partneri
         private void frmIzvozIzPrograma_Load(object sender, EventArgs e)
         {
             fill();
-            this.Paint += new PaintEventHandler(Form1_Paint);
+         
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Color x = System.Drawing.Color.FromArgb(((byte)(105)), ((byte)(170)), ((byte)(197)));
-            Color y = System.Drawing.Color.FromArgb(((byte)(40)), ((byte)(109)), ((byte)(135)));
-
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), x, y, 250);
-            c.FillRectangle(bG, 0, 0, Width, Height);
         }
 
         private void fill()
@@ -290,6 +284,11 @@ namespace PCPOS.Sinkronizacija.Partneri
         private void btnUcitaj_Click(object sender, EventArgs e)
         {
             loadXML();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

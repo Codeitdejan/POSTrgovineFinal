@@ -30,12 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProizvodac));
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.proizvodac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_proizvodac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNoviUnos = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtnazivProizvodaca = new System.Windows.Forms.TextBox();
-            this.proizvodac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_proizvodac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +55,19 @@
             this.dgv.Size = new System.Drawing.Size(559, 483);
             this.dgv.TabIndex = 102;
             this.dgv.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellEndEdit);
+            // 
+            // proizvodac
+            // 
+            this.proizvodac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.proizvodac.HeaderText = "Proizvođač";
+            this.proizvodac.Name = "proizvodac";
+            // 
+            // id_proizvodac
+            // 
+            this.id_proizvodac.HeaderText = "id_proizvodac";
+            this.id_proizvodac.Name = "id_proizvodac";
+            this.id_proizvodac.ReadOnly = true;
+            this.id_proizvodac.Visible = false;
             // 
             // btnNoviUnos
             // 
@@ -111,29 +125,36 @@
             this.txtnazivProizvodaca.Size = new System.Drawing.Size(170, 22);
             this.txtnazivProizvodaca.TabIndex = 97;
             // 
-            // proizvodac
+            // button1
             // 
-            this.proizvodac.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.proizvodac.HeaderText = "Proizvođač";
-            this.proizvodac.Name = "proizvodac";
-            // 
-            // id_proizvodac
-            // 
-            this.id_proizvodac.HeaderText = "id_proizvodac";
-            this.id_proizvodac.Name = "id_proizvodac";
-            this.id_proizvodac.ReadOnly = true;
-            this.id_proizvodac.Visible = false;
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(615, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 103;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmProizvodac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 613);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(757, 613);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.btnNoviUnos);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtnazivProizvodaca);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmProizvodac";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Grupe proizvoda";
@@ -154,6 +175,6 @@
         private System.Windows.Forms.TextBox txtnazivProizvodaca;
         private System.Windows.Forms.DataGridViewTextBoxColumn proizvodac;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_proizvodac;
-
+        private System.Windows.Forms.Button button1;
     }
 }

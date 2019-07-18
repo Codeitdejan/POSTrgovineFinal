@@ -316,6 +316,11 @@ namespace PCPOS.Resort
             Close();
         }
 
+<<<<<<< HEAD
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+=======
         private void dataGridView_MouseUp(object sender, MouseEventArgs e)
         {
             //Broj označenih čelija
@@ -330,9 +335,13 @@ namespace PCPOS.Resort
             int [] days = Days(ref dataGridView, selectedCellCount);
             int firstDay = days[0];
             int lastDay = days[1];
-            
-            //OTVORITI FORMU UNOS REZERVACIJE S PARAMETRIMA O KOJOJ SOBI SE RADI, PRVI DAN, POSLJEDNJI DAN, MJESEC, GODINA
 
+            //OTVORITI FORMU UNOS REZERVACIJE S PARAMETRIMA O KOJOJ SOBI SE RADI, PRVI DAN, POSLJEDNJI DAN, MJESEC, GODINA, TRENUTNO VRIJEME hh:mm:ss
+            int rowNumberToInsertIntoComboBox = dataGridView.SelectedCells[0].RowIndex;
+            string fullFirstDay = firstDay.ToString() + "." + (cbMonth.SelectedIndex + 1).ToString() + "." + numYear.Value.ToString() + " " + DateTime.Now.ToString("hh:mm:ss");
+            string fullLastDay = lastDay.ToString() + "." + (cbMonth.SelectedIndex + 1).ToString() + "." + numYear.Value.ToString() + " " + DateTime.Now.ToString("hh:mm:ss");
+            FrmRezervacija frmRezervacija = new FrmRezervacija(rowNumberToInsertIntoComboBox, fullFirstDay, fullLastDay);
+            frmRezervacija.ShowDialog();
         }
 
         //Provjera ako je korisnik označio više od 1 reda
@@ -386,6 +395,7 @@ namespace PCPOS.Resort
             days[1] = lastDay;
 
             return days;
+>>>>>>> 979e4b42b878568f969accc61ce595366ddfefeb
         }
     }
 }

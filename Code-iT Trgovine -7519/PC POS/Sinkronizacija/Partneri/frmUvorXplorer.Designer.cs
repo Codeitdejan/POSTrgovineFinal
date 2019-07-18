@@ -48,10 +48,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnKreirajXMLiSpremi = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnUcitaj = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label3 = new System.Windows.Forms.Label();
             this.cbSkladiste = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -86,7 +87,7 @@
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Arial", 8.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(618, 535);
+            this.dgv.Size = new System.Drawing.Size(885, 535);
             this.dgv.TabIndex = 23;
             // 
             // sifra
@@ -181,7 +182,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(630, 563);
+            this.groupBox1.Size = new System.Drawing.Size(897, 563);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Uvoz aktikla i grupiranje grupa";
@@ -201,7 +202,7 @@
             this.btnKreirajXMLiSpremi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKreirajXMLiSpremi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
             this.btnKreirajXMLiSpremi.ForeColor = System.Drawing.Color.White;
-            this.btnKreirajXMLiSpremi.Location = new System.Drawing.Point(499, 582);
+            this.btnKreirajXMLiSpremi.Location = new System.Drawing.Point(910, 582);
             this.btnKreirajXMLiSpremi.Name = "btnKreirajXMLiSpremi";
             this.btnKreirajXMLiSpremi.Size = new System.Drawing.Size(144, 48);
             this.btnKreirajXMLiSpremi.TabIndex = 73;
@@ -209,10 +210,6 @@
             this.toolTip1.SetToolTip(this.btnKreirajXMLiSpremi, "Kreiraj XML datoteku i odaberite mjesto spremanja");
             this.btnKreirajXMLiSpremi.UseVisualStyleBackColor = false;
             this.btnKreirajXMLiSpremi.Click += new System.EventHandler(this.btnKreirajXMLiSpremi_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // btnUcitaj
             // 
@@ -229,7 +226,7 @@
             this.btnUcitaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUcitaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
             this.btnUcitaj.ForeColor = System.Drawing.Color.White;
-            this.btnUcitaj.Location = new System.Drawing.Point(345, 582);
+            this.btnUcitaj.Location = new System.Drawing.Point(756, 582);
             this.btnUcitaj.Name = "btnUcitaj";
             this.btnUcitaj.Size = new System.Drawing.Size(148, 48);
             this.btnUcitaj.TabIndex = 74;
@@ -237,6 +234,10 @@
             this.toolTip1.SetToolTip(this.btnUcitaj, "Kreiraj XML datoteku i odaberite mjesto spremanja");
             this.btnUcitaj.UseVisualStyleBackColor = false;
             this.btnUcitaj.Click += new System.EventHandler(this.btnUcitaj_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // label3
             // 
@@ -259,17 +260,36 @@
             this.cbSkladiste.Size = new System.Drawing.Size(294, 21);
             this.cbSkladiste.TabIndex = 75;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(924, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmUvorXplorer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(170)))), ((int)(((byte)(197)))));
-            this.ClientSize = new System.Drawing.Size(655, 641);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(1066, 641);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbSkladiste);
             this.Controls.Add(this.btnUcitaj);
             this.Controls.Add(this.btnKreirajXMLiSpremi);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmUvorXplorer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
@@ -306,5 +326,6 @@
         private System.Windows.Forms.Button btnUcitaj;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbSkladiste;
+        private System.Windows.Forms.Button button1;
     }
 }

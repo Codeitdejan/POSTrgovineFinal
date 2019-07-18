@@ -815,7 +815,6 @@ VALUES
         private void button1_Click(object sender, EventArgs e)
         {
             EnableDisable(true);
-            btnOdustani.PerformClick();
             zapocni_uređivanje_odrzavanja = false;
         }
 
@@ -1041,8 +1040,10 @@ order by x.sort, x.naziv;");
             frmPartnerKronologija kr = new frmPartnerKronologija();
             if (txtSifra.Text != "")
                 kr.id_pr = txtSifra.Text;
-
-            kr.ShowDialog();
+            kr.MdiParent = MainFormMenu;
+            kr.MainForm = MainFormMenu;
+            kr.Dock = DockStyle.Fill;
+            kr.Show();
         }
 
         private void chbKorisnikPrograma_CheckedChanged(object sender, EventArgs e)
@@ -1325,6 +1326,11 @@ WHERE id_partner_poslovnica = '{6}';",
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

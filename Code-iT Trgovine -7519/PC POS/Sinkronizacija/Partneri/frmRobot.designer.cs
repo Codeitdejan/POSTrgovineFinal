@@ -53,6 +53,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbSkladiste = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -87,7 +88,7 @@
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Arial", 8.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(618, 516);
+            this.dgv.Size = new System.Drawing.Size(836, 516);
             this.dgv.TabIndex = 23;
             // 
             // sifra
@@ -182,7 +183,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(630, 544);
+            this.groupBox1.Size = new System.Drawing.Size(848, 544);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Uvoz aktikla i grupiranje grupa";
@@ -190,8 +191,7 @@
             // btnKreirajXMLiSpremi
             // 
             this.btnKreirajXMLiSpremi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKreirajXMLiSpremi.BackColor = System.Drawing.Color.Transparent;
-            this.btnKreirajXMLiSpremi.BackgroundImage = global::PCPOS.Properties.Resources.Untitled_1;
+            this.btnKreirajXMLiSpremi.BackColor = System.Drawing.Color.Gainsboro;
             this.btnKreirajXMLiSpremi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnKreirajXMLiSpremi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKreirajXMLiSpremi.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
@@ -201,8 +201,8 @@
             this.btnKreirajXMLiSpremi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnKreirajXMLiSpremi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKreirajXMLiSpremi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.btnKreirajXMLiSpremi.ForeColor = System.Drawing.Color.White;
-            this.btnKreirajXMLiSpremi.Location = new System.Drawing.Point(499, 582);
+            this.btnKreirajXMLiSpremi.ForeColor = System.Drawing.Color.Black;
+            this.btnKreirajXMLiSpremi.Location = new System.Drawing.Point(853, 582);
             this.btnKreirajXMLiSpremi.Name = "btnKreirajXMLiSpremi";
             this.btnKreirajXMLiSpremi.Size = new System.Drawing.Size(144, 48);
             this.btnKreirajXMLiSpremi.TabIndex = 73;
@@ -214,8 +214,7 @@
             // btnUcitaj
             // 
             this.btnUcitaj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUcitaj.BackColor = System.Drawing.Color.Transparent;
-            this.btnUcitaj.BackgroundImage = global::PCPOS.Properties.Resources.Untitled_1;
+            this.btnUcitaj.BackColor = System.Drawing.Color.Gainsboro;
             this.btnUcitaj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUcitaj.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUcitaj.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
@@ -225,8 +224,8 @@
             this.btnUcitaj.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnUcitaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUcitaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.btnUcitaj.ForeColor = System.Drawing.Color.White;
-            this.btnUcitaj.Location = new System.Drawing.Point(345, 582);
+            this.btnUcitaj.ForeColor = System.Drawing.Color.Black;
+            this.btnUcitaj.Location = new System.Drawing.Point(699, 582);
             this.btnUcitaj.Name = "btnUcitaj";
             this.btnUcitaj.Size = new System.Drawing.Size(148, 48);
             this.btnUcitaj.TabIndex = 74;
@@ -271,18 +270,37 @@
             this.label1.TabIndex = 77;
             this.label1.Text = "Na cijenu robot ide + 20%";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(867, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmRobot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(170)))), ((int)(((byte)(197)))));
-            this.ClientSize = new System.Drawing.Size(655, 641);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(1009, 641);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbSkladiste);
             this.Controls.Add(this.btnUcitaj);
             this.Controls.Add(this.btnKreirajXMLiSpremi);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmRobot";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
@@ -320,5 +338,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbSkladiste;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

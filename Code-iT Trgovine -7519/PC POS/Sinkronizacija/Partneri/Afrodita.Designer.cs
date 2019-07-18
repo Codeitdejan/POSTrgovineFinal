@@ -65,6 +65,7 @@
             this.txtPathExcel = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnTraziPartnera)).BeginInit();
@@ -260,7 +261,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.cbSkladiste);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox2.Location = new System.Drawing.Point(679, 272);
+            this.groupBox2.Location = new System.Drawing.Point(679, 297);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(317, 80);
             this.groupBox2.TabIndex = 25;
@@ -289,8 +290,7 @@
             // btnKreirajXMLiSpremi
             // 
             this.btnKreirajXMLiSpremi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKreirajXMLiSpremi.BackColor = System.Drawing.Color.Transparent;
-            this.btnKreirajXMLiSpremi.BackgroundImage = global::PCPOS.Properties.Resources.Untitled_1;
+            this.btnKreirajXMLiSpremi.BackColor = System.Drawing.Color.Gainsboro;
             this.btnKreirajXMLiSpremi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnKreirajXMLiSpremi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKreirajXMLiSpremi.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
@@ -300,7 +300,7 @@
             this.btnKreirajXMLiSpremi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnKreirajXMLiSpremi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKreirajXMLiSpremi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Bold);
-            this.btnKreirajXMLiSpremi.ForeColor = System.Drawing.Color.White;
+            this.btnKreirajXMLiSpremi.ForeColor = System.Drawing.Color.Black;
             this.btnKreirajXMLiSpremi.Location = new System.Drawing.Point(795, 580);
             this.btnKreirajXMLiSpremi.Name = "btnKreirajXMLiSpremi";
             this.btnKreirajXMLiSpremi.Size = new System.Drawing.Size(197, 48);
@@ -313,8 +313,7 @@
             // btnUcitajExcel
             // 
             this.btnUcitajExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUcitajExcel.BackColor = System.Drawing.Color.Transparent;
-            this.btnUcitajExcel.BackgroundImage = global::PCPOS.Properties.Resources.Untitled_1;
+            this.btnUcitajExcel.BackColor = System.Drawing.Color.Gainsboro;
             this.btnUcitajExcel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUcitajExcel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUcitajExcel.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
@@ -324,7 +323,7 @@
             this.btnUcitajExcel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnUcitajExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUcitajExcel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btnUcitajExcel.ForeColor = System.Drawing.Color.White;
+            this.btnUcitajExcel.ForeColor = System.Drawing.Color.Black;
             this.btnUcitajExcel.Location = new System.Drawing.Point(169, 56);
             this.btnUcitajExcel.Name = "btnUcitajExcel";
             this.btnUcitajExcel.Size = new System.Drawing.Size(135, 40);
@@ -344,7 +343,7 @@
             this.groupBox3.Controls.Add(this.txtNazivPartnera);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox3.Location = new System.Drawing.Point(679, 171);
+            this.groupBox3.Location = new System.Drawing.Point(679, 196);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(317, 92);
             this.groupBox3.TabIndex = 26;
@@ -355,7 +354,7 @@
             // 
             this.tab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tab.Controls.Add(this.txtUvozIzExcela);
-            this.tab.Location = new System.Drawing.Point(675, 23);
+            this.tab.Location = new System.Drawing.Point(675, 48);
             this.tab.Name = "tab";
             this.tab.SelectedIndex = 0;
             this.tab.Size = new System.Drawing.Size(317, 129);
@@ -396,25 +395,43 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(688, 359);
+            this.progressBar1.Location = new System.Drawing.Point(688, 384);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(294, 23);
             this.progressBar1.TabIndex = 75;
             this.progressBar1.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(866, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 76;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Afrodita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(170)))), ((int)(((byte)(197)))));
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1004, 640);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.tab);
             this.Controls.Add(this.btnKreirajXMLiSpremi);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Afrodita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Afrodita";
@@ -470,5 +487,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LinkSlikeWeb;
         private System.Windows.Forms.DataGridViewTextBoxColumn pdv;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Button button1;
     }
 }

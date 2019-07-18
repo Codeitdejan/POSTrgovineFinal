@@ -185,6 +185,10 @@ namespace PCPOS.Resort
             form.Show();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 

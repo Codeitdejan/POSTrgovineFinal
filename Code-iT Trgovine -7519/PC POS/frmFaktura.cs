@@ -2570,15 +2570,12 @@ where b.id_stavka = a.id_stavka;";
 
         private void btnSveFakture_Click(object sender, EventArgs e)
         {
-            //frmMenu menu = new frmMenu();
             frmSveFakture objForm2 = new frmSveFakture();
             objForm2.sifra_fakture = "";
             objForm2.MdiParent = frmmenu;
             objForm2.Dock = DockStyle.Fill;
             objForm2.MainForm = this;
-            //this.Hide();
             objForm2.Show();
-            //this.Controls.Add(objForm2);
             if (broj_fakture_edit != null)
             {
                 deleteFields();

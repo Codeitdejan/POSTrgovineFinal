@@ -308,5 +308,10 @@ namespace PCPOS.Resort
             FrmPopisGostijuReport form = new FrmPopisGostijuReport(gosti);
             form.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

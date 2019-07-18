@@ -13263,3 +13263,317 @@ Code: 42601
    at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 512
    at PCPOS.classSQL.insert(String sql) in C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 142
 **************************************************************
+
+**************************************************************
+DATUM:17.7.2019. 11:23:27, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT * FROM partners WHERE id_partner = ''
+Npgsql.NpgsqlException:
+invalid input syntax for integer: ""
+Severity: ERROR
+Code: 22P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 588
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 538
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at PCPOS.classSQL.select(String sql, String table, Boolean caffe) in C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 59
+**************************************************************
+
+**************************************************************
+DATUM:17.7.2019. 13:16:38, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT postavi_kolicinu_sql_funkcija_prema_sifri('-'2019-01-01 00:00:00'') AS odgovor; SELECT postavi_kolicinu_sql_funkcija_prema_sifri('0'2019-01-01 00:00:00'') AS odgovor; 
+Npgsql.NpgsqlException:
+syntax error at or near "2019"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 512
+   at PCPOS.classSQL.insert(String sql) in C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 142
+**************************************************************
+
+**************************************************************
+DATUM:17.7.2019. 13:23:25, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+UPDATE unos_rezervacije SET 
+                                        godina = 2019,
+                                        id_partner = '31',
+                                        broj_osobne = '',
+                                        broj_putovnice = '',
+                                        datum_dolaska = '2019-07-07 14:34',
+                                        datum_odlaska = '2019-07-10 08:34',
+                                        id_agencija = 1,
+                                        id_soba = 3,
+                                        id_vrsta_usluge = 1,
+                                        dorucak = 0,
+                                        rucak = 0,
+                                        vecera = 0,
+                                        odrasli = 2,
+                                        djeca = 1,
+                                        bebe = 0,
+                                        ukupno = 800 kn,
+                                        napomena = ''
+                                    WHERE broj = 28
+Npgsql.NpgsqlException:
+syntax error at or near "kn"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 512
+   at PCPOS.classSQL.update(String sql) in C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 189
+**************************************************************
+
+**************************************************************
+DATUM:17.7.2019. 13:26:44, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT postavi_kolicinu_sql_funkcija_prema_sifri('-'2019-01-01 00:00:00'') AS odgovor; 
+Npgsql.NpgsqlException:
+syntax error at or near "2019"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 512
+   at PCPOS.classSQL.insert(String sql) in C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 142
+**************************************************************
+
+**************************************************************
+DATUM:17.7.2019. 13:37:51, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT postavi_kolicinu_sql_funkcija_prema_sifri('-'2019-01-01 00:00:00'') AS odgovor; 
+Npgsql.NpgsqlException:
+syntax error at or near "2019"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 512
+   at PCPOS.classSQL.insert(String sql) in C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 142
+**************************************************************
+
+**************************************************************
+DATUM:17.7.2019. 13:52:51, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT MAX(broj_racuna AS INTEGER) FROM racuni
+Npgsql.NpgsqlException:
+syntax error at or near "AS"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 588
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 538
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at PCPOS.classSQL.select(String sql, String table, Boolean caffe) in C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 59
+**************************************************************
+
+**************************************************************
+DATUM:17.7.2019. 13:53:02, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT MAX(broj_racuna AS INTEGER) FROM racuni
+Npgsql.NpgsqlException:
+syntax error at or near "AS"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 588
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 538
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at PCPOS.classSQL.select(String sql, String table, Boolean caffe) in C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 59
+**************************************************************
+
+**************************************************************
+DATUM:17.7.2019. 13:53:14, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT postavi_kolicinu_sql_funkcija_prema_sifri('-'2019-01-01 00:00:00'') AS odgovor; 
+Npgsql.NpgsqlException:
+syntax error at or near "2019"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 512
+   at PCPOS.classSQL.insert(String sql) in C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 142
+**************************************************************
+
+**************************************************************
+DATUM:17.7.2019. 13:54:35, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT MAX(broj_racuna AS INTEGER) FROM racuni
+Npgsql.NpgsqlException:
+syntax error at or near "AS"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 588
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 538
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at PCPOS.classSQL.select(String sql, String table, Boolean caffe) in C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 59
+**************************************************************
+
+**************************************************************
+DATUM:17.7.2019. 13:55:45, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT MAX(broj_racuna AS INTEGER) FROM racuni
+Npgsql.NpgsqlException:
+syntax error at or near "AS"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 588
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 538
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at PCPOS.classSQL.select(String sql, String table, Boolean caffe) in C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 59
+**************************************************************
+
+**************************************************************
+DATUM:17.7.2019. 13:58:12, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT postavi_kolicinu_sql_funkcija_prema_sifri('-'2019-01-01 00:00:00'') AS odgovor; 
+Npgsql.NpgsqlException:
+syntax error at or near "2019"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 512
+   at PCPOS.classSQL.insert(String sql) in C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 142
+**************************************************************
+
+**************************************************************
+DATUM:17.7.2019. 14:00:26, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT postavi_kolicinu_sql_funkcija_prema_sifri('-'2019-01-01 00:00:00'') AS odgovor; 
+Npgsql.NpgsqlException:
+syntax error at or near "2019"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 512
+   at PCPOS.classSQL.insert(String sql) in C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 142
+**************************************************************
+
+**************************************************************
+DATUM:17.7.2019. 14:28:28, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT * FROM partners WHERE id_partner = ''
+Npgsql.NpgsqlException:
+invalid input syntax for integer: ""
+Severity: ERROR
+Code: 22P02
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 588
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 538
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at PCPOS.classSQL.select(String sql, String table, Boolean caffe) in C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 59
+**************************************************************
+
+**************************************************************
+DATUM:17.7.2019. 14:29:23, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT postavi_kolicinu_sql_funkcija_prema_sifri('-'1.1.2019. 0:00:00'') AS odgovor; 
+Npgsql.NpgsqlException:
+syntax error at or near "1.1"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 512
+   at PCPOS.classSQL.insert(String sql) in C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 142
+**************************************************************

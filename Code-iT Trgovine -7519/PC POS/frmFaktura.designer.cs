@@ -1787,8 +1787,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimizeBox = false;
             this.Name = "frmFaktura";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.Text = "Faktura";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GasenjeForme_FormClosing);
             this.Load += new System.EventHandler(this.frmFaktura_Load);

@@ -744,6 +744,7 @@
             this.BackColor = System.Drawing.Color.SlateGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(917, 565);
+            this.ControlBox = false;
             this.Controls.Add(this.btnBarcode);
             this.Controls.Add(this.txtProizvodackaCijena);
             this.Controls.Add(this.label21);
@@ -800,6 +801,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmRobaUsluge";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Roba i usluge";

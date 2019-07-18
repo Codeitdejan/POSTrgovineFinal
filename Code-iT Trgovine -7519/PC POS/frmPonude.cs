@@ -1985,9 +1985,11 @@ namespace PCPOS
             DSpartner = null;
             frmSvePonude objForm3 = new frmSvePonude();
             objForm3.sifra_ponude = "";
+            objForm3.MdiParent = MainForm;
+            objForm3.Dock = DockStyle.Fill;
             objForm3.MainForm = this;
             broj_ponude_edit = null;
-            objForm3.ShowDialog();
+            objForm3.Show();
             if (broj_ponude_edit != null)
             {
                 fillPonude();
