@@ -335,6 +335,9 @@
             this.Controls.Add(this.dgvDokumenti);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPovijestDokumenata";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Povijest koristenja dokumenata";

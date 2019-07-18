@@ -33,15 +33,11 @@ namespace PCPOS.Kasa
             fillCB();
             fillDataGrid();
             SetDecimalInDgv(dgv, "Ukupno", "NE", "NE");
-            this.Paint += new PaintEventHandler(Form1_Paint);
-            //prikaziBrIspisa();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), Color.AliceBlue, Color.LightSlateGray, 500);
-            c.FillRectangle(bG, 0, 0, Width, Height);
+
         }
 
         private void SetDecimalInDgv(DataGridView dg, string column, string column1, string column2)

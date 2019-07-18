@@ -1998,7 +1998,9 @@ namespace PCPOS.FakturaVan
             FakturaVan.frmSveFaktureVan objForm2 = new FakturaVan.frmSveFaktureVan();
             objForm2.sifra_fakture = "";
             objForm2.MainForm = this;
-            objForm2.ShowDialog();
+            objForm2.MdiParent = this.MdiParent;
+            objForm2.Dock = DockStyle.Fill;
+            objForm2.Show();
             if (broj_fakture_edit != null)
             {
                 deleteFields();

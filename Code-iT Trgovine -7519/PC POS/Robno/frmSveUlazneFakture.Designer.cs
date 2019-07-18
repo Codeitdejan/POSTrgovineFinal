@@ -30,9 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSveUlazneFakture));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSveUlazneFakture));
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.broj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valuta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.partner = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ukupno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hub_kreirano = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kreiraj_hub = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.placeno = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.godina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sifra_partner = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnHub = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -58,17 +69,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.btnUrediSifru = new System.Windows.Forms.Button();
-            this.broj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valuta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.partner = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ukupno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hub_kreirano = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kreiraj_hub = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.placeno = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.godina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sifra_partner = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -114,6 +114,75 @@
             this.dgv.TabIndex = 0;
             this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             this.dgv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellDoubleClick);
+            // 
+            // broj
+            // 
+            this.broj.HeaderText = "Broj fakture";
+            this.broj.Name = "broj";
+            this.broj.ReadOnly = true;
+            // 
+            // datum
+            // 
+            this.datum.HeaderText = "Datum";
+            this.datum.Name = "datum";
+            this.datum.ReadOnly = true;
+            // 
+            // Valuta
+            // 
+            this.Valuta.HeaderText = "Valuta";
+            this.Valuta.Name = "Valuta";
+            this.Valuta.ReadOnly = true;
+            // 
+            // partner
+            // 
+            this.partner.HeaderText = "Partner";
+            this.partner.Name = "partner";
+            this.partner.ReadOnly = true;
+            // 
+            // ukupno
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "N2";
+            this.ukupno.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ukupno.HeaderText = "Ukupno";
+            this.ukupno.Name = "ukupno";
+            this.ukupno.ReadOnly = true;
+            // 
+            // hub_kreirano
+            // 
+            this.hub_kreirano.HeaderText = "HUB kreirano";
+            this.hub_kreirano.Name = "hub_kreirano";
+            this.hub_kreirano.ReadOnly = true;
+            // 
+            // kreiraj_hub
+            // 
+            this.kreiraj_hub.HeaderText = "Kreiraj HUB";
+            this.kreiraj_hub.Name = "kreiraj_hub";
+            // 
+            // placeno
+            // 
+            this.placeno.FillWeight = 125F;
+            this.placeno.HeaderText = "Plaćeno";
+            this.placeno.Name = "placeno";
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // godina
+            // 
+            this.godina.HeaderText = "godina";
+            this.godina.Name = "godina";
+            this.godina.Visible = false;
+            // 
+            // sifra_partner
+            // 
+            this.sifra_partner.HeaderText = "Šifra partnera";
+            this.sifra_partner.Name = "sifra_partner";
+            this.sifra_partner.Visible = false;
             // 
             // groupBox1
             // 
@@ -400,75 +469,6 @@
             this.btnUrediSifru.UseVisualStyleBackColor = true;
             this.btnUrediSifru.Click += new System.EventHandler(this.btnUrediSifru_Click);
             // 
-            // broj
-            // 
-            this.broj.HeaderText = "Broj fakture";
-            this.broj.Name = "broj";
-            this.broj.ReadOnly = true;
-            // 
-            // datum
-            // 
-            this.datum.HeaderText = "Datum";
-            this.datum.Name = "datum";
-            this.datum.ReadOnly = true;
-            // 
-            // Valuta
-            // 
-            this.Valuta.HeaderText = "Valuta";
-            this.Valuta.Name = "Valuta";
-            this.Valuta.ReadOnly = true;
-            // 
-            // partner
-            // 
-            this.partner.HeaderText = "Partner";
-            this.partner.Name = "partner";
-            this.partner.ReadOnly = true;
-            // 
-            // ukupno
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "N2";
-            this.ukupno.DefaultCellStyle = dataGridViewCellStyle1;
-            this.ukupno.HeaderText = "Ukupno";
-            this.ukupno.Name = "ukupno";
-            this.ukupno.ReadOnly = true;
-            // 
-            // hub_kreirano
-            // 
-            this.hub_kreirano.HeaderText = "HUB kreirano";
-            this.hub_kreirano.Name = "hub_kreirano";
-            this.hub_kreirano.ReadOnly = true;
-            // 
-            // kreiraj_hub
-            // 
-            this.kreiraj_hub.HeaderText = "Kreiraj HUB";
-            this.kreiraj_hub.Name = "kreiraj_hub";
-            // 
-            // placeno
-            // 
-            this.placeno.FillWeight = 125F;
-            this.placeno.HeaderText = "Plaćeno";
-            this.placeno.Name = "placeno";
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // godina
-            // 
-            this.godina.HeaderText = "godina";
-            this.godina.Name = "godina";
-            this.godina.Visible = false;
-            // 
-            // sifra_partner
-            // 
-            this.sifra_partner.HeaderText = "Šifra partnera";
-            this.sifra_partner.Name = "sifra_partner";
-            this.sifra_partner.Visible = false;
-            // 
             // frmSveUlazneFakture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -479,6 +479,9 @@
             this.Controls.Add(this.btnUrediSifru);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmSveUlazneFakture";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sve ulazne fakture";

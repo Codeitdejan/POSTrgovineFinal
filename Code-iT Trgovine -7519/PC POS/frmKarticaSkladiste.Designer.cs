@@ -1047,6 +1047,9 @@
             this.Controls.Add(this.btnSveFakture);
             this.Controls.Add(this.dgw);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmKarticaSkladiste";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kartica skladišta";

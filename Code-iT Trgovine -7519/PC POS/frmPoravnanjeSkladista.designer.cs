@@ -37,6 +37,7 @@
             this.txtSifra = new System.Windows.Forms.TextBox();
             this.btnTrazi = new System.Windows.Forms.Button();
             this.lblSifra = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,9 +55,9 @@
             this.kolicina,
             this.id,
             this.skladiste});
-            this.dgv.Location = new System.Drawing.Point(0, 38);
+            this.dgv.Location = new System.Drawing.Point(0, 59);
             this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(545, 559);
+            this.dgv.Size = new System.Drawing.Size(583, 538);
             this.dgv.TabIndex = 0;
             this.dgv.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellEndEdit);
             // 
@@ -117,15 +118,35 @@
             this.lblSifra.TabIndex = 3;
             this.lblSifra.Text = "Šifra artikla:";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(441, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmPoravnanjeSkladista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 597);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(583, 597);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblSifra);
             this.Controls.Add(this.btnTrazi);
             this.Controls.Add(this.txtSifra);
             this.Controls.Add(this.dgv);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPoravnanjeSkladista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Poravnanje skladista";
@@ -147,5 +168,6 @@
         private System.Windows.Forms.TextBox txtSifra;
         private System.Windows.Forms.Button btnTrazi;
         private System.Windows.Forms.Label lblSifra;
+        private System.Windows.Forms.Button button1;
     }
 }

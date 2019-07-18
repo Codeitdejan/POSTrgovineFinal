@@ -1213,5 +1213,10 @@ namespace PCPOS
         {
             lblStanje.Text = pocetnoStanjeKolicina.ToString("#0.00") + " kom";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

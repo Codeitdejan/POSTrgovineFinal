@@ -428,7 +428,9 @@ namespace PCPOS
             frmSviNormativi sf = new frmSviNormativi();
             sf.sifra_normativa = "";
             sf.MainForm = this;
-            sf.ShowDialog();
+            sf.MdiParent = this.MdiParent;
+            sf.Dock = DockStyle.Fill;
+            sf.Show();
             if (broj_normativa_edit != null)
             {
                 dgw.Rows.Clear();

@@ -961,7 +961,9 @@ VALUES
             objForm3.MainForm = this;
             servisBarkode = null;
             servisGodina = 0;
-            objForm3.ShowDialog();
+            objForm3.MdiParent = this.MdiParent;
+            objForm3.Dock = DockStyle.Fill;
+            objForm3.Show();
             if (servisBarkode != null && servisGodina != 0)
             {
                 fillRN();

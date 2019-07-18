@@ -144,5 +144,10 @@ namespace PCPOS
             UI.documenat = comboBox1.SelectedValue.ToString();
             UI.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -89,10 +89,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnSpremi = new System.Windows.Forms.Button();
-            this.btnIzlaz = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnOdustani = new System.Windows.Forms.Button();
             this.btnNoviUnos = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -828,22 +828,6 @@
             this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             this.btnSpremi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownDole);
             // 
-            // btnIzlaz
-            // 
-            this.btnIzlaz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIzlaz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnIzlaz.Image = global::PCPOS.Properties.Resources.Log_Out_icon;
-            this.btnIzlaz.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIzlaz.Location = new System.Drawing.Point(695, 12);
-            this.btnIzlaz.Name = "btnIzlaz";
-            this.btnIzlaz.Size = new System.Drawing.Size(85, 41);
-            this.btnIzlaz.TabIndex = 7;
-            this.btnIzlaz.Text = "Izlaz";
-            this.btnIzlaz.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnIzlaz.UseVisualStyleBackColor = true;
-            this.btnIzlaz.Click += new System.EventHandler(this.button6_Click);
-            this.btnIzlaz.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownDole);
-            // 
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -889,20 +873,38 @@
             this.btnNoviUnos.Click += new System.EventHandler(this.button1_Click);
             this.btnNoviUnos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownDole);
             // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button4.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(650, 12);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(130, 40);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "Izlaz      ";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
             // frmAvansRacun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(792, 560);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSpremi);
-            this.Controls.Add(this.btnIzlaz);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnNoviUnos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAvansRacun";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Račun za predujam";
@@ -949,7 +951,6 @@
         private System.Windows.Forms.TextBox txtTecaj;
         private System.Windows.Forms.TextBox txtModel;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnIzlaz;
         private System.Windows.Forms.TextBox txtBrojAvans;
         //private System.DirectoryServices.DirectoryEntry directoryEntry1;
         private System.Windows.Forms.ComboBox cbVD;
@@ -986,5 +987,6 @@
         private System.Windows.Forms.TextBox txtOpis;
         private System.Windows.Forms.DateTimePicker dtpDatumValute;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button button4;
     }
 }

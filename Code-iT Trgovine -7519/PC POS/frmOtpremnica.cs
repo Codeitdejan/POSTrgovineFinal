@@ -46,7 +46,8 @@ namespace PCPOS
 
         private void frmOtpremnica_Load(object sender, EventArgs e)
         {
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            
+
 
             /****************************SINKRONIZACIJA SA WEB-OM***********************/
             bgSinkronizacija = new BackgroundWorker();
@@ -293,9 +294,6 @@ namespace PCPOS
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), Color.AliceBlue, Color.LightSlateGray, 250);
-            c.FillRectangle(bG, 0, 0, Width, Height);
         }
 
         private string brojOtpremnice()

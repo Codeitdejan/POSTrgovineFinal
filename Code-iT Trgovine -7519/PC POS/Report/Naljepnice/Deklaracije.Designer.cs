@@ -57,6 +57,7 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DTRobaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSDeklaracije)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPartner)).BeginInit();
@@ -75,66 +76,63 @@
             // 
             // txtOstalo
             // 
-            this.txtOstalo.Location = new System.Drawing.Point(81, 326);
+            this.txtOstalo.Location = new System.Drawing.Point(61, 265);
+            this.txtOstalo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtOstalo.MaxLength = 60;
             this.txtOstalo.Multiline = true;
             this.txtOstalo.Name = "txtOstalo";
-            this.txtOstalo.Size = new System.Drawing.Size(218, 88);
+            this.txtOstalo.Size = new System.Drawing.Size(164, 72);
             this.txtOstalo.TabIndex = 604;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 329);
+            this.label2.Location = new System.Drawing.Point(15, 267);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 17);
+            this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 603;
             this.label2.Text = "Ostalo:";
             // 
             // txtProizvodac
             // 
-            this.txtProizvodac.Location = new System.Drawing.Point(106, 186);
-            this.txtProizvodac.Margin = new System.Windows.Forms.Padding(4);
+            this.txtProizvodac.Location = new System.Drawing.Point(80, 151);
             this.txtProizvodac.MaxLength = 30;
             this.txtProizvodac.Name = "txtProizvodac";
-            this.txtProizvodac.Size = new System.Drawing.Size(193, 22);
+            this.txtProizvodac.Size = new System.Drawing.Size(146, 20);
             this.txtProizvodac.TabIndex = 601;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(20, 189);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(15, 154);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 17);
+            this.label14.Size = new System.Drawing.Size(64, 13);
             this.label14.TabIndex = 602;
             this.label14.Text = "Proizvođač:";
             // 
             // txtZapocniOdBroja
             // 
-            this.txtZapocniOdBroja.Location = new System.Drawing.Point(148, 462);
-            this.txtZapocniOdBroja.Margin = new System.Windows.Forms.Padding(4);
+            this.txtZapocniOdBroja.Location = new System.Drawing.Point(111, 375);
             this.txtZapocniOdBroja.Name = "txtZapocniOdBroja";
-            this.txtZapocniOdBroja.Size = new System.Drawing.Size(151, 22);
+            this.txtZapocniOdBroja.Size = new System.Drawing.Size(114, 20);
             this.txtZapocniOdBroja.TabIndex = 591;
             this.txtZapocniOdBroja.Text = "1";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(20, 462);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(15, 375);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(119, 17);
+            this.label13.Size = new System.Drawing.Size(90, 13);
             this.label13.TabIndex = 599;
             this.label13.Text = "Započni od broja:";
             // 
             // btnKreiraj
             // 
-            this.btnKreiraj.Location = new System.Drawing.Point(23, 497);
-            this.btnKreiraj.Margin = new System.Windows.Forms.Padding(4);
+            this.btnKreiraj.Location = new System.Drawing.Point(17, 404);
             this.btnKreiraj.Name = "btnKreiraj";
-            this.btnKreiraj.Size = new System.Drawing.Size(276, 37);
+            this.btnKreiraj.Size = new System.Drawing.Size(207, 30);
             this.btnKreiraj.TabIndex = 592;
             this.btnKreiraj.Text = "Kreiraj";
             this.btnKreiraj.UseVisualStyleBackColor = true;
@@ -142,117 +140,105 @@
             // 
             // txtBrojNaljepnica
             // 
-            this.txtBrojNaljepnica.Location = new System.Drawing.Point(148, 427);
-            this.txtBrojNaljepnica.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBrojNaljepnica.Location = new System.Drawing.Point(111, 347);
             this.txtBrojNaljepnica.Name = "txtBrojNaljepnica";
-            this.txtBrojNaljepnica.Size = new System.Drawing.Size(151, 22);
+            this.txtBrojNaljepnica.Size = new System.Drawing.Size(114, 20);
             this.txtBrojNaljepnica.TabIndex = 590;
             this.txtBrojNaljepnica.Text = "10";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(20, 432);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(15, 351);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(105, 17);
+            this.label12.Size = new System.Drawing.Size(79, 13);
             this.label12.TabIndex = 598;
             this.label12.Text = "Broj naljepnica:";
             // 
             // txtZemlja
             // 
-            this.txtZemlja.Location = new System.Drawing.Point(137, 291);
-            this.txtZemlja.Margin = new System.Windows.Forms.Padding(4);
+            this.txtZemlja.Location = new System.Drawing.Point(103, 236);
             this.txtZemlja.MaxLength = 26;
             this.txtZemlja.Name = "txtZemlja";
-            this.txtZemlja.Size = new System.Drawing.Size(162, 22);
+            this.txtZemlja.Size = new System.Drawing.Size(122, 20);
             this.txtZemlja.TabIndex = 589;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(20, 294);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(15, 239);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(116, 17);
+            this.label10.Size = new System.Drawing.Size(86, 13);
             this.label10.TabIndex = 597;
             this.label10.Text = "Zemlja podrijetla:";
             // 
             // txtUvoznik
             // 
-            this.txtUvoznik.Location = new System.Drawing.Point(86, 256);
-            this.txtUvoznik.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUvoznik.Location = new System.Drawing.Point(64, 208);
             this.txtUvoznik.MaxLength = 30;
             this.txtUvoznik.Name = "txtUvoznik";
-            this.txtUvoznik.Size = new System.Drawing.Size(213, 22);
+            this.txtUvoznik.Size = new System.Drawing.Size(161, 20);
             this.txtUvoznik.TabIndex = 588;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(20, 259);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(15, 210);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 17);
+            this.label8.Size = new System.Drawing.Size(49, 13);
             this.label8.TabIndex = 596;
             this.label8.Text = "Uvoznik:";
             // 
             // txtIzvoznik
             // 
-            this.txtIzvoznik.Location = new System.Drawing.Point(86, 221);
-            this.txtIzvoznik.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIzvoznik.Location = new System.Drawing.Point(64, 180);
             this.txtIzvoznik.MaxLength = 30;
             this.txtIzvoznik.Name = "txtIzvoznik";
-            this.txtIzvoznik.Size = new System.Drawing.Size(213, 22);
+            this.txtIzvoznik.Size = new System.Drawing.Size(161, 20);
             this.txtIzvoznik.TabIndex = 587;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 224);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(15, 182);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 17);
+            this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 595;
             this.label6.Text = "Izvoznik:";
             // 
             // txtSifra
             // 
-            this.txtSifra.Location = new System.Drawing.Point(81, 116);
-            this.txtSifra.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSifra.Location = new System.Drawing.Point(61, 94);
             this.txtSifra.MaxLength = 25;
             this.txtSifra.Name = "txtSifra";
-            this.txtSifra.Size = new System.Drawing.Size(175, 22);
+            this.txtSifra.Size = new System.Drawing.Size(132, 20);
             this.txtSifra.TabIndex = 585;
             this.txtSifra.Text = "2070600461";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 119);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(15, 97);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 17);
+            this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 593;
             this.label4.Text = "Šifra:";
             // 
             // txtNaslov
             // 
-            this.txtNaslov.Location = new System.Drawing.Point(81, 151);
-            this.txtNaslov.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNaslov.Location = new System.Drawing.Point(61, 123);
             this.txtNaslov.MaxLength = 30;
             this.txtNaslov.Name = "txtNaslov";
-            this.txtNaslov.Size = new System.Drawing.Size(218, 22);
+            this.txtNaslov.Size = new System.Drawing.Size(164, 20);
             this.txtNaslov.TabIndex = 586;
             this.txtNaslov.Text = "Dječja majca";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 154);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(15, 125);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 17);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 594;
             this.label1.Text = "Naslov:";
             // 
@@ -261,10 +247,9 @@
             this.btnPartner.BackColor = System.Drawing.Color.Transparent;
             this.btnPartner.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPartner.Image = ((System.Drawing.Image)(resources.GetObject("btnPartner.Image")));
-            this.btnPartner.Location = new System.Drawing.Point(258, 110);
-            this.btnPartner.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPartner.Location = new System.Drawing.Point(194, 89);
             this.btnPartner.Name = "btnPartner";
-            this.btnPartner.Size = new System.Drawing.Size(41, 34);
+            this.btnPartner.Size = new System.Drawing.Size(31, 28);
             this.btnPartner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnPartner.TabIndex = 600;
             this.btnPartner.TabStop = false;
@@ -276,9 +261,10 @@
             reportDataSource1.Value = this.DTRobaBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PCPOS.Report.Naljepnice.Deklaracije.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(316, 116);
+            this.reportViewer1.Location = new System.Drawing.Point(237, 94);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(1049, 776);
+            this.reportViewer1.Size = new System.Drawing.Size(787, 631);
             this.reportViewer1.TabIndex = 605;
             // 
             // bindingSource1
@@ -289,9 +275,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(703, 96);
+            this.label3.Location = new System.Drawing.Point(527, 78);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(211, 17);
+            this.label3.Size = new System.Drawing.Size(157, 13);
             this.label3.TabIndex = 606;
             this.label3.Text = "Print na etikete 70x37mm (T-46)";
             // 
@@ -299,18 +286,35 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(581, 25);
+            this.label5.Location = new System.Drawing.Point(436, 20);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(220, 44);
+            this.label5.Size = new System.Drawing.Size(172, 36);
             this.label5.TabIndex = 607;
             this.label5.Text = "Deklaracije";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(913, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 608;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Deklaracije
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(1407, 798);
+            this.ClientSize = new System.Drawing.Size(1055, 648);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.reportViewer1);
@@ -335,6 +339,7 @@
             this.Controls.Add(this.txtNaslov);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Deklaracije";
@@ -378,5 +383,6 @@
         private System.Windows.Forms.BindingSource DTRobaBindingSource;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
     }
 }

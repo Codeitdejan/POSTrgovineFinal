@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dTRpodaciTvrtkeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSRpodaciTvrtke = new PCPOS.Dataset.DSRpodaciTvrtke();
             this.dTlisteBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -49,6 +49,7 @@
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.label4 = new System.Windows.Forms.Label();
             this.txtSifraArtikla = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dTRpodaciTvrtkeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSRpodaciTvrtke)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dTlisteBindingSource)).BeginInit();
@@ -140,7 +141,7 @@
             this.btnTrazi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnTrazi.Image = global::PCPOS.Properties.Resources._10591;
             this.btnTrazi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrazi.Location = new System.Drawing.Point(675, 12);
+            this.btnTrazi.Location = new System.Drawing.Point(540, 12);
             this.btnTrazi.Name = "btnTrazi";
             this.btnTrazi.Size = new System.Drawing.Size(96, 54);
             this.btnTrazi.TabIndex = 571;
@@ -153,22 +154,22 @@
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource5.Name = "DSpodaciTVR";
-            reportDataSource5.Value = this.dTRpodaciTvrtkeBindingSource;
-            reportDataSource6.Name = "DSzaTable";
-            reportDataSource6.Value = this.dTlisteBindingSource;
-            reportDataSource7.Name = "DStext";
-            reportDataSource7.Value = this.dTlisteTekstBindingSource;
-            reportDataSource8.Name = "DSsaldaKonti";
-            reportDataSource8.Value = this.dTsaldaKontiBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource7);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource8);
+            reportDataSource1.Name = "DSpodaciTVR";
+            reportDataSource1.Value = this.dTRpodaciTvrtkeBindingSource;
+            reportDataSource2.Name = "DSzaTable";
+            reportDataSource2.Value = this.dTlisteBindingSource;
+            reportDataSource3.Name = "DStext";
+            reportDataSource3.Value = this.dTlisteTekstBindingSource;
+            reportDataSource4.Name = "DSsaldaKonti";
+            reportDataSource4.Value = this.dTsaldaKontiBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PCPOS.Report.ProdajaPoArtiklima.saldakonti.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(5, 81);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(766, 726);
+            this.reportViewer1.Size = new System.Drawing.Size(904, 726);
             this.reportViewer1.TabIndex = 576;
             // 
             // label4
@@ -187,12 +188,28 @@
             this.txtSifraArtikla.Size = new System.Drawing.Size(167, 20);
             this.txtSifraArtikla.TabIndex = 577;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(772, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 579;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmProdajaPoArtiklu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(776, 812);
+            this.ClientSize = new System.Drawing.Size(914, 812);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSifraArtikla);
             this.Controls.Add(this.reportViewer1);
@@ -201,6 +218,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tdOdDatuma);
             this.Controls.Add(this.btnTrazi);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmProdajaPoArtiklu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Popis prodane robe";
@@ -236,5 +256,6 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtSifraArtikla;
+        private System.Windows.Forms.Button button1;
     }
 }

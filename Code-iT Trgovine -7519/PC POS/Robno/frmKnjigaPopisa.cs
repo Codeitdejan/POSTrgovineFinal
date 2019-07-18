@@ -234,5 +234,10 @@ ORDER BY DATUM asc
                 throw;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

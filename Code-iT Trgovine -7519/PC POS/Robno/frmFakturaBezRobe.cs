@@ -47,7 +47,7 @@ namespace PCPOS.Robno
         {
             lblNaDan.Text = "";
 
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            //this.Paint += new PaintEventHandler(Form1_Paint);
 
             ProvjeraBaze();
             MyDataGrid.MainForm = this;
@@ -819,7 +819,9 @@ VALUES (
             frmSveFaktureBezRobe objForm2 = new frmSveFaktureBezRobe();
             objForm2.sifra_fakture = "";
             objForm2.MainForm = this;
-            objForm2.ShowDialog();
+            objForm2.MdiParent = this.MdiParent;
+            objForm2.Dock = DockStyle.Fill;
+            objForm2.Show();
             if (broj_fakture_edit != null)
             {
                 deleteFields();

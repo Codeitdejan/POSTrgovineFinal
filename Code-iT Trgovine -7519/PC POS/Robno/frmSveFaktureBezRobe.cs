@@ -54,7 +54,7 @@ namespace PCPOS.Robno
 
             DTpostavke = classSQL.select_settings("SELECT * FROM postavke", "postavke").Tables[0];
 
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            //this.Paint += new PaintEventHandler(Form1_Paint);
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)

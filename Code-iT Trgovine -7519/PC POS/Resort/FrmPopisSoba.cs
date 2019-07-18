@@ -67,7 +67,9 @@ namespace PCPOS.Resort
                 BrojSobe = brojSobe,
                 EditMode = edit
             };
-            form.ShowDialog();
+            form.MdiParent = this.MdiParent;
+            form.Dock = DockStyle.Fill;
+            form.Show();
             if (form.Successful)
             {
                 // Kada unesemo jedan zapis, potreban je refresh bez zatvaranja forme FrmSoba i FrmPopisSoba
@@ -126,7 +128,9 @@ namespace PCPOS.Resort
         private void BtnTipSobe_Click(object sender, EventArgs e)
         {
             FrmPopisTipovaSoba form = new FrmPopisTipovaSoba();
-            form.ShowDialog();
+            form.MdiParent = this.MdiParent;
+            form.Dock = DockStyle.Fill;
+            form.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

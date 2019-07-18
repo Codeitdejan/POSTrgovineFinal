@@ -380,5 +380,10 @@ ORDER BY string2{4}", sql, doc, skladiste, zbirno, sort);
                 throw;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

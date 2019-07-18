@@ -52,6 +52,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gbPartner = new System.Windows.Forms.GroupBox();
             this.chbSamoPouzecem = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -123,7 +124,7 @@
             // 
             this.btnIspis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnIspis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnIspis.Location = new System.Drawing.Point(509, 160);
+            this.btnIspis.Location = new System.Drawing.Point(646, 199);
             this.btnIspis.Name = "btnIspis";
             this.btnIspis.Size = new System.Drawing.Size(82, 52);
             this.btnIspis.TabIndex = 6;
@@ -304,7 +305,7 @@
             this.gbPartner.Controls.Add(this.txtPartner);
             this.gbPartner.Controls.Add(this.btnSrchPartner);
             this.gbPartner.Controls.Add(this.txtPartnerNaziv);
-            this.gbPartner.Location = new System.Drawing.Point(322, 134);
+            this.gbPartner.Location = new System.Drawing.Point(459, 173);
             this.gbPartner.Name = "gbPartner";
             this.gbPartner.Size = new System.Drawing.Size(181, 78);
             this.gbPartner.TabIndex = 26;
@@ -322,11 +323,28 @@
             this.chbSamoPouzecem.UseVisualStyleBackColor = true;
             this.chbSamoPouzecem.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(598, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Izlracuni
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 223);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(740, 262);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.chbSamoPouzecem);
             this.Controls.Add(this.gbPartner);
             this.Controls.Add(this.groupBox3);
@@ -335,8 +353,9 @@
             this.Controls.Add(this.btnIspis);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbDokument);
-            this.MaximumSize = new System.Drawing.Size(619, 262);
-            this.MinimumSize = new System.Drawing.Size(619, 262);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Izlracuni";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Liste izlaznih računa";
@@ -381,5 +400,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox gbPartner;
         private System.Windows.Forms.CheckBox chbSamoPouzecem;
+        private System.Windows.Forms.Button button1;
     }
 }

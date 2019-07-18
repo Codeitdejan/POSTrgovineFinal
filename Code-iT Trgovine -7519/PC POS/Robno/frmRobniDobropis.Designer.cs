@@ -609,8 +609,9 @@
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnNoviUnos);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmRobniDobropis";
             this.Text = "Robni dobropis";
             this.Load += new System.EventHandler(this.frmRobniDobropis_Load);

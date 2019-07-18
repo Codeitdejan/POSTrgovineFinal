@@ -48,6 +48,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPreuzeo = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPartner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,7 +90,7 @@
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersVisible = false;
-            this.dgv.Size = new System.Drawing.Size(623, 493);
+            this.dgv.Size = new System.Drawing.Size(624, 516);
             this.dgv.TabIndex = 2;
             // 
             // preuzeo
@@ -155,7 +156,7 @@
             // 
             // btnIspis
             // 
-            this.btnIspis.Location = new System.Drawing.Point(462, 598);
+            this.btnIspis.Location = new System.Drawing.Point(461, 625);
             this.btnIspis.Name = "btnIspis";
             this.btnIspis.Size = new System.Drawing.Size(174, 29);
             this.btnIspis.TabIndex = 561;
@@ -165,7 +166,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(242, 598);
+            this.button2.Location = new System.Drawing.Point(241, 625);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(214, 29);
             this.button2.TabIndex = 562;
@@ -246,12 +247,28 @@
             this.txtPreuzeo.TabIndex = 567;
             this.txtPreuzeo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPreuzeo_KeyDown);
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(644, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 571;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmRobuPreuzeo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(647, 628);
+            this.ClientSize = new System.Drawing.Size(786, 666);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtNazivPreuzeo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
@@ -268,6 +285,9 @@
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSifra);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(663, 666);
             this.Name = "frmRobuPreuzeo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -304,5 +324,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtPreuzeo;
+        private System.Windows.Forms.Button button1;
     }
 }

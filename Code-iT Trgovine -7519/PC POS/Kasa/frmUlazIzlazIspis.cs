@@ -181,5 +181,15 @@ namespace PCPOS.Kasa
 
             dgv.Rows.Add("UKUPNO:", Unabavna.ToString("N2"), Uprodajna.ToString("N2"), (Uprodajna - Unabavna).ToString("N2"));
         }
+
+        private void lblUvijeti_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

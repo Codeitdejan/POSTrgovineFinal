@@ -190,5 +190,10 @@ WHERE id_partner = {4};", otvoreno, uplaceno, potrazujem, isplaceno, idPartner);
                 throw;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

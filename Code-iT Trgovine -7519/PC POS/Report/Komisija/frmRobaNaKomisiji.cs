@@ -243,5 +243,10 @@ order by p.partner asc, sifra asc;", sql);
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

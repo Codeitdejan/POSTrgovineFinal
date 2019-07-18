@@ -55,14 +55,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnOpenRoba = new System.Windows.Forms.Button();
             this.dgw = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnObrisi = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnDeleteAll = new System.Windows.Forms.Button();
-            this.btnSve = new System.Windows.Forms.Button();
-            this.btnNoviUnos = new System.Windows.Forms.Button();
-            this.btnOdustani = new System.Windows.Forms.Button();
-            this.btnSpremi = new System.Windows.Forms.Button();
             this.sifra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.skladiste = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +63,14 @@
             this.id_stavka = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pc_iznos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnObrisi = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnDeleteAll = new System.Windows.Forms.Button();
+            this.btnSve = new System.Windows.Forms.Button();
+            this.btnNoviUnos = new System.Windows.Forms.Button();
+            this.btnOdustani = new System.Windows.Forms.Button();
+            this.btnSpremi = new System.Windows.Forms.Button();
             this.s.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuGodina)).BeginInit();
@@ -398,6 +398,55 @@
             this.dgw.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgw_CellClick);
             this.dgw.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgw_CellEndEdit);
             // 
+            // sifra
+            // 
+            this.sifra.HeaderText = "Šifra robe";
+            this.sifra.Name = "sifra";
+            this.sifra.ReadOnly = true;
+            // 
+            // skladiste
+            // 
+            this.skladiste.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.skladiste.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.skladiste.HeaderText = "Skladište";
+            this.skladiste.Name = "skladiste";
+            this.skladiste.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // naziv
+            // 
+            this.naziv.HeaderText = "Naziv";
+            this.naziv.Name = "naziv";
+            this.naziv.ReadOnly = true;
+            // 
+            // kolicina
+            // 
+            this.kolicina.HeaderText = "Količina";
+            this.kolicina.Name = "kolicina";
+            // 
+            // jmj
+            // 
+            this.jmj.HeaderText = "JMJ";
+            this.jmj.Name = "jmj";
+            this.jmj.ReadOnly = true;
+            // 
+            // id_stavka
+            // 
+            this.id_stavka.HeaderText = "id_stavka";
+            this.id_stavka.Name = "id_stavka";
+            this.id_stavka.Visible = false;
+            // 
+            // PC
+            // 
+            this.PC.HeaderText = "PC";
+            this.PC.Name = "PC";
+            this.PC.Visible = false;
+            // 
+            // pc_iznos
+            // 
+            this.pc_iznos.HeaderText = "PC Iznos";
+            this.pc_iznos.Name = "pc_iznos";
+            this.pc_iznos.Visible = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -511,55 +560,6 @@
             this.btnSpremi.UseVisualStyleBackColor = true;
             this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             // 
-            // sifra
-            // 
-            this.sifra.HeaderText = "Šifra robe";
-            this.sifra.Name = "sifra";
-            this.sifra.ReadOnly = true;
-            // 
-            // skladiste
-            // 
-            this.skladiste.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
-            this.skladiste.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.skladiste.HeaderText = "Skladište";
-            this.skladiste.Name = "skladiste";
-            this.skladiste.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // naziv
-            // 
-            this.naziv.HeaderText = "Naziv";
-            this.naziv.Name = "naziv";
-            this.naziv.ReadOnly = true;
-            // 
-            // kolicina
-            // 
-            this.kolicina.HeaderText = "Količina";
-            this.kolicina.Name = "kolicina";
-            // 
-            // jmj
-            // 
-            this.jmj.HeaderText = "JMJ";
-            this.jmj.Name = "jmj";
-            this.jmj.ReadOnly = true;
-            // 
-            // id_stavka
-            // 
-            this.id_stavka.HeaderText = "id_stavka";
-            this.id_stavka.Name = "id_stavka";
-            this.id_stavka.Visible = false;
-            // 
-            // PC
-            // 
-            this.PC.HeaderText = "PC";
-            this.PC.Name = "PC";
-            this.PC.Visible = false;
-            // 
-            // pc_iznos
-            // 
-            this.pc_iznos.HeaderText = "PC Iznos";
-            this.pc_iznos.Name = "pc_iznos";
-            this.pc_iznos.Visible = false;
-            // 
             // frmNormativi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -581,7 +581,10 @@
             this.Controls.Add(this.btnOpenRoba);
             this.Controls.Add(this.dgw);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmNormativi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Normativi";
