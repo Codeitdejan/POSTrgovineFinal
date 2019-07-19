@@ -106,9 +106,7 @@ namespace PCPOS.Report.lzlazniRacuni
             }
 
             string sqlHeder = string.Format(@"SELECT avans_racun.broj_avansa, avans_racun.dat_knj, avans_racun.datum_valute, partners.id_partner, avans_racun.poslovnica, avans_racun.naplatni_uredaj, partners.ime_tvrtke
-FROM avans_racun
-LEFT JOIN partners ON partners.id_partner = avans_racun.id_partner
-{0}", kriterij);
+            FROM avans_racun LEFT JOIN partners ON partners.id_partner = avans_racun.id_partner {0}", kriterij);
 
             DataRow DDTrow = dSRlisteTekst.Tables[0].NewRow();
             if (BrojFakDO != "")
