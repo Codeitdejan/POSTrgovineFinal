@@ -2576,6 +2576,9 @@
     <EmbeddedResource Include="IzlazniDokumenti\FormRUC.resx">
       <DependentUpon>FormRUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Kasa\frmDodajStavkuUMinus.resx">
+      <DependentUpon>frmDodajStavkuUMinus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Kasa\frmUlazIzlazFinancijski.resx">
       <DependentUpon>frmUlazIzlazFinancijski.cs</DependentUpon>
     </EmbeddedResource>

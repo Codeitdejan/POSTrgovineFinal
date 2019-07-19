@@ -485,6 +485,10 @@ order by x.sort;");
         private void button1_Click(object sender, EventArgs e)
         {
             frmRobaUsluge ru = new frmRobaUsluge();
+            if (this.MdiParent == null)
+            {
+                ru.WindowState = FormWindowState.Maximized;
+            }
             ru.Show();
         }
 

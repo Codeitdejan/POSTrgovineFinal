@@ -94,9 +94,9 @@
             this.btnIzlaz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnIzlaz.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
             this.btnIzlaz.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIzlaz.Location = new System.Drawing.Point(806, 12);
+            this.btnIzlaz.Location = new System.Drawing.Point(793, 12);
             this.btnIzlaz.Name = "btnIzlaz";
-            this.btnIzlaz.Size = new System.Drawing.Size(107, 45);
+            this.btnIzlaz.Size = new System.Drawing.Size(120, 40);
             this.btnIzlaz.TabIndex = 2;
             this.btnIzlaz.Text = "Izlaz    ";
             this.btnIzlaz.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

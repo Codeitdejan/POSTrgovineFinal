@@ -31,6 +31,7 @@
             this.dSRpodaciTvrtkeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSRpodaciTvrtke = new PCPOS.Dataset.DSRpodaciTvrtke();
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.chbUzmiIUsluge = new System.Windows.Forms.CheckBox();
             this.btnUcitaj = new System.Windows.Forms.Button();
             this.cmbSkladiste = new System.Windows.Forms.ComboBox();
@@ -41,7 +42,6 @@
             this.lblDatumOD = new System.Windows.Forms.Label();
             this.pnlFill = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.listaUniverzalnaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaUniverzalna)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSRpodaciTvrtkeBindingSource)).BeginInit();
@@ -87,6 +87,21 @@
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(984, 100);
             this.pnlTop.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(852, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 40);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // chbUzmiIUsluge
             // 
@@ -199,21 +214,6 @@
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(960, 550);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(842, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 40);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Izlaz      ";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmKnjigaPopisa
             // 

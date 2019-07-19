@@ -593,7 +593,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 39);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(997, 543);
+            this.tabPage2.Size = new System.Drawing.Size(997, 530);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Promocija2";
             // 
@@ -854,7 +854,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 39);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(997, 543);
+            this.tabPage3.Size = new System.Drawing.Size(997, 530);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Promocija3";
             // 
@@ -1160,7 +1160,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 39);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(997, 543);
+            this.tabPage4.Size = new System.Drawing.Size(997, 530);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Promocija4";
             // 
@@ -1455,7 +1455,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 39);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(997, 543);
+            this.tabPage5.Size = new System.Drawing.Size(997, 530);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Promocija5";
             // 
@@ -1675,7 +1675,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 39);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(997, 543);
+            this.tabPage6.Size = new System.Drawing.Size(997, 530);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Promocija6";
             // 
@@ -1892,7 +1892,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 39);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(997, 543);
+            this.tabPage7.Size = new System.Drawing.Size(997, 530);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Promocija 8";
             // 
@@ -2021,7 +2021,7 @@
             this.tabPage8.Controls.Add(this.label62);
             this.tabPage8.Location = new System.Drawing.Point(4, 39);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(997, 543);
+            this.tabPage8.Size = new System.Drawing.Size(997, 530);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Promocija 9";
             // 
@@ -2140,9 +2140,9 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(869, 12);
+            this.button1.Location = new System.Drawing.Point(879, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.Size = new System.Drawing.Size(120, 40);
             this.button1.TabIndex = 6;
             this.button1.Text = "Izlaz      ";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

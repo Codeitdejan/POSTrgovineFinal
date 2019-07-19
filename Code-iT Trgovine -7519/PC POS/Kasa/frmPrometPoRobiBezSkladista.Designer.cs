@@ -218,9 +218,9 @@
             this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.buttonExit.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
             this.buttonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonExit.Location = new System.Drawing.Point(408, 8);
+            this.buttonExit.Location = new System.Drawing.Point(424, 8);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(130, 40);
+            this.buttonExit.Size = new System.Drawing.Size(120, 40);
             this.buttonExit.TabIndex = 75;
             this.buttonExit.Text = "Izlaz      ";
             this.buttonExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

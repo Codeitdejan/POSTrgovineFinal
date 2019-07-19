@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPartnerTrazi));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.chbNemaOdr = new System.Windows.Forms.CheckBox();
             this.chbResort = new System.Windows.Forms.CheckBox();
             this.chbCaffe = new System.Windows.Forms.CheckBox();
             this.chbPCPOS = new System.Windows.Forms.CheckBox();
@@ -46,7 +47,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textPrezime = new System.Windows.Forms.TextBox();
             this.textIme = new System.Windows.Forms.TextBox();
-            this.btnKolicina = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
@@ -72,9 +72,10 @@
             this.txtTekst = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnTrazi = new System.Windows.Forms.Button();
-            this.chbNemaOdr = new System.Windows.Forms.CheckBox();
-            this.btnSpremiUExcel = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.btnSpremiUExcel = new System.Windows.Forms.Button();
+            this.btnKolicina = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -92,10 +93,10 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tabControl1.ItemSize = new System.Drawing.Size(100, 30);
-            this.tabControl1.Location = new System.Drawing.Point(0, 18);
+            this.tabControl1.Location = new System.Drawing.Point(0, 43);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(972, 643);
+            this.tabControl1.Size = new System.Drawing.Size(984, 618);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -128,9 +129,21 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(964, 605);
+            this.tabPage1.Size = new System.Drawing.Size(976, 580);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "          Brzo pretraživanje          ";
+            // 
+            // chbNemaOdr
+            // 
+            this.chbNemaOdr.AutoSize = true;
+            this.chbNemaOdr.Location = new System.Drawing.Point(696, 105);
+            this.chbNemaOdr.Name = "chbNemaOdr";
+            this.chbNemaOdr.Size = new System.Drawing.Size(138, 21);
+            this.chbNemaOdr.TabIndex = 49;
+            this.chbNemaOdr.Text = "Nema održavanje";
+            this.chbNemaOdr.UseVisualStyleBackColor = true;
+            this.chbNemaOdr.Visible = false;
+            this.chbNemaOdr.CheckedChanged += new System.EventHandler(this.FunkCheckedChanged);
             // 
             // chbResort
             // 
@@ -300,28 +313,6 @@
             this.textIme.TabIndex = 35;
             this.textIme.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // btnKolicina
-            // 
-            this.btnKolicina.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnKolicina.BackColor = System.Drawing.Color.Transparent;
-            this.btnKolicina.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKolicina.BackgroundImage")));
-            this.btnKolicina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnKolicina.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnKolicina.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
-            this.btnKolicina.FlatAppearance.BorderSize = 0;
-            this.btnKolicina.FlatAppearance.CheckedBackColor = System.Drawing.Color.LightSlateGray;
-            this.btnKolicina.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
-            this.btnKolicina.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
-            this.btnKolicina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKolicina.Font = new System.Drawing.Font("Arial Narrow", 11F);
-            this.btnKolicina.Location = new System.Drawing.Point(802, 6);
-            this.btnKolicina.Name = "btnKolicina";
-            this.btnKolicina.Size = new System.Drawing.Size(139, 42);
-            this.btnKolicina.TabIndex = 33;
-            this.btnKolicina.Text = "Dodaj novog partnera";
-            this.btnKolicina.UseVisualStyleBackColor = false;
-            this.btnKolicina.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -349,7 +340,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(917, 437);
+            this.dataGridView2.Size = new System.Drawing.Size(929, 412);
             this.dataGridView2.TabIndex = 30;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.frms);
@@ -407,7 +398,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(964, 605);
+            this.tabPage2.Size = new System.Drawing.Size(976, 580);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "          Napredno pretraživanje          ";
             // 
@@ -428,7 +419,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(906, 350);
+            this.dataGridView1.Size = new System.Drawing.Size(918, 325);
             this.dataGridView1.TabIndex = 33;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -606,18 +597,6 @@
             this.btnTrazi.UseVisualStyleBackColor = true;
             this.btnTrazi.Click += new System.EventHandler(this.btnTrazi_Click);
             // 
-            // chbNemaOdr
-            // 
-            this.chbNemaOdr.AutoSize = true;
-            this.chbNemaOdr.Location = new System.Drawing.Point(696, 105);
-            this.chbNemaOdr.Name = "chbNemaOdr";
-            this.chbNemaOdr.Size = new System.Drawing.Size(138, 21);
-            this.chbNemaOdr.TabIndex = 49;
-            this.chbNemaOdr.Text = "Nema održavanje";
-            this.chbNemaOdr.UseVisualStyleBackColor = true;
-            this.chbNemaOdr.Visible = false;
-            this.chbNemaOdr.CheckedChanged += new System.EventHandler(this.FunkCheckedChanged);
-            // 
             // btnSpremiUExcel
             // 
             this.btnSpremiUExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -632,7 +611,7 @@
             this.btnSpremiUExcel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.btnSpremiUExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSpremiUExcel.Font = new System.Drawing.Font("Arial Narrow", 11F);
-            this.btnSpremiUExcel.Location = new System.Drawing.Point(801, 54);
+            this.btnSpremiUExcel.Location = new System.Drawing.Point(813, 54);
             this.btnSpremiUExcel.Name = "btnSpremiUExcel";
             this.btnSpremiUExcel.Size = new System.Drawing.Size(139, 42);
             this.btnSpremiUExcel.TabIndex = 50;
@@ -640,12 +619,54 @@
             this.btnSpremiUExcel.UseVisualStyleBackColor = false;
             this.btnSpremiUExcel.Click += new System.EventHandler(this.btnSpremiExcel_Click);
             // 
+            // btnKolicina
+            // 
+            this.btnKolicina.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKolicina.BackColor = System.Drawing.Color.Transparent;
+            this.btnKolicina.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnKolicina.BackgroundImage")));
+            this.btnKolicina.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnKolicina.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnKolicina.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
+            this.btnKolicina.FlatAppearance.BorderSize = 0;
+            this.btnKolicina.FlatAppearance.CheckedBackColor = System.Drawing.Color.LightSlateGray;
+            this.btnKolicina.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSlateGray;
+            this.btnKolicina.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
+            this.btnKolicina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKolicina.Font = new System.Drawing.Font("Arial Narrow", 11F);
+            this.btnKolicina.Location = new System.Drawing.Point(814, 6);
+            this.btnKolicina.Name = "btnKolicina";
+            this.btnKolicina.Size = new System.Drawing.Size(139, 42);
+            this.btnKolicina.TabIndex = 33;
+            this.btnKolicina.Text = "Dodaj novog partnera";
+            this.btnKolicina.UseVisualStyleBackColor = false;
+            this.btnKolicina.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button7
+            // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button7.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(846, 12);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(120, 40);
+            this.button7.TabIndex = 113;
+            this.button7.Text = "Izlaz      ";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // frmPartnerTrazi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(984, 662);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPartnerTrazi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Partner";
@@ -713,6 +734,6 @@
         private System.Windows.Forms.CheckBox chbNemaOdr;
         private System.Windows.Forms.Button btnSpremiUExcel;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-
+        private System.Windows.Forms.Button button7;
     }
 }
