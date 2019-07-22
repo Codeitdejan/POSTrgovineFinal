@@ -22,7 +22,7 @@ namespace PCPOS.Fiskalizacija
         private void frmPoslovniProstor_Load(object sender, EventArgs e)
         {
             Fillpos_prostor();
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            
         }
 
         private static DataTable DTfis = classSQL.select_settings("SELECT * FROM fiskalizacija", "fiskalizacija").Tables[0];
@@ -67,12 +67,7 @@ namespace PCPOS.Fiskalizacija
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Color x = Color.FromArgb(((byte)(105)), ((byte)(170)), ((byte)(197)));
-            Color y = Color.FromArgb(((byte)(40)), ((byte)(109)), ((byte)(135)));
 
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), x, y, 250);
-            c.FillRectangle(bG, 0, 0, Width, Height);
         }
 
         private void btnPosaljiPodatke_Click(object sender, EventArgs e)
@@ -209,6 +204,11 @@ namespace PCPOS.Fiskalizacija
 
                 MessageBox.Show("Greška kod slanja zahtjeva.\r\n\r\n" + ex.ToString());
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

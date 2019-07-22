@@ -29,7 +29,9 @@
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.DTListaUniverzalnaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listaUniverzalna = new PCPOS.Dataset.ListaUniverzalna();
             this.btnUcitaj = new System.Windows.Forms.Button();
             this.btnIspis = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -40,12 +42,21 @@
             this.lblStart = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.txtPocetak = new System.Windows.Forms.NumericUpDown();
-            this.listaUniverzalna = new PCPOS.Dataset.ListaUniverzalna();
-            this.DTListaUniverzalnaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.txtPocetak)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaUniverzalna)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DTListaUniverzalnaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaUniverzalna)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPocetak)).BeginInit();
             this.SuspendLayout();
+            // 
+            // DTListaUniverzalnaBindingSource
+            // 
+            this.DTListaUniverzalnaBindingSource.DataMember = "DTListaUniverzalna";
+            this.DTListaUniverzalnaBindingSource.DataSource = this.listaUniverzalna;
+            // 
+            // listaUniverzalna
+            // 
+            this.listaUniverzalna.DataSetName = "ListaUniverzalna";
+            this.listaUniverzalna.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnUcitaj
             // 
@@ -174,13 +185,13 @@
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource2.Name = "DSLista";
-            reportDataSource2.Value = this.DTListaUniverzalnaBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DSLista";
+            reportDataSource1.Value = this.DTListaUniverzalnaBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PCPOS.Report.Naljepnice.NaljepniceServisEan.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 58);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(775, 632);
+            this.reportViewer1.Size = new System.Drawing.Size(941, 632);
             this.reportViewer1.TabIndex = 126;
             // 
             // txtPocetak
@@ -192,21 +203,28 @@
             this.txtPocetak.TabIndex = 127;
             this.txtPocetak.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPocetak_KeyDown_1);
             // 
-            // listaUniverzalna
+            // button1
             // 
-            this.listaUniverzalna.DataSetName = "ListaUniverzalna";
-            this.listaUniverzalna.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // DTListaUniverzalnaBindingSource
-            // 
-            this.DTListaUniverzalnaBindingSource.DataMember = "DTListaUniverzalna";
-            this.DTListaUniverzalnaBindingSource.DataSource = this.listaUniverzalna;
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(833, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 40);
+            this.button1.TabIndex = 128;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frmBarkodeServis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 702);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(965, 702);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtPocetak);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.lblStart);
@@ -217,13 +235,16 @@
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.btnIspis);
             this.Controls.Add(this.btnUcitaj);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmBarkodeServis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Izrada naljepnice";
             this.Load += new System.EventHandler(this.frmIzradaNaljepnice_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txtPocetak)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaUniverzalna)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DTListaUniverzalnaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaUniverzalna)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPocetak)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,5 +264,6 @@
         private System.Windows.Forms.NumericUpDown txtPocetak;
         private Dataset.ListaUniverzalna listaUniverzalna;
         private System.Windows.Forms.BindingSource DTListaUniverzalnaBindingSource;
-	}
+        private System.Windows.Forms.Button button1;
+    }
 }

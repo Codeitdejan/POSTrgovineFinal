@@ -236,5 +236,10 @@ from partners where id_partner = {0}", id);
                 throw;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

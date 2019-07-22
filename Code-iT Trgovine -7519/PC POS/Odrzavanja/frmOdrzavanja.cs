@@ -22,7 +22,7 @@ namespace PCPOS.Odrzavanja
             SetirajNaplatniPoslovnicuDefault();
             fill();
             Racunaj();
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            //this.Paint += new PaintEventHandler(Form1_Paint);
         }
 
         private static DataTable DTpostavke = classSQL.select_settings("SELECT * FROM postavke", "postavke").Tables[0];
@@ -538,6 +538,11 @@ namespace PCPOS.Odrzavanja
                 dgv.Rows.RemoveAt(dgv.CurrentRow.Index);
                 Racunaj();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

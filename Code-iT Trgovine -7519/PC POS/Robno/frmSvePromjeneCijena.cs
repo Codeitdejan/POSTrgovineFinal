@@ -41,7 +41,7 @@ namespace PCPOS.Robno
                 }
             }
             catch { }
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            //this.Paint += new PaintEventHandler(Form1_Paint);
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)

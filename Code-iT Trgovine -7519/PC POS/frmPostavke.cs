@@ -44,7 +44,7 @@ namespace PCPOS
             setVaga();
             cbSustavPDV.SelectedValue = (Class.Postavke.sustavPdv ? 1 : 0);
             cbveleprodaja.SelectedValue = (Class.Postavke.veleprodaja ? 1 : 0);
-            this.Paint += new PaintEventHandler(Form1_Paint);
+           
 
             chbOslobodenjePDVa.Checked = Class.Postavke.oslobodenje_pdva;
 
@@ -174,9 +174,6 @@ namespace PCPOS
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), Color.AliceBlue, Color.LightSlateGray, 250);
-            c.FillRectangle(bG, 0, 0, Width, Height);
         }
 
         private void SetFiskal()
@@ -2260,5 +2257,9 @@ SET lokacija_sigurnosne_kopije ='{0}', backup_aktivnost = '{1}';", txtBackupLoka
             
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

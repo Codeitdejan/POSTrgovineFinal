@@ -34,7 +34,7 @@ namespace PCPOS
         private void frmStanjeUMinusu_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = DTgrid;
-            dataGridView1.Columns["id_skladiste"].Visible = false;
+            //dataGridView1.Columns["id_skladiste"].Visible = false;
             dataGridView1.Columns["Naziv artikla"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView1.ReadOnly = true;
 
@@ -48,16 +48,12 @@ namespace PCPOS
 
             cbSkladiste.DataSource = DT_Skladiste;
             cbSkladiste.DisplayMember = "skladiste";
-            cbSkladiste.ValueMember = "id_skladiste";
-
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            cbSkladiste.ValueMember = "id_skladiste";        
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), Color.AliceBlue, Color.LightSlateGray, 500);
-            c.FillRectangle(bG, 0, 0, Width, Height);
+
         }
 
         private void cbSkladiste_SelectionChangeCommitted(object sender, EventArgs e)
@@ -80,6 +76,11 @@ namespace PCPOS
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

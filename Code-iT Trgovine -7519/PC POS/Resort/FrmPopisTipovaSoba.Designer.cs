@@ -37,6 +37,7 @@
             this.broj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,18 +135,35 @@
             this.id.Name = "id";
             this.id.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(293, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 40);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmPopisTipovaSoba
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(294, 314);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(425, 314);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.btnUredi);
             this.Controls.Add(this.btnDodaj);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmPopisTipovaSoba";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Popis tipova soba";
@@ -164,5 +182,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn broj;
         private System.Windows.Forms.DataGridViewTextBoxColumn naziv;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.Button button1;
     }
 }

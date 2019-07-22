@@ -37,6 +37,7 @@
             this.labelIznos = new System.Windows.Forms.Label();
             this.labelNapomene = new System.Windows.Forms.Label();
             this.labelBroj = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnUredi
@@ -123,12 +124,28 @@
             this.labelBroj.TabIndex = 10;
             this.labelBroj.Text = "Broj:";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(296, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 40);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmVrstaUslugeUredi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(305, 306);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(428, 306);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnUredi);
             this.Controls.Add(this.txtBoxIznos);
             this.Controls.Add(this.txtBoxNazivUsluge);
@@ -138,6 +155,9 @@
             this.Controls.Add(this.labelIznos);
             this.Controls.Add(this.labelNapomene);
             this.Controls.Add(this.labelBroj);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmVrstaUslugeUredi";
             this.Text = "FrmVrstaUslugeUredi";
             this.Load += new System.EventHandler(this.FrmVrstaUslugeUredi_Load);
@@ -157,5 +177,6 @@
         private System.Windows.Forms.Label labelIznos;
         private System.Windows.Forms.Label labelNapomene;
         private System.Windows.Forms.Label labelBroj;
+        private System.Windows.Forms.Button button1;
     }
 }

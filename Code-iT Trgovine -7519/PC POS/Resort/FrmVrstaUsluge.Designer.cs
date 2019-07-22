@@ -38,6 +38,7 @@
             this.naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iznos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.napomena = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,18 +148,35 @@
             this.napomena.Name = "napomena";
             this.napomena.ReadOnly = true;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(644, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 40);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmVrstaUsluge
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(620, 376);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(776, 376);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.btnIzbrisi);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.btnUredi);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmVrstaUsluge";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vrsta usluge";
@@ -179,5 +197,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn naziv;
         private System.Windows.Forms.DataGridViewTextBoxColumn iznos;
         private System.Windows.Forms.DataGridViewTextBoxColumn napomena;
+        private System.Windows.Forms.Button button1;
     }
 }

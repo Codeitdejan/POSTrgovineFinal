@@ -1336,9 +1336,9 @@
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button7.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(882, 12);
+            this.button7.Location = new System.Drawing.Point(899, 8);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(126, 43);
+            this.button7.Size = new System.Drawing.Size(120, 40);
             this.button7.TabIndex = 112;
             this.button7.Text = "Izlaz      ";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

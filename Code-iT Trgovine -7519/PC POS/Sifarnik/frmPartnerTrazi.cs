@@ -95,7 +95,7 @@ namespace PCPOS
                 chbNemaOdr.Visible = true;
             }
 
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            //this.Paint += new PaintEventHandler(Form1_Paint);
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -481,5 +481,10 @@ namespace PCPOS
         }
 
         #endregion btnSpremiExcel EXCEL
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

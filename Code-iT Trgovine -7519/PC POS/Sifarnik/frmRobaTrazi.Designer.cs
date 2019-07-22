@@ -46,6 +46,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.ime = new System.Windows.Forms.RadioButton();
             this.sifra = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -63,7 +64,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnTrazi = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuPrvih)).BeginInit();
@@ -121,7 +121,7 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(948, 27);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 43);
+            this.button1.Size = new System.Drawing.Size(120, 40);
             this.button1.TabIndex = 55;
             this.button1.Text = "Izlaz      ";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -304,6 +304,21 @@
             this.tabPage2.Size = new System.Drawing.Size(1074, 621);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "          Napredno pretraživanje          ";
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button2.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(938, 17);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(126, 43);
+            this.button2.TabIndex = 56;
+            this.button2.Text = "Izlaz      ";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ime
             // 
@@ -491,21 +506,6 @@
             this.btnTrazi.Text = "Traži";
             this.btnTrazi.UseVisualStyleBackColor = true;
             this.btnTrazi.Click += new System.EventHandler(this.btnTrazi_Click);
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button2.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(938, 17);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 43);
-            this.button2.TabIndex = 56;
-            this.button2.Text = "Izlaz      ";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // frmRobaTrazi
             // 

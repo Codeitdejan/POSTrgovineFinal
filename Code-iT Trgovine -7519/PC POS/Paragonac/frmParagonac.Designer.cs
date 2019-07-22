@@ -121,7 +121,7 @@
             this.GroupBoxUkupnoZaNaplatiti.Controls.Add(this.lblUkupno);
             this.GroupBoxUkupnoZaNaplatiti.Controls.Add(this.lblUkupnoZanemari);
             this.GroupBoxUkupnoZaNaplatiti.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.GroupBoxUkupnoZaNaplatiti.Location = new System.Drawing.Point(481, 563);
+            this.GroupBoxUkupnoZaNaplatiti.Location = new System.Drawing.Point(497, 601);
             this.GroupBoxUkupnoZaNaplatiti.Name = "GroupBoxUkupnoZaNaplatiti";
             this.GroupBoxUkupnoZaNaplatiti.Size = new System.Drawing.Size(234, 88);
             this.GroupBoxUkupnoZaNaplatiti.TabIndex = 93;
@@ -213,7 +213,7 @@
             this.btnOdustaniSve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOdustaniSve.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnOdustaniSve.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnOdustaniSve.Location = new System.Drawing.Point(324, 570);
+            this.btnOdustaniSve.Location = new System.Drawing.Point(324, 608);
             this.btnOdustaniSve.Name = "btnOdustaniSve";
             this.btnOdustaniSve.Size = new System.Drawing.Size(140, 88);
             this.btnOdustaniSve.TabIndex = 96;
@@ -230,7 +230,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(731, 567);
+            this.label10.Location = new System.Drawing.Point(747, 605);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(105, 17);
             this.label10.TabIndex = 1;
@@ -241,7 +241,7 @@
             this.txtImePartnera.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtImePartnera.BackColor = System.Drawing.Color.White;
             this.txtImePartnera.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtImePartnera.Location = new System.Drawing.Point(734, 587);
+            this.txtImePartnera.Location = new System.Drawing.Point(750, 625);
             this.txtImePartnera.Name = "txtImePartnera";
             this.txtImePartnera.ReadOnly = true;
             this.txtImePartnera.Size = new System.Drawing.Size(258, 29);
@@ -530,7 +530,7 @@
             this.lblSkladiste.BackColor = System.Drawing.Color.Transparent;
             this.lblSkladiste.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblSkladiste.ForeColor = System.Drawing.Color.Lime;
-            this.lblSkladiste.Location = new System.Drawing.Point(22, 543);
+            this.lblSkladiste.Location = new System.Drawing.Point(22, 581);
             this.lblSkladiste.Name = "lblSkladiste";
             this.lblSkladiste.Size = new System.Drawing.Size(0, 20);
             this.lblSkladiste.TabIndex = 101;
@@ -601,7 +601,7 @@
             this.dgv.MultiSelect = false;
             this.dgv.Name = "dgv";
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(968, 379);
+            this.dgv.Size = new System.Drawing.Size(984, 417);
             this.dgv.TabIndex = 0;
             this.dgv.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellEndEdit);
             this.dgv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmParagonac_KeyDown);
@@ -703,7 +703,7 @@
             this.btnOdjava.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOdjava.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnOdjava.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOdjava.Location = new System.Drawing.Point(865, 17);
+            this.btnOdjava.Location = new System.Drawing.Point(881, 17);
             this.btnOdjava.Name = "btnOdjava";
             this.btnOdjava.Size = new System.Drawing.Size(127, 96);
             this.btnOdjava.TabIndex = 96;
@@ -754,7 +754,7 @@
             this.btnKartica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKartica.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnKartica.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnKartica.Location = new System.Drawing.Point(174, 570);
+            this.btnKartica.Location = new System.Drawing.Point(174, 608);
             this.btnKartica.Name = "btnKartica";
             this.btnKartica.Size = new System.Drawing.Size(140, 88);
             this.btnKartica.TabIndex = 94;
@@ -779,7 +779,7 @@
             this.btnGotovina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGotovina.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnGotovina.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnGotovina.Location = new System.Drawing.Point(25, 570);
+            this.btnGotovina.Location = new System.Drawing.Point(25, 608);
             this.btnGotovina.Name = "btnGotovina";
             this.btnGotovina.Size = new System.Drawing.Size(140, 88);
             this.btnGotovina.TabIndex = 94;
@@ -827,7 +827,7 @@
             this.btnPregledRacuna.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.btnPregledRacuna.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPregledRacuna.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnPregledRacuna.Location = new System.Drawing.Point(724, 17);
+            this.btnPregledRacuna.Location = new System.Drawing.Point(740, 17);
             this.btnPregledRacuna.Name = "btnPregledRacuna";
             this.btnPregledRacuna.Size = new System.Drawing.Size(116, 95);
             this.btnPregledRacuna.TabIndex = 107;
@@ -852,7 +852,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.Location = new System.Drawing.Point(853, 119);
+            this.button1.Location = new System.Drawing.Point(869, 119);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 35);
             this.button1.TabIndex = 108;
@@ -884,11 +884,13 @@
             this.Controls.Add(this.btnGotovina);
             this.Controls.Add(this.GroupBoxUkupnoZaNaplatiti);
             this.Controls.Add(this.dgv);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1022, 718);
             this.Name = "frmParagonac";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Paragonac prodaja";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmKasa_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmParagonac_KeyDown);
             this.GroupBoxUkupnoZaNaplatiti.ResumeLayout(false);

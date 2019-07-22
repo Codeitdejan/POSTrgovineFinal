@@ -94,7 +94,9 @@ namespace PCPOS.Resort
             int currentlySelectedRow = dataGridView.CurrentCell.RowIndex;
             FrmAgencijeUredi form = new FrmAgencijeUredi(dataGridView.Rows[currentlySelectedRow].Cells["id"].Value.ToString(),
                                                         dataGridView.Rows[currentlySelectedRow].Cells["broj"].Value.ToString());
-            form.ShowDialog();
+            form.MdiParent = this.MdiParent;
+            form.Dock = DockStyle.Fill;
+            form.Show();
             FillDataGridView();
         }
 
@@ -162,5 +164,9 @@ namespace PCPOS.Resort
             dataGridView.Refresh();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

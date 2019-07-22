@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cbkupac = new System.Windows.Forms.CheckBox();
             this.txtkupac = new System.Windows.Forms.TextBox();
@@ -59,7 +60,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnUrediSifru = new System.Windows.Forms.Button();
             this.btnSveFakture = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,7 +68,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.button3);
@@ -102,6 +102,18 @@
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pretraživanje avansa";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.Control;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button3.Location = new System.Drawing.Point(666, 76);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(168, 35);
+            this.button3.TabIndex = 28;
+            this.button3.Text = "Storno avansa";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox2
             // 
@@ -346,8 +358,8 @@
             this.dgv.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
             this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv.BackgroundColor = System.Drawing.Color.White;
@@ -376,9 +388,9 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(862, 12);
+            this.button1.Location = new System.Drawing.Point(872, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 38);
+            this.button1.Size = new System.Drawing.Size(120, 40);
             this.button1.TabIndex = 27;
             this.button1.Text = "Izlaz      ";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -413,28 +425,20 @@
             this.btnSveFakture.UseVisualStyleBackColor = true;
             this.btnSveFakture.Click += new System.EventHandler(this.btnSveFakture_Click);
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.Control;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button3.Location = new System.Drawing.Point(666, 76);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(168, 35);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Storno avansa";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // frmSviAvansiRacun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1004, 631);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnUrediSifru);
             this.Controls.Add(this.btnSveFakture);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmSviAvansiRacun";
             this.Text = "Svi avansi";
             this.Load += new System.EventHandler(this.FrmSviAvansi_Load);

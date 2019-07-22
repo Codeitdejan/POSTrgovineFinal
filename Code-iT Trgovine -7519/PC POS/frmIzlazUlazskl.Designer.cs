@@ -43,6 +43,7 @@
             this.txtSifra_robe = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbskladiste = new System.Windows.Forms.CheckBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,7 +51,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.cbskladiste = new System.Windows.Forms.CheckBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnOpenRoba)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -210,6 +211,16 @@
             this.groupBox1.Text = "Ulaz/Izlaz po skladištu za sve artikle";
             this.groupBox1.Visible = false;
             // 
+            // cbskladiste
+            // 
+            this.cbskladiste.AutoSize = true;
+            this.cbskladiste.BackColor = System.Drawing.Color.Transparent;
+            this.cbskladiste.Location = new System.Drawing.Point(11, 29);
+            this.cbskladiste.Name = "cbskladiste";
+            this.cbskladiste.Size = new System.Drawing.Size(15, 14);
+            this.cbskladiste.TabIndex = 41;
+            this.cbskladiste.UseVisualStyleBackColor = false;
+            // 
             // dateTimePicker3
             // 
             this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -280,21 +291,28 @@
             this.comboBox3.Size = new System.Drawing.Size(173, 23);
             this.comboBox3.TabIndex = 34;
             // 
-            // cbskladiste
+            // button2
             // 
-            this.cbskladiste.AutoSize = true;
-            this.cbskladiste.BackColor = System.Drawing.Color.Transparent;
-            this.cbskladiste.Location = new System.Drawing.Point(11, 29);
-            this.cbskladiste.Name = "cbskladiste";
-            this.cbskladiste.Size = new System.Drawing.Size(15, 14);
-            this.cbskladiste.TabIndex = 41;
-            this.cbskladiste.UseVisualStyleBackColor = false;
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button2.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(482, 13);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 40);
+            this.button2.TabIndex = 43;
+            this.button2.Text = "Izlaz      ";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // frmIzlazUlazskl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 454);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(614, 454);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnOpenRoba);
             this.Controls.Add(this.txtSifra_robe);
@@ -309,6 +327,9 @@
             this.Controls.Add(this.btnIspis);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmIzlazUlazskl";
             this.Text = "frmIzlazUlazskl";
             this.Load += new System.EventHandler(this.frmIzlazUlazskl_Load);
@@ -344,5 +365,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox cbskladiste;
+        private System.Windows.Forms.Button button2;
     }
 }

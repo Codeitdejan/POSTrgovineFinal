@@ -510,9 +510,9 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button2.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(867, 12);
+            this.button2.Location = new System.Drawing.Point(877, 11);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 38);
+            this.button2.Size = new System.Drawing.Size(120, 40);
             this.button2.TabIndex = 61;
             this.button2.Text = "Izlaz      ";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1047,6 +1047,9 @@
             this.Controls.Add(this.btnSveFakture);
             this.Controls.Add(this.dgw);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmKarticaSkladiste";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kartica skladišta";

@@ -24,13 +24,15 @@
         /// </summary>
         private void InitializeComponent () {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.listaUniverzalnaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaUniverzalna = new PCPOS.Dataset.ListaUniverzalna();
             this.dSRpodaciTvrtkeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSRpodaciTvrtke = new PCPOS.Dataset.DSRpodaciTvrtke();
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.chbUzmiIUsluge = new System.Windows.Forms.CheckBox();
             this.btnUcitaj = new System.Windows.Forms.Button();
             this.cmbSkladiste = new System.Windows.Forms.ComboBox();
             this.lblSkladiste = new System.Windows.Forms.Label();
@@ -40,7 +42,6 @@
             this.lblDatumOD = new System.Windows.Forms.Label();
             this.pnlFill = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.chbUzmiIUsluge = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.listaUniverzalnaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaUniverzalna)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSRpodaciTvrtkeBindingSource)).BeginInit();
@@ -71,6 +72,8 @@
             // 
             // pnlTop
             // 
+            this.pnlTop.BackColor = System.Drawing.Color.SlateGray;
+            this.pnlTop.Controls.Add(this.button1);
             this.pnlTop.Controls.Add(this.chbUzmiIUsluge);
             this.pnlTop.Controls.Add(this.btnUcitaj);
             this.pnlTop.Controls.Add(this.cmbSkladiste);
@@ -85,12 +88,40 @@
             this.pnlTop.Size = new System.Drawing.Size(984, 100);
             this.pnlTop.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(852, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 40);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // chbUzmiIUsluge
+            // 
+            this.chbUzmiIUsluge.AutoSize = true;
+            this.chbUzmiIUsluge.Checked = true;
+            this.chbUzmiIUsluge.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chbUzmiIUsluge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.chbUzmiIUsluge.Location = new System.Drawing.Point(372, 42);
+            this.chbUzmiIUsluge.Name = "chbUzmiIUsluge";
+            this.chbUzmiIUsluge.Size = new System.Drawing.Size(111, 21);
+            this.chbUzmiIUsluge.TabIndex = 18;
+            this.chbUzmiIUsluge.Text = "Uzmi i usluge";
+            this.chbUzmiIUsluge.UseVisualStyleBackColor = true;
+            // 
             // btnUcitaj
             // 
             this.btnUcitaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnUcitaj.Image = global::PCPOS.Properties.Resources._10591;
             this.btnUcitaj.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUcitaj.Location = new System.Drawing.Point(887, 12);
+            this.btnUcitaj.Location = new System.Drawing.Point(589, 12);
             this.btnUcitaj.Name = "btnUcitaj";
             this.btnUcitaj.Size = new System.Drawing.Size(85, 40);
             this.btnUcitaj.TabIndex = 17;
@@ -172,30 +203,17 @@
             // 
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            reportDataSource5.Name = "dsUniverzalna";
-            reportDataSource5.Value = this.listaUniverzalnaBindingSource;
-            reportDataSource6.Name = "DTRpodaciTvrtke";
-            reportDataSource6.Value = this.dSRpodaciTvrtkeBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
+            reportDataSource1.Name = "dsUniverzalna";
+            reportDataSource1.Value = this.listaUniverzalnaBindingSource;
+            reportDataSource2.Name = "DTRpodaciTvrtke";
+            reportDataSource2.Value = this.dSRpodaciTvrtkeBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PCPOS.Report.KnjigaPopisa.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 6);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(960, 550);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // chbUzmiIUsluge
-            // 
-            this.chbUzmiIUsluge.AutoSize = true;
-            this.chbUzmiIUsluge.Checked = true;
-            this.chbUzmiIUsluge.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chbUzmiIUsluge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.chbUzmiIUsluge.Location = new System.Drawing.Point(372, 42);
-            this.chbUzmiIUsluge.Name = "chbUzmiIUsluge";
-            this.chbUzmiIUsluge.Size = new System.Drawing.Size(111, 21);
-            this.chbUzmiIUsluge.TabIndex = 18;
-            this.chbUzmiIUsluge.Text = "Uzmi i usluge";
-            this.chbUzmiIUsluge.UseVisualStyleBackColor = true;
             // 
             // frmKnjigaPopisa
             // 
@@ -205,6 +223,9 @@
             this.ClientSize = new System.Drawing.Size(984, 668);
             this.Controls.Add(this.pnlFill);
             this.Controls.Add(this.pnlTop);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmKnjigaPopisa";
             this.Text = "frmKnjigaPopisa";
             this.Load += new System.EventHandler(this.frmKnjigaPopisa_Load);
@@ -236,5 +257,6 @@
         private System.Windows.Forms.BindingSource dSRpodaciTvrtkeBindingSource;
         private Dataset.DSRpodaciTvrtke dSRpodaciTvrtke;
         private System.Windows.Forms.CheckBox chbUzmiIUsluge;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -2439,7 +2439,9 @@ and rp.id_skladiste = '{1}';", sifra, Properties.Settings.Default.idSkladiste);
         private void btnTrazi_Click(object sender, EventArgs e)
         {
             frmRobaTrazi roba = new frmRobaTrazi();
-            roba.ShowDialog();
+            roba.Dock = DockStyle.Fill;
+            roba.WindowState = FormWindowState.Maximized;
+            roba.Show();
 
             if (Properties.Settings.Default.id_roba != "")
             {

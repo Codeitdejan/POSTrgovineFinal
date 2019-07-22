@@ -35,6 +35,7 @@
             this.lblU = new System.Windows.Forms.Label();
             this.btnIzvozDisc = new System.Windows.Forms.Button();
             this.btnObrisi = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgw)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             this.dgw.RowHeadersVisible = false;
             this.dgw.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgw.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgw.Size = new System.Drawing.Size(960, 508);
+            this.dgw.Size = new System.Drawing.Size(788, 508);
             this.dgw.TabIndex = 0;
             this.dgw.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgw_CellClick);
             // 
@@ -143,17 +144,36 @@
             this.btnObrisi.Visible = false;
             this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(834, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 40);
+            this.button1.TabIndex = 130;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmNeupjeleTransakcije
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(984, 571);
+            this.ClientSize = new System.Drawing.Size(966, 571);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblU);
             this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.btnIzvozDisc);
             this.Controls.Add(this.btnNoviUnos);
             this.Controls.Add(this.dgw);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmNeupjeleTransakcije";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Neuspjele transakcije prema porezni upravi";
@@ -171,5 +191,6 @@
         private System.Windows.Forms.Label lblU;
 		private System.Windows.Forms.Button btnIzvozDisc;
 		private System.Windows.Forms.Button btnObrisi;
+        private System.Windows.Forms.Button button1;
     }
 }

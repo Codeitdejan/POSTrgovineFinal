@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFaktura));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFakturaVan));
             this.sa = new PCPOS.FakturaVan.frmFakturaVan.MyDataGrid();
             this.dgw = new PCPOS.FakturaVan.frmFakturaVan.MyDataGrid();
             this.br = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1350,9 +1350,9 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(875, 12);
+            this.button1.Location = new System.Drawing.Point(861, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 40);
+            this.button1.Size = new System.Drawing.Size(120, 40);
             this.button1.TabIndex = 18;
             this.button1.Text = "Izlaz      ";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1491,7 +1491,7 @@
             this.txtotprkupac.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtotprkupac_KeyPress);
             this.txtotprkupac.Leave += new System.EventHandler(this.NAPUSTENI_Leave);
             // 
-            // frmFaktura
+            // frmFakturaVan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1518,7 +1518,10 @@
             this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.dgw);
             this.Controls.Add(this.label10);
-            this.Name = "frmFaktura";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "frmFakturaVan";
             this.Text = "Faktura";
             this.Load += new System.EventHandler(this.frmFaktura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sa)).EndInit();

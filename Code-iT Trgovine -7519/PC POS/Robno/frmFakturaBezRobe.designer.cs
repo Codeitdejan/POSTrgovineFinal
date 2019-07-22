@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFakturaBezRobe));
             this.sa = new PCPOS.Robno.frmFakturaBezRobe.MyDataGrid();
             this.dgw = new PCPOS.Robno.frmFakturaBezRobe.MyDataGrid();
@@ -51,6 +51,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.nmGodinaFakture = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbBrojPonude = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblOtpremnica = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -101,8 +103,6 @@
             this.btnOpenRoba = new System.Windows.Forms.PictureBox();
             this.txtSifra_robe = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbBrojPonude = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.sa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmGodinaFakture)).BeginInit();
@@ -122,20 +122,20 @@
             // dgw
             // 
             this.dgw.AllowUserToAddRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgw.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgw.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgw.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgw.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgw.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgw.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgw.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgw.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.br,
@@ -151,14 +151,14 @@
             this.cijena_bez_pdva,
             this.iznos_bez_pdva,
             this.id_stavka});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgw.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgw.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgw.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgw.GridColor = System.Drawing.Color.Gainsboro;
             this.dgw.Location = new System.Drawing.Point(12, 430);
@@ -321,6 +321,25 @@
             this.groupBox1.Size = new System.Drawing.Size(969, 86);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
+            // 
+            // tbBrojPonude
+            // 
+            this.tbBrojPonude.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbBrojPonude.Location = new System.Drawing.Point(633, 48);
+            this.tbBrojPonude.Name = "tbBrojPonude";
+            this.tbBrojPonude.Size = new System.Drawing.Size(128, 23);
+            this.tbBrojPonude.TabIndex = 14;
+            this.tbBrojPonude.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbBrojPonude.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbBrojPonude_KeyDown);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(453, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(174, 17);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Preuzmi stavke iz ponude:";
             // 
             // label12
             // 
@@ -794,9 +813,9 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(851, 12);
+            this.button1.Location = new System.Drawing.Point(861, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.Size = new System.Drawing.Size(120, 40);
             this.button1.TabIndex = 5;
             this.button1.Text = "Izlaz      ";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -937,25 +956,6 @@
             this.label10.TabIndex = 10;
             this.label10.Text = "Šifra robe/usluge:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(453, 51);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(174, 17);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Preuzmi stavke iz ponude:";
-            // 
-            // tbBrojPonude
-            // 
-            this.tbBrojPonude.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tbBrojPonude.Location = new System.Drawing.Point(633, 48);
-            this.tbBrojPonude.Name = "tbBrojPonude";
-            this.tbBrojPonude.Size = new System.Drawing.Size(128, 23);
-            this.tbBrojPonude.TabIndex = 14;
-            this.tbBrojPonude.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbBrojPonude.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbBrojPonude_KeyDown);
-            // 
             // frmFakturaBezRobe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -980,6 +980,9 @@
             this.Controls.Add(this.lblDeleteStavka);
             this.Controls.Add(this.lblInsertNovaStavka);
             this.Controls.Add(this.dgw);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmFakturaBezRobe";
             this.Text = "Faktura";
             this.Load += new System.EventHandler(this.frmFaktura_Load);

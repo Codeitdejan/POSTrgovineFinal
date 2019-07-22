@@ -43,6 +43,9 @@
             this.chbSkladiste = new System.Windows.Forms.CheckBox();
             this.chbBlagajnik = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbKasa = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.chbKasa = new System.Windows.Forms.CheckBox();
             this.cbdobavljaci = new System.Windows.Forms.ComboBox();
             this.chbdobavljaci = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,9 +55,7 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btnIspisPOS = new System.Windows.Forms.Button();
             this.btnIspis = new System.Windows.Forms.Button();
-            this.cbKasa = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.chbKasa = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -255,6 +256,44 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Opcionalni ispis prometa";
             // 
+            // cbKasa
+            // 
+            this.cbKasa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbKasa.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbKasa.BackColor = System.Drawing.Color.White;
+            this.cbKasa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbKasa.Enabled = false;
+            this.cbKasa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbKasa.FormattingEnabled = true;
+            this.cbKasa.Location = new System.Drawing.Point(28, 177);
+            this.cbKasa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbKasa.Name = "cbKasa";
+            this.cbKasa.Size = new System.Drawing.Size(234, 24);
+            this.cbKasa.TabIndex = 50;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Arial", 9F);
+            this.label6.Location = new System.Drawing.Point(28, 162);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(36, 15);
+            this.label6.TabIndex = 52;
+            this.label6.Text = "Kasa";
+            // 
+            // chbKasa
+            // 
+            this.chbKasa.AutoSize = true;
+            this.chbKasa.BackColor = System.Drawing.Color.Transparent;
+            this.chbKasa.Enabled = false;
+            this.chbKasa.Location = new System.Drawing.Point(267, 182);
+            this.chbKasa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chbKasa.Name = "chbKasa";
+            this.chbKasa.Size = new System.Drawing.Size(15, 14);
+            this.chbKasa.TabIndex = 51;
+            this.chbKasa.UseVisualStyleBackColor = false;
+            // 
             // cbdobavljaci
             // 
             this.cbdobavljaci.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
@@ -384,53 +423,34 @@
             this.btnIspis.Click += new System.EventHandler(this.btnIspis_Click);
             this.btnIspis.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dtpOD_KeyDown);
             // 
-            // cbKasa
+            // button1
             // 
-            this.cbKasa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cbKasa.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbKasa.BackColor = System.Drawing.Color.White;
-            this.cbKasa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbKasa.Enabled = false;
-            this.cbKasa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.cbKasa.FormattingEnabled = true;
-            this.cbKasa.Location = new System.Drawing.Point(28, 177);
-            this.cbKasa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cbKasa.Name = "cbKasa";
-            this.cbKasa.Size = new System.Drawing.Size(234, 24);
-            this.cbKasa.TabIndex = 50;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Arial", 9F);
-            this.label6.Location = new System.Drawing.Point(28, 162);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 15);
-            this.label6.TabIndex = 52;
-            this.label6.Text = "Kasa";
-            // 
-            // chbKasa
-            // 
-            this.chbKasa.AutoSize = true;
-            this.chbKasa.BackColor = System.Drawing.Color.Transparent;
-            this.chbKasa.Enabled = false;
-            this.chbKasa.Location = new System.Drawing.Point(267, 182);
-            this.chbKasa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.chbKasa.Name = "chbKasa";
-            this.chbKasa.Size = new System.Drawing.Size(15, 14);
-            this.chbKasa.TabIndex = 51;
-            this.chbKasa.UseVisualStyleBackColor = false;
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(377, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 40);
+            this.button1.TabIndex = 45;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frmPrometKase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(357, 500);
+            this.ClientSize = new System.Drawing.Size(509, 500);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPrometKase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Promet kase";
@@ -469,5 +489,6 @@
         private System.Windows.Forms.ComboBox cbKasa;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox chbKasa;
+        private System.Windows.Forms.Button button1;
     }
 }

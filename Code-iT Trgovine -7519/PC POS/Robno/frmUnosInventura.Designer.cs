@@ -350,7 +350,7 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(790, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.Size = new System.Drawing.Size(120, 40);
             this.button1.TabIndex = 77;
             this.button1.Text = "Izlaz      ";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -473,6 +473,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(932, 496);
             this.Controls.Add(this.btnUcitajSveStavke);
             this.Controls.Add(this.pictureBox1);
@@ -497,6 +498,9 @@
             this.Controls.Add(this.label17);
             this.Controls.Add(this.txtSifra_robe);
             this.Controls.Add(this.dgw);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmUnosInventura";
             this.Text = "Inventura";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmUnosInventura_FormClosing);

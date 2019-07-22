@@ -29,7 +29,7 @@ namespace PCPOS.Robno
             SetSkladiste();
             txtBroj.Text = brojOdjave();
             ControlDisableEnable(1, 0, 0, 1, 0);
-            this.Paint += new PaintEventHandler(Form1_Paint);
+           // this.Paint += new PaintEventHandler(Form1_Paint);
             if (broj_komisione_edit != null)
             {
                 FillKomisione();
@@ -920,7 +920,9 @@ namespace PCPOS.Robno
         {
             Robno.frmSveOdjave_komisione srn = new frmSveOdjave_komisione();
             srn.MainForm = this;
-            srn.ShowDialog();
+            srn.MdiParent = this.MdiParent;
+            srn.Dock = DockStyle.Fill;
+            srn.Show();
             if (broj_komisione_edit != null)
             {
                 DeleteFields();

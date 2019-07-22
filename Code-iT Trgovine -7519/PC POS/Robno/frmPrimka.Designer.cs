@@ -529,9 +529,9 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(870, 19);
+            this.button1.Location = new System.Drawing.Point(849, 19);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 40);
+            this.button1.Size = new System.Drawing.Size(120, 40);
             this.button1.TabIndex = 6;
             this.button1.Text = "Izlaz   ";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -667,6 +667,9 @@
             this.Controls.Add(this.btnNoviUnos);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnSpremi);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPrimka";
             this.Text = "Primka";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrimka_FormClosing);

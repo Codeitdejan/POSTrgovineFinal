@@ -83,7 +83,7 @@ namespace PCPOS
             {
                 edit_kalkulacija(broj_kalkulacije_edit, edit_skladiste);
             }
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            //this.Paint += new PaintEventHandler(Form1_Paint);
             load = true;
 
             ProvjeriDaliPostojiSkeniraniDok();

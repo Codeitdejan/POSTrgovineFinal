@@ -262,9 +262,9 @@
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnExit.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(868, 12);
+            this.btnExit.Location = new System.Drawing.Point(878, 12);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(130, 38);
+            this.btnExit.Size = new System.Drawing.Size(120, 40);
             this.btnExit.TabIndex = 62;
             this.btnExit.Text = "Izlaz      ";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -335,6 +335,9 @@
             this.Controls.Add(this.dgvDokumenti);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPovijestDokumenata";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Povijest koristenja dokumenata";

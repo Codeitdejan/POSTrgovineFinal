@@ -23,7 +23,7 @@ namespace PCPOS.Robno
 
         private void frmSveIzdatnice_Load(object sender, EventArgs e)
         {
-            this.Paint += new PaintEventHandler(Form1_Paint);
+           
 
             if (MainFormMenu == null)
             {
@@ -89,9 +89,6 @@ namespace PCPOS.Robno
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), Color.AliceBlue, Color.LightSlateGray, 1000);
-            c.FillRectangle(bG, 0, 0, Width, Height);
         }
 
         #region buttons
@@ -525,6 +522,11 @@ namespace PCPOS.Robno
                 }
             }
             catch { }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

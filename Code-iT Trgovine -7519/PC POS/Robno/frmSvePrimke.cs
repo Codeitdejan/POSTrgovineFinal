@@ -19,17 +19,10 @@ namespace PCPOS.Robno
         private DataSet DSprimke = new DataSet();
         private DataSet DSpartners = new DataSet();
         private DataSet DSzaposlenik = new DataSet();
-
-        //private bool proizvodacka_cijena = false;
         public frmMenu MainFormMenu { get; set; }
 
         private void frmSvePrimke_Load(object sender, EventArgs e)
         {
-            //if (MessageBox.Show("Želite ispisati primku s proizvođačkim cijenama?") == DialogResult.Yes) {
-            //    proizvodacka_cijena = true;
-            //}
-            this.Paint += new PaintEventHandler(Form1_Paint);
-
             if (MainFormMenu == null)
             {
                 int heigt = SystemInformation.VirtualScreen.Height;
@@ -59,9 +52,6 @@ namespace PCPOS.Robno
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), Color.AliceBlue, Color.LightSlateGray, 1000);
-            c.FillRectangle(bG, 0, 0, Width, Height);
         }
 
         private void pic_MouseEnter(object sender, EventArgs e)
@@ -533,6 +523,11 @@ namespace PCPOS.Robno
                 }
             }
             catch { }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -478,9 +478,9 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(872, 20);
+            this.button1.Location = new System.Drawing.Point(881, 20);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.Size = new System.Drawing.Size(120, 40);
             this.button1.TabIndex = 77;
             this.button1.Text = "Izlaz      ";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -497,7 +497,7 @@
             this.btnDeleteAllFaktura.Name = "btnDeleteAllFaktura";
             this.btnDeleteAllFaktura.Size = new System.Drawing.Size(195, 40);
             this.btnDeleteAllFaktura.TabIndex = 76;
-            this.btnDeleteAllFaktura.Text = "Obriši Meduskladisnicu";
+            this.btnDeleteAllFaktura.Text = "Obriši Međuskladišnicu";
             this.btnDeleteAllFaktura.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDeleteAllFaktura.UseVisualStyleBackColor = true;
             this.btnDeleteAllFaktura.Click += new System.EventHandler(this.btnDeleteAllFaktura_Click);
@@ -511,7 +511,7 @@
             this.btnSveFakture.Name = "btnSveFakture";
             this.btnSveFakture.Size = new System.Drawing.Size(179, 40);
             this.btnSveFakture.TabIndex = 75;
-            this.btnSveFakture.Text = "Sve Meduskladisnice";
+            this.btnSveFakture.Text = "Sve Međuskladišnice";
             this.btnSveFakture.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSveFakture.UseVisualStyleBackColor = true;
             this.btnSveFakture.Click += new System.EventHandler(this.btnSveFakture_Click);
@@ -562,7 +562,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1023, 600);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDeleteAllFaktura);
@@ -577,6 +577,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.dgw);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmMeduskladisnica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Međuskladišnica";

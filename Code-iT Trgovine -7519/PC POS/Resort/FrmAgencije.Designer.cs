@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.labelAgencije = new System.Windows.Forms.Label();
-            this.buttonDodaj = new System.Windows.Forms.Button();
-            this.buttonUredi = new System.Windows.Forms.Button();
-            this.buttonIzbrisi = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.broj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeAgencije = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.napomena = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aktivnost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelAgencije = new System.Windows.Forms.Label();
+            this.buttonDodaj = new System.Windows.Forms.Button();
+            this.buttonUredi = new System.Windows.Forms.Button();
+            this.buttonIzbrisi = new System.Windows.Forms.Button();
             this.labelBroj = new System.Windows.Forms.Label();
             this.labelImeAgencije = new System.Windows.Forms.Label();
             this.labelAktivnost = new System.Windows.Forms.Label();
@@ -46,6 +46,7 @@
             this.textBoxImeAgencije = new System.Windows.Forms.TextBox();
             this.richTextBoxNapomena = new System.Windows.Forms.RichTextBox();
             this.comboBoxAktivnost = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +67,33 @@
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(540, 261);
             this.dataGridView.TabIndex = 0;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.Visible = false;
+            // 
+            // broj
+            // 
+            this.broj.FillWeight = 30F;
+            this.broj.HeaderText = "Broj";
+            this.broj.Name = "broj";
+            // 
+            // imeAgencije
+            // 
+            this.imeAgencije.HeaderText = "Ime agencije";
+            this.imeAgencije.Name = "imeAgencije";
+            // 
+            // napomena
+            // 
+            this.napomena.HeaderText = "Napomena";
+            this.napomena.Name = "napomena";
+            // 
+            // aktivnost
+            // 
+            this.aktivnost.HeaderText = "Aktivnost";
+            this.aktivnost.Name = "aktivnost";
             // 
             // labelAgencije
             // 
@@ -110,33 +138,6 @@
             this.buttonIzbrisi.Text = "Izbriši";
             this.buttonIzbrisi.UseVisualStyleBackColor = true;
             this.buttonIzbrisi.Click += new System.EventHandler(this.buttonIzbrisi_Click);
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.Visible = false;
-            // 
-            // broj
-            // 
-            this.broj.FillWeight = 30F;
-            this.broj.HeaderText = "Broj";
-            this.broj.Name = "broj";
-            // 
-            // imeAgencije
-            // 
-            this.imeAgencije.HeaderText = "Ime agencije";
-            this.imeAgencije.Name = "imeAgencije";
-            // 
-            // napomena
-            // 
-            this.napomena.HeaderText = "Napomena";
-            this.napomena.Name = "napomena";
-            // 
-            // aktivnost
-            // 
-            this.aktivnost.HeaderText = "Aktivnost";
-            this.aktivnost.Name = "aktivnost";
             // 
             // labelBroj
             // 
@@ -210,12 +211,28 @@
             this.comboBoxAktivnost.Size = new System.Drawing.Size(176, 21);
             this.comboBoxAktivnost.TabIndex = 17;
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(574, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 40);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmAgencije
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(553, 533);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(706, 533);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBoxAktivnost);
             this.Controls.Add(this.richTextBoxNapomena);
             this.Controls.Add(this.textBoxImeAgencije);
@@ -229,8 +246,9 @@
             this.Controls.Add(this.buttonDodaj);
             this.Controls.Add(this.labelAgencije);
             this.Controls.Add(this.dataGridView);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmAgencije";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agencije";
@@ -261,5 +279,6 @@
         private System.Windows.Forms.TextBox textBoxImeAgencije;
         private System.Windows.Forms.RichTextBox richTextBoxNapomena;
         private System.Windows.Forms.ComboBox comboBoxAktivnost;
+        private System.Windows.Forms.Button button1;
     }
 }

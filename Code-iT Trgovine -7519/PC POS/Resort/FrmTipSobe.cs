@@ -87,5 +87,10 @@ namespace PCPOS.Resort
             else
                 MessageBox.Show("Naziv je obavezno polje!", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

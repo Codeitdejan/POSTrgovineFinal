@@ -72,9 +72,9 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(860, 12);
+            this.button1.Location = new System.Drawing.Point(872, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 38);
+            this.button1.Size = new System.Drawing.Size(120, 40);
             this.button1.TabIndex = 27;
             this.button1.Text = "Izlaz      ";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -416,6 +416,9 @@
             this.Controls.Add(this.btnUrediSifru);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmSviPovrati";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Svi povrati";

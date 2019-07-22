@@ -68,7 +68,7 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(860, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 38);
+            this.button1.Size = new System.Drawing.Size(120, 40);
             this.button1.TabIndex = 27;
             this.button1.Text = "Izlaz      ";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -354,6 +354,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1004, 837);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
@@ -361,6 +362,9 @@
             this.Controls.Add(this.btnSveFakture);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmSvePromjeneCijena";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sve promjene cijena";

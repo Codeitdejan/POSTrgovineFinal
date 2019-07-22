@@ -86,6 +86,7 @@
             this.naplaceno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUredi = new System.Windows.Forms.Button();
             this.btnObrisi = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numBebe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDjeca)).BeginInit();
@@ -652,19 +653,37 @@
             this.btnObrisi.UseVisualStyleBackColor = false;
             this.btnObrisi.Click += new System.EventHandler(this.BtnObrisi_Click);
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(1062, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 40);
+            this.button1.TabIndex = 49;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmRezervacija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1059, 620);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(1194, 620);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnObrisi);
             this.Controls.Add(this.btnUredi);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmRezervacija";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Unos rezervacije";
@@ -736,5 +755,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn datum_odlaska;
         private System.Windows.Forms.DataGridViewTextBoxColumn vrsta_usluge;
         private System.Windows.Forms.DataGridViewTextBoxColumn naplaceno;
+        private System.Windows.Forms.Button button1;
     }
 }

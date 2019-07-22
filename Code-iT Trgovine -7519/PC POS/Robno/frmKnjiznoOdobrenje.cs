@@ -143,5 +143,10 @@ namespace PCPOS.Robno
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

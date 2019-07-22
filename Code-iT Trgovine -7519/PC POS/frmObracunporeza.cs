@@ -17,14 +17,12 @@ namespace PCPOS
         {
             Set();
 
-            this.Paint += new PaintEventHandler(Form1_Paint);
+    
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), Color.AliceBlue, Color.LightSlateGray, 1000);
-            c.FillRectangle(bG, 0, 0, Width, Height);
+    
         }
 
         private void Set()
@@ -189,6 +187,11 @@ namespace PCPOS
             lista.datumDO = new DateTime(dateTimePicker2.Value.Year, dateTimePicker2.Value.Month, dateTimePicker2.Value.Day, 23, 59, 59);
 
             lista.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

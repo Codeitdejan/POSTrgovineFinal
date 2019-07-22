@@ -31,7 +31,7 @@ namespace PCPOS
             rtfBottom.Font = font;
 
             FillData();
-            this.Paint += new PaintEventHandler(Form1_Paint);
+        
         }
 
         private DataTable DTpostavke = classSQL.select_settings("SELECT * FROM postavke", "postavke").Tables[0];
@@ -112,9 +112,6 @@ namespace PCPOS
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics c = e.Graphics;
-            Brush bG = new LinearGradientBrush(new Rectangle(0, 0, Width, Height), Color.AliceBlue, Color.LightSlateGray, 1000);
-            c.FillRectangle(bG, 0, 0, Width, Height);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -360,6 +357,11 @@ namespace PCPOS
             {
                 throw;
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

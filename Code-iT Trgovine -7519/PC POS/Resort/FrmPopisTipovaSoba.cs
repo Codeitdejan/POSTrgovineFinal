@@ -64,7 +64,9 @@ namespace PCPOS.Resort
                 EditMode = edit,
                 BrojSobe = edit ? GetSelectedTypeId() : "0"
             };
-            form.ShowDialog();
+            form.MdiParent = this.MdiParent;
+            form.Dock = DockStyle.Fill;
+            form.Show();
             if (form.Successful)
                 FillGrid();
         }
@@ -113,6 +115,11 @@ namespace PCPOS.Resort
                 if (confirmDialog == DialogResult.Yes)
                     DeleteType();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

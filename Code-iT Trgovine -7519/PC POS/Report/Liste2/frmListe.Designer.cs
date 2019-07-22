@@ -32,6 +32,7 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListe));
             this.dTRpodaciTvrtkeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSRpodaciTvrtke = new PCPOS.Dataset.DSRpodaciTvrtke();
             this.dTlisteBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -102,9 +103,10 @@
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(791, 792);
             this.Controls.Add(this.reportViewer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lista";
+            this.Text = "Promet kase";
             this.Load += new System.EventHandler(this.frmListe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dTRpodaciTvrtkeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSRpodaciTvrtke)).EndInit();

@@ -24,7 +24,7 @@ namespace PCPOS.Robno
 
         private void frmRobniDobropis_Load(object sender, EventArgs e)
         {
-            this.Paint += new PaintEventHandler(frmRobniDobropis_Paint); // Sets background gradient
+            //this.Paint += new PaintEventHandler(frmRobniDobropis_Paint); // Sets background gradient
 
             SetBrojDobropis();
             SetNumericGodina();
@@ -730,11 +730,10 @@ namespace PCPOS.Robno
 
         private void BtnSviDobropisi_Click(object sender, EventArgs e)
         {
-            frmSviRobniDobropisi form = new frmSviRobniDobropisi
-            {
-                Dock = DockStyle.Fill
-            };
-            form.ShowDialog();
+            frmSviRobniDobropisi form = new frmSviRobniDobropisi();
+            form.MdiParent = this.MdiParent;
+            form.Dock = DockStyle.Fill;
+            form.Show();
             if (form.IdDobropis != 0)
             {
                 tbBrojUnosa.Text = form.IdDobropis.ToString();
