@@ -1741,6 +1741,7 @@
             this.btnEracun.TabIndex = 561;
             this.btnEracun.Text = "Eračun";
             this.btnEracun.UseVisualStyleBackColor = true;
+            this.btnEracun.Visible = false;
             this.btnEracun.Click += new System.EventHandler(this.BtnEracun_Click);
             // 
             // btnJson

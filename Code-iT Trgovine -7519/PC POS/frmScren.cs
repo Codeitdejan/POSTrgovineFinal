@@ -821,8 +821,10 @@ namespace PCPOS
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            Util.frmHtmlInfo iss = new Util.frmHtmlInfo();
-            iss.Show();
+            /*Util.frmHtmlInfo iss = new Util.frmHtmlInfo();
+            iss.Show();*/
+            frmNewInfo frmNewInfoX = new frmNewInfo();
+            frmNewInfoX.ShowDialog();
         }
 
         private void chbIfb_CheckedChanged(object sender, EventArgs e)

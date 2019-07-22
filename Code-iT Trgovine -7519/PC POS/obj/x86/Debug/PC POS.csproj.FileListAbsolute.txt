@@ -10868,3 +10868,4 @@ C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\ob
 C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PCPOS.Kasa.frmDodajStavkuUMinus.resources
 >>>>>>> 067ee78fa1ca480ee4fa8b4d06d655a8b366634e
 >>>>>>> 637617c9f55bb2e877040a002d571e689145a933
+C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PCPOS.frmNewInfo.resources
