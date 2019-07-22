@@ -6,6 +6,7 @@ using PCPOS.Util;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
@@ -31,7 +32,7 @@ namespace PCPOS
 
         private void frmPostavke_Load(object sender, EventArgs e)
         {
-            verzija.Text = "Trenutna verzija je " + Properties.Settings.Default.verzija_programa.ToString().Replace(",", ".");
+            //verzija.Text = "Trenutna verzija je " + Properties.Settings.Default.verzija_programa.ToString().Replace(",", ".");
 
             centralaSyncShowHide(false);
             FillCurrencyCB();
@@ -602,7 +603,7 @@ cbDucan.SelectedValue, cbKasa.SelectedValue, cbSkladiste.SelectedValue, cbBlagaj
 
         private void btnNadogradi_Click(object sender, EventArgs e)
         {
-            if (!File.Exists("ne_salji"))
+            /*if (!File.Exists("ne_salji"))
             {
                 if (!Util.CheckConnection.Check())
                 {
@@ -611,7 +612,25 @@ cbDucan.SelectedValue, cbKasa.SelectedValue, cbSkladiste.SelectedValue, cbBlagaj
                 }
 
                 Util.Korisno.NovijaInacica(false);
+            }*/
+
+            string fileName = $@"NadogradnjaProgramaT.exe";
+            string url = $"ftp://5.189.154.50/CodeTrgovine/{fileName}";
+            using (WebClient req = new WebClient())
+            {
+                req.Credentials = new NetworkCredential("codeadmin", "Eqws64%2");
+                byte[] fileData = req.DownloadData(url);
+
+                using(FileStream file = File.Create(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $@"{fileName}")))
+                {
+                    file.Write(fileData, 0, fileData.Length);
+                }
             }
+
+            MessageBox.Show($@"Program će se automatski ažurirati. Pritisnite OK.", "Informacija", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            System.Threading.Thread.Sleep(1000);
+            Process.Start("NadogradnjaProgramaT.exe");
+            Environment.Exit(0);
         }
 
         private static string GetApplicationPath()
