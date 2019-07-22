@@ -29,13 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSveFaktureBezRobeNase));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.broj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valuta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sifra_partnera = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.partner = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.broj_ispisa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ukupno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.storno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_ducan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.skladiste = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.placeno = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dgv_partner = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_kasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chbSkladiste = new System.Windows.Forms.CheckBox();
+            this.cmbSkladiste = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.chbPoslovnica = new System.Windows.Forms.CheckBox();
             this.cbPoslovnica = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -67,22 +83,6 @@
             this.btnUrediSifru = new System.Windows.Forms.Button();
             this.btnSveFakture = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.chbSkladiste = new System.Windows.Forms.CheckBox();
-            this.cmbSkladiste = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.broj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valuta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sifra_partnera = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.partner = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.broj_ispisa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ukupno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.storno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_ducan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.skladiste = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placeno = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dgv_partner = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_kasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -95,8 +95,8 @@
             // 
             this.dgv.AllowUserToAddRows = false;
             this.dgv.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -118,14 +118,14 @@
             this.dgv_partner,
             this.id_kasa});
             this.dgv.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv.GridColor = System.Drawing.Color.Gainsboro;
             this.dgv.Location = new System.Drawing.Point(12, 178);
             this.dgv.Name = "dgv";
@@ -136,6 +136,115 @@
             this.dgv.TabIndex = 0;
             this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             this.dgv.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellDoubleClick);
+            // 
+            // broj
+            // 
+            this.broj.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.broj.FillWeight = 70F;
+            this.broj.HeaderText = "Broj";
+            this.broj.Name = "broj";
+            this.broj.ReadOnly = true;
+            this.broj.Width = 70;
+            // 
+            // datum
+            // 
+            this.datum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.datum.FillWeight = 81.55006F;
+            this.datum.HeaderText = "Datum";
+            this.datum.Name = "datum";
+            this.datum.ReadOnly = true;
+            // 
+            // valuta
+            // 
+            this.valuta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.valuta.FillWeight = 150F;
+            this.valuta.HeaderText = "Valuta";
+            this.valuta.Name = "valuta";
+            this.valuta.ReadOnly = true;
+            this.valuta.Width = 80;
+            // 
+            // sifra_partnera
+            // 
+            this.sifra_partnera.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.sifra_partnera.HeaderText = "Šifra partnera";
+            this.sifra_partnera.Name = "sifra_partnera";
+            this.sifra_partnera.ReadOnly = true;
+            this.sifra_partnera.Visible = false;
+            this.sifra_partnera.Width = 80;
+            // 
+            // partner
+            // 
+            this.partner.FillWeight = 81.55006F;
+            this.partner.HeaderText = "Partner";
+            this.partner.Name = "partner";
+            this.partner.ReadOnly = true;
+            // 
+            // broj_ispisa
+            // 
+            this.broj_ispisa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.broj_ispisa.FillWeight = 80F;
+            this.broj_ispisa.HeaderText = "BR ispisa";
+            this.broj_ispisa.Name = "broj_ispisa";
+            this.broj_ispisa.ReadOnly = true;
+            this.broj_ispisa.Visible = false;
+            this.broj_ispisa.Width = 80;
+            // 
+            // ukupno
+            // 
+            this.ukupno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ukupno.HeaderText = "Ukupno";
+            this.ukupno.Name = "ukupno";
+            this.ukupno.ReadOnly = true;
+            // 
+            // storno
+            // 
+            this.storno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.storno.FillWeight = 50F;
+            this.storno.HeaderText = "Storno";
+            this.storno.Name = "storno";
+            this.storno.ReadOnly = true;
+            this.storno.Visible = false;
+            this.storno.Width = 50;
+            // 
+            // id_ducan
+            // 
+            this.id_ducan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.id_ducan.FillWeight = 50F;
+            this.id_ducan.HeaderText = "Poslovnica";
+            this.id_ducan.Name = "id_ducan";
+            this.id_ducan.ReadOnly = true;
+            this.id_ducan.Width = 80;
+            // 
+            // skladiste
+            // 
+            this.skladiste.HeaderText = "Skladište";
+            this.skladiste.Name = "skladiste";
+            this.skladiste.ReadOnly = true;
+            // 
+            // placeno
+            // 
+            this.placeno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.placeno.FillWeight = 150F;
+            this.placeno.HeaderText = "Otpremnica";
+            this.placeno.Name = "placeno";
+            this.placeno.ReadOnly = true;
+            this.placeno.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.placeno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.placeno.Width = 150;
+            // 
+            // dgv_partner
+            // 
+            this.dgv_partner.HeaderText = "dgv_partner";
+            this.dgv_partner.Name = "dgv_partner";
+            this.dgv_partner.ReadOnly = true;
+            this.dgv_partner.Visible = false;
+            // 
+            // id_kasa
+            // 
+            this.id_kasa.HeaderText = "id_kasa";
+            this.id_kasa.Name = "id_kasa";
+            this.id_kasa.ReadOnly = true;
+            this.id_kasa.Visible = false;
             // 
             // groupBox1
             // 
@@ -178,6 +287,38 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pretraživanje fakture";
+            // 
+            // chbSkladiste
+            // 
+            this.chbSkladiste.AutoSize = true;
+            this.chbSkladiste.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.chbSkladiste.Location = new System.Drawing.Point(880, 27);
+            this.chbSkladiste.Name = "chbSkladiste";
+            this.chbSkladiste.Size = new System.Drawing.Size(15, 14);
+            this.chbSkladiste.TabIndex = 225;
+            this.chbSkladiste.UseVisualStyleBackColor = true;
+            // 
+            // cmbSkladiste
+            // 
+            this.cmbSkladiste.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmbSkladiste.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbSkladiste.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSkladiste.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cmbSkladiste.FormattingEnabled = true;
+            this.cmbSkladiste.Location = new System.Drawing.Point(709, 22);
+            this.cmbSkladiste.Name = "cmbSkladiste";
+            this.cmbSkladiste.Size = new System.Drawing.Size(168, 24);
+            this.cmbSkladiste.TabIndex = 224;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.Location = new System.Drawing.Point(624, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 17);
+            this.label7.TabIndex = 223;
+            this.label7.Text = "Skladište:";
             // 
             // chbPoslovnica
             // 
@@ -453,9 +594,9 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(860, 12);
+            this.button1.Location = new System.Drawing.Point(872, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 38);
+            this.button1.Size = new System.Drawing.Size(120, 40);
             this.button1.TabIndex = 21;
             this.button1.Text = "Izlaz      ";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -494,22 +635,22 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.AliceBlue;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.AliceBlue;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.GridColor = System.Drawing.Color.Gainsboro;
             this.dataGridView1.Location = new System.Drawing.Point(12, 662);
             this.dataGridView1.Name = "dataGridView1";
@@ -518,147 +659,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(980, 164);
             this.dataGridView1.TabIndex = 70;
             this.dataGridView1.Visible = false;
-            // 
-            // chbSkladiste
-            // 
-            this.chbSkladiste.AutoSize = true;
-            this.chbSkladiste.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.chbSkladiste.Location = new System.Drawing.Point(880, 27);
-            this.chbSkladiste.Name = "chbSkladiste";
-            this.chbSkladiste.Size = new System.Drawing.Size(15, 14);
-            this.chbSkladiste.TabIndex = 225;
-            this.chbSkladiste.UseVisualStyleBackColor = true;
-            // 
-            // cmbSkladiste
-            // 
-            this.cmbSkladiste.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cmbSkladiste.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbSkladiste.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSkladiste.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cmbSkladiste.FormattingEnabled = true;
-            this.cmbSkladiste.Location = new System.Drawing.Point(709, 22);
-            this.cmbSkladiste.Name = "cmbSkladiste";
-            this.cmbSkladiste.Size = new System.Drawing.Size(168, 24);
-            this.cmbSkladiste.TabIndex = 224;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(624, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 17);
-            this.label7.TabIndex = 223;
-            this.label7.Text = "Skladište:";
-            // 
-            // broj
-            // 
-            this.broj.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.broj.FillWeight = 70F;
-            this.broj.HeaderText = "Broj";
-            this.broj.Name = "broj";
-            this.broj.ReadOnly = true;
-            this.broj.Width = 70;
-            // 
-            // datum
-            // 
-            this.datum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.datum.FillWeight = 81.55006F;
-            this.datum.HeaderText = "Datum";
-            this.datum.Name = "datum";
-            this.datum.ReadOnly = true;
-            // 
-            // valuta
-            // 
-            this.valuta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.valuta.FillWeight = 150F;
-            this.valuta.HeaderText = "Valuta";
-            this.valuta.Name = "valuta";
-            this.valuta.ReadOnly = true;
-            this.valuta.Width = 80;
-            // 
-            // sifra_partnera
-            // 
-            this.sifra_partnera.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.sifra_partnera.HeaderText = "Šifra partnera";
-            this.sifra_partnera.Name = "sifra_partnera";
-            this.sifra_partnera.ReadOnly = true;
-            this.sifra_partnera.Visible = false;
-            this.sifra_partnera.Width = 80;
-            // 
-            // partner
-            // 
-            this.partner.FillWeight = 81.55006F;
-            this.partner.HeaderText = "Partner";
-            this.partner.Name = "partner";
-            this.partner.ReadOnly = true;
-            // 
-            // broj_ispisa
-            // 
-            this.broj_ispisa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.broj_ispisa.FillWeight = 80F;
-            this.broj_ispisa.HeaderText = "BR ispisa";
-            this.broj_ispisa.Name = "broj_ispisa";
-            this.broj_ispisa.ReadOnly = true;
-            this.broj_ispisa.Visible = false;
-            this.broj_ispisa.Width = 80;
-            // 
-            // ukupno
-            // 
-            this.ukupno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ukupno.HeaderText = "Ukupno";
-            this.ukupno.Name = "ukupno";
-            this.ukupno.ReadOnly = true;
-            // 
-            // storno
-            // 
-            this.storno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.storno.FillWeight = 50F;
-            this.storno.HeaderText = "Storno";
-            this.storno.Name = "storno";
-            this.storno.ReadOnly = true;
-            this.storno.Visible = false;
-            this.storno.Width = 50;
-            // 
-            // id_ducan
-            // 
-            this.id_ducan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.id_ducan.FillWeight = 50F;
-            this.id_ducan.HeaderText = "Poslovnica";
-            this.id_ducan.Name = "id_ducan";
-            this.id_ducan.ReadOnly = true;
-            this.id_ducan.Width = 80;
-            // 
-            // skladiste
-            // 
-            this.skladiste.HeaderText = "Skladište";
-            this.skladiste.Name = "skladiste";
-            this.skladiste.ReadOnly = true;
-            // 
-            // placeno
-            // 
-            this.placeno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.placeno.FillWeight = 150F;
-            this.placeno.HeaderText = "Otpremnica";
-            this.placeno.Name = "placeno";
-            this.placeno.ReadOnly = true;
-            this.placeno.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.placeno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.placeno.Width = 150;
-            // 
-            // dgv_partner
-            // 
-            this.dgv_partner.HeaderText = "dgv_partner";
-            this.dgv_partner.Name = "dgv_partner";
-            this.dgv_partner.ReadOnly = true;
-            this.dgv_partner.Visible = false;
-            // 
-            // id_kasa
-            // 
-            this.id_kasa.HeaderText = "id_kasa";
-            this.id_kasa.Name = "id_kasa";
-            this.id_kasa.ReadOnly = true;
-            this.id_kasa.Visible = false;
             // 
             // button2
             // 

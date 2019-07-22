@@ -42,6 +42,7 @@
             this.cbVD = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtNaZiroRacun = new System.Windows.Forms.TextBox();
             this.cbSziroRacuna = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -116,7 +117,6 @@
             this.txtUkupno = new System.Windows.Forms.TextBox();
             this._txtPolaznaStavka = new System.Windows.Forms.TextBox();
             this.txtPolaznaStavka = new System.Windows.Forms.TextBox();
-            this.txtNaZiroRacun = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmGodinaFakture)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -274,6 +274,11 @@
             this.groupBox2.Controls.Add(this.txtModel);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            // 
+            // txtNaZiroRacun
+            // 
+            resources.ApplyResources(this.txtNaZiroRacun, "txtNaZiroRacun");
+            this.txtNaZiroRacun.Name = "txtNaZiroRacun";
             // 
             // cbSziroRacuna
             // 
@@ -873,11 +878,6 @@
             this.txtPolaznaStavka.Enter += new System.EventHandler(this.TRENUTNI_Enter);
             this.txtPolaznaStavka.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbVD_KeyDown);
             this.txtPolaznaStavka.Leave += new System.EventHandler(this.NAPUSTENI_Leave);
-            // 
-            // txtNaZiroRacun
-            // 
-            resources.ApplyResources(this.txtNaZiroRacun, "txtNaZiroRacun");
-            this.txtNaZiroRacun.Name = "txtNaZiroRacun";
             // 
             // frmUlazneFakture
             // 

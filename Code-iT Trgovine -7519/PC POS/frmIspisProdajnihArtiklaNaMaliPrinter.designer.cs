@@ -341,7 +341,7 @@
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(334, 12);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 40);
+            this.button2.Size = new System.Drawing.Size(120, 40);
             this.button2.TabIndex = 95;
             this.button2.Text = "Izlaz      ";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

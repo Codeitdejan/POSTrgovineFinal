@@ -10863,3 +10863,4 @@ D:\Projects\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PC POS.
 C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PCPOS.Report.Naljepnice.Deklaracije.resources
 C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PCPOS.Report.Naljepnice.Deklaracije.resources
 >>>>>>> 979e4b42b878568f969accc61ce595366ddfefeb
+C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PCPOS.Kasa.frmDodajStavkuUMinus.resources
