@@ -732,8 +732,8 @@ SET lokacija_sigurnosne_kopije ='{0}', backup_aktivnost = '{1}';", txtBackupLoka
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            frmPovijestPromjena p = new frmPovijestPromjena();
-            p.ShowDialog();
+            /*frmPovijestPromjena p = new frmPovijestPromjena();
+            p.ShowDialog();*/
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
