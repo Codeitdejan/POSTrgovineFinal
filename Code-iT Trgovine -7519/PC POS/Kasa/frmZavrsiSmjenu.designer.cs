@@ -50,8 +50,7 @@
             // btnZavrsiSmjenu
             // 
             this.btnZavrsiSmjenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnZavrsiSmjenu.BackColor = System.Drawing.Color.Transparent;
-            this.btnZavrsiSmjenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnZavrsiSmjenu.BackgroundImage")));
+            this.btnZavrsiSmjenu.BackColor = System.Drawing.Color.Gainsboro;
             this.btnZavrsiSmjenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnZavrsiSmjenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnZavrsiSmjenu.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
@@ -61,7 +60,7 @@
             this.btnZavrsiSmjenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnZavrsiSmjenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnZavrsiSmjenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnZavrsiSmjenu.ForeColor = System.Drawing.Color.White;
+            this.btnZavrsiSmjenu.ForeColor = System.Drawing.Color.Black;
             this.btnZavrsiSmjenu.Location = new System.Drawing.Point(13, 566);
             this.btnZavrsiSmjenu.Name = "btnZavrsiSmjenu";
             this.btnZavrsiSmjenu.Size = new System.Drawing.Size(197, 49);
@@ -90,7 +89,7 @@
             this.lblBLminimum.Font = new System.Drawing.Font("Verdana", 10F);
             this.lblBLminimum.Location = new System.Drawing.Point(13, 95);
             this.lblBLminimum.Name = "lblBLminimum";
-            this.lblBLminimum.Size = new System.Drawing.Size(294, 17);
+            this.lblBLminimum.Size = new System.Drawing.Size(191, 17);
             this.lblBLminimum.TabIndex = 73;
             this.lblBLminimum.Text = "Polog na početku smjene:";
             // 
@@ -131,8 +130,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackColor = System.Drawing.Color.Gainsboro;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
@@ -142,8 +140,8 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(435, 4);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(432, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 70);
             this.button1.TabIndex = 75;
@@ -161,7 +159,7 @@
             this.flpArtikli.BackColor = System.Drawing.Color.Transparent;
             this.flpArtikli.Location = new System.Drawing.Point(13, 143);
             this.flpArtikli.Name = "flpArtikli";
-            this.flpArtikli.Size = new System.Drawing.Size(511, 318);
+            this.flpArtikli.Size = new System.Drawing.Size(508, 318);
             this.flpArtikli.TabIndex = 129;
             // 
             // label5
@@ -226,8 +224,7 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackColor = System.Drawing.Color.Gainsboro;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.LightSlateGray;
@@ -237,7 +234,7 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(530, 566);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(352, 49);
@@ -251,7 +248,7 @@
             // 
             this.rtb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtb.Location = new System.Drawing.Point(530, 4);
+            this.rtb.Location = new System.Drawing.Point(527, 4);
             this.rtb.Name = "rtb";
             this.rtb.Size = new System.Drawing.Size(352, 534);
             this.rtb.TabIndex = 132;
@@ -275,7 +272,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 627);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(891, 627);
             this.Controls.Add(this.chbStavke);
             this.Controls.Add(this.rtb);
             this.Controls.Add(this.button2);
@@ -292,9 +290,10 @@
             this.Controls.Add(this.lblSmjenaZavrsena);
             this.Controls.Add(this.lblSmjenaPocela);
             this.Controls.Add(this.lblBLminimum);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmZavrsiSmjenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Završi smjenu DEMO VERZIJA";
+            this.Text = "Završi smjenu ";
             this.Load += new System.EventHandler(this.frmZavrsiSmjenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

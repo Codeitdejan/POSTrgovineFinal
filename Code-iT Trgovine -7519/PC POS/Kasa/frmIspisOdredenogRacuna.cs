@@ -21,7 +21,7 @@ namespace PCPOS.Kasa
         private void frmIspisOdredenogRacuna_Load(object sender, EventArgs e)
         {
             textBox1.Select();
-            this.Paint += new PaintEventHandler(Form1_Paint);
+            //this.Paint += new PaintEventHandler(Form1_Paint);
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)

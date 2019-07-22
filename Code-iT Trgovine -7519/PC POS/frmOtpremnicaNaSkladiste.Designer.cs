@@ -62,15 +62,6 @@
             this.txtBrojOtpremnice = new System.Windows.Forms.TextBox();
             this.nmGodinaOtpremnice = new System.Windows.Forms.NumericUpDown();
             this.dgw = new PCPOS.frmOtpremnicaNaSkladiste.MyDataGrid();
-            this.label18 = new System.Windows.Forms.Label();
-            this.btnObrisi = new System.Windows.Forms.Button();
-            this.btnOpenRoba = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnDeleteAllFaktura = new System.Windows.Forms.Button();
-            this.btnSveFakture = new System.Windows.Forms.Button();
-            this.btnNoviUnos = new System.Windows.Forms.Button();
-            this.btnOdustani = new System.Windows.Forms.Button();
-            this.btnSpremi = new System.Windows.Forms.Button();
             this.br = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sifra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.naziv = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,6 +80,15 @@
             this.id_roba_prodaja = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oduzmi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.porez_potrosnja = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label18 = new System.Windows.Forms.Label();
+            this.btnObrisi = new System.Windows.Forms.Button();
+            this.btnOpenRoba = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnDeleteAllFaktura = new System.Windows.Forms.Button();
+            this.btnSveFakture = new System.Windows.Forms.Button();
+            this.btnNoviUnos = new System.Windows.Forms.Button();
+            this.btnOdustani = new System.Windows.Forms.Button();
+            this.btnSpremi = new System.Windows.Forms.Button();
             this.rbPos_partner.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmGodinaOtpremnice)).BeginInit();
@@ -536,130 +536,6 @@
             this.dgw.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgw_CellEndEdit);
             this.dgw.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgw_CellValidated);
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label18.Location = new System.Drawing.Point(12, 254);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(129, 17);
-            this.label18.TabIndex = 35;
-            this.label18.Text = "Šifra artikla/usluge:";
-            // 
-            // btnObrisi
-            // 
-            this.btnObrisi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnObrisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnObrisi.Image = global::PCPOS.Properties.Resources.Close;
-            this.btnObrisi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnObrisi.Location = new System.Drawing.Point(875, 257);
-            this.btnObrisi.Name = "btnObrisi";
-            this.btnObrisi.Size = new System.Drawing.Size(135, 43);
-            this.btnObrisi.TabIndex = 36;
-            this.btnObrisi.Text = "   Obriši stavku";
-            this.btnObrisi.UseVisualStyleBackColor = true;
-            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
-            // 
-            // btnOpenRoba
-            // 
-            this.btnOpenRoba.BackColor = System.Drawing.Color.Transparent;
-            this.btnOpenRoba.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOpenRoba.Image = global::PCPOS.Properties.Resources._1059;
-            this.btnOpenRoba.Location = new System.Drawing.Point(205, 272);
-            this.btnOpenRoba.Name = "btnOpenRoba";
-            this.btnOpenRoba.Size = new System.Drawing.Size(39, 31);
-            this.btnOpenRoba.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnOpenRoba.TabIndex = 37;
-            this.btnOpenRoba.TabStop = false;
-            this.btnOpenRoba.Click += new System.EventHandler(this.btnOpenRoba_Click);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(880, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 40);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "Izlaz      ";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnDeleteAllFaktura
-            // 
-            this.btnDeleteAllFaktura.Enabled = false;
-            this.btnDeleteAllFaktura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnDeleteAllFaktura.Image = global::PCPOS.Properties.Resources.Recyclebin_Empty;
-            this.btnDeleteAllFaktura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteAllFaktura.Location = new System.Drawing.Point(564, 12);
-            this.btnDeleteAllFaktura.Name = "btnDeleteAllFaktura";
-            this.btnDeleteAllFaktura.Size = new System.Drawing.Size(156, 40);
-            this.btnDeleteAllFaktura.TabIndex = 42;
-            this.btnDeleteAllFaktura.Text = "Obriši otpremnicu";
-            this.btnDeleteAllFaktura.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDeleteAllFaktura.UseVisualStyleBackColor = true;
-            this.btnDeleteAllFaktura.Click += new System.EventHandler(this.btnDeleteAllFaktura_Click);
-            // 
-            // btnSveFakture
-            // 
-            this.btnSveFakture.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSveFakture.Image = global::PCPOS.Properties.Resources._10591;
-            this.btnSveFakture.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSveFakture.Location = new System.Drawing.Point(420, 12);
-            this.btnSveFakture.Name = "btnSveFakture";
-            this.btnSveFakture.Size = new System.Drawing.Size(138, 40);
-            this.btnSveFakture.TabIndex = 41;
-            this.btnSveFakture.Text = "Sve otpremnice";
-            this.btnSveFakture.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSveFakture.UseVisualStyleBackColor = true;
-            this.btnSveFakture.Click += new System.EventHandler(this.btnSveFakture_Click);
-            // 
-            // btnNoviUnos
-            // 
-            this.btnNoviUnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnNoviUnos.Image = global::PCPOS.Properties.Resources.folder_open_icon;
-            this.btnNoviUnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNoviUnos.Location = new System.Drawing.Point(12, 12);
-            this.btnNoviUnos.Name = "btnNoviUnos";
-            this.btnNoviUnos.Size = new System.Drawing.Size(130, 40);
-            this.btnNoviUnos.TabIndex = 40;
-            this.btnNoviUnos.Text = "Novi unos   ";
-            this.btnNoviUnos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNoviUnos.UseVisualStyleBackColor = true;
-            this.btnNoviUnos.Click += new System.EventHandler(this.btnNoviUnos_Click);
-            // 
-            // btnOdustani
-            // 
-            this.btnOdustani.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnOdustani.Image = global::PCPOS.Properties.Resources.undo;
-            this.btnOdustani.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOdustani.Location = new System.Drawing.Point(148, 12);
-            this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(130, 40);
-            this.btnOdustani.TabIndex = 39;
-            this.btnOdustani.Text = "Odustani   ";
-            this.btnOdustani.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOdustani.UseVisualStyleBackColor = true;
-            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
-            // 
-            // btnSpremi
-            // 
-            this.btnSpremi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSpremi.Image = ((System.Drawing.Image)(resources.GetObject("btnSpremi.Image")));
-            this.btnSpremi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSpremi.Location = new System.Drawing.Point(284, 12);
-            this.btnSpremi.Name = "btnSpremi";
-            this.btnSpremi.Size = new System.Drawing.Size(130, 40);
-            this.btnSpremi.TabIndex = 38;
-            this.btnSpremi.Text = "Spremi   ";
-            this.btnSpremi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSpremi.UseVisualStyleBackColor = true;
-            this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
-            // 
             // br
             // 
             this.br.FillWeight = 50F;
@@ -779,6 +655,130 @@
             this.porez_potrosnja.HeaderText = "porez_potrosnja";
             this.porez_potrosnja.Name = "porez_potrosnja";
             this.porez_potrosnja.Visible = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label18.Location = new System.Drawing.Point(12, 254);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(129, 17);
+            this.label18.TabIndex = 35;
+            this.label18.Text = "Šifra artikla/usluge:";
+            // 
+            // btnObrisi
+            // 
+            this.btnObrisi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnObrisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnObrisi.Image = global::PCPOS.Properties.Resources.Close;
+            this.btnObrisi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnObrisi.Location = new System.Drawing.Point(875, 257);
+            this.btnObrisi.Name = "btnObrisi";
+            this.btnObrisi.Size = new System.Drawing.Size(135, 43);
+            this.btnObrisi.TabIndex = 36;
+            this.btnObrisi.Text = "   Obriši stavku";
+            this.btnObrisi.UseVisualStyleBackColor = true;
+            this.btnObrisi.Click += new System.EventHandler(this.btnObrisi_Click);
+            // 
+            // btnOpenRoba
+            // 
+            this.btnOpenRoba.BackColor = System.Drawing.Color.Transparent;
+            this.btnOpenRoba.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOpenRoba.Image = global::PCPOS.Properties.Resources._1059;
+            this.btnOpenRoba.Location = new System.Drawing.Point(205, 272);
+            this.btnOpenRoba.Name = "btnOpenRoba";
+            this.btnOpenRoba.Size = new System.Drawing.Size(39, 31);
+            this.btnOpenRoba.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnOpenRoba.TabIndex = 37;
+            this.btnOpenRoba.TabStop = false;
+            this.btnOpenRoba.Click += new System.EventHandler(this.btnOpenRoba_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(890, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 40);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "Izlaz      ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnDeleteAllFaktura
+            // 
+            this.btnDeleteAllFaktura.Enabled = false;
+            this.btnDeleteAllFaktura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnDeleteAllFaktura.Image = global::PCPOS.Properties.Resources.Recyclebin_Empty;
+            this.btnDeleteAllFaktura.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteAllFaktura.Location = new System.Drawing.Point(564, 12);
+            this.btnDeleteAllFaktura.Name = "btnDeleteAllFaktura";
+            this.btnDeleteAllFaktura.Size = new System.Drawing.Size(156, 40);
+            this.btnDeleteAllFaktura.TabIndex = 42;
+            this.btnDeleteAllFaktura.Text = "Obriši otpremnicu";
+            this.btnDeleteAllFaktura.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDeleteAllFaktura.UseVisualStyleBackColor = true;
+            this.btnDeleteAllFaktura.Click += new System.EventHandler(this.btnDeleteAllFaktura_Click);
+            // 
+            // btnSveFakture
+            // 
+            this.btnSveFakture.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSveFakture.Image = global::PCPOS.Properties.Resources._10591;
+            this.btnSveFakture.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSveFakture.Location = new System.Drawing.Point(420, 12);
+            this.btnSveFakture.Name = "btnSveFakture";
+            this.btnSveFakture.Size = new System.Drawing.Size(138, 40);
+            this.btnSveFakture.TabIndex = 41;
+            this.btnSveFakture.Text = "Sve otpremnice";
+            this.btnSveFakture.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSveFakture.UseVisualStyleBackColor = true;
+            this.btnSveFakture.Click += new System.EventHandler(this.btnSveFakture_Click);
+            // 
+            // btnNoviUnos
+            // 
+            this.btnNoviUnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnNoviUnos.Image = global::PCPOS.Properties.Resources.folder_open_icon;
+            this.btnNoviUnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNoviUnos.Location = new System.Drawing.Point(12, 12);
+            this.btnNoviUnos.Name = "btnNoviUnos";
+            this.btnNoviUnos.Size = new System.Drawing.Size(130, 40);
+            this.btnNoviUnos.TabIndex = 40;
+            this.btnNoviUnos.Text = "Novi unos   ";
+            this.btnNoviUnos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNoviUnos.UseVisualStyleBackColor = true;
+            this.btnNoviUnos.Click += new System.EventHandler(this.btnNoviUnos_Click);
+            // 
+            // btnOdustani
+            // 
+            this.btnOdustani.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnOdustani.Image = global::PCPOS.Properties.Resources.undo;
+            this.btnOdustani.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOdustani.Location = new System.Drawing.Point(148, 12);
+            this.btnOdustani.Name = "btnOdustani";
+            this.btnOdustani.Size = new System.Drawing.Size(130, 40);
+            this.btnOdustani.TabIndex = 39;
+            this.btnOdustani.Text = "Odustani   ";
+            this.btnOdustani.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
+            // 
+            // btnSpremi
+            // 
+            this.btnSpremi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSpremi.Image = ((System.Drawing.Image)(resources.GetObject("btnSpremi.Image")));
+            this.btnSpremi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSpremi.Location = new System.Drawing.Point(284, 12);
+            this.btnSpremi.Name = "btnSpremi";
+            this.btnSpremi.Size = new System.Drawing.Size(130, 40);
+            this.btnSpremi.TabIndex = 38;
+            this.btnSpremi.Text = "Spremi   ";
+            this.btnSpremi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSpremi.UseVisualStyleBackColor = true;
+            this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             // 
             // frmOtpremnicaNaSkladiste
             // 

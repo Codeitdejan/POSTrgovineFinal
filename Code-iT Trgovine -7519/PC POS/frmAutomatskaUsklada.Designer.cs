@@ -202,9 +202,9 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button2.Image = global::PCPOS.Properties.Resources.Actions_application_exit_icon;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(683, 12);
+            this.button2.Location = new System.Drawing.Point(693, 8);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 40);
+            this.button2.Size = new System.Drawing.Size(120, 40);
             this.button2.TabIndex = 10;
             this.button2.Text = "Izlaz      ";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -215,7 +215,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(809, 501);
+            this.ClientSize = new System.Drawing.Size(825, 539);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.dtpDatumDo);

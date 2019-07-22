@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKasa));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblBrojRac = new System.Windows.Forms.Label();
             this.GroupBoxUkupnoZaNaplatiti = new System.Windows.Forms.GroupBox();
             this.lblUkupno = new System.Windows.Forms.Label();
@@ -147,10 +147,9 @@
             this.lblBrojRac.BackColor = System.Drawing.Color.Transparent;
             this.lblBrojRac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblBrojRac.ForeColor = System.Drawing.Color.Black;
-            this.lblBrojRac.Location = new System.Drawing.Point(4, 0);
-            this.lblBrojRac.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBrojRac.Location = new System.Drawing.Point(3, 0);
             this.lblBrojRac.Name = "lblBrojRac";
-            this.lblBrojRac.Size = new System.Drawing.Size(210, 25);
+            this.lblBrojRac.Size = new System.Drawing.Size(170, 20);
             this.lblBrojRac.TabIndex = 13;
             this.lblBrojRac.Text = "Broj računa 0002/2012";
             this.lblBrojRac.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,11 +161,9 @@
             this.GroupBoxUkupnoZaNaplatiti.Controls.Add(this.lblUkupno);
             this.GroupBoxUkupnoZaNaplatiti.Controls.Add(this.lblUkupnoZanemari);
             this.GroupBoxUkupnoZaNaplatiti.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.GroupBoxUkupnoZaNaplatiti.Location = new System.Drawing.Point(641, 693);
-            this.GroupBoxUkupnoZaNaplatiti.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GroupBoxUkupnoZaNaplatiti.Location = new System.Drawing.Point(481, 563);
             this.GroupBoxUkupnoZaNaplatiti.Name = "GroupBoxUkupnoZaNaplatiti";
-            this.GroupBoxUkupnoZaNaplatiti.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.GroupBoxUkupnoZaNaplatiti.Size = new System.Drawing.Size(312, 108);
+            this.GroupBoxUkupnoZaNaplatiti.Size = new System.Drawing.Size(234, 88);
             this.GroupBoxUkupnoZaNaplatiti.TabIndex = 93;
             this.GroupBoxUkupnoZaNaplatiti.TabStop = false;
             this.GroupBoxUkupnoZaNaplatiti.Text = "Ukupno za naplatiti:";
@@ -176,10 +173,9 @@
             this.lblUkupno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblUkupno.AutoSize = true;
             this.lblUkupno.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
-            this.lblUkupno.Location = new System.Drawing.Point(3, 41);
-            this.lblUkupno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUkupno.Location = new System.Drawing.Point(2, 33);
             this.lblUkupno.Name = "lblUkupno";
-            this.lblUkupno.Size = new System.Drawing.Size(204, 58);
+            this.lblUkupno.Size = new System.Drawing.Size(163, 46);
             this.lblUkupno.TabIndex = 55;
             this.lblUkupno.Text = "0,00 Kn";
             // 
@@ -188,10 +184,9 @@
             this.lblUkupnoZanemari.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUkupnoZanemari.AutoSize = true;
             this.lblUkupnoZanemari.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblUkupnoZanemari.Location = new System.Drawing.Point(611, 706);
-            this.lblUkupnoZanemari.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUkupnoZanemari.Location = new System.Drawing.Point(458, 574);
             this.lblUkupnoZanemari.Name = "lblUkupnoZanemari";
-            this.lblUkupnoZanemari.Size = new System.Drawing.Size(91, 39);
+            this.lblUkupnoZanemari.Size = new System.Drawing.Size(73, 31);
             this.lblUkupnoZanemari.TabIndex = 54;
             this.lblUkupnoZanemari.Text = "0 Kn";
             // 
@@ -202,10 +197,9 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(975, 740);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(731, 601);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(128, 21);
+            this.label10.Size = new System.Drawing.Size(105, 17);
             this.label10.TabIndex = 1;
             this.label10.Text = "Ime partnera:";
             // 
@@ -214,11 +208,10 @@
             this.txtImePartnera.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtImePartnera.BackColor = System.Drawing.Color.White;
             this.txtImePartnera.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtImePartnera.Location = new System.Drawing.Point(979, 764);
-            this.txtImePartnera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtImePartnera.Location = new System.Drawing.Point(734, 621);
             this.txtImePartnera.Name = "txtImePartnera";
             this.txtImePartnera.ReadOnly = true;
-            this.txtImePartnera.Size = new System.Drawing.Size(343, 34);
+            this.txtImePartnera.Size = new System.Drawing.Size(258, 29);
             this.txtImePartnera.TabIndex = 0;
             this.txtImePartnera.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnOdjava_KeyDown);
             // 
@@ -239,10 +232,9 @@
             this.panTastatura.Controls.Add(this.button19);
             this.panTastatura.Controls.Add(this.button20);
             this.panTastatura.Controls.Add(this.button8);
-            this.panTastatura.Location = new System.Drawing.Point(961, 185);
-            this.panTastatura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panTastatura.Location = new System.Drawing.Point(721, 150);
             this.panTastatura.Name = "panTastatura";
-            this.panTastatura.Size = new System.Drawing.Size(373, 480);
+            this.panTastatura.Size = new System.Drawing.Size(280, 390);
             this.panTastatura.TabIndex = 97;
             this.panTastatura.Visible = false;
             // 
@@ -259,10 +251,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(17, 375);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(13, 305);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(343, 95);
+            this.button1.Size = new System.Drawing.Size(257, 77);
             this.button1.TabIndex = 105;
             this.button1.Text = "ENTER";
             this.button1.UseVisualStyleBackColor = false;
@@ -284,10 +275,9 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(133, 12);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(100, 10);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 84);
+            this.button2.Size = new System.Drawing.Size(84, 68);
             this.button2.TabIndex = 0;
             this.button2.Text = "2";
             this.button2.UseVisualStyleBackColor = false;
@@ -310,10 +300,9 @@
             this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button14.Location = new System.Drawing.Point(17, 12);
-            this.button14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button14.Location = new System.Drawing.Point(13, 10);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(112, 84);
+            this.button14.Size = new System.Drawing.Size(84, 68);
             this.button14.TabIndex = 0;
             this.button14.Text = "1";
             this.button14.UseVisualStyleBackColor = false;
@@ -336,10 +325,9 @@
             this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button12.Location = new System.Drawing.Point(249, 284);
-            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button12.Location = new System.Drawing.Point(187, 231);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(112, 84);
+            this.button12.Size = new System.Drawing.Size(84, 68);
             this.button12.TabIndex = 0;
             this.button12.Text = "C";
             this.button12.UseVisualStyleBackColor = false;
@@ -362,10 +350,9 @@
             this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button15.Location = new System.Drawing.Point(249, 12);
-            this.button15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button15.Location = new System.Drawing.Point(187, 10);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(112, 84);
+            this.button15.Size = new System.Drawing.Size(84, 68);
             this.button15.TabIndex = 0;
             this.button15.Text = "3";
             this.button15.UseVisualStyleBackColor = false;
@@ -388,10 +375,9 @@
             this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button16.Location = new System.Drawing.Point(17, 102);
-            this.button16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button16.Location = new System.Drawing.Point(13, 83);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(112, 84);
+            this.button16.Size = new System.Drawing.Size(84, 68);
             this.button16.TabIndex = 0;
             this.button16.Text = "4";
             this.button16.UseVisualStyleBackColor = false;
@@ -414,10 +400,9 @@
             this.button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button17.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button17.Location = new System.Drawing.Point(133, 102);
-            this.button17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button17.Location = new System.Drawing.Point(100, 83);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(112, 84);
+            this.button17.Size = new System.Drawing.Size(84, 68);
             this.button17.TabIndex = 0;
             this.button17.Text = "5";
             this.button17.UseVisualStyleBackColor = false;
@@ -440,10 +425,9 @@
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button9.Location = new System.Drawing.Point(249, 193);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button9.Location = new System.Drawing.Point(187, 157);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(112, 84);
+            this.button9.Size = new System.Drawing.Size(84, 68);
             this.button9.TabIndex = 0;
             this.button9.Text = "9";
             this.button9.UseVisualStyleBackColor = false;
@@ -466,10 +450,9 @@
             this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button18.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button18.Location = new System.Drawing.Point(249, 102);
-            this.button18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button18.Location = new System.Drawing.Point(187, 83);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(112, 84);
+            this.button18.Size = new System.Drawing.Size(84, 68);
             this.button18.TabIndex = 0;
             this.button18.Text = "6";
             this.button18.UseVisualStyleBackColor = false;
@@ -492,10 +475,9 @@
             this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button11.Location = new System.Drawing.Point(133, 284);
-            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button11.Location = new System.Drawing.Point(100, 231);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(112, 84);
+            this.button11.Size = new System.Drawing.Size(84, 68);
             this.button11.TabIndex = 0;
             this.button11.Text = "0";
             this.button11.UseVisualStyleBackColor = false;
@@ -518,10 +500,9 @@
             this.button19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button19.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button19.Location = new System.Drawing.Point(17, 193);
-            this.button19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button19.Location = new System.Drawing.Point(13, 157);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(112, 84);
+            this.button19.Size = new System.Drawing.Size(84, 68);
             this.button19.TabIndex = 0;
             this.button19.Text = "7";
             this.button19.UseVisualStyleBackColor = false;
@@ -544,10 +525,9 @@
             this.button20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button20.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button20.Location = new System.Drawing.Point(17, 284);
-            this.button20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button20.Location = new System.Drawing.Point(13, 231);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(112, 84);
+            this.button20.Size = new System.Drawing.Size(84, 68);
             this.button20.TabIndex = 0;
             this.button20.Text = ",";
             this.button20.UseVisualStyleBackColor = false;
@@ -570,10 +550,9 @@
             this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button8.Location = new System.Drawing.Point(133, 193);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Location = new System.Drawing.Point(100, 157);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(112, 84);
+            this.button8.Size = new System.Drawing.Size(84, 68);
             this.button8.TabIndex = 0;
             this.button8.Text = "8";
             this.button8.UseVisualStyleBackColor = false;
@@ -615,7 +594,7 @@
             this.lblLYvlasnik.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblLYvlasnik.Location = new System.Drawing.Point(19, 91);
             this.lblLYvlasnik.Name = "lblLYvlasnik";
-            this.lblLYvlasnik.Size = new System.Drawing.Size(136, 21);
+            this.lblLYvlasnik.Size = new System.Drawing.Size(112, 17);
             this.lblLYvlasnik.TabIndex = 1;
             this.lblLYvlasnik.Text = "Podaci o vlasniku";
             // 
@@ -625,7 +604,7 @@
             this.lblLYkartica.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblLYkartica.Location = new System.Drawing.Point(17, 35);
             this.lblLYkartica.Name = "lblLYkartica";
-            this.lblLYkartica.Size = new System.Drawing.Size(95, 21);
+            this.lblLYkartica.Size = new System.Drawing.Size(77, 17);
             this.lblLYkartica.TabIndex = 1;
             this.lblLYkartica.Text = "Broj kartice";
             // 
@@ -636,7 +615,7 @@
             this.txtPodaciOvlasnikuCB.Location = new System.Drawing.Point(20, 109);
             this.txtPodaciOvlasnikuCB.Name = "txtPodaciOvlasnikuCB";
             this.txtPodaciOvlasnikuCB.ReadOnly = true;
-            this.txtPodaciOvlasnikuCB.Size = new System.Drawing.Size(225, 32);
+            this.txtPodaciOvlasnikuCB.Size = new System.Drawing.Size(225, 27);
             this.txtPodaciOvlasnikuCB.TabIndex = 0;
             // 
             // txtBrojKarticeCB
@@ -644,7 +623,7 @@
             this.txtBrojKarticeCB.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtBrojKarticeCB.Location = new System.Drawing.Point(19, 53);
             this.txtBrojKarticeCB.Name = "txtBrojKarticeCB";
-            this.txtBrojKarticeCB.Size = new System.Drawing.Size(152, 32);
+            this.txtBrojKarticeCB.Size = new System.Drawing.Size(152, 27);
             this.txtBrojKarticeCB.TabIndex = 0;
             // 
             // panel1
@@ -668,7 +647,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(8, 37);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 21);
+            this.label4.Size = new System.Drawing.Size(78, 17);
             this.label4.TabIndex = 106;
             this.label4.Text = "Dućan: 01";
             // 
@@ -680,7 +659,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(8, 112);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 21);
+            this.label6.Size = new System.Drawing.Size(76, 17);
             this.label6.TabIndex = 107;
             this.label6.Text = "Blagajnik:";
             // 
@@ -692,7 +671,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(8, 87);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 21);
+            this.label5.Size = new System.Drawing.Size(56, 17);
             this.label5.TabIndex = 105;
             this.label5.Text = "Kupac:";
             // 
@@ -704,7 +683,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(8, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 21);
+            this.label3.Size = new System.Drawing.Size(68, 17);
             this.label3.TabIndex = 103;
             this.label3.Text = "Kasa: 01";
             // 
@@ -716,7 +695,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(8, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 21);
+            this.label1.Size = new System.Drawing.Size(143, 17);
             this.label1.TabIndex = 104;
             this.label1.Text = "Datum: 27.11.2010";
             // 
@@ -724,10 +703,9 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(-200, 14);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(-150, 11);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(157, 310);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(118, 252);
             this.flowLayoutPanel1.TabIndex = 99;
             // 
             // gbSB
@@ -762,7 +740,7 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.Location = new System.Drawing.Point(19, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 21);
+            this.label2.Size = new System.Drawing.Size(112, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Podaci o vlasniku";
             // 
@@ -772,7 +750,7 @@
             this.label7.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label7.Location = new System.Drawing.Point(17, 35);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 21);
+            this.label7.Size = new System.Drawing.Size(77, 17);
             this.label7.TabIndex = 1;
             this.label7.Text = "Broj kartice";
             // 
@@ -783,7 +761,7 @@
             this.txtPodaciOvlasnikuSB.Location = new System.Drawing.Point(20, 109);
             this.txtPodaciOvlasnikuSB.Name = "txtPodaciOvlasnikuSB";
             this.txtPodaciOvlasnikuSB.ReadOnly = true;
-            this.txtPodaciOvlasnikuSB.Size = new System.Drawing.Size(225, 32);
+            this.txtPodaciOvlasnikuSB.Size = new System.Drawing.Size(225, 27);
             this.txtPodaciOvlasnikuSB.TabIndex = 0;
             // 
             // txtBrojKarticeSB
@@ -791,7 +769,7 @@
             this.txtBrojKarticeSB.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtBrojKarticeSB.Location = new System.Drawing.Point(19, 53);
             this.txtBrojKarticeSB.Name = "txtBrojKarticeSB";
-            this.txtBrojKarticeSB.Size = new System.Drawing.Size(152, 32);
+            this.txtBrojKarticeSB.Size = new System.Drawing.Size(152, 27);
             this.txtBrojKarticeSB.TabIndex = 0;
             // 
             // gbPO
@@ -826,7 +804,7 @@
             this.label8.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label8.Location = new System.Drawing.Point(19, 91);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(136, 21);
+            this.label8.Size = new System.Drawing.Size(112, 17);
             this.label8.TabIndex = 1;
             this.label8.Text = "Podaci o vlasniku";
             // 
@@ -836,7 +814,7 @@
             this.label9.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label9.Location = new System.Drawing.Point(17, 35);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(117, 21);
+            this.label9.Size = new System.Drawing.Size(96, 17);
             this.label9.TabIndex = 1;
             this.label9.Text = "Broj sa računa";
             // 
@@ -847,7 +825,7 @@
             this.txtPodaciOvlasnikuPO.Location = new System.Drawing.Point(20, 109);
             this.txtPodaciOvlasnikuPO.Name = "txtPodaciOvlasnikuPO";
             this.txtPodaciOvlasnikuPO.ReadOnly = true;
-            this.txtPodaciOvlasnikuPO.Size = new System.Drawing.Size(225, 32);
+            this.txtPodaciOvlasnikuPO.Size = new System.Drawing.Size(225, 27);
             this.txtPodaciOvlasnikuPO.TabIndex = 0;
             // 
             // txtBrojKarticePO
@@ -855,7 +833,7 @@
             this.txtBrojKarticePO.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txtBrojKarticePO.Location = new System.Drawing.Point(19, 53);
             this.txtBrojKarticePO.Name = "txtBrojKarticePO";
-            this.txtBrojKarticePO.Size = new System.Drawing.Size(152, 32);
+            this.txtBrojKarticePO.Size = new System.Drawing.Size(152, 27);
             this.txtBrojKarticePO.TabIndex = 0;
             // 
             // lblSkladiste
@@ -865,10 +843,9 @@
             this.lblSkladiste.BackColor = System.Drawing.Color.Transparent;
             this.lblSkladiste.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.lblSkladiste.ForeColor = System.Drawing.Color.Lime;
-            this.lblSkladiste.Location = new System.Drawing.Point(29, 668);
-            this.lblSkladiste.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSkladiste.Location = new System.Drawing.Point(22, 543);
             this.lblSkladiste.Name = "lblSkladiste";
-            this.lblSkladiste.Size = new System.Drawing.Size(0, 25);
+            this.lblSkladiste.Size = new System.Drawing.Size(0, 20);
             this.lblSkladiste.TabIndex = 101;
             // 
             // backgroundWorkerSendToDisplay
@@ -879,20 +856,20 @@
             // 
             this.dgv.AllowUserToAddRows = false;
             this.dgv.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.AliceBlue;
+            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgv.ColumnHeadersHeight = 30;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sifra,
@@ -913,25 +890,24 @@
             this.porez_na_dohodak_iznos,
             this.prirez_iznos});
             this.dgv.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 12F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Tahoma", 12F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgv.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgv.GridColor = System.Drawing.Color.Gainsboro;
-            this.dgv.Location = new System.Drawing.Point(32, 198);
-            this.dgv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv.Location = new System.Drawing.Point(24, 161);
             this.dgv.MultiSelect = false;
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowHeadersWidth = 20;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(921, 466);
+            this.dgv.Size = new System.Drawing.Size(691, 379);
             this.dgv.TabIndex = 0;
             this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             this.dgv.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgv_EditingControlShowing);
@@ -972,8 +948,8 @@
             // 
             // cijena
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.cijena.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.cijena.DefaultCellStyle = dataGridViewCellStyle13;
             this.cijena.FillWeight = 60F;
             this.cijena.HeaderText = "CIJENA";
             this.cijena.Name = "cijena";
@@ -998,8 +974,8 @@
             // 
             // iznos
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.iznos.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.iznos.DefaultCellStyle = dataGridViewCellStyle14;
             this.iznos.HeaderText = "IZNOS";
             this.iznos.Name = "iznos";
             this.iznos.ReadOnly = true;
@@ -1072,10 +1048,9 @@
             // 
             this.txtUnos.BackColor = System.Drawing.Color.White;
             this.txtUnos.Font = new System.Drawing.Font("Tahoma", 16F);
-            this.txtUnos.Location = new System.Drawing.Point(36, 43);
-            this.txtUnos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUnos.Location = new System.Drawing.Point(27, 35);
             this.txtUnos.Name = "txtUnos";
-            this.txtUnos.Size = new System.Drawing.Size(347, 40);
+            this.txtUnos.Size = new System.Drawing.Size(261, 33);
             this.txtUnos.TabIndex = 0;
             this.txtUnos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnOdjava_KeyDown);
             // 
@@ -1085,10 +1060,9 @@
             this.CBskladiste.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBskladiste.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.CBskladiste.FormattingEnabled = true;
-            this.CBskladiste.Location = new System.Drawing.Point(979, 693);
-            this.CBskladiste.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CBskladiste.Location = new System.Drawing.Point(734, 563);
             this.CBskladiste.Name = "CBskladiste";
-            this.CBskladiste.Size = new System.Drawing.Size(343, 37);
+            this.CBskladiste.Size = new System.Drawing.Size(258, 32);
             this.CBskladiste.TabIndex = 102;
             this.CBskladiste.SelectionChangeCommitted += new System.EventHandler(this.CBskladiste_SelectionChangeCommited);
             this.CBskladiste.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnOdjava_KeyDown);
@@ -1099,10 +1073,9 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(36, 18);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(27, 15);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 20);
+            this.label11.Size = new System.Drawing.Size(57, 17);
             this.label11.TabIndex = 103;
             this.label11.Text = "UNOS:";
             // 
@@ -1113,10 +1086,9 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(975, 668);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(731, 543);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 21);
+            this.label12.Size = new System.Drawing.Size(69, 17);
             this.label12.TabIndex = 1;
             this.label12.Text = "Skladište";
             // 
@@ -1124,10 +1096,9 @@
             // 
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel2.Controls.Add(this.lblBrojRac);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(24, 172);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(18, 140);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(360, 26);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(270, 21);
             this.flowLayoutPanel2.TabIndex = 104;
             // 
             // btnDodajNaPartnera
@@ -1142,10 +1113,9 @@
             this.btnDodajNaPartnera.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.btnDodajNaPartnera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDodajNaPartnera.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnDodajNaPartnera.Location = new System.Drawing.Point(1019, 41);
-            this.btnDodajNaPartnera.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDodajNaPartnera.Location = new System.Drawing.Point(764, 33);
             this.btnDodajNaPartnera.Name = "btnDodajNaPartnera";
-            this.btnDodajNaPartnera.Size = new System.Drawing.Size(145, 118);
+            this.btnDodajNaPartnera.Size = new System.Drawing.Size(109, 96);
             this.btnDodajNaPartnera.TabIndex = 108;
             this.btnDodajNaPartnera.Text = "Dodaj na partnera F11";
             this.btnDodajNaPartnera.UseVisualStyleBackColor = false;
@@ -1166,10 +1136,9 @@
             this.btnPregledRacuna.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.btnPregledRacuna.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPregledRacuna.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnPregledRacuna.Location = new System.Drawing.Point(481, 702);
-            this.btnPregledRacuna.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPregledRacuna.Location = new System.Drawing.Point(361, 570);
             this.btnPregledRacuna.Name = "btnPregledRacuna";
-            this.btnPregledRacuna.Size = new System.Drawing.Size(141, 108);
+            this.btnPregledRacuna.Size = new System.Drawing.Size(106, 88);
             this.btnPregledRacuna.TabIndex = 106;
             this.btnPregledRacuna.Text = "Pregledaj račun";
             this.btnPregledRacuna.UseVisualStyleBackColor = false;
@@ -1190,10 +1159,9 @@
             this.btnPromjenaCijene.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.btnPromjenaCijene.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPromjenaCijene.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnPromjenaCijene.Location = new System.Drawing.Point(275, 91);
-            this.btnPromjenaCijene.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPromjenaCijene.Location = new System.Drawing.Point(206, 74);
             this.btnPromjenaCijene.Name = "btnPromjenaCijene";
-            this.btnPromjenaCijene.Size = new System.Drawing.Size(109, 64);
+            this.btnPromjenaCijene.Size = new System.Drawing.Size(82, 52);
             this.btnPromjenaCijene.TabIndex = 105;
             this.btnPromjenaCijene.Text = "Promjena cijene F3";
             this.btnPromjenaCijene.UseVisualStyleBackColor = false;
@@ -1215,10 +1183,9 @@
             this.btnRabat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.btnRabat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRabat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnRabat.Location = new System.Drawing.Point(155, 91);
-            this.btnRabat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRabat.Location = new System.Drawing.Point(116, 74);
             this.btnRabat.Name = "btnRabat";
-            this.btnRabat.Size = new System.Drawing.Size(111, 64);
+            this.btnRabat.Size = new System.Drawing.Size(83, 52);
             this.btnRabat.TabIndex = 2;
             this.btnRabat.Text = "Rabat F2";
             this.btnRabat.UseVisualStyleBackColor = false;
@@ -1240,10 +1207,9 @@
             this.btnKolicina.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.btnKolicina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKolicina.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnKolicina.Location = new System.Drawing.Point(36, 91);
-            this.btnKolicina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKolicina.Location = new System.Drawing.Point(27, 74);
             this.btnKolicina.Name = "btnKolicina";
-            this.btnKolicina.Size = new System.Drawing.Size(109, 64);
+            this.btnKolicina.Size = new System.Drawing.Size(82, 52);
             this.btnKolicina.TabIndex = 2;
             this.btnKolicina.Text = "Kolicina F1";
             this.btnKolicina.UseVisualStyleBackColor = false;
@@ -1266,10 +1232,9 @@
             this.btnTrazi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTrazi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnTrazi.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnTrazi.Location = new System.Drawing.Point(401, 41);
-            this.btnTrazi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTrazi.Location = new System.Drawing.Point(301, 33);
             this.btnTrazi.Name = "btnTrazi";
-            this.btnTrazi.Size = new System.Drawing.Size(144, 55);
+            this.btnTrazi.Size = new System.Drawing.Size(108, 45);
             this.btnTrazi.TabIndex = 2;
             this.btnTrazi.Text = "Traži F4";
             this.btnTrazi.UseVisualStyleBackColor = false;
@@ -1291,10 +1256,9 @@
             this.btnAlati.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.btnAlati.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlati.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnAlati.Location = new System.Drawing.Point(864, 41);
-            this.btnAlati.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAlati.Location = new System.Drawing.Point(648, 33);
             this.btnAlati.Name = "btnAlati";
-            this.btnAlati.Size = new System.Drawing.Size(145, 118);
+            this.btnAlati.Size = new System.Drawing.Size(109, 96);
             this.btnAlati.TabIndex = 96;
             this.btnAlati.Text = "Opcije F10";
             this.btnAlati.UseVisualStyleBackColor = false;
@@ -1318,10 +1282,9 @@
             this.btnOdjava.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOdjava.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnOdjava.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOdjava.Location = new System.Drawing.Point(1173, 41);
-            this.btnOdjava.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOdjava.Location = new System.Drawing.Point(880, 33);
             this.btnOdjava.Name = "btnOdjava";
-            this.btnOdjava.Size = new System.Drawing.Size(143, 118);
+            this.btnOdjava.Size = new System.Drawing.Size(107, 96);
             this.btnOdjava.TabIndex = 96;
             this.btnOdjava.Text = "Odjava ESC";
             this.btnOdjava.UseVisualStyleBackColor = false;
@@ -1343,10 +1306,9 @@
             this.btnObrisiStavku.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.btnObrisiStavku.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnObrisiStavku.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnObrisiStavku.Location = new System.Drawing.Point(709, 41);
-            this.btnObrisiStavku.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnObrisiStavku.Location = new System.Drawing.Point(532, 33);
             this.btnObrisiStavku.Name = "btnObrisiStavku";
-            this.btnObrisiStavku.Size = new System.Drawing.Size(145, 118);
+            this.btnObrisiStavku.Size = new System.Drawing.Size(109, 96);
             this.btnObrisiStavku.TabIndex = 96;
             this.btnObrisiStavku.Text = "Obriši stavku F9";
             this.btnObrisiStavku.UseVisualStyleBackColor = false;
@@ -1368,10 +1330,9 @@
             this.btnPartner.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.btnPartner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPartner.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnPartner.Location = new System.Drawing.Point(555, 41);
-            this.btnPartner.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPartner.Location = new System.Drawing.Point(416, 33);
             this.btnPartner.Name = "btnPartner";
-            this.btnPartner.Size = new System.Drawing.Size(145, 55);
+            this.btnPartner.Size = new System.Drawing.Size(109, 45);
             this.btnPartner.TabIndex = 96;
             this.btnPartner.Text = "Kupac F8";
             this.btnPartner.UseVisualStyleBackColor = false;
@@ -1395,10 +1356,9 @@
             this.btnOdustaniSve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOdustaniSve.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnOdustaniSve.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnOdustaniSve.Location = new System.Drawing.Point(332, 702);
-            this.btnOdustaniSve.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOdustaniSve.Location = new System.Drawing.Point(249, 570);
             this.btnOdustaniSve.Name = "btnOdustaniSve";
-            this.btnOdustaniSve.Size = new System.Drawing.Size(141, 108);
+            this.btnOdustaniSve.Size = new System.Drawing.Size(106, 88);
             this.btnOdustaniSve.TabIndex = 96;
             this.btnOdustaniSve.Text = "Odustani F7";
             this.btnOdustaniSve.UseVisualStyleBackColor = false;
@@ -1422,10 +1382,9 @@
             this.btnKartica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKartica.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnKartica.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnKartica.Location = new System.Drawing.Point(183, 702);
-            this.btnKartica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKartica.Location = new System.Drawing.Point(137, 570);
             this.btnKartica.Name = "btnKartica";
-            this.btnKartica.Size = new System.Drawing.Size(141, 108);
+            this.btnKartica.Size = new System.Drawing.Size(106, 88);
             this.btnKartica.TabIndex = 94;
             this.btnKartica.Text = "Kartica F6";
             this.btnKartica.UseVisualStyleBackColor = false;
@@ -1449,10 +1408,9 @@
             this.btnGotovina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGotovina.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnGotovina.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnGotovina.Location = new System.Drawing.Point(33, 702);
-            this.btnGotovina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGotovina.Location = new System.Drawing.Point(25, 570);
             this.btnGotovina.Name = "btnGotovina";
-            this.btnGotovina.Size = new System.Drawing.Size(141, 108);
+            this.btnGotovina.Size = new System.Drawing.Size(106, 88);
             this.btnGotovina.TabIndex = 94;
             this.btnGotovina.Text = "Gotovina F5";
             this.btnGotovina.UseVisualStyleBackColor = false;
@@ -1475,10 +1433,9 @@
             this.btnPopust.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPopust.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnPopust.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnPopust.Location = new System.Drawing.Point(401, 100);
-            this.btnPopust.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPopust.Location = new System.Drawing.Point(301, 81);
             this.btnPopust.Name = "btnPopust";
-            this.btnPopust.Size = new System.Drawing.Size(144, 55);
+            this.btnPopust.Size = new System.Drawing.Size(108, 45);
             this.btnPopust.TabIndex = 109;
             this.btnPopust.Text = "Popust F12";
             this.btnPopust.UseVisualStyleBackColor = false;
@@ -1502,10 +1459,9 @@
             this.btnPopustSve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPopustSve.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.btnPopustSve.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnPopustSve.Location = new System.Drawing.Point(401, 100);
-            this.btnPopustSve.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPopustSve.Location = new System.Drawing.Point(301, 81);
             this.btnPopustSve.Name = "btnPopustSve";
-            this.btnPopustSve.Size = new System.Drawing.Size(144, 55);
+            this.btnPopustSve.Size = new System.Drawing.Size(108, 45);
             this.btnPopustSve.TabIndex = 110;
             this.btnPopustSve.Text = "Popust na\r\nsve F12";
             this.btnPopustSve.UseVisualStyleBackColor = false;
@@ -1517,10 +1473,9 @@
             // chbNeObracunavajPorezPrirez
             // 
             this.chbNeObracunavajPorezPrirez.AutoSize = true;
-            this.chbNeObracunavajPorezPrirez.Location = new System.Drawing.Point(1296, 166);
-            this.chbNeObracunavajPorezPrirez.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chbNeObracunavajPorezPrirez.Location = new System.Drawing.Point(972, 135);
             this.chbNeObracunavajPorezPrirez.Name = "chbNeObracunavajPorezPrirez";
-            this.chbNeObracunavajPorezPrirez.Size = new System.Drawing.Size(18, 17);
+            this.chbNeObracunavajPorezPrirez.Size = new System.Drawing.Size(15, 14);
             this.chbNeObracunavajPorezPrirez.TabIndex = 111;
             this.chbNeObracunavajPorezPrirez.UseVisualStyleBackColor = true;
             this.chbNeObracunavajPorezPrirez.Visible = false;
@@ -1528,10 +1483,9 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(1141, 166);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(856, 135);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(148, 17);
+            this.label13.Size = new System.Drawing.Size(111, 13);
             this.label13.TabIndex = 112;
             this.label13.Text = "Ne obračunavaj prirez";
             this.label13.Visible = false;
@@ -1550,10 +1504,9 @@
             this.lblVaga.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVaga.AutoSize = true;
             this.lblVaga.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblVaga.Location = new System.Drawing.Point(392, 174);
-            this.lblVaga.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVaga.Location = new System.Drawing.Point(294, 141);
             this.lblVaga.Name = "lblVaga";
-            this.lblVaga.Size = new System.Drawing.Size(59, 24);
+            this.lblVaga.Size = new System.Drawing.Size(45, 18);
             this.lblVaga.TabIndex = 113;
             this.lblVaga.Text = "Vaga:";
             this.lblVaga.Visible = false;
@@ -1562,10 +1515,9 @@
             // 
             this.lblVagaValue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblVagaValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblVagaValue.Location = new System.Drawing.Point(435, 174);
-            this.lblVagaValue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVagaValue.Location = new System.Drawing.Point(326, 141);
             this.lblVagaValue.Name = "lblVagaValue";
-            this.lblVagaValue.Size = new System.Drawing.Size(83, 22);
+            this.lblVagaValue.Size = new System.Drawing.Size(62, 18);
             this.lblVagaValue.TabIndex = 114;
             this.lblVagaValue.Text = "0";
             this.lblVagaValue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1584,10 +1536,9 @@
             this.btnKarticaKupca.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSlateGray;
             this.btnKarticaKupca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKarticaKupca.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.btnKarticaKupca.Location = new System.Drawing.Point(555, 100);
-            this.btnKarticaKupca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnKarticaKupca.Location = new System.Drawing.Point(416, 81);
             this.btnKarticaKupca.Name = "btnKarticaKupca";
-            this.btnKarticaKupca.Size = new System.Drawing.Size(145, 55);
+            this.btnKarticaKupca.Size = new System.Drawing.Size(109, 45);
             this.btnKarticaKupca.TabIndex = 115;
             this.btnKarticaKupca.Text = "Kartica kupca";
             this.btnKarticaKupca.UseVisualStyleBackColor = false;
@@ -1597,19 +1548,18 @@
             // 
             this.lblKarticaKupca.AutoSize = true;
             this.lblKarticaKupca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.lblKarticaKupca.Location = new System.Drawing.Point(549, 172);
-            this.lblKarticaKupca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblKarticaKupca.Location = new System.Drawing.Point(412, 140);
             this.lblKarticaKupca.Name = "lblKarticaKupca";
-            this.lblKarticaKupca.Size = new System.Drawing.Size(18, 25);
+            this.lblKarticaKupca.Size = new System.Drawing.Size(14, 20);
             this.lblKarticaKupca.TabIndex = 116;
             this.lblKarticaKupca.Text = " ";
             // 
             // frmKasa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSlateGray;
-            this.ClientSize = new System.Drawing.Size(1341, 837);
+            this.BackColor = System.Drawing.Color.SlateGray;
+            this.ClientSize = new System.Drawing.Size(1006, 680);
             this.Controls.Add(this.lblKarticaKupca);
             this.Controls.Add(this.btnKarticaKupca);
             this.Controls.Add(this.label13);
@@ -1643,8 +1593,8 @@
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.lblVaga);
             this.Controls.Add(this.lblVagaValue);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MinimumSize = new System.Drawing.Size(1357, 873);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1022, 717);
             this.Name = "frmKasa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kasa";
