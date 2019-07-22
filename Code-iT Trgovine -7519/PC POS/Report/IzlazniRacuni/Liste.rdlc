@@ -410,6 +410,46 @@
         <rd:TableAdapterName />
       </rd:DataSetInfo>
     </DataSet>
+    <DataSet Name="DSstopeSRabatom">
+      <Query>
+        <DataSourceName>DSstope</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="stopa">
+          <DataField>stopa</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="osnovica">
+          <DataField>osnovica</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="iznos">
+          <DataField>iznos</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="trosak_pdv">
+          <DataField>trosak_pdv</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="trosak_ukupno">
+          <DataField>trosak_ukupno</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="vrsta">
+          <DataField>vrsta</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DSstope</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS\Dataset\DSstope.xsd</rd:SchemaPath>
+        <rd:TableName>DTstope</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
   </DataSets>
 
       <Body>
@@ -1825,7 +1865,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Ukupno Osnovica</Value>
+                        <Value>Ukupno Osnovica (bez rabata)</Value>
                         <Style>
                           <FontWeight>Bold</FontWeight>
                         </Style>
@@ -1838,9 +1878,9 @@
                 </Paragraphs>
                 <rd:DefaultName>oib</rd:DefaultName>
                 <Top>2.04441cm</Top>
-                <Left>0.07937cm</Left>
+                <Left>0.32094cm</Left>
                 <Height>0.4cm</Height>
-                <Width>4.83691cm</Width>
+                <Width>5.84805cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -1855,7 +1895,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>=Sum(Fields!cijena3.Value, "DataSet1")</Value>
+                        <Value>=Sum(Fields!osnovica.Value, "dSstope")</Value>
                         <Style>
                           <FontSize>8pt</FontSize>
                           <FontWeight>Bold</FontWeight>
@@ -1869,8 +1909,8 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>oib</rd:DefaultName>
-                <Top>2.04441cm</Top>
-                <Left>4.91628cm</Left>
+                <Top>2.00913cm</Top>
+                <Left>6.16899cm</Left>
                 <Height>0.4cm</Height>
                 <Width>3.14805cm</Width>
                 <ZIndex>1</ZIndex>
@@ -1888,7 +1928,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>=Sum(Fields!cijena7.Value, "DataSet1")</Value>
+                        <Value>=Sum(Fields!osnovica.Value, "DSstopeSRabatom")</Value>
                         <Style>
                           <FontSize>8pt</FontSize>
                           <FontWeight>Bold</FontWeight>
@@ -1903,7 +1943,7 @@
                 </Paragraphs>
                 <rd:DefaultName>oib</rd:DefaultName>
                 <Top>2.44441cm</Top>
-                <Left>4.91628cm</Left>
+                <Left>6.16899cm</Left>
                 <Height>0.4cm</Height>
                 <Width>3.14802cm</Width>
                 <ZIndex>2</ZIndex>
@@ -1921,7 +1961,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>=Sum(Fields!cijena8.Value, "DataSet1")</Value>
+                        <Value>=Sum(Fields!iznos.Value, "DSstopeSRabatom")</Value>
                         <Style>
                           <FontSize>8pt</FontSize>
                           <FontWeight>Bold</FontWeight>
@@ -1936,7 +1976,7 @@
                 </Paragraphs>
                 <rd:DefaultName>oib</rd:DefaultName>
                 <Top>3.24441cm</Top>
-                <Left>4.91628cm</Left>
+                <Left>6.16893cm</Left>
                 <Height>0.4cm</Height>
                 <Width>3.14805cm</Width>
                 <ZIndex>3</ZIndex>
@@ -1969,7 +2009,7 @@
                 </Paragraphs>
                 <rd:DefaultName>oib</rd:DefaultName>
                 <Top>1.64441cm</Top>
-                <Left>4.91628cm</Left>
+                <Left>6.16899cm</Left>
                 <Height>0.4cm</Height>
                 <Width>3.14802cm</Width>
                 <ZIndex>4</ZIndex>
@@ -2002,7 +2042,7 @@
                 </Paragraphs>
                 <rd:DefaultName>oib</rd:DefaultName>
                 <Top>1.24441cm</Top>
-                <Left>4.91628cm</Left>
+                <Left>6.16899cm</Left>
                 <Height>0.4cm</Height>
                 <Width>3.14802cm</Width>
                 <ZIndex>5</ZIndex>
@@ -2033,9 +2073,9 @@
                 </Paragraphs>
                 <rd:DefaultName>oib</rd:DefaultName>
                 <Top>1.24441cm</Top>
-                <Left>0.07937cm</Left>
+                <Left>0.32094cm</Left>
                 <Height>0.4cm</Height>
-                <Width>4.83691cm</Width>
+                <Width>5.84805cm</Width>
                 <ZIndex>6</ZIndex>
                 <Style>
                   <Border>
@@ -2064,9 +2104,9 @@
                 </Paragraphs>
                 <rd:DefaultName>oib</rd:DefaultName>
                 <Top>1.64441cm</Top>
-                <Left>0.07937cm</Left>
+                <Left>0.32094cm</Left>
                 <Height>0.4cm</Height>
-                <Width>4.83691cm</Width>
+                <Width>5.84805cm</Width>
                 <ZIndex>7</ZIndex>
                 <Style>
                   <Border>
@@ -2082,7 +2122,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Ukupno Porez</Value>
+                        <Value>Ukupno Osnovica (s rabatom)</Value>
                         <Style>
                           <FontWeight>Bold</FontWeight>
                         </Style>
@@ -2094,10 +2134,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>oib</rd:DefaultName>
-                <Top>2.44441cm</Top>
-                <Left>0.07937cm</Left>
+                <Top>2.40913cm</Top>
+                <Left>0.32097cm</Left>
                 <Height>0.4cm</Height>
-                <Width>4.83691cm</Width>
+                <Width>5.84805cm</Width>
                 <ZIndex>8</ZIndex>
                 <Style>
                   <Border>
@@ -2113,7 +2153,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Ukupno</Value>
+                        <Value>Ukupno Porez (s rabatom)</Value>
                         <Style>
                           <FontWeight>Bold</FontWeight>
                         </Style>
@@ -2126,9 +2166,9 @@
                 </Paragraphs>
                 <rd:DefaultName>oib</rd:DefaultName>
                 <Top>3.24441cm</Top>
-                <Left>0.07937cm</Left>
+                <Left>0.32094cm</Left>
                 <Height>0.4cm</Height>
-                <Width>4.83691cm</Width>
+                <Width>5.84805cm</Width>
                 <ZIndex>9</ZIndex>
                 <Style>
                   <Border>
@@ -2159,7 +2199,7 @@
                 </Paragraphs>
                 <rd:DefaultName>oib</rd:DefaultName>
                 <Top>0.87969cm</Top>
-                <Left>4.91628cm</Left>
+                <Left>6.16899cm</Left>
                 <Height>0.4cm</Height>
                 <Width>3.14802cm</Width>
                 <ZIndex>10</ZIndex>
@@ -2190,9 +2230,9 @@
                 </Paragraphs>
                 <rd:DefaultName>oib</rd:DefaultName>
                 <Top>0.87969cm</Top>
-                <Left>0.07937cm</Left>
+                <Left>0.32094cm</Left>
                 <Height>0.4cm</Height>
-                <Width>4.83691cm</Width>
+                <Width>5.84805cm</Width>
                 <ZIndex>11</ZIndex>
                 <Style>
                   <Border>
@@ -2208,7 +2248,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>=Sum(Fields!cijena5.Value, "DataSet1")</Value>
+                        <Value>=Sum(Fields!iznos.Value, "dSstope")</Value>
                         <Style>
                           <FontSize>8pt</FontSize>
                           <FontWeight>Bold</FontWeight>
@@ -2223,7 +2263,7 @@
                 </Paragraphs>
                 <rd:DefaultName>oib</rd:DefaultName>
                 <Top>2.84441cm</Top>
-                <Left>4.91625cm</Left>
+                <Left>6.16896cm</Left>
                 <Height>0.4cm</Height>
                 <Width>3.14805cm</Width>
                 <ZIndex>12</ZIndex>
@@ -2241,7 +2281,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Ukupno Rabat</Value>
+                        <Value>Ukupno Porez (baz rabata)</Value>
                         <Style>
                           <FontWeight>Bold</FontWeight>
                         </Style>
@@ -2253,10 +2293,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>oib</rd:DefaultName>
-                <Top>2.84441cm</Top>
-                <Left>0.07934cm</Left>
+                <Top>2.80913cm</Top>
+                <Left>0.32091cm</Left>
                 <Height>0.4cm</Height>
-                <Width>4.83691cm</Width>
+                <Width>5.84805cm</Width>
                 <ZIndex>13</ZIndex>
                 <Style>
                   <Border>
@@ -2285,9 +2325,9 @@
                 </Paragraphs>
                 <rd:DefaultName>oib</rd:DefaultName>
                 <Top>0.09292cm</Top>
-                <Left>0.0794cm</Left>
+                <Left>0.32097cm</Left>
                 <Height>0.4cm</Height>
-                <Width>4.83691cm</Width>
+                <Width>5.84805cm</Width>
                 <ZIndex>14</ZIndex>
                 <Visibility>
                   <Hidden>=IIF(Parameters!prikazi_proizvodacku_cijenu.Value, false, true)</Hidden>
@@ -2321,7 +2361,7 @@
                 </Paragraphs>
                 <rd:DefaultName>oib</rd:DefaultName>
                 <Top>0.09292cm</Top>
-                <Left>4.91631cm</Left>
+                <Left>6.16902cm</Left>
                 <Height>0.4cm</Height>
                 <Width>3.14802cm</Width>
                 <ZIndex>15</ZIndex>
@@ -2355,9 +2395,9 @@
                 </Paragraphs>
                 <rd:DefaultName>oib</rd:DefaultName>
                 <Top>0.47969cm</Top>
-                <Left>0.07934cm</Left>
+                <Left>0.32091cm</Left>
                 <Height>0.4cm</Height>
-                <Width>4.83691cm</Width>
+                <Width>5.84805cm</Width>
                 <ZIndex>16</ZIndex>
                 <Style>
                   <Border>
@@ -2388,7 +2428,7 @@
                 </Paragraphs>
                 <rd:DefaultName>oib</rd:DefaultName>
                 <Top>0.47969cm</Top>
-                <Left>4.91625cm</Left>
+                <Left>6.16896cm</Left>
                 <Height>0.4cm</Height>
                 <Width>3.14802cm</Width>
                 <ZIndex>17</ZIndex>
@@ -2399,12 +2439,140 @@
                   <VerticalAlign>Middle</VerticalAlign>
                 </Style>
               </Textbox>
+              <Textbox Name="oib22">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Ukupno Rabat</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>oib</rd:DefaultName>
+                <Top>3.67969cm</Top>
+                <Left>0.32097cm</Left>
+                <Height>0.4cm</Height>
+                <Width>5.84805cm</Width>
+                <ZIndex>18</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <VerticalAlign>Middle</VerticalAlign>
+                </Style>
+              </Textbox>
+              <Textbox Name="oib23">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Sum(Fields!osnovica.Value, "dSstope")-Sum(Fields!osnovica.Value, "DSstopeSRabatom")</Value>
+                        <Style>
+                          <FontSize>8pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                          <Format>N2</Format>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>oib</rd:DefaultName>
+                <Top>3.67969cm</Top>
+                <Left>6.16893cm</Left>
+                <Height>0.4cm</Height>
+                <Width>3.14805cm</Width>
+                <ZIndex>19</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <VerticalAlign>Middle</VerticalAlign>
+                </Style>
+              </Textbox>
+              <Textbox Name="oib24">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Ukupno:</Value>
+                        <Style>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>oib</rd:DefaultName>
+                <Top>4.07969cm</Top>
+                <Left>0.32106cm</Left>
+                <Height>0.4cm</Height>
+                <Width>5.84805cm</Width>
+                <ZIndex>20</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <VerticalAlign>Middle</VerticalAlign>
+                </Style>
+              </Textbox>
+              <Textbox Name="oib25">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Sum(Fields!osnovica.Value, "DSstopeSRabatom")+Sum(Fields!iznos.Value, "DSstopeSRabatom")</Value>
+                        <Style>
+                          <FontSize>8pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                          <Format>N2</Format>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Right</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>oib</rd:DefaultName>
+                <Top>4.07969cm</Top>
+                <Left>6.16902cm</Left>
+                <Height>0.4cm</Height>
+                <Width>3.14805cm</Width>
+                <ZIndex>21</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <VerticalAlign>Middle</VerticalAlign>
+                </Style>
+              </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>2.35219cm</Top>
-            <Left>20.5665cm</Left>
-            <Height>3.90899cm</Height>
-            <Width>8.29685cm</Width>
+            <Left>19.31379cm</Left>
+            <Height>4.53708cm</Height>
+            <Width>9.54956cm</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -2414,7 +2582,41 @@
           </Rectangle>
           <Rectangle Name="Rectangle4">
             <ReportItems>
-              <Tablix Name="Tablix3">
+              <Textbox Name="Textbox42">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>REKAPITULACIJA POREZA (S RABATOM)</Value>
+                        <Style>
+                          <FontFamily>Verdana</FontFamily>
+                          <FontSize>7pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox26</rd:DefaultName>
+                <Top>0.17542cm</Top>
+                <Height>0.52063cm</Height>
+                <Width>7.5cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Tablix Name="Tablix4">
                 <TablixBody>
                   <TablixColumns>
                     <TablixColumn>
@@ -2433,7 +2635,7 @@
                       <TablixCells>
                         <TablixCell>
                           <CellContents>
-                            <Textbox Name="Textbox19">
+                            <Textbox Name="Textbox27">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
@@ -2469,7 +2671,7 @@
                         </TablixCell>
                         <TablixCell>
                           <CellContents>
-                            <Textbox Name="Textbox21">
+                            <Textbox Name="Textbox29">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
@@ -2546,7 +2748,7 @@
                       <TablixCells>
                         <TablixCell>
                           <CellContents>
-                            <Textbox Name="stopa2">
+                            <Textbox Name="stopa1">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
@@ -2558,7 +2760,7 @@
                                         <FontFamily>Verdana</FontFamily>
                                         <FontSize>7pt</FontSize>
                                         <FontWeight>Bold</FontWeight>
-                                        <Format>N2</Format>
+                                        <Format>0.00;(0.00)</Format>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
@@ -2567,7 +2769,7 @@
                                   </Style>
                                 </Paragraph>
                               </Paragraphs>
-                              <rd:DefaultName>stopa</rd:DefaultName>
+                              <rd:DefaultName>stopa1</rd:DefaultName>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -2583,19 +2785,19 @@
                         </TablixCell>
                         <TablixCell>
                           <CellContents>
-                            <Textbox Name="osnovica2">
+                            <Textbox Name="osnovica1">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=Sum(Fields!cijena8.Value, "DataSet1")</Value>
+                                      <Value>=Fields!osnovica.Value</Value>
                                       <Style>
                                         <FontFamily>Verdana</FontFamily>
                                         <FontSize>7pt</FontSize>
                                         <FontWeight>Bold</FontWeight>
-                                        <Format>N2</Format>
+                                        <Format>0.00;(0.00)</Format>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
@@ -2604,7 +2806,7 @@
                                   </Style>
                                 </Paragraph>
                               </Paragraphs>
-                              <rd:DefaultName>osnovica</rd:DefaultName>
+                              <rd:DefaultName>osnovica1</rd:DefaultName>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -2620,7 +2822,7 @@
                         </TablixCell>
                         <TablixCell>
                           <CellContents>
-                            <Textbox Name="iznos2">
+                            <Textbox Name="iznos1">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
@@ -2632,7 +2834,7 @@
                                         <FontFamily>Verdana</FontFamily>
                                         <FontSize>7pt</FontSize>
                                         <FontWeight>Bold</FontWeight>
-                                        <Format>N2</Format>
+                                        <Format>0.00;(0.00)</Format>
                                       </Style>
                                     </TextRun>
                                   </TextRuns>
@@ -2641,7 +2843,7 @@
                                   </Style>
                                 </Paragraph>
                               </Paragraphs>
-                              <rd:DefaultName>iznos</rd:DefaultName>
+                              <rd:DefaultName>iznos1</rd:DefaultName>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -2676,57 +2878,27 @@
                     </TablixMember>
                   </TablixMembers>
                 </TablixRowHierarchy>
-                <DataSetName>dSstope</DataSetName>
-                <Top>0.69605cm</Top>
+                <DataSetName>DSstopeSRabatom</DataSetName>
+                <Top>0.71241cm</Top>
                 <Height>1.2cm</Height>
-                <Width>7.5cm</Width>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                </Style>
-              </Tablix>
-              <Textbox Name="Textbox42">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>REKAPITULACIJA POREZA (S RABATOM)</Value>
-                        <Style>
-                          <FontFamily>Verdana</FontFamily>
-                          <FontSize>7pt</FontSize>
-                          <FontWeight>Bold</FontWeight>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Center</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox26</rd:DefaultName>
-                <Top>0.17542cm</Top>
-                <Height>0.52063cm</Height>
                 <Width>7.5cm</Width>
                 <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
                   </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
+                  <FontFamily>Verdana</FontFamily>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextAlign>Center</TextAlign>
                 </Style>
-              </Textbox>
+              </Tablix>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>2.35219cm</Top>
-            <Left>10.42658cm</Left>
+            <Left>9.534cm</Left>
             <Height>3.64441cm</Height>
-            <Width>8.29685cm</Width>
+            <Width>8.88721cm</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -2735,7 +2907,7 @@
             </Style>
           </Rectangle>
         </ReportItems>
-        <Height>2.56509in</Height>
+        <Height>2.78176in</Height>
         <Style />
       </Body>
       <Width>29.15cm</Width>

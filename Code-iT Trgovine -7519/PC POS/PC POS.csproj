@@ -2923,7 +2923,9 @@
       <DependentUpon>frmListe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\IzlazniRacuni\Listakalk.rdlc" />
-    <EmbeddedResource Include="Report\IzlazniRacuni\Liste.rdlc" />
+    <EmbeddedResource Include="Report\IzlazniRacuni\Liste.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\Kalkposkl\frmKalkposkl.resx">
       <DependentUpon>frmKalkposkl.cs</DependentUpon>
     </EmbeddedResource>
@@ -3507,6 +3509,7 @@
     </None>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
     <None Include="Dataset\DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>

@@ -349,6 +349,7 @@ DTheader.Rows[i]["broj_avansa"].ToString(), DTheader.Rows[i]["poslovnica"].ToStr
                 decimal osnovica_ukupno = 0;
                 decimal ukupno = 0;
                 decimal vpc1 = 0;
+                decimal vpc2 = 0;
                 decimal usl_bez_por = 0;
                 decimal roba_bez_por = 0;
                 decimal proizvodacka_cijena = 0;
@@ -392,33 +393,51 @@ DTheader.Rows[i]["broj_avansa"].ToString(), DTheader.Rows[i]["poslovnica"].ToStr
                     pdvUkupno += ukupno * (((pdv * 100) / (pdv + 100)) / 100);
 
                     decimal iznos = Math.Round((vpc1 * (pdv / 100)), 6, MidpointRounding.AwayFromZero);
+                    vpc2 = vpc - rabat_proracun;
+                    vpc2 = vpc2-(vpc2 * (((100 * pdv) / (100 + pdv))/100));
+                    decimal iznos2 = Math.Round((vpc2 * (pdv / 100)), 6, MidpointRounding.AwayFromZero);
                     if (kol != 0)
                     {
                         //DataRow[] dataROW = DTpdv.Select("stopa = '" + stopa.ToString("0.00") + "'");
                         DataRow[] stope = (dSstope.Tables[0]).Select(string.Format("stopa='{0}'", pdv.ToString("#0.00")));
-                        if (stope.Length == 0)
+                        DataRow[] stope2 = (DSstopeSRabatom.Tables[0]).Select(string.Format("stopa='{0}'", pdv.ToString("#0.00")));
+                        if (stope.Length == 0 || stope2.Length == 0)
                         {
                             DataRow stopa = dSstope.Tables[0].NewRow();
+                            DataRow stopa2 = DSstopeSRabatom.Tables[0].NewRow();
 
                             stopa["stopa"] = pdv.ToString("#0.00");
+                            stopa2["stopa"] = pdv.ToString("#0.00");
+
                             stopa["osnovica"] = Math.Round((vpc1 * kol), 6, MidpointRounding.AwayFromZero);
+                            stopa2["osnovica"] = Math.Round((vpc2 * kol), 6, MidpointRounding.AwayFromZero);
+
                             stopa["iznos"] = Math.Round((iznos * kol), 6, MidpointRounding.AwayFromZero);
+                            stopa2["iznos"] = Math.Round((iznos2 * kol), 6, MidpointRounding.AwayFromZero);
 
                             dSstope.Tables[0].Rows.Add(stopa);
+                            DSstopeSRabatom.Tables[0].Rows.Add(stopa2);
                         }
                         else
                         {
                             decimal osnovicaOld = 0, iznosOld = 0;
+                            decimal osnovicaOld2 = 0, iznosOld2 = 0;
+
                             decimal.TryParse(stope[0]["osnovica"].ToString(), out osnovicaOld);
+                            decimal.TryParse(stope2[0]["osnovica"].ToString(), out osnovicaOld2);
                             decimal.TryParse(stope[0]["iznos"].ToString(), out iznosOld);
+                            decimal.TryParse(stope2[0]["iznos"].ToString(), out iznosOld2);
 
                             stope[0]["osnovica"] = (osnovicaOld + Math.Round((vpc1 * kol), 6, MidpointRounding.AwayFromZero));
+                            stope2[0]["osnovica"] = (osnovicaOld2 + Math.Round((vpc2 * kol), 6, MidpointRounding.AwayFromZero));
                             stope[0]["iznos"] = (iznosOld + Math.Round((iznos * kol), 6, MidpointRounding.AwayFromZero));
+                            stope2[0]["iznos"] = (iznosOld2 + Math.Round((iznos2 * kol), 6, MidpointRounding.AwayFromZero));
+                            
                         }
                     }
-
+                    /*
                     DataTable dt2 = dSstope.Tables[0].Clone();
-                    dt2.Columns["stopa"].DataType = Type.GetType("System.Decimal");
+                     dt2.Columns["stopa"].DataType = Type.GetType("System.Decimal");
 
                     foreach (DataRow dr in dSstope.Tables[0].Rows)
                     {
@@ -441,7 +460,7 @@ DTheader.Rows[i]["broj_avansa"].ToString(), DTheader.Rows[i]["poslovnica"].ToStr
 
                         dSstope.Tables[0].Rows.Add(stopa);
                         //stopa_index++;
-                    }
+                    }*/
 
                 }
 

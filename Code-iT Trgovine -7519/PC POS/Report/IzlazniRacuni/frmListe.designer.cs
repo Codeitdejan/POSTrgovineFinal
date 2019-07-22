@@ -33,6 +33,7 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dTlisteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSRliste = new PCPOS.Dataset.DSRliste();
             this.dTRpodaciTvrtkeBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -40,7 +41,9 @@
             this.dTlisteTekstBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSRlisteTekst = new PCPOS.Dataset.DSRlisteTekst();
             this.dSstopeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DSstopeSRabatomBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSstope = new PCPOS.Dataset.DSstope();
+            this.DSstopeSRabatom = new PCPOS.Dataset.DSstope();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.dTlisteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSRliste)).BeginInit();
@@ -49,7 +52,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dTlisteTekstBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSRlisteTekst)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSstopeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DSstopeSRabatomBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSstope)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DSstopeSRabatom)).BeginInit();
             this.SuspendLayout();
             // 
             // dTlisteBindingSource
@@ -91,6 +96,15 @@
             // 
             this.dSstope.DataSetName = "DSstope";
             this.dSstope.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+
+            this.DSstopeSRabatomBindingSource.DataMember = "DTstope";
+            this.DSstopeSRabatomBindingSource.DataSource = this.DSstopeSRabatom;
+
+
+            this.DSstopeSRabatom.DataSetName = "DSstope";
+            this.DSstopeSRabatom.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+
+            
             // 
             // reportViewer1
             // 
@@ -103,10 +117,13 @@
             reportDataSource3.Value = this.dTlisteTekstBindingSource;
             reportDataSource4.Name = "dSstope";
             reportDataSource4.Value = this.dSstopeBindingSource;
+            reportDataSource5.Name = "DSstopeSRabatom";
+            reportDataSource5.Value = this.DSstopeSRabatomBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "PCPOS.Report.IzlazniRacuni.Liste.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -134,6 +151,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dSRlisteTekst)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSstopeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSstope)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DSstopeSRabatomBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DSstopeSRabatom)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -148,6 +167,9 @@
 		private Dataset.DSRliste dSRliste;
         private System.Windows.Forms.BindingSource dTlisteBindingSource;
         private System.Windows.Forms.BindingSource dSstopeBindingSource;
+        private System.Windows.Forms.BindingSource DSstopeSRabatomBindingSource;
         private Dataset.DSstope dSstope;
+        private Dataset.DSstope DSstopeSRabatom;
+
     }
 }
