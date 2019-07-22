@@ -85,28 +85,28 @@ namespace PCPOS.Report.lzlazniRacuni
             string kriterij = "";
             if (prema_rac)
             {
-                kriterij = string.Format(" WHERE avans_racun.broj_avansa >= {0} AND avans_racun.broj_avansa <= {1} and avans_racun.poslovnica = {2}", BrojFakOD, BrojFakDO, skladiste);
+                kriterij = string.Format(" WHERE avansi.broj_avansa >= {0} AND avansi.broj_avansa <= {1} ", BrojFakOD, BrojFakDO);
                 if (partner > 0)
                 {
-                    kriterij += string.Format(" AND avans_racun.id_partner = {0}", partner);
+                    kriterij += string.Format(" AND avansi.id_partner = {0}", partner);
                 }
 
-                kriterij += " ORDER BY CAST(avans_racun.broj_avansa as numeric) ASC;";
+                kriterij += " ORDER BY CAST(avansi.broj_avansa as numeric) ASC;";
             }
             else
             {
-                kriterij = string.Format(" WHERE avans_racun.dat_knj >= '{0}' AND avans_racun.dat_knj <= '{1}' and avans_racun.poslovnica = {2}", datumOD.ToString("yyyy-MM-dd 00:00:00"), datumDO.ToString("yyyy-MM-dd 23:59:59"), skladiste);
+                kriterij = string.Format(" WHERE avansi.dat_knj >= '{0}' AND avansi.dat_knj <= '{1}'", datumOD.ToString("yyyy-MM-dd 00:00:00"), datumDO.ToString("yyyy-MM-dd 23:59:59"));
 
                 if (partner > 0)
                 {
-                    kriterij += string.Format(" AND avans_racun.id_partner = {0}", partner);
+                    kriterij += string.Format(" AND avansi.id_partner = {0}", partner);
                 }
 
-                kriterij += " ORDER BY avans_racun.dat_knj ASC;";
+                kriterij += " ORDER BY avansi.dat_knj ASC;";
             }
 
-            string sqlHeder = string.Format(@"SELECT avans_racun.broj_avansa, avans_racun.dat_knj, avans_racun.datum_valute, partners.id_partner, avans_racun.poslovnica, avans_racun.naplatni_uredaj, partners.ime_tvrtke
-            FROM avans_racun LEFT JOIN partners ON partners.id_partner = avans_racun.id_partner {0}", kriterij);
+            string sqlHeder = string.Format(@"SELECT avansi.broj_avansa, avansi.dat_knj, avansi.datum_valute, partners.id_partner, partners.ime_tvrtke
+            FROM avansi LEFT JOIN partners ON partners.id_partner = avansi.id_partner {0}", kriterij);
 
             DataRow DDTrow = dSRlisteTekst.Tables[0].NewRow();
             if (BrojFakDO != "")
@@ -123,12 +123,12 @@ namespace PCPOS.Report.lzlazniRacuni
             if (documenat == "rac_za_avans")
             {
                 string naslov = "Račun za avans";
-
+                /*
                 if (skladiste != null && skladiste.ToString().Length > 0)
                 {
                     naslov += "\nZa poslovnicu " + classSQL.select(string.Format("select ime_ducana from ducan where id_ducan = {0};", skladiste), "ducan").Tables[0].Rows[0][0];
                 }
-
+                */
                 DDTrow["string5"] = naslov;
             }
 
@@ -140,11 +140,8 @@ namespace PCPOS.Report.lzlazniRacuni
 
             for (int i = 0; i < DTheader.Rows.Count; i++)
             {
-                string sqlStavka = string.Format(@"SELECT avans_racun.osnovica_var as vpc, avans_racun.porez_var as porez, 1 as kolicina, 'NE' as oduzmi, 0 as nbc, 0 as id_skladiste, 0 as rabat
-FROM avans_racun
-left join porezi on avans_racun.id_pdv = porezi.id_porez
-WHERE avans_racun.broj_avansa = {0} AND avans_racun.poslovnica = {1};",
-DTheader.Rows[i]["broj_avansa"].ToString(), DTheader.Rows[i]["poslovnica"].ToString());
+                string sqlStavka = string.Format(@"SELECT avansi.osnovica_var as vpc, avansi.porez_var as porez, 1 as kolicina, 'NE' as oduzmi, 0 as nbc, 0 as id_skladiste, 0 as rabat
+                FROM avansi left join porezi on avansi.id_pdv = porezi.id_porez WHERE avansi.broj_avansa = {0}", DTheader.Rows[i]["broj_avansa"].ToString());
 
                 DTstavke = classSQL.select(sqlStavka, "faktura_stavke").Tables[0];
 

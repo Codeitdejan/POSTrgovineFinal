@@ -217,6 +217,12 @@
     <Compile Include="Eracun\Entities\InvoiceItem.cs" />
     <Compile Include="Eracun\Entities\Partner.cs" />
     <Compile Include="Eracun\Eracun.cs" />
+    <Compile Include="frmNewInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewInfo.Designer.cs">
+      <DependentUpon>frmNewInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmOtpremnicaNaSkladiste.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2421,6 +2427,9 @@
     </Compile>
     <EmbeddedResource Include="aaaaa.resx">
       <DependentUpon>aaaaa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewInfo.resx">
+      <DependentUpon>frmNewInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmOtpremnicaNaSkladiste.resx">
       <DependentUpon>frmOtpremnicaNaSkladiste.cs</DependentUpon>

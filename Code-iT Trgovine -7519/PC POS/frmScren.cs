@@ -54,7 +54,34 @@ namespace PCPOS
 
             try
             {
-                label4.Text = "Verzija programa: " + Properties.Settings.Default.verzija_programa;
+                /*//Preuzmi last version.txt*/
+                GetTxtLastVersion();
+                string lastVersion;
+                string currentPathLastVersion = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $@"lastVersion.txt");
+                using (StreamReader reader = new StreamReader(currentPathLastVersion))
+                {
+                    lastVersion = reader.ReadLine();
+                }
+
+
+                string currentVersion = "Potrebna nova verzija.";
+                string currentPathCurrentVersion = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $@"currentVersion.txt");
+
+                if (File.Exists(currentPathCurrentVersion))
+                {
+                    using (StreamReader reader = new StreamReader(currentPathCurrentVersion))
+                    {
+                        currentVersion = reader.ReadLine();
+                    }
+                }
+
+                if (!lastVersion.Equals(currentVersion))
+                {
+                    currentVersion = "Potrebna nova verzija.";
+                }
+
+                //label4.Text = "Verzija programa: " + Properties.Settings.Default.verzija_programa;
+                label4.Text = "Verzija programa: " + currentVersion;
                 PCPOS.Util.classFukcijeZaUpravljanjeBazom B = new Util.classFukcijeZaUpravljanjeBazom("MALOPRODAJA", "POS");
                 int trenutnaG = B.UzmiGodinuKojaSeKoristi();
 
@@ -124,6 +151,22 @@ namespace PCPOS
             }
 
             //this.Paint += new PaintEventHandler(Form1_Paint);
+        }
+
+        private void GetTxtLastVersion()
+        {
+            string fileName = @"lastVersion.txt";
+            string url = $"ftp://5.189.154.50/CodeTrgovine/{fileName}";
+            using (WebClient req = new WebClient())
+            {
+                req.Credentials = new NetworkCredential("codeadmin", "Eqws64%2");
+                byte[] fileData = req.DownloadData(url);
+
+                using (FileStream file = File.Create(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, $@"{fileName}")))
+                {
+                    file.Write(fileData, 0, fileData.Length);
+                }
+            }
         }
 
         private string OO(string s)
@@ -778,8 +821,10 @@ namespace PCPOS
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            Util.frmHtmlInfo iss = new Util.frmHtmlInfo();
-            iss.Show();
+            /*Util.frmHtmlInfo iss = new Util.frmHtmlInfo();
+            iss.Show();*/
+            frmNewInfo frmNewInfoX = new frmNewInfo();
+            frmNewInfoX.ShowDialog();
         }
 
         private void chbIfb_CheckedChanged(object sender, EventArgs e)
