@@ -14039,3 +14039,260 @@ Code: 42601
    at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
    at PCPOS.classSQL.select(String sql, String table, Boolean caffe) in C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 59
 **************************************************************
+
+**************************************************************
+DATUM:22.7.2019. 8:02:10, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT id_grad FROM grad WHERE grad='Belica '
+Npgsql.NpgsqlException:
+database "nevida2019" does not exist
+Severity: FATAL
+Code: 3D000
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 693
+   at Npgsql.NpgsqlState.IterateThroughAllResponses(IEnumerable`1 ienum) in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 326
+   at Npgsql.NpgsqlConnectedState.Startup(NpgsqlConnector context) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectedState.cs:line 52
+   at Npgsql.NpgsqlConnector.Open() in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnector.cs:line 707
+   at Npgsql.NpgsqlConnectorPool.GetPooledConnector(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 447
+   at Npgsql.NpgsqlConnectorPool.RequestPooledConnectorInternal(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 252
+   at Npgsql.NpgsqlConnectorPool.RequestPooledConnector(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 197
+   at Npgsql.NpgsqlConnectorPool.RequestConnector(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 181
+   at Npgsql.NpgsqlConnection.Open() in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnection.cs:line 536
+   at PCPOS.classSQL.select(String sql, String table, Boolean caffe) in C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 51
+**************************************************************
+
+**************************************************************
+DATUM:22.7.2019. 8:02:12, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+select * from ducan where id_ducan = '1';
+Npgsql.NpgsqlException:
+database "nevida2019" does not exist
+Severity: FATAL
+Code: 3D000
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 693
+   at Npgsql.NpgsqlState.IterateThroughAllResponses(IEnumerable`1 ienum) in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 326
+   at Npgsql.NpgsqlConnectedState.Startup(NpgsqlConnector context) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectedState.cs:line 52
+   at Npgsql.NpgsqlConnector.Open() in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnector.cs:line 707
+   at Npgsql.NpgsqlConnectorPool.GetPooledConnector(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 447
+   at Npgsql.NpgsqlConnectorPool.RequestPooledConnectorInternal(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 252
+   at Npgsql.NpgsqlConnectorPool.RequestPooledConnector(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 197
+   at Npgsql.NpgsqlConnectorPool.RequestConnector(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 181
+   at Npgsql.NpgsqlConnection.Open() in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnection.cs:line 536
+   at PCPOS.classSQL.select(String sql, String table, Boolean caffe) in C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 51
+**************************************************************
+
+**************************************************************
+DATUM:22.7.2019. 8:02:12, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+select * from blagajna where id_ducan = '1'
+Npgsql.NpgsqlException:
+database "nevida2019" does not exist
+Severity: FATAL
+Code: 3D000
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 693
+   at Npgsql.NpgsqlState.IterateThroughAllResponses(IEnumerable`1 ienum) in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 326
+   at Npgsql.NpgsqlConnectedState.Startup(NpgsqlConnector context) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectedState.cs:line 52
+   at Npgsql.NpgsqlConnector.Open() in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnector.cs:line 707
+   at Npgsql.NpgsqlConnectorPool.GetPooledConnector(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 447
+   at Npgsql.NpgsqlConnectorPool.RequestPooledConnectorInternal(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 252
+   at Npgsql.NpgsqlConnectorPool.RequestPooledConnector(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 197
+   at Npgsql.NpgsqlConnectorPool.RequestConnector(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 181
+   at Npgsql.NpgsqlConnection.Open() in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnection.cs:line 536
+   at PCPOS.classSQL.select(String sql, String table, Boolean caffe) in C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 51
+**************************************************************
+
+**************************************************************
+DATUM:22.7.2019. 8:02:13, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT id_grad FROM grad WHERE grad='Belica '
+Npgsql.NpgsqlException:
+database "nevida2019" does not exist
+Severity: FATAL
+Code: 3D000
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 693
+   at Npgsql.NpgsqlState.IterateThroughAllResponses(IEnumerable`1 ienum) in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 326
+   at Npgsql.NpgsqlConnectedState.Startup(NpgsqlConnector context) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectedState.cs:line 52
+   at Npgsql.NpgsqlConnector.Open() in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnector.cs:line 707
+   at Npgsql.NpgsqlConnectorPool.GetPooledConnector(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 447
+   at Npgsql.NpgsqlConnectorPool.RequestPooledConnectorInternal(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 252
+   at Npgsql.NpgsqlConnectorPool.RequestPooledConnector(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 197
+   at Npgsql.NpgsqlConnectorPool.RequestConnector(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 181
+   at Npgsql.NpgsqlConnection.Open() in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnection.cs:line 536
+   at PCPOS.classSQL.select(String sql, String table, Boolean caffe) in C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 51
+**************************************************************
+
+**************************************************************
+DATUM:22.7.2019. 8:02:14, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT ime_ducana FROM ducan where id_ducan ='1'
+Npgsql.NpgsqlException:
+database "nevida2019" does not exist
+Severity: FATAL
+Code: 3D000
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 693
+   at Npgsql.NpgsqlState.IterateThroughAllResponses(IEnumerable`1 ienum) in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 326
+   at Npgsql.NpgsqlConnectedState.Startup(NpgsqlConnector context) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectedState.cs:line 52
+   at Npgsql.NpgsqlConnector.Open() in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnector.cs:line 707
+   at Npgsql.NpgsqlConnectorPool.GetPooledConnector(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 447
+   at Npgsql.NpgsqlConnectorPool.RequestPooledConnectorInternal(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 252
+   at Npgsql.NpgsqlConnectorPool.RequestPooledConnector(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 197
+   at Npgsql.NpgsqlConnectorPool.RequestConnector(NpgsqlConnection Connection) in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnectorPool.cs:line 181
+   at Npgsql.NpgsqlConnection.Open() in C:\projects\Npgsql2\src\Npgsql\NpgsqlConnection.cs:line 536
+   at PCPOS.classSQL.select(String sql, String table, Boolean caffe) in C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 51
+**************************************************************
+
+**************************************************************
+DATUM:22.7.2019. 8:12:55, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT postavi_kolicinu_sql_funkcija_prema_sifri('CodeiT-u/s', '1.1.2019. 0:00:00'') AS odgovor; 
+Npgsql.NpgsqlException:
+unterminated quoted string at or near "'1.1.2019. 0:00:00'') AS odgovor;"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 512
+   at PCPOS.classSQL.insert(String sql) in C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 142
+**************************************************************
+
+**************************************************************
+DATUM:22.7.2019. 8:13:26, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT postavi_kolicinu_sql_funkcija_prema_sifri('CodeiT-najam-a', '1.1.2019. 0:00:00'') AS odgovor; 
+Npgsql.NpgsqlException:
+unterminated quoted string at or near "'1.1.2019. 0:00:00'') AS odgovor;"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 512
+   at PCPOS.classSQL.insert(String sql) in C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 142
+**************************************************************
+
+**************************************************************
+DATUM:22.7.2019. 8:13:55, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT postavi_kolicinu_sql_funkcija_prema_sifri('CodeiT-c/s', '1.1.2019. 0:00:00'') AS odgovor; 
+Npgsql.NpgsqlException:
+unterminated quoted string at or near "'1.1.2019. 0:00:00'') AS odgovor;"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 512
+   at PCPOS.classSQL.insert(String sql) in C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 142
+**************************************************************
+
+**************************************************************
+DATUM:22.7.2019. 13:17:34, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT postavi_kolicinu_sql_funkcija_prema_sifri('CodeiT-u/s', '1.1.2019. 0:00:00'') AS odgovor; 
+Npgsql.NpgsqlException:
+unterminated quoted string at or near "'1.1.2019. 0:00:00'') AS odgovor;"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 512
+   at PCPOS.classSQL.insert(String sql) in C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 142
+**************************************************************
+
+**************************************************************
+DATUM:22.7.2019. 14:07:54, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT postavi_kolicinu_sql_funkcija_prema_sifri('CodeiT-najam-p', '1.1.2019. 0:00:00'') AS odgovor; 
+Npgsql.NpgsqlException:
+unterminated quoted string at or near "'1.1.2019. 0:00:00'') AS odgovor;"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 512
+   at PCPOS.classSQL.insert(String sql) in C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 142
+**************************************************************
+
+**************************************************************
+DATUM:22.7.2019. 14:08:46, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT postavi_kolicinu_sql_funkcija_prema_sifri('CodeiT-c/s', '1.1.2019. 0:00:00'') AS odgovor; 
+Npgsql.NpgsqlException:
+unterminated quoted string at or near "'1.1.2019. 0:00:00'') AS odgovor;"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 512
+   at PCPOS.classSQL.insert(String sql) in C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 142
+**************************************************************
+
+**************************************************************
+DATUM:22.7.2019. 14:09:47, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT postavi_kolicinu_sql_funkcija_prema_sifri('CodeiT-najam-p', '1.1.2019. 0:00:00'') AS odgovor; 
+Npgsql.NpgsqlException:
+unterminated quoted string at or near "'1.1.2019. 0:00:00'') AS odgovor;"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 512
+   at PCPOS.classSQL.insert(String sql) in C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 142
+**************************************************************
+
+**************************************************************
+DATUM:22.7.2019. 14:10:05, FORMA: RemoteDB
+LINIJA KODA:65
+GREŠKA:
+SELECT postavi_kolicinu_sql_funkcija_prema_sifri('806332', '1.1.2019. 0:00:00'') AS odgovor; 
+Npgsql.NpgsqlException:
+unterminated quoted string at or near "'1.1.2019. 0:00:00'') AS odgovor;"
+Severity: ERROR
+Code: 42601
+   at Npgsql.NpgsqlState.<ProcessBackendResponses_Ver_3>d__a.MoveNext() in C:\projects\Npgsql2\src\Npgsql\NpgsqlState.cs:line 850
+   at Npgsql.ForwardsOnlyDataReader.GetNextResponseObject() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1173
+   at Npgsql.ForwardsOnlyDataReader.GetNextRowDescription() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1191
+   at Npgsql.ForwardsOnlyDataReader.NextResult() in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1377
+   at Npgsql.ForwardsOnlyDataReader..ctor(IEnumerable`1 dataEnumeration, CommandBehavior behavior, NpgsqlCommand command, NotificationThreadBlock threadBlock, Boolean synchOnReadError) in C:\projects\Npgsql2\src\Npgsql\NpgsqlDataReader.cs:line 1040
+   at Npgsql.NpgsqlCommand.GetReader(CommandBehavior cb) in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 609
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery() in C:\projects\Npgsql2\src\Npgsql\NpgsqlCommand.cs:line 512
+   at PCPOS.classSQL.insert(String sql) in C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS\classSQL.cs:line 142
+**************************************************************
