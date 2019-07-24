@@ -27,7 +27,7 @@ namespace PCPOS
         {
             string fileString = "";
             string fileName = @"promjene.txt";
-            string url = $"ftp://5.189.154.50/CodeCaffe/{fileName}";
+            string url = $"ftp://5.189.154.50/CodeTrgovine/{fileName}";
             using (WebClient req = new WebClient())
             {
                 try
