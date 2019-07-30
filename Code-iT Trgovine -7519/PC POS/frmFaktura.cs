@@ -12,6 +12,7 @@ using PCPOS.Eracun.Entities;
 using System.Collections.Generic;
 using System.IO;
 using PCPOS.Entities;
+using PCPOS.Eracun;
 using System.Net;
 
 namespace PCPOS
@@ -1862,6 +1863,10 @@ where id_partner = {0}", txtSifraOdrediste.Text.Trim());
             string sifra = "";
             string kol = "";
 
+            // Eracun object
+            Eracun.Entities.Faktura faktura = new Eracun.Entities.Faktura();
+            List<FakturaStavka> fakturaStavkeList = new List<FakturaStavka>();
+
             for (int i = 0; i < dgw.Rows.Count; i++)
             {
                 if (DTrezervacija != null)
@@ -1982,7 +1987,21 @@ where id_partner = {0}", txtSifraOdrediste.Text.Trim());
                     row["ppmv"] = ppmv.ToString("#0.00").Replace(".", ",");
                 }
 
+                decimal.TryParse(dg(i, "cijena_bez_pdva").ToString().Replace(',', '.'), NumberStyles.Any, CultureInfo.InvariantCulture, out decimal cijenaBezPdv);
+                decimal.TryParse(dg(i, "porez").ToString().Replace(',', '.'), NumberStyles.Any, CultureInfo.InvariantCulture, out decimal porezPostotak);
+
+                FakturaStavka stavka = new FakturaStavka
+                {
+                    Naziv = row["naziv"].ToString(),
+                    Cijena = cijenaBezPdv,
+                    Kolicina = (decimal)kolicina,
+                    Pdv = porezPostotak,
+                    IznosBezPdv = (decimal)ukupnoVpc,
+                    IznosSaPdv = (decimal)ukupnoMpc
+                };
+
                 DTsend1.Rows.Add(row);
+                fakturaStavkeList.Add(stavka);
 
                 if (chbOduzmiIzSkladista.Checked)
                 {
@@ -2061,6 +2080,19 @@ where id_partner = {0}", txtSifraOdrediste.Text.Trim());
             }
             string[] podaciAvio = (string[])lblAvioPodaci.Tag;
 
+            #region Eracun object
+            faktura.BrojFakture = Convert.ToInt32(ttxBrojFakture.Text);
+            faktura.IdPartner = Convert.ToInt32(txtSifraOdrediste.Text);
+            faktura.IdFakturirati = Convert.ToInt32(txtSifraFakturirati.Text);
+            faktura.GodinaFakture = Convert.ToInt32(nmGodinaFakture.Value);
+            faktura.Model = txtModel.Text;
+            faktura.ZiroRacun = cbZiroRacun.Text;
+            faktura.Napomena = rtbNapomena.Text;
+            faktura.Datum = dtpDatumDVO.Value;
+            faktura.Stavke = fakturaStavkeList;
+            Eracun.Eracun.Instance.GenerateEracunXml(faktura);
+            #endregion
+
             string sql = "INSERT INTO fakture (broj_fakture, id_odrediste, id_fakturirati, date," +
                 "dateDVO,datum_valute,id_izjava,id_zaposlenik,id_zaposlenik_izradio,model" +
                 ",id_nacin_placanja,zr,id_valuta,otprema,id_predujam,napomena,id_vd,godina_predujma," +
@@ -2121,7 +2153,6 @@ where id_partner = {0}", txtSifraOdrediste.Text.Trim());
                 }
             }
 
-
             provjera_sql(classSQL.insert("INSERT INTO aktivnost_zaposlenici (id_zaposlenik,datum,radnja) VALUES ('" + Properties.Settings.Default.id_zaposlenik + "','" + DateTime.Now.ToString("yyyy-MM-dd H:mm:ss") + "','Nova faktura br." + ttxBrojFakture.Text + "')"));
             if (chbOduzmiIzSkladista.Checked)
                 Util.AktivnostZaposlenika.SpremiAktivnost(dgw, null, "Faktura", ttxBrojFakture.Text, false);
@@ -2144,6 +2175,10 @@ where b.id_stavka = a.id_stavka;";
             {
                 printaj(ttxBrojFakture.Text);
             }
+
+            // E-Račun
+            if(MessageBox.Show("Želite li ovu fakturu poslati kao e-račun?", "E-račun", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                Eracun.Eracun.Instance.SendEracun(faktura);
 
             if (DTrezervacija != null)
                 Global.Database.UpdateRezervacijaNaplaceno(DTrezervacija.Rows[0]["broj"].ToString(), 1);
@@ -4677,131 +4712,6 @@ where b.id_stavka = a.id_stavka;";
         }
 
         /// <summary>
-        /// Method used to send create Invoice object and send it as POST request
-        /// </summary>
-        private void SendInvoice()
-        {
-            if (dgw.Rows.Count > 0)
-            {
-                HttpWebResponse response;
-                // Check if partner exists
-                Partner takeOverPartner = GetPartnerObject(txtSifraOdrediste.Text);
-                response = Eracun.Eracun.SendRequest(takeOverPartner, "api/checkpartner");
-                if(response.StatusCode != HttpStatusCode.OK)
-                {
-                    MessageBox.Show($"Greška kod kreiranja partnera {takeOverPartner.Name}. Molimo da provjerite podatke ako su ispravni", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                Partner invoiceToPartner = GetPartnerObject(txtSifraFakturirati.Text);
-                response = Eracun.Eracun.SendRequest(invoiceToPartner, "api/checkpartner");
-                if (response.StatusCode != HttpStatusCode.OK)
-                {
-                    MessageBox.Show($"Greška kod kreiranja partnera {invoiceToPartner.Name}. Molimo da provjerite podatke ako su ispravni", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // Check if employee exists
-                Employee employee = GetEmployeeObject(cbKomercijalist.SelectedValue.ToString());
-                response = Eracun.Eracun.SendRequest(employee, "api/checkemployee");
-                if (response.StatusCode != HttpStatusCode.OK)
-                {
-                    MessageBox.Show($"Greška kod kreiranja zaposlenika {employee.Name} {employee.Surname}. Molimo da provjerite podatke ako su ispravni", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // Create Invoice
-                List<InvoiceItem> invoiceItemList = new List<InvoiceItem>();
-
-                foreach (DataGridViewRow row in dgw.Rows)
-                {
-                    decimal.TryParse(row.Cells["porez"].Value.ToString().Replace(',', '.'), NumberStyles.Any, CultureInfo.InvariantCulture, out decimal porez);
-                    decimal.TryParse(row.Cells["mpc"].Value.ToString().Replace(',', '.'), NumberStyles.Any, CultureInfo.InvariantCulture, out decimal mpc);
-                    decimal.TryParse(row.Cells["vpc"].Value.ToString().Replace(',', '.'), NumberStyles.Any, CultureInfo.InvariantCulture, out decimal vpc);
-                    decimal.TryParse(row.Cells["rabat"].Value.ToString().Replace(',', '.'), NumberStyles.Any, CultureInfo.InvariantCulture, out decimal rabat);
-                    int.TryParse(row.Cells["kolicina"].Value.ToString().Replace(',', '.'), NumberStyles.Any, CultureInfo.InvariantCulture, out int kolicina);
-
-                    InvoiceItem invoiceItem = new InvoiceItem
-                    {
-                        MerchandiseId = row.Cells["sifra"].Value.ToString(),
-                        Name = row.Cells["naziv"].Value.ToString(),
-                        Amount = kolicina,
-                        TaxPercentage = porez,
-                        RetailPrice = mpc,
-                        WholesalePrice = vpc,
-                        DiscountPercentage = rabat
-                    };
-
-                    invoiceItemList.Add(invoiceItem);
-                }
-
-                if (invoiceItemList.Count > 0)
-                {
-                    Invoice invoice = new Invoice
-                    {
-                        TakeOverPartnerId = Convert.ToInt32(txtSifraOdrediste.Text),
-                        InvoiceForPartnerId = Convert.ToInt32(txtSifraFakturirati.Text),
-                        EmployeeId = Convert.ToInt32(cbKomercijalist.SelectedValue.ToString()),
-                        DateDVO = dtpDatum.Value,
-                        DateIssued = dtpDatumDVO.Value,
-                        DateCurrency = dtpDanaValuta.Value,
-                        Currency = cbValuta.SelectedText.ToString(),
-                        CurrencyRate = Convert.ToDecimal(txtTecaj.Text),
-                        Days = Convert.ToInt32(txtDana.Text),
-                        Remark = rtbNapomena.Text,
-                        InvoiceItems = invoiceItemList,
-                        Employee = employee
-                    };
-
-                    response = Eracun.Eracun.SendRequest(invoice, "api/createinvoice");
-                    if (response.StatusCode == HttpStatusCode.OK)
-                        MessageBox.Show("Eračun kreairan!", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                    MessageBox.Show("Greška kod kreiranja stavka.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        /// <summary>
-        /// Used to return Partner object for given Id (sifra)
-        /// </summary>
-        /// <param name="sifra"></param>
-        /// <returns></returns>
-        private Partner GetPartnerObject(string sifra)
-        {
-            DataTable DTpartner = Global.Database.GetPartners(sifra);
-            Partner partner = new Partner
-            {
-                Code = DTpartner.Rows[0]["id_partner"].ToString(),
-                Name = DTpartner.Rows[0]["ime_tvrtke"].ToString(),
-                Address = DTpartner.Rows[0]["adresa"].ToString(),
-                Oib = DTpartner.Rows[0]["oib"].ToString(),
-                PhoneNumber = DTpartner.Rows[0]["mob"].ToString(),
-                Email = DTpartner.Rows[0]["email"].ToString()
-            };
-            return partner;
-        }
-
-        /// <summary>
-        /// Used to return Employee object for given Id (id_zaposlenik)
-        /// </summary>
-        /// <param name="sifra"></param>
-        /// <returns></returns>
-        private Employee GetEmployeeObject(string sifra)
-        {
-            DataTable DTzaposlenik = Global.Database.GetZaposlenici(sifra);
-            Employee employee = new Employee
-            {
-                Name = DTzaposlenik.Rows[0]["ime"].ToString(),
-                Surname = DTzaposlenik.Rows[0]["prezime"].ToString(),
-                Address = DTzaposlenik.Rows[0]["adresa"].ToString(),
-                Oib = DTzaposlenik.Rows[0]["oib"].ToString(),
-                PhoneNumber = DTzaposlenik.Rows[0]["tel"].ToString()
-            };
-            return employee;
-        }
-
-        /// <summary>
         /// 
         /// </summary>
         private void ReadJSON()
@@ -4813,7 +4723,7 @@ where b.id_stavka = a.id_stavka;";
                 {
                     fromJSON = true;
                     var serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
-                    Faktura faktura = serializer.Deserialize<Faktura>(jsonString);
+                    PCPOS.Entities.Faktura faktura = serializer.Deserialize<PCPOS.Entities.Faktura>(jsonString);
                     if (faktura != null)
                     {
                         NoviUnos();
@@ -4884,11 +4794,6 @@ where b.id_stavka = a.id_stavka;";
                     dgw.CurrentCell = dgw[icolumn + 1, irow];
                 }
             }
-        }
-
-        private void BtnEracun_Click(object sender, EventArgs e)
-        {
-            SendInvoice();
         }
 
         private void BtnJson_Click(object sender, EventArgs e)

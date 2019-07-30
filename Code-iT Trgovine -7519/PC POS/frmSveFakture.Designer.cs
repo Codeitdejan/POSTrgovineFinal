@@ -701,7 +701,7 @@
             this.buttonPrintNjemackeFakture.Name = "buttonPrintNjemackeFakture";
             this.buttonPrintNjemackeFakture.Size = new System.Drawing.Size(192, 38);
             this.buttonPrintNjemackeFakture.TabIndex = 73;
-            this.buttonPrintNjemackeFakture.Text = "Ispis fakture njemacki";
+            this.buttonPrintNjemackeFakture.Text = "Ispis fakture njemački";
             this.buttonPrintNjemackeFakture.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonPrintNjemackeFakture.UseVisualStyleBackColor = true;
             this.buttonPrintNjemackeFakture.Click += new System.EventHandler(this.buttonPrintNjemackeFakture_Click);

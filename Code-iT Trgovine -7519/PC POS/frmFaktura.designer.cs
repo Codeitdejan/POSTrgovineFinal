@@ -166,8 +166,8 @@
             this.label31 = new System.Windows.Forms.Label();
             this.dtpOtpremniceOd = new System.Windows.Forms.DateTimePicker();
             this.btnStavkaUMinus = new System.Windows.Forms.Button();
-            this.btnEracun = new System.Windows.Forms.Button();
             this.btnJson = new System.Windows.Forms.Button();
+            this.btnEracun = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgw)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmGodinaFakture)).BeginInit();
@@ -1733,25 +1733,24 @@
             this.btnStavkaUMinus.UseVisualStyleBackColor = true;
             this.btnStavkaUMinus.Click += new System.EventHandler(this.btnStavkaUMinus_Click);
             // 
-            // btnEracun
-            // 
-            this.btnEracun.Location = new System.Drawing.Point(331, 423);
-            this.btnEracun.Name = "btnEracun";
-            this.btnEracun.Size = new System.Drawing.Size(134, 23);
-            this.btnEracun.TabIndex = 561;
-            this.btnEracun.Text = "Eračun";
-            this.btnEracun.UseVisualStyleBackColor = true;
-            this.btnEracun.Click += new System.EventHandler(this.BtnEracun_Click);
-            // 
             // btnJson
             // 
-            this.btnJson.Location = new System.Drawing.Point(471, 423);
+            this.btnJson.Location = new System.Drawing.Point(328, 423);
             this.btnJson.Name = "btnJson";
             this.btnJson.Size = new System.Drawing.Size(134, 23);
             this.btnJson.TabIndex = 562;
             this.btnJson.Text = "JSON";
             this.btnJson.UseVisualStyleBackColor = true;
             this.btnJson.Click += new System.EventHandler(this.BtnJson_Click);
+            // 
+            // btnEracun
+            // 
+            this.btnEracun.Location = new System.Drawing.Point(465, 423);
+            this.btnEracun.Name = "btnEracun";
+            this.btnEracun.Size = new System.Drawing.Size(134, 23);
+            this.btnEracun.TabIndex = 563;
+            this.btnEracun.Text = "Eracun";
+            this.btnEracun.UseVisualStyleBackColor = true;
             // 
             // frmFaktura
             // 
@@ -1760,8 +1759,8 @@
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(1005, 629);
             this.ControlBox = false;
-            this.Controls.Add(this.btnJson);
             this.Controls.Add(this.btnEracun);
+            this.Controls.Add(this.btnJson);
             this.Controls.Add(this.btnStavkaUMinus);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnOpenRoba);
@@ -1942,7 +1941,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn povratna_naknada;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dozvoli_prodaju;
         private System.Windows.Forms.DataGridViewTextBoxColumn ppmv;
-        private System.Windows.Forms.Button btnEracun;
         private System.Windows.Forms.Button btnJson;
+        private System.Windows.Forms.Button btnEracun;
     }
 }

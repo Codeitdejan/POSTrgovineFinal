@@ -94,6 +94,17 @@ namespace PCPOS.Global
         /// </summary>
         /// <param name="sifra"></param>
         /// <returns></returns>
+        public static DataTable GetGrad(string sifra = null)
+        {
+            string query = $@"SELECT * FROM grad {(sifra != null ? $"WHERE id_grad = '{sifra}'" : "")}";
+            return classSQL.select(query, "grad").Tables[0];
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sifra"></param>
+        /// <returns></returns>
         public static DataTable GetRoba(string sifra = null)
         {
             string query = $@"SELECT * FROM roba {(sifra != null ? $"WHERE sifra = '{sifra}'" : "")}";
