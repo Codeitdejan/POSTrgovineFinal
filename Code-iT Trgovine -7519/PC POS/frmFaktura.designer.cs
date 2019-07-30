@@ -1733,6 +1733,20 @@
             this.btnStavkaUMinus.UseVisualStyleBackColor = true;
             this.btnStavkaUMinus.Click += new System.EventHandler(this.btnStavkaUMinus_Click);
             // 
+<<<<<<< HEAD
+=======
+            // btnEracun
+            // 
+            this.btnEracun.Location = new System.Drawing.Point(331, 423);
+            this.btnEracun.Name = "btnEracun";
+            this.btnEracun.Size = new System.Drawing.Size(134, 23);
+            this.btnEracun.TabIndex = 561;
+            this.btnEracun.Text = "Eračun";
+            this.btnEracun.UseVisualStyleBackColor = true;
+            this.btnEracun.Visible = false;
+            this.btnEracun.Click += new System.EventHandler(this.BtnEracun_Click);
+            // 
+>>>>>>> 12d79dd594b0c0a1313cf30eac33b5abebafedc9
             // btnJson
             // 
             this.btnJson.Location = new System.Drawing.Point(328, 423);

@@ -10865,5 +10865,15 @@ C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x
 >>>>>>> 979e4b42b878568f969accc61ce595366ddfefeb
 D:\Projects\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PCPOS.Report.Naljepnice.Deklaracije.resources
 C:\Users\Marko Vrban\Documents\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PCPOS.Kasa.frmDodajStavkuUMinus.resources
+<<<<<<< HEAD
+C:\Users\Toni\Desktop\PosFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PCPOS.Kasa.frmDodajStavkuUMinus.resources
+=======
+C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PCPOS.Kasa.frmDodajStavkuUMinus.resources
 >>>>>>> 067ee78fa1ca480ee4fa8b4d06d655a8b366634e
+<<<<<<< HEAD
 D:\Projects\POSTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PCPOS.Kasa.frmDodajStavkuUMinus.resources
+=======
+>>>>>>> 637617c9f55bb2e877040a002d571e689145a933
+C:\Users\Korisnik\Desktop\PCPosTrgovineFinal\Code-iT Trgovine -7519\PC POS\obj\x86\Debug\PCPOS.frmNewInfo.resources
+>>>>>>> 1c57423068187820abcdca6f8eb2ae27717710ea
+>>>>>>> 12d79dd594b0c0a1313cf30eac33b5abebafedc9

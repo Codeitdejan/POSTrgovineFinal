@@ -110,10 +110,8 @@
             this.label22 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.btnNadogradiBazu = new System.Windows.Forms.Button();
-            this.verzija = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.btnNadogradi = new System.Windows.Forms.Button();
-            this.btnProvjeriNadogradnju = new System.Windows.Forms.Button();
             this.btnSpremi = new System.Windows.Forms.Button();
             this.cbSustavPDV = new System.Windows.Forms.ComboBox();
             this.cbBlagajnik = new System.Windows.Forms.ComboBox();
@@ -1022,7 +1020,7 @@
             this.groupBox21.Controls.Add(this.label41);
             this.groupBox21.Controls.Add(this.label40);
             this.groupBox21.Controls.Add(this.txtPorezNaDohodak);
-            this.groupBox21.Location = new System.Drawing.Point(444, 221);
+            this.groupBox21.Location = new System.Drawing.Point(444, 208);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.Size = new System.Drawing.Size(341, 100);
             this.groupBox21.TabIndex = 58;
@@ -1186,21 +1184,19 @@
             // 
             this.groupBox5.BackColor = System.Drawing.Color.Transparent;
             this.groupBox5.Controls.Add(this.btnNadogradiBazu);
-            this.groupBox5.Controls.Add(this.verzija);
             this.groupBox5.Controls.Add(this.button3);
             this.groupBox5.Controls.Add(this.btnNadogradi);
-            this.groupBox5.Controls.Add(this.btnProvjeriNadogradnju);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBox5.Location = new System.Drawing.Point(444, 29);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(341, 185);
+            this.groupBox5.Size = new System.Drawing.Size(341, 136);
             this.groupBox5.TabIndex = 50;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Nadogradnja programa";
             // 
             // btnNadogradiBazu
             // 
-            this.btnNadogradiBazu.Location = new System.Drawing.Point(50, 90);
+            this.btnNadogradiBazu.Location = new System.Drawing.Point(54, 60);
             this.btnNadogradiBazu.Name = "btnNadogradiBazu";
             this.btnNadogradiBazu.Size = new System.Drawing.Size(240, 32);
             this.btnNadogradiBazu.TabIndex = 5;
@@ -1208,18 +1204,9 @@
             this.btnNadogradiBazu.UseVisualStyleBackColor = true;
             this.btnNadogradiBazu.Click += new System.EventHandler(this.btnNadogradiBazu_Click);
             // 
-            // verzija
-            // 
-            this.verzija.AutoSize = true;
-            this.verzija.Location = new System.Drawing.Point(51, 160);
-            this.verzija.Name = "verzija";
-            this.verzija.Size = new System.Drawing.Size(54, 17);
-            this.verzija.TabIndex = 4;
-            this.verzija.Text = "label24";
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(50, 125);
+            this.button3.Location = new System.Drawing.Point(54, 95);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(240, 32);
             this.button3.TabIndex = 3;
@@ -1229,7 +1216,7 @@
             // 
             // btnNadogradi
             // 
-            this.btnNadogradi.Location = new System.Drawing.Point(50, 55);
+            this.btnNadogradi.Location = new System.Drawing.Point(54, 25);
             this.btnNadogradi.Name = "btnNadogradi";
             this.btnNadogradi.Size = new System.Drawing.Size(240, 32);
             this.btnNadogradi.TabIndex = 2;
@@ -1237,20 +1224,10 @@
             this.btnNadogradi.UseVisualStyleBackColor = true;
             this.btnNadogradi.Click += new System.EventHandler(this.btnNadogradi_Click);
             // 
-            // btnProvjeriNadogradnju
-            // 
-            this.btnProvjeriNadogradnju.Location = new System.Drawing.Point(50, 20);
-            this.btnProvjeriNadogradnju.Name = "btnProvjeriNadogradnju";
-            this.btnProvjeriNadogradnju.Size = new System.Drawing.Size(240, 32);
-            this.btnProvjeriNadogradnju.TabIndex = 1;
-            this.btnProvjeriNadogradnju.Text = "Provjeri da li postoji nadogradnja";
-            this.btnProvjeriNadogradnju.UseVisualStyleBackColor = true;
-            this.btnProvjeriNadogradnju.Click += new System.EventHandler(this.btnProvjeriNadogradnju_Click);
-            // 
             // btnSpremi
             // 
             this.btnSpremi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSpremi.Location = new System.Drawing.Point(444, 333);
+            this.btnSpremi.Location = new System.Drawing.Point(444, 318);
             this.btnSpremi.Name = "btnSpremi";
             this.btnSpremi.Size = new System.Drawing.Size(341, 37);
             this.btnSpremi.TabIndex = 47;
@@ -2798,7 +2775,6 @@
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.tabSkladiste.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
@@ -2914,10 +2890,8 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label verzija;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnNadogradi;
-        private System.Windows.Forms.Button btnProvjeriNadogradnju;
         private System.Windows.Forms.Button btnSpremi;
         private System.Windows.Forms.ComboBox cbSustavPDV;
         private System.Windows.Forms.ComboBox cbBlagajnik;

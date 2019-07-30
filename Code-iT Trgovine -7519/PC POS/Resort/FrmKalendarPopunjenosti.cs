@@ -320,7 +320,10 @@ namespace PCPOS.Resort
         {
             Close();
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 12d79dd594b0c0a1313cf30eac33b5abebafedc9
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();

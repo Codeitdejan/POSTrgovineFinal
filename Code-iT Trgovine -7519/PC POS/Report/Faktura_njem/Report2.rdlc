@@ -2954,6 +2954,7 @@
                     <TextRun>
                       <Value>=IIf(First(Fields!ime_poslovnice.Value, "DSPodaciTvrtke")="","","Büroname: " &amp; First(Fields!ime_poslovnice.Value, "DSPodaciTvrtke") &amp; vbcrlf) &amp;
 IIf(First(Fields!adresa.Value, "DSPodaciTvrtke")="","","Adresse: " &amp; First(Fields!adresa.Value, "DSPodaciTvrtke") &amp; vbcrlf) &amp;
+IIf(First(Fields!oib.Value, "DSPodaciTvrtke")="","","Steuer-NR: " &amp; First(Fields!oib.Value, "DSPodaciTvrtke") &amp; vbcrlf) &amp;
 IIf(First(Fields!grad.Value, "DSPodaciTvrtke")="","","Stadt: " &amp; First(Fields!grad.Value, "DSPodaciTvrtke") &amp; vbcrlf) &amp;
 IIf(First(Fields!tel.Value, "DSPodaciTvrtke")="","","Tel: " &amp; First(Fields!tel.Value, "DSPodaciTvrtke") &amp; vbcrlf) &amp; 
 IIf(First(Fields!fax.Value, "DSPodaciTvrtke")="","","Fax: " &amp; First(Fields!fax.Value, "DSPodaciTvrtke") &amp; vbcrlf) &amp; 

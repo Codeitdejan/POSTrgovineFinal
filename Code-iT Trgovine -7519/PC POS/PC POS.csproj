@@ -217,7 +217,16 @@
     <Compile Include="Eracun\Enums\QuantityCode.cs" />
     <Compile Include="Eracun\Enums\TaxTypeCode.cs" />
     <Compile Include="Eracun\Eracun.cs" />
+<<<<<<< HEAD
     <Compile Include="Eracun\TaxTotal.cs" />
+=======
+    <Compile Include="frmNewInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewInfo.Designer.cs">
+      <DependentUpon>frmNewInfo.cs</DependentUpon>
+    </Compile>
+>>>>>>> 12d79dd594b0c0a1313cf30eac33b5abebafedc9
     <Compile Include="frmOtpremnicaNaSkladiste.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2423,6 +2432,9 @@
     <EmbeddedResource Include="aaaaa.resx">
       <DependentUpon>aaaaa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNewInfo.resx">
+      <DependentUpon>frmNewInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmOtpremnicaNaSkladiste.resx">
       <DependentUpon>frmOtpremnicaNaSkladiste.cs</DependentUpon>
     </EmbeddedResource>
@@ -2924,7 +2936,9 @@
       <DependentUpon>frmListe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\IzlazniRacuni\Listakalk.rdlc" />
-    <EmbeddedResource Include="Report\IzlazniRacuni\Liste.rdlc" />
+    <EmbeddedResource Include="Report\IzlazniRacuni\Liste.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\Kalkposkl\frmKalkposkl.resx">
       <DependentUpon>frmKalkposkl.cs</DependentUpon>
     </EmbeddedResource>
@@ -3508,6 +3522,7 @@
     </None>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
     <None Include="Dataset\DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>

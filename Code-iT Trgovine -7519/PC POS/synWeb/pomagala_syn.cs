@@ -76,8 +76,7 @@ namespace PCPOS.synWeb
                 WebResponse response = reguest.GetResponse();
                 stream = response.GetResponseStream();
 
-                StreamReader sr = new StreamReader(stream, Encoding.GetEncoding("windows-1250"));
-
+                StreamReader sr = new StreamReader(stream, Encoding.GetEncoding("windows-1250"));                
                 ds.ReadXml(sr);
                 sr.Close();
                 response.Close();

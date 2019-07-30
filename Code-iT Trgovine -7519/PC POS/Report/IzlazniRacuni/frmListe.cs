@@ -85,28 +85,28 @@ namespace PCPOS.Report.lzlazniRacuni
             string kriterij = "";
             if (prema_rac)
             {
-                kriterij = string.Format(" WHERE avans_racun.broj_avansa >= {0} AND avans_racun.broj_avansa <= {1} and avans_racun.poslovnica = {2}", BrojFakOD, BrojFakDO, skladiste);
+                kriterij = string.Format(" WHERE avansi.broj_avansa >= {0} AND avansi.broj_avansa <= {1} ", BrojFakOD, BrojFakDO);
                 if (partner > 0)
                 {
-                    kriterij += string.Format(" AND avans_racun.id_partner = {0}", partner);
+                    kriterij += string.Format(" AND avansi.id_partner = {0}", partner);
                 }
 
-                kriterij += " ORDER BY CAST(avans_racun.broj_avansa as numeric) ASC;";
+                kriterij += " ORDER BY CAST(avansi.broj_avansa as numeric) ASC;";
             }
             else
             {
-                kriterij = string.Format(" WHERE avans_racun.dat_knj >= '{0}' AND avans_racun.dat_knj <= '{1}' and avans_racun.poslovnica = {2}", datumOD.ToString("yyyy-MM-dd 00:00:00"), datumDO.ToString("yyyy-MM-dd 23:59:59"), skladiste);
+                kriterij = string.Format(" WHERE avansi.dat_knj >= '{0}' AND avansi.dat_knj <= '{1}'", datumOD.ToString("yyyy-MM-dd 00:00:00"), datumDO.ToString("yyyy-MM-dd 23:59:59"));
 
                 if (partner > 0)
                 {
-                    kriterij += string.Format(" AND avans_racun.id_partner = {0}", partner);
+                    kriterij += string.Format(" AND avansi.id_partner = {0}", partner);
                 }
 
-                kriterij += " ORDER BY avans_racun.dat_knj ASC;";
+                kriterij += " ORDER BY avansi.dat_knj ASC;";
             }
 
-            string sqlHeder = string.Format(@"SELECT avans_racun.broj_avansa, avans_racun.dat_knj, avans_racun.datum_valute, partners.id_partner, avans_racun.poslovnica, avans_racun.naplatni_uredaj, partners.ime_tvrtke
-            FROM avans_racun LEFT JOIN partners ON partners.id_partner = avans_racun.id_partner {0}", kriterij);
+            string sqlHeder = string.Format(@"SELECT avansi.broj_avansa, avansi.dat_knj, avansi.datum_valute, partners.id_partner, partners.ime_tvrtke
+            FROM avansi LEFT JOIN partners ON partners.id_partner = avansi.id_partner {0}", kriterij);
 
             DataRow DDTrow = dSRlisteTekst.Tables[0].NewRow();
             if (BrojFakDO != "")
@@ -123,12 +123,12 @@ namespace PCPOS.Report.lzlazniRacuni
             if (documenat == "rac_za_avans")
             {
                 string naslov = "Račun za avans";
-
+                /*
                 if (skladiste != null && skladiste.ToString().Length > 0)
                 {
                     naslov += "\nZa poslovnicu " + classSQL.select(string.Format("select ime_ducana from ducan where id_ducan = {0};", skladiste), "ducan").Tables[0].Rows[0][0];
                 }
-
+                */
                 DDTrow["string5"] = naslov;
             }
 
@@ -140,11 +140,8 @@ namespace PCPOS.Report.lzlazniRacuni
 
             for (int i = 0; i < DTheader.Rows.Count; i++)
             {
-                string sqlStavka = string.Format(@"SELECT avans_racun.osnovica_var as vpc, avans_racun.porez_var as porez, 1 as kolicina, 'NE' as oduzmi, 0 as nbc, 0 as id_skladiste, 0 as rabat
-FROM avans_racun
-left join porezi on avans_racun.id_pdv = porezi.id_porez
-WHERE avans_racun.broj_avansa = {0} AND avans_racun.poslovnica = {1};",
-DTheader.Rows[i]["broj_avansa"].ToString(), DTheader.Rows[i]["poslovnica"].ToString());
+                string sqlStavka = string.Format(@"SELECT avansi.osnovica_var as vpc, avansi.porez_var as porez, 1 as kolicina, 'NE' as oduzmi, 0 as nbc, 0 as id_skladiste, 0 as rabat
+                FROM avansi left join porezi on avansi.id_pdv = porezi.id_porez WHERE avansi.broj_avansa = {0}", DTheader.Rows[i]["broj_avansa"].ToString());
 
                 DTstavke = classSQL.select(sqlStavka, "faktura_stavke").Tables[0];
 
@@ -349,6 +346,7 @@ DTheader.Rows[i]["broj_avansa"].ToString(), DTheader.Rows[i]["poslovnica"].ToStr
                 decimal osnovica_ukupno = 0;
                 decimal ukupno = 0;
                 decimal vpc1 = 0;
+                decimal vpc2 = 0;
                 decimal usl_bez_por = 0;
                 decimal roba_bez_por = 0;
                 decimal proizvodacka_cijena = 0;
@@ -392,33 +390,51 @@ DTheader.Rows[i]["broj_avansa"].ToString(), DTheader.Rows[i]["poslovnica"].ToStr
                     pdvUkupno += ukupno * (((pdv * 100) / (pdv + 100)) / 100);
 
                     decimal iznos = Math.Round((vpc1 * (pdv / 100)), 6, MidpointRounding.AwayFromZero);
+                    vpc2 = vpc - rabat_proracun;
+                    vpc2 = vpc2-(vpc2 * (((100 * pdv) / (100 + pdv))/100));
+                    decimal iznos2 = Math.Round((vpc2 * (pdv / 100)), 6, MidpointRounding.AwayFromZero);
                     if (kol != 0)
                     {
                         //DataRow[] dataROW = DTpdv.Select("stopa = '" + stopa.ToString("0.00") + "'");
                         DataRow[] stope = (dSstope.Tables[0]).Select(string.Format("stopa='{0}'", pdv.ToString("#0.00")));
-                        if (stope.Length == 0)
+                        DataRow[] stope2 = (DSstopeSRabatom.Tables[0]).Select(string.Format("stopa='{0}'", pdv.ToString("#0.00")));
+                        if (stope.Length == 0 || stope2.Length == 0)
                         {
                             DataRow stopa = dSstope.Tables[0].NewRow();
+                            DataRow stopa2 = DSstopeSRabatom.Tables[0].NewRow();
 
                             stopa["stopa"] = pdv.ToString("#0.00");
+                            stopa2["stopa"] = pdv.ToString("#0.00");
+
                             stopa["osnovica"] = Math.Round((vpc1 * kol), 6, MidpointRounding.AwayFromZero);
+                            stopa2["osnovica"] = Math.Round((vpc2 * kol), 6, MidpointRounding.AwayFromZero);
+
                             stopa["iznos"] = Math.Round((iznos * kol), 6, MidpointRounding.AwayFromZero);
+                            stopa2["iznos"] = Math.Round((iznos2 * kol), 6, MidpointRounding.AwayFromZero);
 
                             dSstope.Tables[0].Rows.Add(stopa);
+                            DSstopeSRabatom.Tables[0].Rows.Add(stopa2);
                         }
                         else
                         {
                             decimal osnovicaOld = 0, iznosOld = 0;
+                            decimal osnovicaOld2 = 0, iznosOld2 = 0;
+
                             decimal.TryParse(stope[0]["osnovica"].ToString(), out osnovicaOld);
+                            decimal.TryParse(stope2[0]["osnovica"].ToString(), out osnovicaOld2);
                             decimal.TryParse(stope[0]["iznos"].ToString(), out iznosOld);
+                            decimal.TryParse(stope2[0]["iznos"].ToString(), out iznosOld2);
 
                             stope[0]["osnovica"] = (osnovicaOld + Math.Round((vpc1 * kol), 6, MidpointRounding.AwayFromZero));
+                            stope2[0]["osnovica"] = (osnovicaOld2 + Math.Round((vpc2 * kol), 6, MidpointRounding.AwayFromZero));
                             stope[0]["iznos"] = (iznosOld + Math.Round((iznos * kol), 6, MidpointRounding.AwayFromZero));
+                            stope2[0]["iznos"] = (iznosOld2 + Math.Round((iznos2 * kol), 6, MidpointRounding.AwayFromZero));
+                            
                         }
                     }
-
+                    /*
                     DataTable dt2 = dSstope.Tables[0].Clone();
-                    dt2.Columns["stopa"].DataType = Type.GetType("System.Decimal");
+                     dt2.Columns["stopa"].DataType = Type.GetType("System.Decimal");
 
                     foreach (DataRow dr in dSstope.Tables[0].Rows)
                     {
@@ -441,7 +457,7 @@ DTheader.Rows[i]["broj_avansa"].ToString(), DTheader.Rows[i]["poslovnica"].ToStr
 
                         dSstope.Tables[0].Rows.Add(stopa);
                         //stopa_index++;
-                    }
+                    }*/
 
                 }
 
